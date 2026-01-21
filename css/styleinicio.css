@@ -1,0 +1,213 @@
+@font-face{
+    font-family: "Indie_Flower";
+    src: url(./fonts/Indie_Flower/IndieFlower-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: "Lobster";
+    src: url(./fonts/Lobster/Lobster-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: "Share_Tech";
+    src: url(./fonts/Lobster_Pacifico_Share_Tech/Share_Tech/ShareTech-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root{
+    --Blanco: white;
+    --Rosa: pink;
+    --Amarillo: yellow;
+    --Gris: rgb(131, 131, 131); 
+    --Rosa-fuerte: rgb(250, 0, 146);
+}
+
+/*Inicio de portada de muñecos XO*/
+
+*{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(19deg,rgba(247, 153, 202, 1) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+/*Inicio de estolo del contenedor de letrero*/
+
+#main{
+    /* border: palevioletred solid 1px; */
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 97.2vh;
+}
+
+.welcomen{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 60%;
+    height: auto;
+    /* border: purple 1px solid; */
+    text-align: center;
+    justify-content: center;
+    font-size: 50px;
+    color: var(--Rosa-fuerte);
+    padding-top: 2em;
+    margin-left: 1em;
+    font-family: Indie_Flower;
+}
+
+.welcomeContainer{
+    display: flex;
+    justify-content: center;
+    gap: 0.7em;
+}
+
+.welcomeContainer > span{
+    position: relative;
+    animation: luceswelcome 1.5s linear infinite;
+}
+
+@keyframes luceswelcome{
+    0%, 100%{
+        color: var(--Rosa);
+        text-shadow: 0 0 12px rgb(207, 59, 84), 0 0 50px rgb(231, 55, 217), 0 0 100px rgb(167, 89, 156);
+    }10%, 90%{
+        color: rgba(255, 255, 255, 0.884);
+        text-shadow: none;
+    }
+}
+
+.welcomeContainer > span:nth-child(1){/*B1*/
+    animation-delay: .1s;
+}   
+
+.welcomeContainer > span:nth-child(2){/*B1*/
+    animation-delay: .2s;
+}   
+
+.welcomeContainer > span:nth-child(3){/*B1*/
+    animation-delay: .3s;
+}   
+
+.welcomeContainer > span:nth-child(4){/*B1*/
+    animation-delay: .4s;
+}   
+
+.welcomeContainer > span:nth-child(5){/*B1*/
+    animation-delay: .5s;
+}   
+
+.welcomeContainer > span:nth-child(6){/*B1*/
+    animation-delay: .6s;
+}   
+
+.welcomeContainer > span:nth-child(7){/*B1*/
+    animation-delay: .5s;
+}   
+
+
+.welcomeContainer > span:nth-child(8){/*o*/
+    animation-delay: .4s;
+}
+
+.welcomeContainer > span:nth-child(9){/*B1*/
+    animation-delay: .3s;
+}   
+
+.welcomeContainer > span:nth-child(10){/*B1*/
+    animation-delay: .2s;
+}   
+
+.buttomEnter > a.enterButton{
+    position: relative;
+    border: yellowgreen 2px solid;
+    border-radius: 2em;
+    width: 23%;
+    padding: 10px;
+    background: var(--Rosa-fuerte);
+    font-family: Indie_Flower;
+    color: var(--Blanco);
+    right: 2em;
+    cursor:pointer;
+    transition: 1.3s;
+}
+
+.buttomEnter > a.enterButton:hover{
+    transform: translateY(-20px);
+    transition: 1.3s;
+}
+
+/*Fin de estolo del contenedor de letrero*/
+
+.containerRedes{
+    width: 40%;
+    height: 99.1vh;
+    /* border: palegreen solid 2px; */
+}
+
+/*animacion de los iconos y estilo*/
+.icons{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    padding-top: 1.5em;
+    overflow: hidden;
+}
+
+.icons1{
+    transform: translateX(-150px);
+    opacity: 0;
+    transition: all 2s ease;/*afecta tiempo de transicion*/
+}
+
+.icons2{
+    transform: translateX(150px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+
+.icons1.mostrar{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.icons2.mostrar2{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.icons > a > img{
+    display: flex;
+    width: 20%;
+    justify-content: center;
+    align-items: center;
+    margin-left: 12em;
+}
+
+/*fin de portada de muñecos XO*/
+
+/*Inicio de estilo de logo*/
+
+#logo > div > img{
+    position: absolute;
+    width: 5%;
+    height: 10vh;
+    bottom: 10px;
+    left: 80em;
+    border: paleturquoise solid 1px;
+    opacity: 0.5;
+}
+
+/*Inicio de estilo de logo*/
