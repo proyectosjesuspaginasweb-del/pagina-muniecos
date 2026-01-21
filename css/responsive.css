@@ -1,4 +1,23 @@
+/* ========================================
+   BOOTSTRAP 5 RESPONSIVE BREAKPOINTS
+   ========================================
+   X-Small:       <576px
+   Small (sm):    ≥576px
+   Medium (md):   ≥768px
+   Large (lg):    ≥992px
+   X-Large (xl):  ≥1200px
+   XX-Large (xxl):≥1400px
+======================================== */
+
+/* XX-Large devices and down (xxl) - <1400px */
+@media (max-width: 1400px){ }
+
+/* X-Large devices and down (xl) - <1200px */
+@media (max-width: 1200px){ }
+
+/* Large devices and down (lg) - <992px */
 @media (max-width: 992px){
+    /* Main Section */
     #main{
         flex-direction: column;
         height: auto;
@@ -28,36 +47,8 @@
         left: auto;
         right: 1em;
     }
-}
-
-@media (max-width: 576px){
-    .welcomen{
-        font-size: 30px;
-        gap: 0.5em;
-    }
-    .welcomeContainer{
-        flex-wrap: wrap;
-    }
-    .buttomEnter > a.enterButton{
-        width: 80%;
-        font-size: 16px;
-        padding: 8px;
-    }
-    .icons{
-        gap: 2em;
-        padding-top: 1em;
-    }
-    .icons > a > img{
-        width: 22%;
-    }
-    #logo > div > img{
-        width: 20%;
-        height: auto;
-        bottom: 5px;
-    }
-}
-
-@media (max-width: 992px){
+    
+    /* Navigation */
     .containernav{
         flex-direction: column;
         height: auto;
@@ -79,6 +70,8 @@
         padding-top: 1em;
         height: auto;
     }
+    
+    /* Who Section */
     .containerwho{
         flex-direction: column;
         height: auto;
@@ -98,6 +91,8 @@
         margin: 1em auto;
         display: block;
     }
+    
+    /* Goals Section */
     #goals,
     .containerGoals{
         height: auto;
@@ -109,6 +104,8 @@
     .ListonGoalsup{
         display: none;
     }
+    
+    /* Sizes Section */
     #sizes,
     .containerSizes{
         height: auto;
@@ -129,6 +126,8 @@
     .listonsizes2{
         display: none;
     }
+    
+    /* Catalog Section */
     #catalog{
         height: auto;
     }
@@ -147,44 +146,8 @@
         justify-content: center;
         width: 40%;
     }
-}
-
-@media (max-width: 576px){
-    .navoption{
-        flex-direction: column;
-        align-items: center;
-    }
-    .tittlewho{
-        font-size: 32px;
-        padding: 2em 0;
-    }
-    .textwho{
-        font-size: 18px;
-        width: 95%;
-    }
-    .containerSizes{
-        flex-direction: column;
-    }
-    .sizescontainer{
-        width: 100%;
-    }
-    .sizescontainer > img{
-        width: 70%;
-        height: auto;
-    }
-    .imgcontainer{
-        max-height: none;
-    }
-    .imagenprueba > a > img{
-        height: auto;
-        width: 100%;
-    }
-    .buttomFurther{
-        width: 70%;
-    }
-}
-
-@media (max-width: 992px){
+    
+    /* Catalogo2 Page */
     .container-xxl{
         flex-direction: column;
         gap: 1em;
@@ -302,7 +265,78 @@
     }
 }
 
+/* Medium devices and down (md) - <768px */
+@media (max-width: 768px){ }
+
+/* Small devices and down (sm) - <576px */
 @media (max-width: 576px){
+    /* Welcome Section */
+    .welcomen{
+        font-size: 30px;
+        gap: 0.5em;
+    }
+    .welcomeContainer{
+        flex-wrap: wrap;
+    }
+    .buttomEnter > a.enterButton{
+        width: 80%;
+        font-size: 16px;
+        padding: 8px;
+    }
+    .icons{
+        gap: 2em;
+        padding-top: 1em;
+    }
+    .icons > a > img{
+        width: 22%;
+    }
+    #logo > div > img{
+        width: 20%;
+        height: auto;
+        bottom: 5px;
+    }
+    
+    /* Navigation */
+    .navoption{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    /* Who Section */
+    .tittlewho{
+        font-size: 32px;
+        padding: 2em 0;
+    }
+    .textwho{
+        font-size: 18px;
+        width: 95%;
+    }
+    
+    /* Sizes Section */
+    .containerSizes{
+        flex-direction: column;
+    }
+    .sizescontainer{
+        width: 100%;
+    }
+    .sizescontainer > img{
+        width: 70%;
+        height: auto;
+    }
+    
+    /* Catalog Section */
+    .imgcontainer{
+        max-height: none;
+    }
+    .imagenprueba > a > img{
+        height: auto;
+        width: 100%;
+    }
+    .buttomFurther{
+        width: 70%;
+    }
+    
+    /* Catalogo2 Page */
     .MenunavXo > ul{
         flex-direction: column;
     }
@@ -346,3 +380,5 @@
     }
 }
 
+/* Small devices and up (sm) - ≥576px */
+@media (min-width: 576px){ }
