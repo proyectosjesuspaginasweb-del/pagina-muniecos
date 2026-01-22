@@ -33,6 +33,7 @@ body{
     padding: 0;
     background: linear-gradient(19deg,rgba(235, 2, 122, 0.822) 0%, rgba(255, 255, 255, 1) 100%);
     user-select: none;
+    overflow-y: auto;
 }
 
 
@@ -57,6 +58,14 @@ body{
     top: 2px;
     left: 3em;
     z-index: 9;
+}
+
+nav{
+    position: sticky;
+    border: #ff0080 2px solid;
+    z-index: 999;
+    top: 0;
+    background: var(--Blanco);
 }
 
 .MenunavXo > ul{
