@@ -59,6 +59,14 @@ body{
     z-index: 9;
 }
 
+nav{
+    position: sticky;
+    /* border: #ff0080 2px solid; */
+    z-index: 999;
+    top: 0;
+    background: var(--Blanco);
+}
+
 .MenunavXo > ul{
     display: flex;
     flex-direction: row;
