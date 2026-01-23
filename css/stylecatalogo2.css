@@ -62,7 +62,7 @@ body{
 
 nav{
     position: sticky;
-    border: #ff0080 2px solid;
+    /* border: #ff0080 2px solid; */
     z-index: 999;
     top: 0;
     background: var(--Blanco);
