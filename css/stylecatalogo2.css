@@ -5,7 +5,7 @@
     font-style: normal;
 }
 
-@font-face{
+@font-face{/*letra para titulos*/
     font-family: "Lobster";
     src: url(./fonts/Lobster/Lobster-Regular.ttf);
     font-weight: normal;
@@ -19,12 +19,20 @@
     font-style: normal;
 }
 
+@font-face{/*Letra para texto*/
+    font-family: "Playfair_Display";
+    src: url(./fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
 :root{
     --Blanco: white;
     --Rosa: pink;
     --Amarillo: yellow;
     --Gris: rgb(131, 131, 131);
     --Rosa-fuerte: rgb(250, 0, 146);
+    --Rosa-Para-Letra: rgb(150, 6, 118);
 }
 
 
@@ -36,83 +44,25 @@ body{
 }
 
 
-/*Inicia estilo del menu y el logo de XO*/
+/*Inicia estilo del menu, el logo de XO y who*/
 
 .container-xxl{/*contenedor donde viene el logo y el menu*/
     display: flex;
     flex-direction: row;
     max-width: 100%;
     height: 15vh;
-    /* border: slategrey 3px solid; */
     align-items: center;
-    padding: 0;
+    padding: 0 3em;
     margin: 0;
-    gap: 42em;
+    justify-content: space-between;
 }
-
-.ImgLogoXo > img{/*afecta la imagen del logo directamente*/
-    position: absolute;
-    width: 8%;
-    height: 15vh;
-    top: 2px;
-    left: 3em;
-    z-index: 9;
-}
-
-nav{
-    position: sticky;
-    /* border: #ff0080 2px solid; */
-    z-index: 999;
-    top: 0;
-    width: 100%;
-    /* background: var(--Blanco); */
-}
-
-.nav-principal{
-    transition: all 0.3s ease;
-}
-
-.is-scrolled{
-    position: sticky;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: white;
-    z-index: 999;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    width: 100%;
-}
-
-
-.MenunavXo > ul{
-    display: flex;
-    flex-direction: row;
-    gap: 2em;
-    width: 80%;
-    list-style: none;
-    margin: 2em 6em;
-    /* border: yellow 1px solid; */
-}
-
-.MenunavXo > ul > li > a{
-    text-decoration: none;
-    color: var(--Rosa-fuerte);
-    font-size: 1em;
-    font-family: Lobster;
-}
-
-.MenunavXo > ul > li > a:hover{
-    border-bottom: 2px solid var(--Rosa-fuerte);
-    border-radius: 1em;
-}
-
-/*Inicia estilo del menu y el logo de XO*/
 
 .container-fluid{
     max-width: 100%;
-    height: 100vh;
-    /* border: yellow 2px solid; */
-    margin-bottom: 12em;
+    height: 120vh;
+    border: yellow 2px solid;
+    margin-bottom: 10em;
+    box-shadow: 0 0 50px white;
 }
 
 #CatalogXo > .container-fluid:nth-child(1){/*se puso para separar el contenedor de catalogo con ubicacion solo afecta ese*/
@@ -120,202 +70,230 @@ nav{
     margin-bottom: 70em;
 }
 
-/*Contenedor de Who empieza el diseño*/
+#SizeXo > .container-fluid:nth-child(1){
+    border: orange 2px solid;
+    height: 770vh;
+    
+}
 
-.ContainerWhoXo{
-    overflow-y: auto;
+/*Inicio Diseño de menú*/
+
+.OptionandLogoMenu{
     position: relative;
-    width: 100%;
-    height: 100vh;
     display: flex;
     flex-direction: row;
-    /* border: violet 2px solid; */
-    background: url(./img/TrabajosXo/ImagenWho1.jpeg) no-repeat center / 100% 100vh;
-    /*efecto vidrio templado*/
-    /*background: rgba(235, 1, 184, 0.192); /* Blanco con transparencia 
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); /* Para soporte en Safari
-    border: 1px solid rgba(245, 3, 225, 0.247); /* Borde tenue 
-    box-shadow: 0 4px 22px rgba(80, 3, 76, 0.37); /* Sombra ligera */
-    /*efecto vidrio templado*/
+    width: 100%;
+    height: 32vh;
+    /* border: #00c6ff 2px solid; */
 }
 
-
-
-.ContainerTextAndTittle{
+.OptionMenu > ul{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 2em;
-    text-align: center;
-    width: 80%;
-    /* border: seagreen 1px solid; */
-    overflow: hidden;
-    font-size: 25px;
-    padding-top: 5em;
-    /*efecto vidrio templado*/
-    /*background: rgba(235, 1, 184, 0.274); /* Blanco con transparencia 
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); /* Para soporte en Safari 
-    border: 1px solid rgba(245, 3, 225, 0.247); /* Borde tenue 
-    box-shadow: 0 4px 22px rgba(80, 3, 76, 0.37); /* Sombra ligera */
-    /*efecto vidrio templado*/
-    clip-path: polygon(
-    0 0,
-    95% 0,
-    100% 50%,
-    95% 100%,
-    0 100%,
-    0% 0%
-    );
-    background: url(./img/Imagen_fondos/Fondo_Tejido2.png)/*imagen de fondo para Who*/
-    no-repeat
-    2em 1em;
+    margin: 3.5em 0em;
+    text-align: end;
+    justify-content: end;
+    /* border: skyblue 1px solid; */
 }
 
-/*Contenedor de tittle y texto*/
+.OptionMenu > ul > li{
+    list-style: none;
+}
 
-.ContainerTextAndTittle > .TittleWhoXo{
-    /* border: springgreen 1px solid; */
-    width: 40%;
-    height: 10vh;
-    margin-left: 5.5em;
-    padding-top: 1px;
-    /*efecto vidrio templado*/
-    background: rgba(242, 243, 245, 0.144); /* Blanco con transparencia */
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); /* Para soporte en Safari */
-    border: 1px solid rgba(245, 3, 225, 0.247); /* Borde tenue */
-    box-shadow: 0 4px 32px rgba(80, 3, 76, 0.37); /* Sombra ligera */
-    /*efecto vidrio templado*/
-    color: var(--Blanco);
+.OptionMenu > ul > li > a{
+    text-decoration: none;
+    font-size: 19px;
+    color: var(--Rosa-fuerte);
     font-family: Lobster;
-    font-size: 38px;
-    border-radius: 1em 2em;
+
+    &:hover{
+        cursor: pointer;
+        border-bottom: var(--Rosa-fuerte) 4px dashed;
+        border-radius: 2em;
+    }
 }
 
-.ContainerTextAndTittle > .TextWhoXo{
-    width: 70%;
-    height: 40vh;
-    /* border: springgreen 1px solid; */
-    margin-left: 4em;
-    /*efecto vidrio templado*/
-    background: rgba(242, 243, 245, 0.144); /* Blanco con transparencia */
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); /* Para soporte en Safari */
-    border: 1px solid rgba(245, 3, 225, 0.247); /* Borde tenue */
-    box-shadow: 0 4px 22px rgba(80, 3, 76, 0.37); /* Sombra ligera */
-    /*efecto vidrio templado*/
-    color: var(--Blanco);
-    font-family: Indie_Flower;
-    font-size: 22px;
-    text-align: justify;
-    border-radius: 1em 2em;
+.is-scrolled{
+    position: sticky;
+    background: var(--Rosa-fuerte);
 }
 
-.ContainerTextAndTittle > .TextWhoXo > p{
-    /* border: yellow 1px solid; */
-    width: 90%;
-    margin: 2.5em 1em;
-}
+/*Fin Diseño de menú*/
 
-.ImgWhoXo{
-    /* border: plum 1px solid; */
-    margin: 3em;
-    width: 50%;
-    padding-left: 5px;
-    background: url(./img/Imagen_fondos/FondoTejido-removebg-preview.png)
-    no-repeat
-    center / 35em;/*imagen de fondo para Who*/
+/*Efecto para desplazamiento del menú*/
+
+/*Fin del Efecto para desplazamiento del menú*/
+
+/*inicio diseño de imagenes de contenedor menú y who*/
+
+.ImgLogoXo > img{
+    position: absolute;
+    width: 15%;
+    height: 30vh;
+    top: 3em;
+    left: 8em;
 }
 
 .ImgWhoXo > img{
     width: 40%;
+    height: 30vh;
+    display: block;/*Elimina los espacios en linea que tiene la imagen*/
+    box-sizing: border-box;/*adapanta el border y pading se inclya en la dimesion de la imagen*/
+    object-fit: cover;/*asegura que la imagen cubra su caja sin deformarse; recorta los bordes si es necesario manteniendo la proporción.*/
+    border-radius: 50%;/*pone el borde en un 55% adaptandolo a la imagen*/
+    border: 6px dashed rgba(255, 0, 128, 0.9); /* borde circular que sigue la forma*/
+    background-clip: padding-box; /* evita que la imagen se solape con el borde */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+/*fin de diseño de imagenes de contenedor menú y who*/
+
+/*Inicia el diseño de Contenedor de tittle and text for Who*/
+
+#WhoMyXo > .container-fluid:nth-child(1){
+    /* border: slategray 2px solid; */
+    height: 150vh;
+    background: url(./img/Fondos_Pagina_Munecos/FondoWho3.jpg) no-repeat center / 120% 150vh;
+    object-fit: cover;
+}
+
+.ContainerWhoXo{
+    position: relative;
+    width: 100%;
+    height: 120vh;
+    display: flex;
+    flex-direction: column;
+    /* border: violet 2px solid; */
+}
+
+.ContainerTextAndTittleWhoXo{
+    position: relative;
+    width: 100%;
     height: 40vh;
+    /* border: red 2px solid; */
+    top: 6em;
+    left: 0em;
+    align-content: center;
 }
 
-.ImgWhoXo > img:nth-child(1){/*Flores de tejido*/
+.TittleWhoXo > h3{/*contenedor del titulo afecta el h3 directamente*/
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    justify-content: center;
+    text-align: center;
+    align-content: center;/*alinia el texto en medio del contenedor*/
+    font-size: 40px;
+    color: var(--Blanco);
+    font-family: "Lobster";
+    /*efecto vidrio templado*/
+    background: rgba(206, 7, 224, 0.068); /* Blanco con transparencia */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Para soporte en Safari */
+    border: 4px dashed rgba(245, 3, 213, 0.418); /* Borde tenue */
+    box-shadow: 0 4px 22px rgba(80, 3, 76, 0.37); /* Sombra ligera */
+    /*efecto vidrio templado*/
+    left: 2em;
+    border-radius: 1em 2em;
+}
+
+.TextWhoXo{/*contenedor del texto*/
+    height: 50vh;
+    text-align: center;
+    align-content: center;
+    /* border: salmon 2px solid; */
+    /*efecto vidrio templado*/
+    background: rgba(206, 7, 224, 0.068); /* Blanco con transparencia */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Para soporte en Safari */
+    border: 4px dashed rgba(245, 3, 213, 0.418); /* Borde tenue */
+    box-shadow: 0 4px 22px rgba(80, 3, 76, 0.37); /* Sombra ligera */
+    /*efecto vidrio templado*/
+    color: var(--Rosa-Para-Letra);
+    font-size: 18px;
+    font-family: Playfair_Display;
+    margin-left: 6em;
+    border-radius: 1em 2em;
+}
+
+.ImgWhoXo{/*contenedor de las imagenes*/
+    height: 51vh;
+    width: 32%!important;
     position: absolute;
-    width: 15%;
-    height: 30vh;
-    border-radius: 100%;
-    right: 8em;
-    bottom: 10.5em;
-    filter: drop-shadow(0 0 20px rgb(184, 8, 37));
-    opacity: 0.8;
+    left: 57em;
+    top: 8em;
+    /* border: #ff0080 1px solid; */
+    filter: drop-shadow(0 0 10px rgb(139, 1, 116));
 }
 
-.ImgWhoXo > img:nth-child(2){/*Muñeco de Spiderman*/
+.ImgWhoXo > img:nth-child(1){/*Ramo de flores*/
     position: absolute;
-    width: 15%;
-    height: 30vh;
-    border-radius: 100%;
-    right: 11em;
-    bottom: 19em;
-    filter: drop-shadow(0 0 20px rgb(184, 8, 37));
-    opacity: 0.8;
+    left: 8em;
 }
 
-.ImgWhoXo > img:nth-child(3){/*Tejido de cabeza de muñeco*/
+.ImgWhoXo > img:nth-child(2){/*Muñeco de spiderman*/
     position: absolute;
-    width: 15%;
-    height: 30vh;
-    border-radius: 100%;
-    top: 18em;
-    right: 14em;
-    filter: drop-shadow(0 0 20px rgb(184, 8, 37));
-    opacity: 0.8;
+    left: 3em;
+    top: 7em;
 }
 
-/*Contenedor de tittle y texto*/
+.ImgWhoXo > img:nth-child(3){/*Llavero de cabeza*/
+    position: absolute;
+    top: 7em;
+    left: 13.5em;
+}
 
 
-/*Contenedor de Who termina el diseño*/
-
+/*Fin el diseño de Contenedor de tittle and text for Who*/
 
 /*Contenedor de AimXO Inicia el diseño*/
 
-.ContainerAim{
-    display: flex;
-    flex-direction: row;
+.ContainerTittleandTextAimXo{
+    position: relative;
+    /* border: royalblue 1px solid; */
     width: 100%;
-    height: 100vh;
-    /* border: slategrey 2px solid; */
-    background: url(./img/Imagen_fondos/tejido-de-punto-Fondo1.png) /*primer icono de estambre esta de lado superior izquierdo*/ no-repeat 13em /*lo mueve de izquierda a derecha*/ 7em /*de arriba hacia abajo*// 8em /*Tamaño*/,
-    url(./img/Imagen_fondos/tejido-de-punto-Fondo1.png) /*segundo icono de estambre esta enmedio abajo*/ no-repeat 38em /*lo mueve de izquierda a derecha*/ 31em /*de arriba hacia abajo*// 8em, /*Tamaño*/
-    url(./img/Imagen_fondos/tejido-de-punto-Fondo1.png) /*tercer icono de estambre esta de lado superior derecho*/ no-repeat 62em /*lo mueve de izquierda a derecha*/ 7em /*de arriba hacia abajo*// 8em; /*Tamaño*/
-    z-index: 0;
+    height: 120vh;
+    overflow: hidden;
+    background: url(../css/img/Iconos_Xo/ParcheXo.png) no-repeat 6em 3em / 5em 5em,/*primero icono de parche arriba a la izquieda*/
+    url(../css/img/Iconos_Xo/ParcheXo.png) no-repeat 40em 15em / 5em 5em,/*segundo parche de enmedio de arriba*/
+    url(../css/img/Iconos_Xo/ParcheXo.png) no-repeat 73em 3em / 5em 5em,/*tercer parche arriba a la derecha*/
+    url(../css/img/Iconos_Xo/ParcheXo.png) no-repeat 40em 30em / 5em 5em,/*cuarto parche abajo de enmedio*/
+    url(../css/img/Iconos_Xo/ParcheXo.png) no-repeat 6em 39em / 5em 5em,/*quinto parche abajo de enmedio*/
+    url(../css/img/Iconos_Xo/ParcheXo.png) no-repeat 73em 39em / 5em 5em,/*sexto parche abajo de derecha*/
+    url(../css/img/Iconos_Xo/Circulo_Xo.png) no-repeat 10em 20em / 10em 10em,
+    url(../css/img/Iconos_Xo/Circulo_Xo.png) no-repeat 63em 20em / 10em 10em;
 }
 
-
-.ContainerAim, .TittleAim, .TextAim{
-    /* border: royalblue 2px solid; */
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    z-index: 6;
+.ImgAimXo > img{
+    position: absolute;
+    width: 18%;
+    left: 8.7em;
+    top: 3em;
 }
 
-.TittleAim{
-    /* border: skyblue 1px solid; */
+.TittleAimXo{
+    position: relative;
+    /* border: sandybrown 1px solid; */
+    width: 100%;
     height: 30vh;
-    width: 40%;
+    margin: 3px 0px;
+    padding: 0;
     text-align: center;
-    justify-content: center;
+    align-content: center;
     color: var(--Blanco);
-    margin-left: 25em;
+    font-family: Lobster;
+    border-radius: 1em;
 }
 
-.TittleAim > h3{
-    font-size: 38px;
-    font-family: Lobster;
-    /*efecto vidrio templado*/
-    background: rgba(206, 7, 224, 0.144); /* Blanco con transparencia */
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); /* Para soporte en Safari */
-    border: 1px solid rgba(176, 3, 245, 0.418); /* Borde tenue */
-    box-shadow: 0 4px 22px rgba(80, 3, 76, 0.37); /* Sombra ligera */
-    /*efecto vidrio templado*/
+.TittleAimXo > h3{
+    position: relative;
+    width: 40%;
+    height: 12vh;
+    left: 10.5em;
+    top: 1em;
+    align-content: center;
+    background: var(--Rosa-fuerte);
     clip-path: polygon(/*figura de liston*/
     0 0,
     100% 0,/*afecta el lado derecho arriba*/
@@ -324,238 +302,101 @@ nav{
     0 100%,/*afecta el lado izquierdo*/
     4% 50%/*afecta el lado izquierdo*/
     );
+    filter: drop-shadow();
+    display: block;/*Elimina los espacios en linea que tiene la imagen*/
+    box-sizing: border-box;/*adapanta el border y pading se inclya en la dimesion de la imagen*/
+    object-fit: cover;/*asegura que la imagen cubra su caja sin deformarse; recorta los bordes si es necesario manteniendo la proporción.*/
+    border: 6px dashed rgba(255, 0, 128, 0.9); /* borde circular que sigue la forma*/
+    background-clip: padding-box; /* evita que la imagen se solape con el borde */
+    font-size: 38px;
+}
+
+.ContainerTextAimXo{
+    position: relative;
+    /* border: orange 2px solid; */
+    margin-bottom: 15em;
+    width: 100%;
+    height: 100vh;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
 }
 
 .TextAim{
-    /* border: slateblue 1px solid; */
+    position: relative;
+    /* border: #ff0080 1px solid; */
+    margin: 2em;
     height: 60vh;
-    width: 100%;
-    color: var(--Blanco);
-    font-family: Indie_Flower;
-    font-size: 22px;
     /*efecto vidrio templado*/
-    background: rgba(206, 7, 224, 0.144); /* Blanco con transparencia */
+    background: rgba(206, 7, 224, 0.068); /* Blanco con transparencia */
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px); /* Para soporte en Safari */
-    border: 1px solid rgba(176, 3, 245, 0.418); /* Borde tenue */
+    border: 4px dashed rgba(245, 3, 213, 0.418); /* Borde tenue */
     box-shadow: 0 4px 22px rgba(80, 3, 76, 0.37); /* Sombra ligera */
     /*efecto vidrio templado*/
-    clip-path: polygon(/*figura de liston*/
-    0 0,
-    100% 0,/*afecta el lado derecho arriba*/
-    97% 50%,/*edita el lado derecho el centro*/
-    100% 100%,/*afecta el lado derecho abajo*/
-    0 100%,/*afecta el lado izquierdo*/
-    4% 50%/*afecta el lado izquierdo*/
-    );
-    text-align: center;
-    justify-content: center;
+    bottom: 1.5em;
+    border-radius: 1em 2em;
+}
+
+.TextAim > h3{
+    position: relative;
+    /* border: yellow 1px solid; */
+    top: 1.5em;
 }
 
 .TextAim > p{
-    width: 90%;
-    margin: 3em;
+    position: relative;
+    top: 0em;
 }
-
-.Icon1Aim{
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    z-index: 10;/*afecta los iconos del tejido lo pone arriba del contenedor de texto*/
-
-    background:url(./img/Imagen_fondos/tejido-Costura-Fondo1.png) no-repeat 2em 8em / 8em /*tamaño*/;
-
-    background-position: 75em 30em,/*Imagen de icono de costura que esta abajo a la derecha*/
-    1em 8em;/*Imagen de icono de costura que esta arriba a la izquierda*/
-
-    transform: scaleX(-1);
-    /* border: 2px solid red; */
-}
-
-.Icon1Aim::before{
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: url(./img/Imagen_fondos/tejido-Costura-Fondo1.png) no-repeat 2em 8em / 8em /*tamaño*/;
-
-}
-
-/*Contenido de las flechas de fondo*/
-
-.FlechaAim1{
-    content: "";
-    position: absolute;
-    z-index: 1;
-    width: 30%;
-    height: 70vh;
-    left: 29.4em;
-    top: 58em;
-    background: var(--Rosa-fuerte);
-    clip-path: polygon(
-    0 0,
-    80% 0,
-    100% 50%,
-    80% 100%,
-    0 100%,
-    0% 0%
-    );
-    transform: rotate(90deg);
-}
-
 
 /*Contenedor de AimXO termina el diseño (Aim)*/
 
 /*inicia contenedor de tamaño (sizes)*/
 
-.ContainerSizes{
-    /* border: sandybrown 2px solid; */
+.ContainerSizesXo{
+    position: relative;
     width: 100%;
-    height: 100vh;
-    /* overflow: hidden; */
-    /*efecto vidrio templado*/
-    background: rgba(235, 1, 184, 0.192); /* Blanco con transparencia */
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); /* Para soporte en Safari */
-    border: 1px solid rgba(245, 3, 225, 0.247); /* Borde tenue */
-    box-shadow: 0 4px 22px rgba(80, 3, 76, 0.37); /* Sombra ligera */
-    /*efecto vidrio templado*/
-}
-
-.SizesXo{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100vh;
-    /* border: palegreen 1px solid; */
-    background: url(./img/Imagen_fondos/ListoFondo.png) no-repeat 0em 0em / 100em 30em,
-    url(./img/Imagen_fondos/Liston2fondo-.png) center;
-}
-
-.TittleSizeXo{
-    width: 100%;
-    height: 15vh;
-    /* border: springgreen 1px solid; */
+    height: 120vh;
     text-align: center;
     justify-content: center;
+    align-content: center;
 }
 
-.TittleSizeXo > h3{
-    /* border: rgb(184, 8, 37) 1px solid; */
-    margin: 1em;
-    font-size: 40px;
-    color: var(--Blanco);
-    font-family: Lobster;
-    /*efecto vidrio templado*/
-    background: rgba(206, 7, 224, 0.144); /* Blanco con transparencia */
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); /* Para soporte en Safari */
-    border: 1px solid rgba(176, 3, 245, 0.418); /* Borde tenue */
-    box-shadow: 0 4px 22px rgba(80, 3, 76, 0.37); /* Sombra ligera */
-    /*efecto vidrio templado*/
-    border-radius: 2em 1em;
-    clip-path: polygon(/*figura de liston*/
-    0 0,
-    100% 0,/*afecta el lado derecho arriba*/
-    97% 50%,/*edita el lado derecho el centro*/
-    100% 100%,/*afecta el lado derecho abajo*/
-    0 100%,/*afecta el lado izquierdo*/
-    4% 50%/*afecta el lado izquierdo*/
-    );
+#SizeXo{
+    position: relative;
+    min-height: 100vh;
+    /* overflow-y: scroll; */
 }
 
-.ContainerImgSize{
-    display: flex;
-    flex-direction: row;
-    height: 85vh;
-    /* border: rgb(250, 0, 146) solid 2px; */
-}
-
-.SizeImg{/*viene o se agrego los estilos para la letra de los tamaños aqui*/
-    text-align: center;
-    color: var(--Blanco);
-    font-family: Indie_Flower;
-    /* border: orangered solid 2px; */
-    width: 50%;
-    height: 80vh;
-    margin-top: 4em;
-}
-
-.SizeImg > img{
-    /*efecto vidrio templado*/
-    background: rgba(206, 7, 224, 0.144); /* Blanco con transparencia */
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); /* Para soporte en Safari */
-    border: 1px solid rgba(176, 3, 245, 0.418); /* Borde tenue */
-    box-shadow: 0 4px 22px rgba(80, 3, 76, 0.37); /* Sombra ligera */
-    /*efecto vidrio templado*/
-    border-radius: 1em 2em;
-    width: 100%;
+body.lock-scroll {
     overflow: hidden;
-    filter: drop-shadow(0 0 20px white);
 }
 
-/*contenedor donde esta el titulo y imagen*/
-
-.SizeImg:nth-child(1) img{
+.ContainerImgSizeXo{
     position: relative;
-    width: 80%;
-    height: 28vh;
-    border: white 2px solid;
 }
 
-.SizeImg:nth-child(2) img{
-    position: relative;
-    width: 80%;
-    height: 30vh;
-    border: white 2px solid;
+.scroll-step{
+    opacity: 0;
+    transform: translateY(60px) scale(0.95);
+    transition: all 3s ease;
 }
 
-.SizeImg:nth-child(3) img{
-    position: relative;
-    width: 80%;
-    height: 35vh;
-    border: white 2px solid;
+.scroll-step.active{
+    opacity: 1;
+    transform: translateY(0) scale(1);
 }
-
-.SizeImg:nth-child(4) img{
-    position: relative;
-    width: 85%;
-    height: 40vh;
-    border: white 2px solid;
-}
-
-.SizeImg:nth-child(5) img{
-    position: relative;
-    top: 0.5em;
-    width: 85%;
-    height: 45vh;
-    border: white 2px solid;
-}
-
-.SizeImg:nth-child(6) img{
-    position: relative;
-    width: 85%;
-    height: 50vh;
-    border: white 2px solid;
-}
-
-.SizeImg:nth-child(7) img{
-    position: relative;
-    width: 85%;
-    height: 55vh;
-    border: white 2px solid;
-}
-
-/*fin contenedor donde esta el titulo y imagen*/
 
 /*Termina contenedor de tamaño (sizes)*/
 
 /*Inicio de contenedor de Catalogo*/
 
 .CatalogoXocontainer{
+    position: relative;
     width: 100%;
     height: 310vh;
     /* border: royalblue 2px solid; */
+    z-index: 1;
 }
 
 .ImgContainerCatXo{
@@ -564,8 +405,8 @@ nav{
     min-height: auto;
     gap: 2em;
     margin: 5em;
-    top: 165em;
-    /* border: steelblue 2px solid; */
+    top: 4em;
+    border: steelblue 2px solid;
     z-index: 99;
     overflow: hidden;
 }
