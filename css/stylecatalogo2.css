@@ -71,7 +71,7 @@ body{
 }
 
 #SizeXo > .container-fluid:nth-child(1){
-    border: orange 2px solid;
+    /* border: orange 2px solid; */
     height: 770vh;
     
 }
