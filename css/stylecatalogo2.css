@@ -72,7 +72,7 @@ body{
 
 #SizeXo > .container-fluid:nth-child(1){
     /* border: orange 2px solid; */
-    height: 770vh;
+    height: 420vh;
     
 }
 
@@ -370,54 +370,43 @@ body{
     /* overflow-y: scroll; */
 }
 
-.ContainerImgSizeXo{
-    height: 150vh;
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
-    border: tomato 2px solid;
+.ContainerImgSizeXo {
+    position: relative;
+    height: 400vh; /* Ajusta esto: a más altura, más lento el scroll */
 }
 
-.SizeImg{
-    border: #00c6ff solid 2px;
-    height: 150vh;
+/* Este es el que se queda quieto en pantalla */
+.sticky-wrapper {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow: hidden; /* Evita que salgan barras de scroll internas */
     display: flex;
-    align-items: center;
     justify-content: center;
-    scroll-snap-align: center;
-    overflow: hidden;
+    align-items: center;
 }
 
-.scroll-step > img{
-    position: relative;
-    align-content: center;
-    width: 90%;
-    height: 90vh;
-}
-    
-
-.scroll-step{
-    position: relative;
-    opacity: 0;
-    transform: translateX(150px) scale(0.95);
-    transition: all 1.5s ease;
-    bottom: 9em;
-}
-
-.scroll-step > img:nth-child(2){
-    position: relative;
-    height: 80vh;
-    bottom: 3em;
+/* Las imágenes se enciman una de otra */
+.SizeImg {
+    position: absolute; /* Todas en el mismo lugar */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Ocultas por defecto */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    pointer-events: none;
 }
 
-.ContainerImgSizeXo > .scroll-step:nth-child(7) img{
-    position: relative;
-    width: 10%;
-    bottom: 3em;
-}
-
-body.lock-scroll {
-    overflow: hidden;
+/* Solo la que tiene .active se ve */
+.SizeImg.active {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: all;
 }
 
 .scroll-step.active{
