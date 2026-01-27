@@ -356,10 +356,12 @@ body{
 .ContainerSizesXo{
     position: relative;
     width: 100%;
-    height: 120vh;
+    height: 100vh;
     text-align: center;
     justify-content: center;
     align-content: center;
+    /* border: #7928ca 1px solid; */
+    
 }
 
 #SizeXo{
@@ -368,18 +370,54 @@ body{
     /* overflow-y: scroll; */
 }
 
-body.lock-scroll {
+.ContainerImgSizeXo{
+    height: 150vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    border: tomato 2px solid;
+}
+
+.SizeImg{
+    border: #00c6ff solid 2px;
+    height: 150vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: center;
     overflow: hidden;
 }
 
-.ContainerImgSizeXo{
+.scroll-step > img{
     position: relative;
+    align-content: center;
+    width: 90%;
+    height: 90vh;
 }
+    
 
 .scroll-step{
+    position: relative;
     opacity: 0;
-    transform: translateY(60px) scale(0.95);
-    transition: all 3s ease;
+    transform: translateX(150px) scale(0.95);
+    transition: all 1.5s ease;
+    bottom: 9em;
+}
+
+.scroll-step > img:nth-child(2){
+    position: relative;
+    height: 80vh;
+    bottom: 3em;
+}
+
+.ContainerImgSizeXo > .scroll-step:nth-child(7) img{
+    position: relative;
+    width: 10%;
+    bottom: 3em;
+}
+
+body.lock-scroll {
+    overflow: hidden;
 }
 
 .scroll-step.active{

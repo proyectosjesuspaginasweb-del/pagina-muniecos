@@ -11,11 +11,11 @@ $(function() {
 
 /*Efecto de size*/
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {/*DOM dice cuando la pagina este 100% cargada ejecuta lo siguiente*/
 
-    const steps = document.querySelectorAll(".scroll-step");
+    const steps = document.querySelectorAll(".scroll-step");/*Buscame en el html la clase llamada .scroll-step y guardamela como una constante*/
 
-    const observer = new IntersectionObserver(
+    const observer = new IntersectionObserver(/*IntersectionObserver si los elementos salen o entran hasmela visible*/
         (entries) => {
             entries.forEach(entry => {
 
