@@ -72,7 +72,7 @@ body{
 
 #SizeXo > .container-fluid:nth-child(1){
     /* border: orange 2px solid; */
-    height: 420vh;
+    height: 422vh;
     
 }
 
@@ -364,6 +364,35 @@ body{
     
 }
 
+.ContainerTittleandSizesXo{
+    position: static;
+    width: 100%;
+    height: 100vh;
+    top: 3em;
+    /* border: springgreen 1px solid; */
+}
+
+/*Estilo para titulos*/
+
+.TittleSizeXo > h3{
+    width: 100%;
+    height: 20vh;
+    text-align: center;
+    align-content: center;
+    font-size: 40px;
+    color: var(--Blanco);
+    font-family: Lobster;
+    border: tomato 2px solid;
+}
+
+.TittleSizeXoSize > h3{
+    font-size: 25px;
+    font-family: Playfair_Display;
+    color: var(--Blanco);
+}
+
+/*Fin Estilo para titulos*/
+
 #SizeXo{
     position: relative;
     min-height: 100vh;
@@ -378,29 +407,67 @@ body{
 /* Este es el que se queda quieto en pantalla */
 .sticky-wrapper {
     position: sticky;
-    top: 0;
-    height: 100vh;
+    top: 0em;
+    width: 100%;
+    max-height: 100vh;
     overflow: hidden; /* Evita que salgan barras de scroll internas */
     display: flex;
     justify-content: center;
     align-items: center;
+    border: #6d015f 2px solid;
+}
+
+.sticky-wrapper:nth-child(1){
+    /* border: purple 2px solid; */
+    /*efecto vidrio templado*/
+    width: 100%;
+    height: 100vh;
+    z-index: 2;
+}
+
+.sticky-wrapper > .SizeImg:nth-child(2n+1){/*Impares en las imagenes*/
+    z-index: 2;
+    width: 100%;
+    background: url(../css/img/Fondos_Pagina_Munecos/wave.svg)no-repeat -51em 2em / cover,
+    url(../css/img/Fondos_Pagina_Munecos/wave-Arriba.svg) no-repeat 0em -9em / 113% 100% ;
+}
+
+.sticky-wrapper > .SizeImg:nth-child(2n){/*pares en las imagenes*/
+    background: url(../css/img/Fondos_Pagina_Munecos/wave2.svg) no-repeat center / cover,
+    url(../css/img/Fondos_Pagina_Munecos/wave2-Arriba.svg) no-repeat 0em -9em / 113% 100% ;
+    z-index: 2;
+    width: 100%;
 }
 
 /* Las imágenes se enciman una de otra */
-.SizeImg {
+.SizeImg {/*contenedor principal que tiene el titulo de tamaño e imagen*/
     position: absolute; /* Todas en el mismo lugar */
-    top: 2em;
-    left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    top: 0em;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     opacity: 0; /* Ocultas por defecto */
     transition: opacity 0.5s ease-in-out;
     pointer-events: none;
     transform: 3s ease translateX(100px) linear;
+    z-index: 2;
+    border: #ff0080 2px solid;
+}
+
+.SizeImg img{
+    position: relative;
+    width: 30%;
+    height: 60vh;
+    border-radius: 2em;
+    box-shadow: #6d015f 5px 10px 20px;
+    z-index: 1;
+    /* border: tomato 2px solid; */
+}
+
+.FondoOndeado{
+    position: absolute;
+    z-index: 2;
 }
 
 /* Solo la que tiene .active se ve */
@@ -408,6 +475,14 @@ body{
     opacity: 1;
     transform: scale(1);
     pointer-events: all;
+}
+
+.scroll-step{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    align-content: center;
+    border: yellow 2px solid;
 }
 
 .scroll-step.active{
@@ -635,10 +710,5 @@ form{
 .NombreFormXo > input:nth-child(2){
     color: var(--Rosa-fuerte);
 }
-
-
-
-
-
 
 /*Termina el contenedor de Contact*/
