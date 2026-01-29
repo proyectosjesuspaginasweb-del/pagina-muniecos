@@ -433,8 +433,8 @@ body{
 }
 
 .sticky-wrapper > .SizeImg:nth-child(2n){/*pares en las imagenes*/
-    background: url(../css/img/Fondos_Pagina_Munecos/wave2.svg) no-repeat center / cover,
-    url(../css/img/Fondos_Pagina_Munecos/wave2-Arriba.svg) no-repeat 0em -9em / 113% 100% ;
+    background: url(../css/img/Fondos_Pagina_Munecos/wave2.svg) no-repeat 0em 10em / cover,
+    url(../css/img/Fondos_Pagina_Munecos/wave2-Arriba.svg) no-repeat 0em -10em / 113% 100% ;
     z-index: 2;
     width: 100%;
 }
