@@ -60,7 +60,7 @@ body{
 .container-fluid{
     max-width: 100%;
     height: 120vh;
-    border: yellow 2px solid;
+    /* border: yellow 2px solid; */
     margin-bottom: 10em;
     box-shadow: 0 0 50px white;
 }
@@ -74,6 +74,11 @@ body{
     /* border: orange 2px solid; */
     height: 422vh;
     
+}
+
+#CatalogXo > .container-fluid:nth-child(1){
+    border: orange 2px solid;
+    height: 300vh;
 }
 
 /*Inicio Diseño de menú*/
@@ -362,6 +367,7 @@ body{
     align-content: center;
     /* border: #7928ca 1px solid; */
     
+    
 }
 
 .ContainerTittleandSizesXo{
@@ -383,12 +389,20 @@ body{
     color: var(--Blanco);
     font-family: Lobster;
     border: tomato 2px solid;
+    /*efecto vidrio templado*/
+    background: rgba(206, 7, 224, 0.068); /* Blanco con transparencia */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Para soporte en Safari */
+    border: 4px dashed rgba(245, 3, 213, 0.418); /* Borde tenue */
+    box-shadow: 0 4px 22px rgba(80, 3, 76, 0.37); /* Sombra ligera */
+    /*efecto vidrio templado*/
 }
 
 .TittleSizeXoSize > h3{
     font-size: 25px;
     font-family: Playfair_Display;
     color: var(--Blanco);
+    /* border: turquoise 2px solid; */
 }
 
 /*Fin Estilo para titulos*/
@@ -414,7 +428,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: #6d015f 2px solid;
+    /* border: #6d015f 2px solid; */
 }
 
 .sticky-wrapper:nth-child(1){
@@ -428,13 +442,13 @@ body{
 .sticky-wrapper > .SizeImg:nth-child(2n+1){/*Impares en las imagenes*/
     z-index: 2;
     width: 100%;
-    background: url(../css/img/Fondos_Pagina_Munecos/wave.svg)no-repeat -51em 2em / cover,
-    url(../css/img/Fondos_Pagina_Munecos/wave-Arriba.svg) no-repeat 0em -9em / 113% 100% ;
+    background: url(../css/img/Fondos_Pagina_Munecos/wave.svg)no-repeat -51em 2em / cover,/*Fondo ondulado de abajo*/
+    url(../css/img/Fondos_Pagina_Munecos/wave-Arriba.svg) no-repeat 0em -10em / 113% 100% ;/*Fondo ondulado de arriba*/
 }
 
 .sticky-wrapper > .SizeImg:nth-child(2n){/*pares en las imagenes*/
-    background: url(../css/img/Fondos_Pagina_Munecos/wave2.svg) no-repeat 0em 10em / cover,
-    url(../css/img/Fondos_Pagina_Munecos/wave2-Arriba.svg) no-repeat 0em -10em / 113% 100% ;
+    background: url(../css/img/Fondos_Pagina_Munecos/wave2.svg) no-repeat 0em 10em / cover,/*Fondo ondulado de Abajo*/
+    url(../css/img/Fondos_Pagina_Munecos/wave2-Arriba.svg) no-repeat 0em -10em / 113% 100% ;/*Fondo ondulado de arriba*/
     z-index: 2;
     width: 100%;
 }
@@ -452,14 +466,14 @@ body{
     pointer-events: none;
     transform: 3s ease translateX(100px) linear;
     z-index: 2;
-    border: #ff0080 2px solid;
+    /* border: #ff0080 2px solid; */
 }
 
-.SizeImg img{
+.SizeImg img{/*contenedor de imagenes*/
     position: relative;
     width: 30%;
     height: 60vh;
-    border-radius: 2em;
+    border-radius: 2em 3em;
     box-shadow: #6d015f 5px 10px 20px;
     z-index: 1;
     /* border: tomato 2px solid; */
@@ -482,7 +496,7 @@ body{
     width: 100%;
     height: 100vh;
     align-content: center;
-    border: yellow 2px solid;
+    /* border: yellow 2px solid; */
 }
 
 .scroll-step.active{
@@ -497,46 +511,41 @@ body{
 .CatalogoXocontainer{
     position: relative;
     width: 100%;
-    height: 310vh;
-    /* border: royalblue 2px solid; */
-    z-index: 1;
-}
-
-.ImgContainerCatXo{
-    position: absolute;
-    width: 88%;
-    min-height: auto;
-    gap: 2em;
-    margin: 5em;
-    top: 4em;
-    border: steelblue 2px solid;
-    z-index: 99;
-    overflow: hidden;
-}
-
-.ImgContainerCatXo > img{/*impacta las imagenes del catalogo*/
-    width: 25%;
-    height: 50vh;
-    margin: 0em 2.7em;
-    border-radius: 3em;
-    /* border: springgreen 1px solid; */
-    overflow: hidden;
-    background: linear-gradient(135deg,#ff0080,#7928ca,#00c6ff);
+    height: 300vh;
+    border: #6d015f 2px solid;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .TittleCatalogo{
-    position: absolute;
-    text-align: center;
-    left: 18em;
-    /* border: wheat 2px solid; */
+    position: relative;
+    width: 100%;
     height: 20vh;
-    width: 60%;
+    bottom: 6em;
+    border: #ff0080 2px solid;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.TittleCatalogo > h3{
+    position: relative;
+    width: 50%;
+    height: 12vh;
+    align-content: center;
+    text-align: center;
+    left: 7em;
+    color: var(--Blanco);
+    font-family: Lobster;
+    font-size: 45px;
+    border: royalblue 1px solid;
     /*efecto vidrio templado*/
-    background: rgba(206, 7, 224, 0.144); /* Blanco con transparencia */
+    background: rgb(224, 7, 195); /* Blanco con transparencia */
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px); /* Para soporte en Safari */
-    border: 1px solid rgba(176, 3, 245, 0.418); /* Borde tenue */
-    box-shadow: 0 4px 22px rgba(80, 3, 76, 0.37); /* Sombra ligera */
+    border: 4px dashed rgb(121, 0, 158); /* Borde tenue */
+    box-shadow: 0 4px 22px rgb(61, 0, 58); /* Sombra ligera */
     /*efecto vidrio templado*/
     clip-path: polygon(/*figura de liston*/
     0 0,
@@ -546,73 +555,60 @@ body{
     0 100%,/*afecta el lado izquierdo*/
     4% 50%/*afecta el lado izquierdo*/
     );
-    color: var(--Blanco);
-    z-index: 99;
 }
 
-.TittleCatalogo > h3{
-    padding-top: 7px;
-    font-family: Lobster;
-    font-size: 45px;
-}
-
-.TittleCatalogo > p{
-    font-family: Indie_Flower;
-    font-size: 20px;
-}
-
-.ImgContainerCatXo > img:nth-child(2n){/*pares los contenedores de img impares*/
-    /* border: yellow 1px solid; */
-    height: 70vh;
-    margin-bottom: 3.9em;
-}
-
-.ImgContainerCatXo > img:nth-child(2n+1){/*selecciona los contenedores de img impares*/
-    /* border: steelblue 1px solid; */
-    height: 50vh;
-    margin-bottom: 11.9em;
-}
-
-.ImgContainerCatXo > img:nth-child(4){
+.TextCatalogo{
     position: relative;
-    height: 50vh;
-    bottom: 12em;
-}
-
-.ImgContainerCatXo > img:nth-child(6){
-    position: relative;
-    height: 50vh;
-    bottom: 12em;
-}
-
-.ImgContainerCatXo > img:nth-child(7){
-    position: relative;
-    height: 50vh;
-    bottom: 16em;
-}
-
-.ImgContainerCatXo > img:nth-child(8){/*pares los contenedores de img impares*/
-    position: relative;
-    height: 70vh;
-    bottom: 8em;
-}
-
-.ImgContainerCatXo > img:nth-child(9){/*pares los contenedores de img impares*/
-    position: relative;
-    height: 50vh;
-    bottom: 16em;
-}
-
-/*Imagenes para adornar fondo de catalogo*/
-
-.FondoCatalogoXo{
-    position: absolute;
+    border: rgba(235, 2, 122, 0.822) 2px solid;
     width: 100%;
-    height: 250vh;
-    background: url(./img/Imagen_fondos/FondoCorazonTejidoXo2.png) center / 20em;/*Imagen de bola de estrambre dentro de circulo*/
-    /* border: springgreen 1px solid; */
-    z-index: 1;
+    height: 20vh;
+    bottom: 4em;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    /*efecto vidrio templado*/
+    /*efecto vidrio templado*/
+    background: rgb(224, 7, 195); /* Blanco con transparencia */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Para soporte en Safari */
+    border: 4px dashed rgb(121, 0, 158); /* Borde tenue */
+    box-shadow: 0 4px 22px rgb(61, 0, 58); /* Sombra ligera */
+    /*efecto vidrio templado*/
+    color: var(--Blanco);
+    padding: 2em;
+    font-size: 20px;
+    font-family: Playfair_Display;
 }
+
+.ImgContainerCatXo{
+    width: 70%;
+    height: auto;
+    border: springgreen 2px solid;
+}
+
+.ImgContainerCatXo > img{
+    margin: 1em;
+    width: 30%;
+    height: 80vh;
+    /*efecto vidrio templado*/
+    background: rgb(224, 7, 195); /* Blanco con transparencia */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Para soporte en Safari */
+    border: 7px dashed rgb(238, 5, 122); /* Borde tenue */
+    box-shadow: 0 4px 22px rgb(241, 237, 241); /* Sombra ligera */
+    /*efecto vidrio templado*/  
+}
+
+.ImgContainerCatXo > img:nth-child(2n){
+    height: 60vh;
+    border-radius: 100%;
+}
+
+.ImgContainerCatXo > img:nth-child(2n+1){
+    height: 70vh;
+    border-radius: 20%;
+}
+
 
 /*Fin de Imagenes para adornar fondo de catalogo*/
 
