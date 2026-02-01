@@ -512,17 +512,24 @@ body{
     position: relative;
     width: 100%;
     height: 300vh;
-    border: #6d015f 2px solid;
+    /* border: #6d015f 2px solid; */
     align-content: center;
     justify-content: center;
     text-align: center;
+    overflow: hidden;
+}
+
+
+.ContainerTittleandText{
+    position: absolute;
+    border: #ff0080 2px solid;
+    top: 5em;
 }
 
 .TittleCatalogo{
     position: relative;
     width: 100%;
     height: 20vh;
-    bottom: 6em;
     border: #ff0080 2px solid;
     align-content: center;
     justify-content: center;
@@ -539,7 +546,7 @@ body{
     color: var(--Blanco);
     font-family: Lobster;
     font-size: 45px;
-    border: royalblue 1px solid;
+    /* border: royalblue 1px solid; */
     /*efecto vidrio templado*/
     background: rgb(224, 7, 195); /* Blanco con transparencia */
     backdrop-filter: blur(10px);
@@ -559,10 +566,9 @@ body{
 
 .TextCatalogo{
     position: relative;
-    border: rgba(235, 2, 122, 0.822) 2px solid;
+    /* border: rgba(235, 2, 122, 0.822) 2px solid; */
     width: 100%;
     height: 20vh;
-    bottom: 4em;
     text-align: center;
     justify-content: center;
     align-content: center;
@@ -581,32 +587,44 @@ body{
 }
 
 .ImgContainerCatXo{
-    width: 70%;
-    height: auto;
-    border: springgreen 2px solid;
+    position: relative;
+    align-content: center;
+    height: 200vh;
+    top: 4em;
+    border: red 2px solid;
 }
 
-.ImgContainerCatXo > img{
-    margin: 1em;
-    width: 30%;
-    height: 80vh;
+.ImgCatXo{
+    position: relative;
+    display: flex;
+    left: 2.5em;
+    flex-direction: row;
+    height: 55vh;
+    border: sienna 2px solid;
+    margin: 3em 2em;
     /*efecto vidrio templado*/
-    background: rgb(224, 7, 195); /* Blanco con transparencia */
+    background: rgba(224, 7, 188, 0.37); /* Blanco con transparencia */
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px); /* Para soporte en Safari */
-    border: 7px dashed rgb(238, 5, 122); /* Borde tenue */
-    box-shadow: 0 4px 22px rgb(241, 237, 241); /* Sombra ligera */
-    /*efecto vidrio templado*/  
+    border: 4px dashed rgb(158, 0, 97); /* Borde tenue */
+    box-shadow: 0 4px 22px rgb(61, 0, 58); /* Sombra ligera */
+    /*efecto vidrio templado*/
+    border-radius: 1em 3em;
 }
 
-.ImgContainerCatXo > img:nth-child(2n){
-    height: 60vh;
-    border-radius: 100%;
-}
+.ImgCatXo > img{
+    position: absolute;
+    width: 85%;
+    top: 1.5em;
+    left: 1.3em;
+    height: 45vh;
+    border-radius: 1em 3em;
+    transition: all 2s ease;
 
-.ImgContainerCatXo > img:nth-child(2n+1){
-    height: 70vh;
-    border-radius: 20%;
+    &:hover{
+        transform: scaleY(40px);
+        background: #000;
+    }
 }
 
 
