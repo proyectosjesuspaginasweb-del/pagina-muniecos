@@ -34,3 +34,6 @@ window.addEventListener("scroll", () => {/*cuando el usuario mueva la rueda del 
     }
 });
 
+/*Efecto de ventana para imagenes catalogo*/
+
+

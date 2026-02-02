@@ -35,7 +35,6 @@
     --Rosa-Para-Letra: rgb(150, 6, 118);
 }
 
-
 body{
     margin: 0;
     padding: 0;
@@ -592,6 +591,7 @@ body{
     height: 200vh;
     top: 4em;
     border: red 2px solid;
+    overflow: hidden;
 }
 
 .ImgCatXo{
@@ -627,6 +627,129 @@ body{
     }
 }
 
+.ImgCatXo > a{
+    position: relative;
+    width: 25%;
+    height: 10vh;
+    /* border: #ff0080 solid 2px; */
+    z-index: 4;
+    left: 6em;
+    top: 8em;
+    opacity: 0.5;
+}
+
+.ImgCatXo > a > img{
+    position: relative;
+    width: 100%;
+    height: auto;
+    z-index: 4;
+}
+
+.ModalDialog{
+    position: fixed;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 999;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    transition: opacity 400ms;
+    /* border: yellow 2px solid; */
+    overflow: hidden;
+    overflow-y: none;
+}
+
+.ModalContent{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    /* border: #6d015f 2px solid; */
+    overflow: hidden;
+}
+
+.ModalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
+
+html:has(.ModalDialog:target) {/*hace que solo afecte el modalDialog para que al abrir las imagenes en grande no haga scroll*/
+    overflow: hidden;
+}
+
+.ModalDialog > div > img {
+	width: 50%;
+	position: relative;
+	height: 80vh;
+    border-radius: 1em 3em;
+    /*efecto vidrio templado*/
+    -webkit-backdrop-filter: blur(10px); /* Para soporte en Safari */
+    border: 10px dashed rgb(205, 0, 247); /* Borde tenue */
+    /*efecto vidrio templado*/
+}
+
+.btn-cerrar > img{
+    position: relative;
+    width: 100%;
+    left: 23.5em;
+    bottom: 5em;
+    height: 10vh;
+    font-size: 40px;
+    text-decoration: none;
+    z-index: 999;
+}
+
+.FlechaDerecha, .FlechaIzquierda {
+    flex-shrink: 0; /* Evita que la flecha se aplaste */
+    width: 80px;    /* Tamaño fijo para las flechas */
+    cursor: pointer;
+    z-index: 10;
+}
+
+.FlechaDerecha{
+    position: absolute;
+    /* border: #6d015f 2px solid; */
+    width: 14%;
+    height: 30vh;
+    top: 13em;
+    right: 8em;
+}
+
+.FlechaDerecha > img{
+    position: absolute;
+    width: 100%;
+    height: 20vh;
+    right: 0.1em;
+    top: 1.5em;
+}
+
+.FlechaIzquierda{
+    position: absolute;
+    /* border: #6d015f 2px solid; */
+    width: 14%;
+    height: 30vh;
+    top: 13em;
+    left: 8em;
+    z-index: 4;
+    transform: rotate(180deg);
+}
+
+.FlechaIzquierda > img{
+    position: absolute;
+    width: 100%;
+    height: 20vh;
+    right: 0em;
+    top: 1.5em;
+}
 
 /*Fin de Imagenes para adornar fondo de catalogo*/
 
