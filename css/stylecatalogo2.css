@@ -629,20 +629,27 @@ body{
     /*efecto vidrio templado*/
 }
 
-.ImgCatXo > a{
+.ImgCatXo > a{/*el la imagen del cuadrado*/
     position: relative;
-    width: 25%;
-    height: 10vh;
+    width: 100%;
+    height: 50vh;
     /* border: #ff0080 solid 2px; */
     z-index: 4;
-    left: 6em;
-    top: 8em;
-    opacity: 0.5;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: transform 1s ease, opacity 1s ease, top 1s ease;
+    justify-content: center;
+    align-content: center;
+
+    &:hover{
+        opacity: 0.8;
+        transform: translateY(0);
+    }
 }
 
 .ImgCatXo > a > img{
     position: relative;
-    width: 100%;
+    width: 20%;
     height: auto;
     z-index: 4;
 }
@@ -755,18 +762,23 @@ html:has(.ModalDialog:target) {/*hace que solo afecte el modalDialog para que al
 
 .buttomMore{
     position: relative;
-    top: 4em;
+    width: 100%;
+    top: 3em;
+    align-content: center;
+    justify-content: center;
 }
 
-.buttomMore > input{
-    border-radius: 2em;
-    width: 10%;
-    height: 5vh;
-    text-align: center;
-    background: var(--Rosa-fuerte);
-    color: var(--Blanco);
-    font-size: 20px;
+.buttomMore > a{
+    width: 50%;
+    /*efecto vidrio templado*/
+    background: rgba(224, 7, 188, 0.37); /* Blanco con transparencia */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Para soporte en Safari */
+    border: 4px dashed rgb(158, 0, 97); /* Borde tenue */
+    box-shadow: 0 4px 22px rgb(61, 0, 58); /* Sombra ligera */
+    /*efecto vidrio templado*/
 }
+
 
 /*Fin de Imagenes para adornar fondo de catalogo*/
 
