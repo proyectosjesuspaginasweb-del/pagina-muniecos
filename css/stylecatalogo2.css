@@ -66,7 +66,7 @@ body{
 
 #CatalogXo > .container-fluid:nth-child(1){/*se puso para separar el contenedor de catalogo con ubicacion solo afecta ese*/
     /* border: orange 2px solid; */
-    margin-bottom: 70em;
+    margin-bottom: 10em;
 }
 
 #SizeXo > .container-fluid:nth-child(1){
@@ -76,8 +76,8 @@ body{
 }
 
 #CatalogXo > .container-fluid:nth-child(1){
-    border: orange 2px solid;
-    height: 300vh;
+    /* border: orange 2px solid; */
+    height: 280vh;
 }
 
 /*Inicio Diseño de menú*/
@@ -521,7 +521,7 @@ body{
 
 .ContainerTittleandText{
     position: absolute;
-    border: #ff0080 2px solid;
+    /* border: #ff0080 2px solid; */
     top: 5em;
 }
 
@@ -529,7 +529,7 @@ body{
     position: relative;
     width: 100%;
     height: 20vh;
-    border: #ff0080 2px solid;
+    /* border: #ff0080 2px solid; */
     align-content: center;
     justify-content: center;
     align-items: center;
@@ -588,9 +588,9 @@ body{
 .ImgContainerCatXo{
     position: relative;
     align-content: center;
-    height: 200vh;
+    height: 250vh;
     top: 4em;
-    border: red 2px solid;
+    /* border: red 2px solid; */
     overflow: hidden;
 }
 
@@ -600,13 +600,13 @@ body{
     left: 2.5em;
     flex-direction: row;
     height: 55vh;
-    border: sienna 2px solid;
+    /* border: sienna 2px solid; */
     margin: 3em 2em;
     /*efecto vidrio templado*/
     background: rgba(224, 7, 188, 0.37); /* Blanco con transparencia */
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px); /* Para soporte en Safari */
-    border: 4px dashed rgb(158, 0, 97); /* Borde tenue */
+    border: 4px dashed rgba(158, 0, 97, 0.39); /* Borde tenue */
     box-shadow: 0 4px 22px rgb(61, 0, 58); /* Sombra ligera */
     /*efecto vidrio templado*/
     border-radius: 1em 3em;
@@ -620,11 +620,13 @@ body{
     height: 45vh;
     border-radius: 1em 3em;
     transition: all 2s ease;
-
-    &:hover{
-        transform: scaleY(40px);
-        background: #000;
-    }
+    /*efecto vidrio templado*/
+    background: rgba(224, 7, 188, 0.37); /* Blanco con transparencia */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Para soporte en Safari */
+    border: 4px dashed rgb(158, 0, 97); /* Borde tenue */
+    box-shadow: 0 4px 22px rgb(61, 0, 58); /* Sombra ligera */
+    /*efecto vidrio templado*/
 }
 
 .ImgCatXo > a{
@@ -749,6 +751,21 @@ html:has(.ModalDialog:target) {/*hace que solo afecte el modalDialog para que al
     height: 20vh;
     right: 0em;
     top: 1.5em;
+}
+
+.buttomMore{
+    position: relative;
+    top: 4em;
+}
+
+.buttomMore > input{
+    border-radius: 2em;
+    width: 10%;
+    height: 5vh;
+    text-align: center;
+    background: var(--Rosa-fuerte);
+    color: var(--Blanco);
+    font-size: 20px;
 }
 
 /*Fin de Imagenes para adornar fondo de catalogo*/
