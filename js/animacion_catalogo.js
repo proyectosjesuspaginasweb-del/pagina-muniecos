@@ -11,32 +11,29 @@ $(function() {
 
 /*Efecto de size*/
 
-document.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("scroll", () => {/*cuando el usuario mueva la rueda del raton hacia abajo has este efecto*/
+    const container = document.querySelector(".ContainerImgSizeXo");
+    const steps = document.querySelectorAll(".SizeImg");
+    
+    // Calculamos cuánto hemos scrolleado dentro del contenedor
+    const rect = container.getBoundingClientRect();
+    const scrollPercent = -rect.top / (rect.height - window.innerHeight);
+    
+    if (scrollPercent >= 0 && scrollPercent <= 1) {
+        // Dividimos el progreso entre el número de imágenes
+        const stepIndex = Math.floor(scrollPercent * steps.length);
+        const targetIndex = Math.min(stepIndex, steps.length - 1);
 
-    const steps = document.querySelectorAll(".scroll-step");
-
-    const observer = new IntersectionObserver(
-        (entries) => {
-            entries.forEach(entry => {
-
-                if (entry.isIntersecting) {
-                    // Quitamos active a todos
-                    steps.forEach(step => step.classList.remove("active"));
-
-                    // Activamos solo el que está visible
-                    entry.target.classList.add("active");
-
-                    handleScrollLock(entry.target);
-                }
-
-            });
-        },
-        {
-            threshold: 0.6
-        }
-    );
-
-    steps.forEach(step => observer.observe(step));
-
+        steps.forEach((step, index) => {
+            if (index === targetIndex) {
+                step.classList.add("active");
+            } else {
+                step.classList.remove("active");
+            }
+        });
+    }
 });
+
+/*Efecto de ventana para imagenes catalogo*/
+
 

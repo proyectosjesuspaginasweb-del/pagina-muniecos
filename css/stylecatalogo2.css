@@ -35,7 +35,6 @@
     --Rosa-Para-Letra: rgb(150, 6, 118);
 }
 
-
 body{
     margin: 0;
     padding: 0;
@@ -102,20 +101,25 @@ nav{
 .container-fluid{
     max-width: 100%;
     height: 120vh;
-    border: yellow 2px solid;
+    /* border: yellow 2px solid; */
     margin-bottom: 10em;
     box-shadow: 0 0 50px white;
 }
 
 #CatalogXo > .container-fluid:nth-child(1){/*se puso para separar el contenedor de catalogo con ubicacion solo afecta ese*/
     /* border: orange 2px solid; */
-    margin-bottom: 70em;
+    margin-bottom: 10em;
 }
 
 #SizeXo > .container-fluid:nth-child(1){
     /* border: orange 2px solid; */
-    height: 770vh;
+    height: 422vh;
     
+}
+
+#CatalogXo > .container-fluid:nth-child(1){
+    /* border: orange 2px solid; */
+    height: 280vh;
 }
 
 /*Inicio Diseño de menú*/
@@ -398,11 +402,51 @@ nav{
 .ContainerSizesXo{
     position: relative;
     width: 100%;
-    height: 120vh;
+    height: 100vh;
     text-align: center;
     justify-content: center;
     align-content: center;
+    /* border: #7928ca 1px solid; */
+    
+    
 }
+
+.ContainerTittleandSizesXo{
+    position: static;
+    width: 100%;
+    height: 100vh;
+    top: 3em;
+    /* border: springgreen 1px solid; */
+}
+
+/*Estilo para titulos*/
+
+.TittleSizeXo > h3{
+    width: 100%;
+    height: 20vh;
+    text-align: center;
+    align-content: center;
+    font-size: 40px;
+    color: var(--Blanco);
+    font-family: Lobster;
+    border: tomato 2px solid;
+    /*efecto vidrio templado*/
+    background: rgba(206, 7, 224, 0.068); /* Blanco con transparencia */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Para soporte en Safari */
+    border: 4px dashed rgba(245, 3, 213, 0.418); /* Borde tenue */
+    box-shadow: 0 4px 22px rgba(80, 3, 76, 0.37); /* Sombra ligera */
+    /*efecto vidrio templado*/
+}
+
+.TittleSizeXoSize > h3{
+    font-size: 25px;
+    font-family: Playfair_Display;
+    color: var(--Blanco);
+    /* border: turquoise 2px solid; */
+}
+
+/*Fin Estilo para titulos*/
 
 #SizeXo{
     position: relative;
@@ -410,23 +454,95 @@ nav{
     /* overflow-y: scroll; */
 }
 
-body.lock-scroll {
-    overflow: hidden;
+.ContainerImgSizeXo {
+    position: relative;
+    height: 400vh; /* Ajusta esto: a más altura, más lento el scroll */
 }
 
-.ContainerImgSizeXo{
+/* Este es el que se queda quieto en pantalla */
+.sticky-wrapper {
+    position: sticky;
+    top: 0em;
+    width: 100%;
+    max-height: 100vh;
+    overflow: hidden; /* Evita que salgan barras de scroll internas */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: #6d015f 2px solid; */
+}
+
+.sticky-wrapper:nth-child(1){
+    /* border: purple 2px solid; */
+    /*efecto vidrio templado*/
+    width: 100%;
+    height: 100vh;
+    z-index: 2;
+}
+
+.sticky-wrapper > .SizeImg:nth-child(2n+1){/*Impares en las imagenes*/
+    z-index: 2;
+    width: 100%;
+    background: url(../css/img/Fondos_Pagina_Munecos/wave.svg)no-repeat -51em 2em / cover,/*Fondo ondulado de abajo*/
+    url(../css/img/Fondos_Pagina_Munecos/wave-Arriba.svg) no-repeat 0em -10em / 113% 100% ;/*Fondo ondulado de arriba*/
+}
+
+.sticky-wrapper > .SizeImg:nth-child(2n){/*pares en las imagenes*/
+    background: url(../css/img/Fondos_Pagina_Munecos/wave2.svg) no-repeat 0em 10em / cover,/*Fondo ondulado de Abajo*/
+    url(../css/img/Fondos_Pagina_Munecos/wave2-Arriba.svg) no-repeat 0em -10em / 113% 100% ;/*Fondo ondulado de arriba*/
+    z-index: 2;
+    width: 100%;
+}
+
+/* Las imágenes se enciman una de otra */
+.SizeImg {/*contenedor principal que tiene el titulo de tamaño e imagen*/
+    position: absolute; /* Todas en el mismo lugar */
+    width: 100%;
+    height: 100vh;
+    top: 0em;
+    display: flex;
+    flex-direction: column;
+    opacity: 0; /* Ocultas por defecto */
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: none;
+    transform: 3s ease translateX(100px) linear;
+    z-index: 2;
+    /* border: #ff0080 2px solid; */
+}
+
+.SizeImg img{/*contenedor de imagenes*/
     position: relative;
+    width: 30%;
+    height: 60vh;
+    border-radius: 2em 3em;
+    box-shadow: #6d015f 5px 10px 20px;
+    z-index: 1;
+    /* border: tomato 2px solid; */
+}
+
+.FondoOndeado{
+    position: absolute;
+    z-index: 2;
+}
+
+/* Solo la que tiene .active se ve */
+.SizeImg.active {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: all;
 }
 
 .scroll-step{
-    opacity: 0;
-    transform: translateY(60px) scale(0.95);
-    transition: all 3s ease;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    align-content: center;
+    /* border: yellow 2px solid; */
 }
 
 .scroll-step.active{
     opacity: 1;
-    transform: translateY(0) scale(1);
+    transform: translateX(100px) scale(2);
 }
 
 /*Termina contenedor de tamaño (sizes)*/
@@ -436,46 +552,48 @@ body.lock-scroll {
 .CatalogoXocontainer{
     position: relative;
     width: 100%;
-    height: 310vh;
-    /* border: royalblue 2px solid; */
-    z-index: 1;
+    height: 300vh;
+    /* border: #6d015f 2px solid; */
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
 }
 
-.ImgContainerCatXo{
+
+.ContainerTittleandText{
     position: absolute;
-    width: 88%;
-    min-height: auto;
-    gap: 2em;
-    margin: 5em;
-    top: 4em;
-    border: steelblue 2px solid;
-    z-index: 99;
-    overflow: hidden;
-}
-
-.ImgContainerCatXo > img{/*impacta las imagenes del catalogo*/
-    width: 25%;
-    height: 50vh;
-    margin: 0em 2.7em;
-    border-radius: 3em;
-    /* border: springgreen 1px solid; */
-    overflow: hidden;
-    background: linear-gradient(135deg,#ff0080,#7928ca,#00c6ff);
+    /* border: #ff0080 2px solid; */
+    top: 5em;
 }
 
 .TittleCatalogo{
-    position: absolute;
-    text-align: center;
-    left: 18em;
-    /* border: wheat 2px solid; */
+    position: relative;
+    width: 100%;
     height: 20vh;
-    width: 60%;
+    /* border: #ff0080 2px solid; */
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.TittleCatalogo > h3{
+    position: relative;
+    width: 50%;
+    height: 12vh;
+    align-content: center;
+    text-align: center;
+    left: 7em;
+    color: var(--Blanco);
+    font-family: Lobster;
+    font-size: 45px;
+    /* border: royalblue 1px solid; */
     /*efecto vidrio templado*/
-    background: rgba(206, 7, 224, 0.144); /* Blanco con transparencia */
+    background: rgb(224, 7, 195); /* Blanco con transparencia */
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px); /* Para soporte en Safari */
-    border: 1px solid rgba(176, 3, 245, 0.418); /* Borde tenue */
-    box-shadow: 0 4px 22px rgba(80, 3, 76, 0.37); /* Sombra ligera */
+    border: 4px dashed rgb(121, 0, 158); /* Borde tenue */
+    box-shadow: 0 4px 22px rgb(61, 0, 58); /* Sombra ligera */
     /*efecto vidrio templado*/
     clip-path: polygon(/*figura de liston*/
     0 0,
@@ -485,72 +603,211 @@ body.lock-scroll {
     0 100%,/*afecta el lado izquierdo*/
     4% 50%/*afecta el lado izquierdo*/
     );
+}
+
+.TextCatalogo{
+    position: relative;
+    /* border: rgba(235, 2, 122, 0.822) 2px solid; */
+    width: 100%;
+    height: 20vh;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    /*efecto vidrio templado*/
+    /*efecto vidrio templado*/
+    background: rgb(224, 7, 195); /* Blanco con transparencia */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Para soporte en Safari */
+    border: 4px dashed rgb(121, 0, 158); /* Borde tenue */
+    box-shadow: 0 4px 22px rgb(61, 0, 58); /* Sombra ligera */
+    /*efecto vidrio templado*/
     color: var(--Blanco);
-    z-index: 99;
-}
-
-.TittleCatalogo > h3{
-    padding-top: 7px;
-    font-family: Lobster;
-    font-size: 45px;
-}
-
-.TittleCatalogo > p{
-    font-family: Indie_Flower;
+    padding: 2em;
     font-size: 20px;
+    font-family: Playfair_Display;
 }
 
-.ImgContainerCatXo > img:nth-child(2n){/*pares los contenedores de img impares*/
-    /* border: yellow 1px solid; */
-    height: 70vh;
-    margin-bottom: 3.9em;
-}
-
-.ImgContainerCatXo > img:nth-child(2n+1){/*selecciona los contenedores de img impares*/
-    /* border: steelblue 1px solid; */
-    height: 50vh;
-    margin-bottom: 11.9em;
-}
-
-.ImgContainerCatXo > img:nth-child(4){
+.ImgContainerCatXo{
     position: relative;
-    height: 50vh;
-    bottom: 12em;
+    align-content: center;
+    height: 250vh;
+    top: 4em;
+    /* border: red 2px solid; */
+    overflow: hidden;
 }
 
-.ImgContainerCatXo > img:nth-child(6){
+.ImgCatXo{
     position: relative;
-    height: 50vh;
-    bottom: 12em;
+    display: flex;
+    left: 2.5em;
+    flex-direction: row;
+    height: 55vh;
+    /* border: sienna 2px solid; */
+    margin: 3em 2em;
+    /*efecto vidrio templado*/
+    background: rgba(224, 7, 188, 0.37); /* Blanco con transparencia */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Para soporte en Safari */
+    border: 4px dashed rgba(158, 0, 97, 0.39); /* Borde tenue */
+    box-shadow: 0 4px 22px rgb(61, 0, 58); /* Sombra ligera */
+    /*efecto vidrio templado*/
+    border-radius: 1em 3em;
 }
 
-.ImgContainerCatXo > img:nth-child(7){
+.ImgCatXo > img{
+    position: absolute;
+    width: 85%;
+    top: 1.5em;
+    left: 1.3em;
+    height: 45vh;
+    border-radius: 1em 3em;
+    transition: all 2s ease;
+    /*efecto vidrio templado*/
+    background: rgba(224, 7, 188, 0.37); /* Blanco con transparencia */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Para soporte en Safari */
+    border: 4px dashed rgb(158, 0, 97); /* Borde tenue */
+    box-shadow: 0 4px 22px rgb(61, 0, 58); /* Sombra ligera */
+    /*efecto vidrio templado*/
+}
+
+.ImgCatXo > a{
     position: relative;
-    height: 50vh;
-    bottom: 16em;
+    width: 25%;
+    height: 10vh;
+    /* border: #ff0080 solid 2px; */
+    z-index: 4;
+    left: 6em;
+    top: 8em;
+    opacity: 0.5;
 }
 
-.ImgContainerCatXo > img:nth-child(8){/*pares los contenedores de img impares*/
+.ImgCatXo > a > img{
     position: relative;
-    height: 70vh;
-    bottom: 8em;
+    width: 100%;
+    height: auto;
+    z-index: 4;
 }
 
-.ImgContainerCatXo > img:nth-child(9){/*pares los contenedores de img impares*/
+.ModalDialog{
+    position: fixed;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 999;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    transition: opacity 400ms;
+    /* border: yellow 2px solid; */
+    overflow: hidden;
+    overflow-y: none;
+}
+
+.ModalContent{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    /* border: #6d015f 2px solid; */
+    overflow: hidden;
+}
+
+.ModalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
+
+html:has(.ModalDialog:target) {/*hace que solo afecte el modalDialog para que al abrir las imagenes en grande no haga scroll*/
+    overflow: hidden;
+}
+
+.ModalDialog > div > img {
+	width: 50%;
+	position: relative;
+	height: 80vh;
+    border-radius: 1em 3em;
+    /*efecto vidrio templado*/
+    -webkit-backdrop-filter: blur(10px); /* Para soporte en Safari */
+    border: 10px dashed rgb(205, 0, 247); /* Borde tenue */
+    /*efecto vidrio templado*/
+}
+
+.btn-cerrar > img{
     position: relative;
-    height: 50vh;
-    bottom: 16em;
+    width: 100%;
+    left: 23.5em;
+    bottom: 5em;
+    height: 10vh;
+    font-size: 40px;
+    text-decoration: none;
+    z-index: 999;
 }
 
-/*Imagenes para adornar fondo de catalogo*/
+.FlechaDerecha, .FlechaIzquierda {
+    flex-shrink: 0; /* Evita que la flecha se aplaste */
+    width: 80px;    /* Tamaño fijo para las flechas */
+    cursor: pointer;
+    z-index: 10;
+}
 
-.FondoCatalogoXo{
+.FlechaDerecha{
+    position: absolute;
+    /* border: #6d015f 2px solid; */
+    width: 14%;
+    height: 30vh;
+    top: 13em;
+    right: 8em;
+}
+
+.FlechaDerecha > img{
     position: absolute;
     width: 100%;
-    height: 250vh;
-    background: url(./img/Imagen_fondos/FondoCorazonTejidoXo2.png) center / 20em;/*Imagen de bola de estrambre dentro de circulo*/
-    /* border: springgreen 1px solid; */
-    z-index: 1;
+    height: 20vh;
+    right: 0.1em;
+    top: 1.5em;
+}
+
+.FlechaIzquierda{
+    position: absolute;
+    /* border: #6d015f 2px solid; */
+    width: 14%;
+    height: 30vh;
+    top: 13em;
+    left: 8em;
+    z-index: 4;
+    transform: rotate(180deg);
+}
+
+.FlechaIzquierda > img{
+    position: absolute;
+    width: 100%;
+    height: 20vh;
+    right: 0em;
+    top: 1.5em;
+}
+
+.buttomMore{
+    position: relative;
+    top: 4em;
+}
+
+.buttomMore > input{
+    border-radius: 2em;
+    width: 10%;
+    height: 5vh;
+    text-align: center;
+    background: var(--Rosa-fuerte);
+    color: var(--Blanco);
+    font-size: 20px;
 }
 
 /*Fin de Imagenes para adornar fondo de catalogo*/
@@ -649,10 +906,5 @@ form{
 .NombreFormXo > input:nth-child(2){
     color: var(--Rosa-fuerte);
 }
-
-
-
-
-
 
 /*Termina el contenedor de Contact*/
