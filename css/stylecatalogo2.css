@@ -61,7 +61,6 @@ body{
     height: 120vh;
     /* border: yellow 2px solid; */
     margin-bottom: 10em;
-    box-shadow: 0 0 50px white;
 }
 
 #SizeXo > .container-fluid:nth-child(1){
@@ -82,7 +81,6 @@ body{
 .OptionandLogoMenu{
     position: relative;
     display: flex;
-    flex-direction: row;
     width: 100%;
     height: 32vh;
     /* border: #00c6ff 2px solid; */
@@ -115,9 +113,31 @@ body{
     }
 }
 
+.navbar{
+    background: var(--Blanco);
+    position: fixed;
+    height: 35vh;
+}
+
 .is-scrolled{
-    position: sticky;
-    background: var(--Rosa-fuerte);
+    position: fixed;
+    width: 100%;
+    height: 15vh;
+    background: var(--Blanco);
+    /* border: #6d015f 2px solid; */
+    z-index: 999;
+}
+
+.is-scrollednav{
+    /* border: 2px red solid; */
+    position: relative;
+    width: 60%;
+    bottom: 4.5em;
+    right: 3em;
+}
+
+.is-scrollimgnav{
+    display: none;
 }
 
 /*Fin Diseño de menú*/
@@ -132,7 +152,7 @@ body{
     position: absolute;
     width: 15%;
     height: 30vh;
-    top: 3em;
+    top: 1em;
     left: 8em;
 }
 
@@ -219,12 +239,18 @@ body{
     border-radius: 1em 2em;
 }
 
+.scrollimgwho{
+    /* border: #6d015f 3px solid; */
+    position: absolute;
+    padding-top: 3em;
+}
+
 .ImgWhoXo{/*contenedor de las imagenes*/
     height: 51vh;
     width: 32%!important;
-    position: absolute;
-    left: 57em;
-    top: 8em;
+    position: relative;
+    left: 0em;
+    top: 0em;
     /* border: #ff0080 1px solid; */
     filter: drop-shadow(0 0 10px rgb(139, 1, 116));
 }
@@ -378,10 +404,15 @@ body{
 /*Estilo para titulos*/
 
 .TittleSizeXo > h3{
-    width: 100%;
+    position: relative;
+    width: 50%;
     height: 20vh;
+    left: 8em;
+    display: flex;
     text-align: center;
     align-content: center;
+    justify-content: center;
+    align-items: center;
     font-size: 40px;
     color: var(--Blanco);
     font-family: Lobster;
@@ -412,8 +443,9 @@ body{
 
 .ContainerImgSizeXo {
     position: relative;
+    top: 5em;
     height: 400vh; /* Ajusta esto: a más altura, más lento el scroll */
-    border: 4px dashed rgba(245, 3, 213, 0.418); /* Borde tenue */
+    border: 10px dashed rgba(245, 3, 213, 0.418); /* Borde tenue */
 }
 
 /* Este es el que se queda quieto en pantalla */
@@ -872,9 +904,9 @@ html:has(.ModalDialog:target) {/*hace que solo afecte el modalDialog para que al
     position: absolute;
     width: 100%;
     height: 120vh;
-    background: url(../css/img/Iconos_Xo/CirculoRosaDibujo.png) no-repeat -2em 40em / 10em,/*1er Circulo Rosa*/
-    url(../css/img/Iconos_Xo/CirculoRosaDibujo.png) no-repeat 78em -2em / 10em,/*2do Circulo Rosa*/
-    url(../css/img/Iconos_Xo/CirculoRosaPintura.png) no-repeat 1em 1em / 20em;
+    background: url(../css/img/Iconos_Xo/CirculoRosaDibujo.png) no-repeat 1em 36em / 10em,/*1er Circulo Rosa*/
+    url(../css/img/Iconos_Xo/CirculoRosaDibujo.png) no-repeat 74em 1em / 10em,/*2do Circulo Rosa*/
+    url(../css/img/Iconos_Xo/CirculoRosaPintura.png) no-repeat 1em 1em / 20em;/*Circulo principal*/
     /* border: red 2px solid; */
     z-index: 0;
 }
@@ -885,7 +917,7 @@ html:has(.ModalDialog:target) {/*hace que solo afecte el modalDialog para que al
 
 .ContainerContactXo{
     position: absolute;
-    height: 120vh;
+    height: 110vh;
     /* border: yellowgreen 1px solid; */
     overflow: hidden;
     display: flex;
@@ -896,7 +928,7 @@ html:has(.ModalDialog:target) {/*hace que solo afecte el modalDialog para que al
     /* border: slateblue 2px solid; */
     position: relative;
     height: 90vh;
-    top: 8em;
+    top: 0em;
 }
 
 .TextContactXo{
@@ -964,7 +996,7 @@ html:has(.ModalDialog:target) {/*hace que solo afecte el modalDialog para que al
 
 .FormXo{
     position: relative;
-    top: 8em;
+    top: 0em;
     right: 3em;
     /* border: springgreen 2px solid; */
     height: 90vh;
@@ -1024,3 +1056,41 @@ html:has(.ModalDialog:target) {/*hace que solo afecte el modalDialog para que al
     top: -1em;
 }
 /*Termina el contenedor de Contact*/
+
+/*Inicio de diseño de Footer*/
+
+.FooterXo{
+    position: relative;
+    display: flex;
+    text-align: center;
+    /* border: rgba(0,0,0,0.8) 2px solid; */
+    height: 80vh;
+    background: url(../css/img/Fondos_Pagina_Munecos/FondoFooter2.svg) no-repeat 0em 2em / 160%;
+}
+
+.NameXo{
+    /* border: yellow 2px solid; */
+    position: absolute;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    color: var(--Rosa-fuerte);
+    font-family: Lobster;
+    font-size: 28px;
+    z-index: 2;
+}
+
+.backgroundfooter{
+    position: absolute;
+    /* border: tomato 2px solid; */
+    height: 80vh;
+    width: 100%;
+    background: url(../css/img/Iconos_Xo/BochasoRosa.png) no-repeat center / 40em;
+    z-index: 0;
+}
+
+/*Termino de diseño de Footer*/

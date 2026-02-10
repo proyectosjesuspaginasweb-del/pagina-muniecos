@@ -9,6 +9,32 @@ $(function() {
     });
 });
 
+
+/*Inicio de efecto del menu en seguimiento*/
+
+const navbar = document.getElementById("navbar");
+const navoption = document.getElementById("optionav");
+const imgnav = document.getElementById("ImgLogoXo");
+const imgwho = document.getElementById("imgwhoxo");
+
+window.onscroll = function () {
+    if (window.scrollY > 10) {
+        navbar.classList.add('is-scrolled');
+        navoption.classList.add('is-scrollednav');
+        imgnav.classList.add('is-scrollimgnav');
+        imgwho.classList.add('scrollimgwhoxo');
+    
+    }else{
+        navbar.classList.remove('is-scrolled');
+        navoption.classList.remove('is-scrollednav');
+        imgnav.classList.remove('is-scrollimgnav');
+        imgwho.classList.remove('scrollimgwhoxo');
+    }
+}
+
+
+/*fin de efecto del menu en seguimiento*/
+
 /*Efecto de size*/
 
 window.addEventListener("scroll", () => {/*cuando el usuario mueva la rueda del raton hacia abajo has este efecto*/
@@ -35,5 +61,6 @@ window.addEventListener("scroll", () => {/*cuando el usuario mueva la rueda del 
 });
 
 /*Efecto de ventana para imagenes catalogo*/
+
 
 
