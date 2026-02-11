@@ -16,7 +16,7 @@ $(function() {
 const scrollElements = [
     { id: "navbar", className: "is-scrolled" },
     { id: "optionav", className: "is-scrollednav" },
-    { id: "ImgLogoXo", className: "is-scrollimgnav" }, // Ojo a las mayúsculas
+    { id: "imglogoXo", className: "is-scrollimgnav" }, // Ojo a las mayúsculas
     { id: "imgwhoxo", className: "scrollingwhoxo" },  // Ojo a los nombres
     { id: "scrolltittleWho", className: "scroll-tiitle" } // El nombre que mencionaste
 ];
