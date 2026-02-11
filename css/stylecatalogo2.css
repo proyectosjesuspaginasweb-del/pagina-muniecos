@@ -174,7 +174,7 @@ body{
 
 #WhoMyXo > .container-fluid:nth-child(1){
     /* border: slategray 2px solid; */
-    height: 150vh;
+    height: 110vh;
     background: url(./img/Fondos_Pagina_Munecos/FondoWho3.jpg) no-repeat center / 120% 150vh;
     object-fit: cover;
 }
@@ -193,9 +193,15 @@ body{
     width: 100%;
     height: 40vh;
     /* border: red 2px solid; */
-    top: 6em;
+    top: -2em;
     left: 0em;
     align-content: center;
+}
+
+.TittleWhoXo{
+    transform: translateX(-400px);
+    transition: 2.5s all ease;
+    opacity: 0;
 }
 
 .TittleWhoXo > h3{/*contenedor del titulo afecta el h3 directamente*/
@@ -232,11 +238,14 @@ body{
     border: 4px dashed rgba(245, 3, 213, 0.418); /* Borde tenue */
     box-shadow: 0 4px 22px rgba(80, 3, 76, 0.37); /* Sombra ligera */
     /*efecto vidrio templado*/
-    color: var(--Rosa-Para-Letra);
+    color: var(--Blanco);
     font-size: 18px;
     font-family: Playfair_Display;
     margin-left: 6em;
     border-radius: 1em 2em;
+    transform: translateX(-400px);
+    transition: all 2.5s ease;
+    opacity: 0;
 }
 
 .scrollimgwho{
@@ -253,6 +262,9 @@ body{
     top: 0em;
     /* border: #ff0080 1px solid; */
     filter: drop-shadow(0 0 10px rgb(139, 1, 116));
+    transform: translateY(300px);
+    transition: all 2.5s ease;
+    opacity: 0;
 }
 
 .ImgWhoXo > img:nth-child(1){/*Ramo de flores*/
@@ -278,8 +290,20 @@ body{
 /*Ininicia animacion para los campos de Who texto y tittle*/
 
 .scroll-tittle{
-    transform: translate(0px);
-    transition: 2s all ease;
+    transform: translateX(0);
+    transition: 2.5s all ease;
+    opacity: 1;
+}
+
+.scroll-text{
+    transform: translateX(0);
+    transition: 2.5s all ease;
+    opacity: 1;
+}
+
+.loadimgwho{
+    transform: translateY(0);
+    transition: 2.5s all ease;
     opacity: 1;
 }
 

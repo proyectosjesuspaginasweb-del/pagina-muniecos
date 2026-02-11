@@ -17,7 +17,6 @@ const scrollElements = [
     { id: "navbar", className: "is-scrolled" },
     { id: "optionav", className: "is-scrollednav" },
     { id: "imglogoXo", className: "is-scrollimgnav" }, // Ojo a las mayúsculas
-    { id: "imgwhoxo", className: "scrollingwhoxo" },  // Ojo a los nombres
     { id: "scrolltittleWho", className: "scroll-tiitle" } // El nombre que mencionaste
 ];
 
@@ -31,6 +30,21 @@ window.onscroll = () =>{
         }
     });
 }
+
+const loadwindows = [
+    {id: "scrolltittleWho", className: "scroll-tittle"},
+    {id: "scrolltextWho", className: "scroll-text"},
+    {id: "imgwhoxo", className: "loadimgwho"}
+];
+
+window.addEventListener('DOMContentLoaded', () =>{
+    loadwindows.forEach(item=>{
+        const el = document.getElementById(item.id);
+        if (el) {
+            el.classList.add(item.className);
+        }
+    })
+});
 
 /*const navbar = document.getElementById("navbar");
 const navoption = document.getElementById("optionav");
