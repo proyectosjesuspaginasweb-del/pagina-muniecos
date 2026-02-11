@@ -12,10 +12,31 @@ $(function() {
 
 /*Inicio de efecto del menu en seguimiento*/
 
-const navbar = document.getElementById("navbar");
+
+const scrollElements = [
+    { id: "navbar", className: "is-scrolled" },
+    { id: "optionav", className: "is-scrollednav" },
+    { id: "ImgLogoXo", className: "is-scrollimgnav" }, // Ojo a las mayúsculas
+    { id: "imgwhoxo", className: "scrollingwhoxo" },  // Ojo a los nombres
+    { id: "scrolltittleWho", className: "scroll-tiitle" } // El nombre que mencionaste
+];
+
+window.onscroll = () =>{
+    const isScrolled = window.scrollY > 10;
+
+    scrollElements.forEach(item =>{
+        const element = document.getElementById(item.id);
+        if (element) {
+            element.classList.toggle(item.className, isScrolled);
+        }
+    });
+}
+
+/*const navbar = document.getElementById("navbar");
 const navoption = document.getElementById("optionav");
 const imgnav = document.getElementById("ImgLogoXo");
 const imgwho = document.getElementById("imgwhoxo");
+const titulowho = document.getElementById("scrolltittleWho");
 
 window.onscroll = function () {
     if (window.scrollY > 10) {
@@ -23,17 +44,24 @@ window.onscroll = function () {
         navoption.classList.add('is-scrollednav');
         imgnav.classList.add('is-scrollimgnav');
         imgwho.classList.add('scrollimgwhoxo');
+        titulowho.classList.add('scroll-tiitle');
     
     }else{
         navbar.classList.remove('is-scrolled');
         navoption.classList.remove('is-scrollednav');
         imgnav.classList.remove('is-scrollimgnav');
         imgwho.classList.remove('scrollimgwhoxo');
+        titulowho.classList.remove('scroll-tiitle');
     }
-}
+}*/
 
 
 /*fin de efecto del menu en seguimiento*/
+
+/*Inicio del efecto del movimiento del who*/
+
+
+/*Termino del efecto del movimiento del who*/
 
 /*Efecto de size*/
 

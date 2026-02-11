@@ -119,6 +119,10 @@ body{
     height: 35vh;
 }
 
+/*Fin Diseño de menú*/
+
+/*Efecto de menu en seguimiento*/
+
 .is-scrolled{
     position: fixed;
     width: 100%;
@@ -140,11 +144,7 @@ body{
     display: none;
 }
 
-/*Fin Diseño de menú*/
-
-/*Efecto para desplazamiento del menú*/
-
-/*Fin del Efecto para desplazamiento del menú*/
+/*terminade menu en seguimiento*/
 
 /*inicio diseño de imagenes de contenedor menú y who*/
 
@@ -274,6 +274,16 @@ body{
 
 
 /*Fin el diseño de Contenedor de tittle and text for Who*/
+
+/*Ininicia animacion para los campos de Who texto y tittle*/
+
+.scroll-tittle{
+    transform: translate(0px);
+    transition: 2s all ease;
+    opacity: 1;
+}
+
+/*Termina animacion para los campos de Who texto y tittle*/
 
 /*Contenedor de AimXO Inicia el diseño*/
 
