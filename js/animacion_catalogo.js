@@ -10,14 +10,17 @@ $(function() {
 });
 
 
-/*Inicio de efecto del menu en seguimiento*/
+/*Inicio de efecto del menu en seguimiento y efecto de movimiento en pagina*/
 
 
 const scrollElements = [
     { id: "navbar", className: "is-scrolled" },
     { id: "optionav", className: "is-scrollednav" },
     { id: "imglogoXo", className: "is-scrollimgnav" }, // Ojo a las mayúsculas
-    { id: "scrolltittleWho", className: "scroll-tiitle" } // El nombre que mencionaste
+    { id: "aimtittle", className: "scroll-tittleaim"},
+    { id: "aimtextscroll", className: "scroll-textaim"},
+    { id: "sizetext", className: "scroll-textsize"},
+    { id: "catalogotittle", className: "scroll-tittlecatalogo"}
 ];
 
 window.onscroll = () =>{
@@ -32,7 +35,7 @@ window.onscroll = () =>{
 }
 
 const loadwindows = [
-    {id: "scrolltittleWho", className: "scroll-tittle"},
+    {id: "scrolltittleWho", className: "scroll-tittlewho"},
     {id: "scrolltextWho", className: "scroll-text"},
     {id: "imgwhoxo", className: "loadimgwho"}
 ];
@@ -46,36 +49,7 @@ window.addEventListener('DOMContentLoaded', () =>{
     })
 });
 
-/*const navbar = document.getElementById("navbar");
-const navoption = document.getElementById("optionav");
-const imgnav = document.getElementById("ImgLogoXo");
-const imgwho = document.getElementById("imgwhoxo");
-const titulowho = document.getElementById("scrolltittleWho");
-
-window.onscroll = function () {
-    if (window.scrollY > 10) {
-        navbar.classList.add('is-scrolled');
-        navoption.classList.add('is-scrollednav');
-        imgnav.classList.add('is-scrollimgnav');
-        imgwho.classList.add('scrollimgwhoxo');
-        titulowho.classList.add('scroll-tiitle');
-    
-    }else{
-        navbar.classList.remove('is-scrolled');
-        navoption.classList.remove('is-scrollednav');
-        imgnav.classList.remove('is-scrollimgnav');
-        imgwho.classList.remove('scrollimgwhoxo');
-        titulowho.classList.remove('scroll-tiitle');
-    }
-}*/
-
-
-/*fin de efecto del menu en seguimiento*/
-
-/*Inicio del efecto del movimiento del who*/
-
-
-/*Termino del efecto del movimiento del who*/
+/*termino de efecto del menu en seguimiento y efecto de movimiento en pagina*/
 
 /*Efecto de size*/
 
