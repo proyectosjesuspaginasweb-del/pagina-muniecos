@@ -244,7 +244,7 @@ body{
     margin-left: 6em;
     border-radius: 1em 2em;
     transform: translateX(-400px);
-    transition: all 2.5s ease;
+    transition: all 2.5s ease-out;
     opacity: 0;
 }
 
@@ -289,23 +289,7 @@ body{
 
 /*Ininicia animacion para los campos de Who texto y tittle*/
 
-.scroll-tittle{
-    transform: translateX(0);
-    transition: 2.5s all ease;
-    opacity: 1;
-}
 
-.scroll-text{
-    transform: translateX(0);
-    transition: 2.5s all ease;
-    opacity: 1;
-}
-
-.loadimgwho{
-    transform: translateY(0);
-    transition: 2.5s all ease;
-    opacity: 1;
-}
 
 /*Termina animacion para los campos de Who texto y tittle*/
 
@@ -384,7 +368,7 @@ body{
     justify-content: center;
 }
 
-.TextAim{
+.TextAim{/*contenedor donde viene el texto de Aim*/
     position: relative;
     /* border: #ff0080 1px solid; */
     margin: 2em;
@@ -410,6 +394,12 @@ body{
     position: relative;
     top: 0em;
 }
+
+/*Inicia la animacion de AIM en el contenedor de tittle y text*/
+
+
+
+/*Termina la animacion de AIM en el contenedor de tittle y text*/
 
 /*Contenedor de AimXO termina el diseño (Aim)*/
 
@@ -569,6 +559,12 @@ body{
 }
 
 /*Termina contenedor de tamaño (sizes)*/
+
+/*empieza la animacion del size*/
+
+
+
+/*termina la animacion del size*/
 
 /*Inicio de contenedor de Catalogo*/
 
@@ -853,6 +849,12 @@ html:has(.ModalDialog:target) {/*hace que solo afecte el modalDialog para que al
 /*Fin de Imagenes para adornar fondo de catalogo*/
 
 /*termino de contenedor de Catalogo*/
+
+/*Inicia la animacion del catalogo, texto, titulo e imagenes*/
+
+
+
+/*Termina la animacion del catalogo, texto, titulo e imagenes*/
 
 /*Inicio de contenedor de process*/
 
