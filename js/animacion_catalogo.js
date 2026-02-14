@@ -12,31 +12,6 @@ const scrollElements = [
     { id: "catalogotexto", className: "scroll-textcatalogo"}
 ];
 
-
-
-const loadwindows = [
-    {id: "scrolltittleWho", className: "scroll-tittlewho"},
-    {id: "scrolltextWho", className: "scroll-text"},
-    {id: "imgwhoxo", className: "loadimgwho"}
-];
-
-window.addEventListener('DOMContentLoaded', () =>{
-    loadwindows.forEach(item=>{
-        const el = document.getElementById(item.id);
-        if (el) {
-            el.classList.add(item.className);
-        }
-    })
-});
-
-
-
-/*termino de efecto del menu en seguimiento y efecto de movimiento en pagina*/
-
-/*termino de efecto del menu en seguimiento y efecto de movimiento en pagina*/
-
-/*termino de efecto del menu en seguimiento y efecto de movimiento en pagina*/
-
 window.addEventListener("scroll", () => {/*cuando el usuario mueva la rueda del raton hacia abajo has este efecto*/
     const container = document.querySelector(".ContainerImgSizeXo");
     const steps = document.querySelectorAll(".SizeImg");
@@ -60,7 +35,25 @@ window.addEventListener("scroll", () => {/*cuando el usuario mueva la rueda del 
     }
 });
 
-/*Efecto de ventana para imagenes catalogo*/
+/*termino de animacion de menu*/
+
+const loadwindows = [
+    {id: "scrolltittleWho", className: "scroll-tittlewho"},
+    {id: "scrolltextWho", className: "scroll-text"},
+    {id: "imgwhoxo", className: "loadimgwho"}
+];
+
+window.addEventListener('DOMContentLoaded', () =>{
+    loadwindows.forEach(item=>{
+        const el = document.getElementById(item.id);
+        if (el) {
+            el.classList.add(item.className);
+        }
+    })
+});
+
+
+/*termino de efecto del menu en seguimiento y efecto de movimiento en pagina*/
 
 
 

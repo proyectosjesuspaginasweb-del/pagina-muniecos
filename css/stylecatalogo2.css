@@ -198,12 +198,6 @@ body{
     align-content: center;
 }
 
-.TittleWhoXo{
-    transform: translateX(-400px);
-    transition: 2.5s all ease;
-    opacity: 0;
-}
-
 .TittleWhoXo > h3{/*contenedor del titulo afecta el h3 directamente*/
     position: relative;
     width: 100%;
@@ -243,9 +237,6 @@ body{
     font-family: Playfair_Display;
     margin-left: 6em;
     border-radius: 1em 2em;
-    transform: translateX(-400px);
-    transition: all 2.5s ease-out;
-    opacity: 0;
 }
 
 .scrollimgwho{
@@ -262,9 +253,6 @@ body{
     top: 0em;
     /* border: #ff0080 1px solid; */
     filter: drop-shadow(0 0 10px rgb(139, 1, 116));
-    transform: translateY(300px);
-    transition: all 2.5s ease;
-    opacity: 0;
 }
 
 .ImgWhoXo > img:nth-child(1){/*Ramo de flores*/
