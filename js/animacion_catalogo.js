@@ -51,9 +51,9 @@ window.addEventListener('DOMContentLoaded', () =>{
 
 /*termino de efecto del menu en seguimiento y efecto de movimiento en pagina*/
 
-/*Efecto de size
+//Efecto de size
 
-window.addEventListener("scroll", () => {/*cuando el usuario mueva la rueda del raton hacia abajo has este efecto
+window.addEventListener("scroll", () => {/*cuando el usuario mueva la rueda del raton hacia abajo has este efecto*/
     const container = document.querySelector(".ContainerImgSizeXo");
     const steps = document.querySelectorAll(".SizeImg");
     
