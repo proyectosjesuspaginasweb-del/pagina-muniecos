@@ -30,7 +30,11 @@ window.addEventListener('DOMContentLoaded', () =>{
 });
 
 
+
 /*termino de efecto del menu en seguimiento y efecto de movimiento en pagina*/
+
+/*termino de efecto del menu en seguimiento y efecto de movimiento en pagina*/
+
 /*termino de efecto del menu en seguimiento y efecto de movimiento en pagina*/
 
 window.addEventListener("scroll", () => {/*cuando el usuario mueva la rueda del raton hacia abajo has este efecto*/
