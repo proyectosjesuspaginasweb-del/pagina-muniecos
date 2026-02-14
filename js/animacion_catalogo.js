@@ -1,15 +1,3 @@
-$(function() {
-    $(window).scroll(function() {
-        var scroll  = $(window).scrollTop();
-        if (scroll >= 100) {
-            $('.OptionMenu').addClass('.is-scrolled'); 
-        }else{
-            $('OptionMenu').addClass('.is-scrolled')
-        }
-    });
-});
-
-
 /*Inicio de efecto del menu en seguimiento y efecto de movimiento en pagina*/
 
 
@@ -20,19 +8,11 @@ const scrollElements = [
     { id: "aimtittle", className: "scroll-tittleaim"},
     { id: "aimtextscroll", className: "scroll-textaim"},
     { id: "sizetext", className: "scroll-textsize"},
-    { id: "catalogotittle", className: "scroll-tittlecatalogo"}
+    { id: "catalogotittle", className: "scroll-tittlecatalogo"},
+    { id: "catalogotexto", className: "scroll-textcatalogo"}
 ];
 
-window.onscroll = () =>{
-    const isScrolled = window.scrollY > 10;
 
-    scrollElements.forEach(item =>{
-        const element = document.getElementById(item.id);
-        if (element) {
-            element.classList.toggle(item.className, isScrolled);
-        }
-    });
-}
 
 const loadwindows = [
     {id: "scrolltittleWho", className: "scroll-tittlewho"},
@@ -49,11 +29,12 @@ window.addEventListener('DOMContentLoaded', () =>{
     })
 });
 
-/*termino de efecto del menu en seguimiento y efecto de movimiento en pagina*/
 
-/*Efecto de size*/
+/*termino de efecto del menu en seguimiento y efecto de movimiento en pagina
 
-window.addEventListener("scroll", () => {/*cuando el usuario mueva la rueda del raton hacia abajo has este efecto*/
+/*Efecto de size
+
+window.addEventListener("scroll", () => {/*cuando el usuario mueva la rueda del raton hacia abajo has este efecto
     const container = document.querySelector(".ContainerImgSizeXo");
     const steps = document.querySelectorAll(".SizeImg");
     
@@ -77,6 +58,8 @@ window.addEventListener("scroll", () => {/*cuando el usuario mueva la rueda del 
 });
 
 /*Efecto de ventana para imagenes catalogo*/
+
+
 
 
 

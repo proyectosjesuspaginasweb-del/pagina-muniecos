@@ -289,23 +289,7 @@ body{
 
 /*Ininicia animacion para los campos de Who texto y tittle*/
 
-.scroll-tittlewho{
-    transform: translateX(0);
-    transition: 2.5s all ease;
-    opacity: 1;
-}
 
-.scroll-text{
-    transform: translateX(0);
-    transition: 2.5s all ease;
-    opacity: 1;
-}
-
-.loadimgwho{
-    transform: translateY(0);
-    transition: 2.5s all ease;
-    opacity: 1;
-}
 
 /*Termina animacion para los campos de Who texto y tittle*/
 
@@ -346,9 +330,6 @@ body{
     color: var(--Blanco);
     font-family: Lobster;
     border-radius: 1em;
-    transform: translateY(-180px);
-    transition: 2s all ease;
-    opacity: 0;
 }
 
 .TittleAimXo > h3{
@@ -385,9 +366,6 @@ body{
     align-content: center;
     text-align: center;
     justify-content: center;
-    transform: translateY(500px);
-    opacity: 0;
-    transition: 2s all ease-out;
 }
 
 .TextAim{/*contenedor donde viene el texto de Aim*/
@@ -419,17 +397,7 @@ body{
 
 /*Inicia la animacion de AIM en el contenedor de tittle y text*/
 
-.scroll-tittleaim{
-    transform: translateY(-20px);
-    transition: 2s all ease-out;
-    opacity: 1!important;
-}
 
-.scroll-textaim{
-    transform: translateY(0);
-    transition: 2s all ease-out;
-    opacity: 1;
-}
 
 /*Termina la animacion de AIM en el contenedor de tittle y text*/
 
@@ -458,11 +426,6 @@ body{
 }
 
 /*Estilo para titulos*/
-
-.TittleSizeXo{
-    transform: translateY(230px);
-    opacity: 0;
-}
 
 .TittleSizeXo > h3{
     position: relative;
@@ -599,11 +562,7 @@ body{
 
 /*empieza la animacion del size*/
 
-.scroll-textsize{
-    transform: translateY(0);
-    transition: 2s all;
-    opacity: 1;
-}
+
 
 /*termina la animacion del size*/
 
@@ -634,9 +593,6 @@ body{
     align-content: center;
     justify-content: center;
     align-items: center;
-    transform: translateY(200px);
-    transition: 2s ease;
-    opacity: 1;
 }
 
 .TittleCatalogo > h3{
@@ -896,11 +852,7 @@ html:has(.ModalDialog:target) {/*hace que solo afecte el modalDialog para que al
 
 /*Inicia la animacion del catalogo, texto, titulo e imagenes*/
 
-.scroll-tittlecatalogo{
-    transform: translateY(-50px);
-    transition: 5s all ease;
-    opacity: 1;
-}
+
 
 /*Termina la animacion del catalogo, texto, titulo e imagenes*/
 
