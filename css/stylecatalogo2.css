@@ -125,28 +125,44 @@ body{
 
 .is-scrolled{
     position: fixed;
-    width: 100%;
-    height: 15vh;
     background: var(--Blanco);
-    /* border: #6d015f 2px solid; */
     z-index: 999;
+    width: 100%;
+    height: 10vh;
+    animation: bajarMenu 0.5s forwards;
+}
+
+@keyframes bajarMenu{
+    from{
+        transform: translateY(-100%);
+    }
+    to{
+        transform: translateY(0);
+    }
 }
 
 .is-scrollednav{
-    /* border: 2px red solid; */
-    position: relative;
-    width: 60%;
-    bottom: 4.5em;
-    right: 3em;
+    display: none;
 }
 
-.is-scrollimgnav{
-    display: none;
+.is-scrolloptionnav{
+    position: relative;
+    width: 100%;
+    /* border: springgreen 2px solid; */
+    bottom: 2em;
+    padding: 0 !important;
+    margin: 0 !important;
+    right: 18em;
 }
 
 /*terminade menu en seguimiento*/
 
 /*inicio diseño de imagenes de contenedor menú y who*/
+
+.ImgWhoXo{
+    transform: translateY(350px);
+    opacity: 0;
+}
 
 .ImgLogoXo > img{
     position: absolute;
@@ -198,6 +214,11 @@ body{
     align-content: center;
 }
 
+.TittleWhoXo{
+    transform: translateX(-400px);
+    opacity: 0;
+}
+
 .TittleWhoXo > h3{/*contenedor del titulo afecta el h3 directamente*/
     position: relative;
     width: 100%;
@@ -237,6 +258,8 @@ body{
     font-family: Playfair_Display;
     margin-left: 6em;
     border-radius: 1em 2em;
+    transform: translateX(-400px);
+    opacity: 0;
 }
 
 .scrollimgwho{
@@ -277,7 +300,23 @@ body{
 
 /*Ininicia animacion para los campos de Who texto y tittle*/
 
+.animationwhotittle{
+    transform: translateX(0);
+    transition: 1.2s all ease-in;
+    opacity: 1;
+}
 
+.animationwhotext{
+    transform: translateX(0);
+    transition: 1.2s all ease-in;
+    opacity: 1;
+}
+
+.animationimgwho{
+    transform: translateY(0);
+    transition: 1.4s all ease-in;
+    opacity: 1;
+}
 
 /*Termina animacion para los campos de Who texto y tittle*/
 

@@ -1,17 +1,5 @@
 /*Inicio de efecto del menu en seguimiento y efecto de movimiento en pagina*/
 
-
-const scrollElements = [
-    { id: "navbar", className: "is-scrolled" },
-    { id: "optionav", className: "is-scrollednav" },
-    { id: "imglogoXo", className: "is-scrollimgnav" }, // Ojo a las mayúsculas
-    { id: "aimtittle", className: "scroll-tittleaim"},
-    { id: "aimtextscroll", className: "scroll-textaim"},
-    { id: "sizetext", className: "scroll-textsize"},
-    { id: "catalogotittle", className: "scroll-tittlecatalogo"},
-    { id: "catalogotexto", className: "scroll-textcatalogo"}
-];
-
 window.addEventListener("scroll", () => {/*cuando el usuario mueva la rueda del raton hacia abajo has este efecto*/
     const container = document.querySelector(".ContainerImgSizeXo");
     const steps = document.querySelectorAll(".SizeImg");
@@ -20,7 +8,7 @@ window.addEventListener("scroll", () => {/*cuando el usuario mueva la rueda del 
     const rect = container.getBoundingClientRect();
     const scrollPercent = -rect.top / (rect.height - window.innerHeight);
     
-    if (scrollPercent >= 0 && scrollPercent <= 1) {
+    if (scrollPercent >= 0 && scrollPercent <= 10) {
         // Dividimos el progreso entre el número de imágenes
         const stepIndex = Math.floor(scrollPercent * steps.length);
         const targetIndex = Math.min(stepIndex, steps.length - 1);
@@ -35,19 +23,48 @@ window.addEventListener("scroll", () => {/*cuando el usuario mueva la rueda del 
     }
 });
 
+/*Empieza el seguimiento del menu*/
+
+const scrollnav = [
+    { id: "navbar", className: "is-scrolled"},
+    { id: "imgnavxo", className: "is-scrollednav"},
+    { id: "optionav", className: "is-scrolloptionnav"}
+]
+
+//El vigilate
+window.addEventListener("scroll", () =>{
+    //Se crea una constante para saber cuanto se ha movido el scroll verticalmente
+    const scrollActual = window.scrollY
+
+    //Recorre la constante (por si en el futuro tenemos mas de una elemento)
+    scrollnav.forEach(item =>{
+        const elemento = document.getElementById(item.id)//en la constante elemento se guardar el id que se pone en scrollnav
+
+        if (scrollActual > 100) {
+            elemento.classList.add(item.className);
+        } else {
+            elemento.classList.remove(item.className);
+        }
+    });
+});
+
+
+/*Termina el seguimiento del menu*/
+
+
 /*termino de animacion de menu*/
 
 const loadwindows = [
-    {id: "scrolltittleWho", className: "scroll-tittlewho"},
-    {id: "scrolltextWho", className: "scroll-text"},
-    {id: "imgwhoxo", className: "loadimgwho"}
+    {id: "scrolltittleWho", className: "animationwhotittle"},
+    {id: "scrolltextWho", className: "animationwhotext"},
+    {id: "imgwhoxo", className: "animationimgwho"}
 ];
 
 window.addEventListener('DOMContentLoaded', () =>{
     loadwindows.forEach(item=>{
         const el = document.getElementById(item.id);
         if (el) {
-            el.classList.add(item.className);
+            el.classList.toggle(item.className);
         }
     })
 });
