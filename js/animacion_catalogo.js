@@ -1,3 +1,24 @@
+/*Boton de modo oscuro/claro*/
+
+const temaCheckbox = document.getElementById("theme-checkbox");
+const imgWho = document.querySelector(".ContainerWhoXo");
+
+temaCheckbox.addEventListener("change", ()=>{
+    
+    if (temaCheckbox.checked) {
+        document.body.classList.add("dark-mode");
+        console.log("Modo Oscuro Activado");
+        imgWho.classList.add("the-containercontactXo");
+
+    } else {
+        document.body.classList.remove("dark-mode");
+        console.log("Modo Claro Activado");
+        imgWho.classList.remove("the-containercontactXo");
+    }
+});
+
+/*fin de tema de modo*/
+
 /*Inicio de efecto del menu en seguimiento y efecto de movimiento en pagina*/
 
 window.addEventListener("scroll", () => {/*cuando el usuario mueva la rueda del raton hacia abajo has este efecto*/

@@ -42,6 +42,62 @@ body{
     user-select: none;
 }
 
+body.dark-mode{
+    color: var(--Blanco);
+}
+
+/*Boton modo oscuro y modo claro*/
+
+/* El contenedor del switch */
+
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 4.5%!important;
+    height: 34px;
+    left: 78em;
+    bottom: 13em;
+    /* border: #6d015f solid 3px; */
+}
+
+.switch input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider{
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border: 34px;
+    width: 100%;
+    border-radius: 2em;
+}
+
+.slider::before{
+    position: absolute;
+    content: "";
+    height: 26px;width: 26px;
+    left: 4px;bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+.dark-mode{
+    background: #000;
+}
+
+input:checked + .slider{
+    background-color: #000;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
 
 /*Inicia estilo del menu, el logo de XO y who*/
 
@@ -60,7 +116,7 @@ body{
     max-width: 100%;
     height: 120vh;
     /* border: yellow 2px solid; */
-    margin-bottom: 10em;
+    margin-bottom: 5em;
 }
 
 #SizeXo > .container-fluid:nth-child(1){
@@ -188,20 +244,18 @@ body{
 
 /*Inicia el diseño de Contenedor de tittle and text for Who*/
 
-#WhoMyXo > .container-fluid:nth-child(1){
-    /* border: slategray 2px solid; */
-    height: 110vh;
-    background: url(./img/Fondos_Pagina_Munecos/FondoWho3.jpg) no-repeat center / 120% 150vh;
-    object-fit: cover;
-}
-
 .ContainerWhoXo{
     position: relative;
     width: 100%;
     height: 120vh;
     display: flex;
     flex-direction: column;
+    background: url(./img/Fondos_Pagina_Munecos/FondoWho3.jpg) no-repeat center / 120% 150vh;
     /* border: violet 2px solid; */
+}
+
+.the-containercontactXo{
+    background: none;
 }
 
 .ContainerTextAndTittleWhoXo{
@@ -887,7 +941,7 @@ html:has(.ModalDialog:target) {/*hace que solo afecte el modalDialog para que al
 
 .ContainerTittleandTextProcess{
     position: relative;
-    /* border: skyblue 2px solid; */
+    border: skyblue 2px solid;
     height: 120vh;
     display: flex;
     align-items: center;
