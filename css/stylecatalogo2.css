@@ -66,7 +66,7 @@ body.dark-mode{
     height: 0;
 }
 
-.slider{
+.slider{/*contenedor que tiene adentro el boton*/
     position: absolute;
     cursor: pointer;
     top: 0; left: 0; right: 0; bottom: 0;
@@ -77,12 +77,27 @@ body.dark-mode{
     border-radius: 2em;
 }
 
-.slider::before{
+.slider::before{/*boton blanco del modo claro*/
     position: absolute;
     content: "";
     height: 26px;width: 26px;
     left: 4px;bottom: 4px;
     background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+.mode-black-slider{/*Boton de contenedor de modo negro*/
+    background: white!important;
+    border: #ccc 1px solid;
+}
+
+.mode-black-slider::before{
+    position: absolute;
+    content: "";
+    height: 26px;width: 26px;
+    left: 4px;bottom: 4px;
+    background-color: black;
     transition: .4s;
     border-radius: 50%;
 }
@@ -98,6 +113,8 @@ input:checked + .slider{
 input:checked + .slider:before {
     transform: translateX(26px);
 }
+
+/*termina el modo de tema*/
 
 /*Inicia estilo del menu, el logo de XO y who*/
 
@@ -596,10 +613,10 @@ input:checked + .slider:before {
     top: 0em;
     display: flex;
     flex-direction: column;
-    opacity: 0; /* Ocultas por defecto */
+    opacity: 0; /*Ocultas por defecto*/
     transition: opacity 0.5s ease-in-out;
     pointer-events: none;
-    transform: 3s ease translateX(100px) linear;
+    transition: 3s ease translateX(100px) linear;
     z-index: 2;
     /* border: #ff0080 2px solid; */
 }
@@ -624,6 +641,7 @@ input:checked + .slider:before {
     opacity: 1;
     transform: scale(1);
     pointer-events: all;
+    z-index: 10;
 }
 
 .scroll-step{

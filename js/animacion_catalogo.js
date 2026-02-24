@@ -2,6 +2,7 @@
 
 const temaCheckbox = document.getElementById("theme-checkbox");
 const imgWho = document.querySelector(".ContainerWhoXo");
+const btnBlack = document.querySelector(".slider");
 
 temaCheckbox.addEventListener("change", ()=>{
     
@@ -9,11 +10,13 @@ temaCheckbox.addEventListener("change", ()=>{
         document.body.classList.add("dark-mode");
         console.log("Modo Oscuro Activado");
         imgWho.classList.add("the-containercontactXo");
+        btnBlack.classList.add("mode-black-slider")
 
     } else {
         document.body.classList.remove("dark-mode");
         console.log("Modo Claro Activado");
         imgWho.classList.remove("the-containercontactXo");
+        btnBlack.classList.remove("mode-black-slider")
     }
 });
 
@@ -21,28 +24,65 @@ temaCheckbox.addEventListener("change", ()=>{
 
 /*Inicio de efecto del menu en seguimiento y efecto de movimiento en pagina*/
 
-window.addEventListener("scroll", () => {/*cuando el usuario mueva la rueda del raton hacia abajo has este efecto*/
+// 1. Metemos todo en una función para poder reutilizarla
+const handleScrollEffect = () => {
     const container = document.querySelector(".ContainerImgSizeXo");
     const steps = document.querySelectorAll(".SizeImg");
     
-    // Calculamos cuánto hemos scrolleado dentro del contenedor
+    if (!container) return; // Seguridad Senior: si no existe el div, no rompas el código
+
     const rect = container.getBoundingClientRect();
-    const scrollPercent = -rect.top / (rect.height - window.innerHeight);
     
-    if (scrollPercent >= 0 && scrollPercent <= 10) {
-        // Dividimos el progreso entre el número de imágenes
-        const stepIndex = Math.floor(scrollPercent * steps.length);
-        const targetIndex = Math.min(stepIndex, steps.length - 1);
+    // Calculamos el progreso. 
+    // Usamos Math.max y Math.min para que el número siempre esté entre 0 y 1
+    let scrollPercent = -rect.top / (rect.height - window.innerHeight);
+    
+    // Normalizamos el porcentaje
+    if (scrollPercent >= 0 && scrollPercent <= 1) {
+        const targetIndex = Math.floor(scrollPercent * steps.length);
+        const activeIndex = Math.min(targetIndex, steps.length - 1);
 
         steps.forEach((step, index) => {
-            if (index === targetIndex) {
+            if (index === activeIndex) {
                 step.classList.add("active");
             } else {
                 step.classList.remove("active");
             }
         });
     }
-});
+};
+
+// Dispara el efecto cuando el usuario hace scroll
+window.addEventListener("scroll", handleScrollEffect);
+
+// ¡CLAVE! Dispara el efecto en cuanto la página carga
+window.addEventListener("DOMContentLoaded", handleScrollEffect);
+
+// OPCIONAL: Por si el usuario cambia el tamaño de la ventana
+window.addEventListener("resize", handleScrollEffect);
+
+// window.addEventListener("scroll", () => {/*cuando el usuario mueva la rueda del raton hacia abajo has este efecto*/
+//     const container = document.querySelector(".ContainerImgSizeXo");
+//     const steps = document.querySelectorAll(".SizeImg");
+    
+//     // Calculamos cuánto hemos scrolleado dentro del contenedor
+//     const rect = container.getBoundingClientRect();
+//     const scrollPercent = -rect.top / (rect.height - window.innerHeight);
+    
+//     if (scrollPercent >= 0 && scrollPercent <= 1) {
+//         // Dividimos el progreso entre el número de imágenes
+//         const stepIndex = Math.floor(scrollPercent * steps.length);
+//         const targetIndex = Math.min(stepIndex, steps.length - 1);
+
+//         steps.forEach((step, index) => {
+//             if (index === targetIndex) {
+//                 step.classList.add("active");
+//             } else {
+//                 step.classList.remove("active");
+//             }
+//         });
+//     }
+// });
 
 /*Empieza el seguimiento del menu*/
 
