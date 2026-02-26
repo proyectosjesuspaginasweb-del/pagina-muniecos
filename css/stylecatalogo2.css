@@ -356,13 +356,13 @@ input:checked + .slider:before {
 
 .animationwhotittle{
     transform: translateX(0);
-    transition: 1.2s all ease-in;
+    transition: 1.4s all ease-in;
     opacity: 1;
 }
 
 .animationwhotext{
     transform: translateX(0);
-    transition: 1.2s all ease-in;
+    transition: 1.4s all ease-in;
     opacity: 1;
 }
 
@@ -637,6 +637,14 @@ input:checked + .slider:before {
 .scroll-step.active{
     opacity: 1;
     transform: translateX(100px) scale(2);
+}
+
+/*se agrega para corregir el error en el efecto de scroll en las imagenes*/
+.SizeImg.active {
+    opacity: 1 !important;
+    transform: scale(1) !important;
+    pointer-events: all !important;
+    z-index: 10; /* Que suba al frente */
 }
 
 /*Termina contenedor de tamaño (sizes)*/

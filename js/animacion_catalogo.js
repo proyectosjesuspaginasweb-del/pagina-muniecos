@@ -21,28 +21,39 @@ temaCheckbox.addEventListener("change", ()=>{
 
 /*Inicio de efecto del menu en seguimiento y efecto de movimiento en pagina*/
 
-window.addEventListener("scroll", () => {/*cuando el usuario mueva la rueda del raton hacia abajo has este efecto*/
+const updateActiveImage = () => {
     const container = document.querySelector(".ContainerImgSizeXo");
     const steps = document.querySelectorAll(".SizeImg");
     
-    // Calculamos cuánto hemos scrolleado dentro del contenedor
-    const rect = container.getBoundingClientRect();
-    const scrollPercent = -rect.top / (rect.height - window.innerHeight);
-    
-    if (scrollPercent >= 0 && scrollPercent <= 10) {
-        // Dividimos el progreso entre el número de imágenes
-        const stepIndex = Math.floor(scrollPercent * steps.length);
-        const targetIndex = Math.min(stepIndex, steps.length - 1);
+    if (!container || steps.length === 0) return;
 
-        steps.forEach((step, index) => {
-            if (index === targetIndex) {
-                step.classList.add("active");
-            } else {
-                step.classList.remove("active");
-            }
-        });
+    const rect = container.getBoundingClientRect();
+    
+    // Calculamos el progreso. 
+    // Si rect.top es positivo, aún no llegamos al contenedor.
+    let scrollPercent = -rect.top / (rect.height - window.innerHeight);
+
+    // --- MI CRÍTICA: Lógica de protección ---
+    let targetIndex = 0; // Por defecto, la primera imagen
+
+    if (scrollPercent >= 0 && scrollPercent <= 1) {
+        // Si estamos dentro del contenedor, calculamos cuál toca
+        const stepIndex = Math.floor(scrollPercent * steps.length);
+        targetIndex = Math.min(stepIndex, steps.length - 1);
+    } else if (scrollPercent > 1) {
+        // Si ya pasamos el contenedor, dejamos la última activa
+        targetIndex = steps.length - 1;
     }
-});
+    // Si scrollPercent es < 0, targetIndex se queda en 0 (la primera)
+
+    steps.forEach((step, index) => {
+        step.classList.toggle("active", index === targetIndex);
+    });
+};
+
+window.addEventListener("scroll", updateActiveImage);
+window.addEventListener("load", updateActiveImage); // También al terminar de cargar todo
+updateActiveImage();
 
 /*Empieza el seguimiento del menu*/
 
