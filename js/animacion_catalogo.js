@@ -21,22 +21,22 @@ temaCheckbox.addEventListener("change", ()=>{
 
 /*Inicio de efecto del menu en seguimiento y efecto de movimiento en pagina*/
 
-const updateActiveImage = () => {
+const updateActiveImage = () => {//guardia
     const container = document.querySelector(".ContainerImgSizeXo");
     const steps = document.querySelectorAll(".SizeImg");
     
     if (!container || steps.length === 0) return;
 
-    const rect = container.getBoundingClientRect();
+    const rect = container.getBoundingClientRect();//codigo importante para saber para proteccion del evento (guardia)
     
     // Calculamos el progreso. 
     // Si rect.top es positivo, aún no llegamos al contenedor.
-    let scrollPercent = -rect.top / (rect.height - window.innerHeight);
+    let scrollPercent = -rect.top / (rect.height - window.innerHeight);//la distancia donde da el borde
 
     // --- MI CRÍTICA: Lógica de protección ---
     let targetIndex = 0; // Por defecto, la primera imagen
 
-    if (scrollPercent >= 0 && scrollPercent <= 1) {
+    if (scrollPercent >= 0 && scrollPercent <= 1) {//ayuda que la primera imagen este vista en la ventana
         // Si estamos dentro del contenedor, calculamos cuál toca
         const stepIndex = Math.floor(scrollPercent * steps.length);
         targetIndex = Math.min(stepIndex, steps.length - 1);
@@ -54,6 +54,8 @@ const updateActiveImage = () => {
 window.addEventListener("scroll", updateActiveImage);
 window.addEventListener("load", updateActiveImage); // También al terminar de cargar todo
 updateActiveImage();
+
+/*efecto del size*/
 
 /*Empieza el seguimiento del menu*/
 
@@ -83,8 +85,7 @@ window.addEventListener("scroll", () =>{
 
 /*Termina el seguimiento del menu*/
 
-
-/*termino de animacion de menu*/
+/*Efecto de carga de animacion en who*/
 
 const loadwindows = [
     {id: "scrolltittleWho", className: "animationwhotittle"},
@@ -98,12 +99,42 @@ window.addEventListener('DOMContentLoaded', () =>{
         if (el) {
             el.classList.toggle(item.className);
         }
-    })
+    });
 });
 
+/*Fin efecto de carga de animacion en who*/
 
-/*termino de efecto del menu en seguimiento y efecto de movimiento en pagina*/
+//animacion en scroll buttom en pagina
 
+const scrollbuttom = [//constantes definidas en un Array
+    {id: "tittleandtextaimxo", className: "scroll-tittleandtextaimxo"},
+    {id: "textaimxo1", className: "scroll-textaimxo1"},
+    {id: "textaimxo2", className: "scroll-textaimxo2"},
+    {id: "textaimxo3", className: "scroll-textaimxo3"}
+];
+
+window.addEventListener('scroll', () =>{//guardia llamado windows al momento de que la ventana de scroll
+    scrollbuttom.forEach(item =>{//bucle hasta que se cumpla el bucle hasta que se cumpla la condicion
+        const elementoscroll = document.getElementById(item.id);
+
+    if (elementoscroll) {
+        
+        // 2. Medimos la distancia del elemento al techo de la pantalla
+        const posicionelementoscroll = elementoscroll.getBoundingClientRect().top;
+
+        // 3. Definimos un "punto de activación" (ejemplo: a un 100% de la pantalla)
+        const puntodeactivacion = window.innerHeight * 1;//indica que en que punto se activara la animacion
+
+        if (posicionelementoscroll < puntodeactivacion){
+            // Si el elemento subió lo suficiente, le ponemos la clase de CSS
+            elementoscroll.classList.add(item.className);
+        }else{
+            // Opcional: si quieres que la animación se repita al subir
+            elementoscroll.classList.remove(item.className);
+        }
+    }
+    });
+});
 
 
 

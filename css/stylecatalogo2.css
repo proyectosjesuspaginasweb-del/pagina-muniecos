@@ -411,6 +411,8 @@ input:checked + .slider:before {
     color: var(--Blanco);
     font-family: Lobster;
     border-radius: 1em;
+    transform: translateY(200px);
+    opacity: 0;
 }
 
 .TittleAimXo > h3{
@@ -463,6 +465,7 @@ input:checked + .slider:before {
     /*efecto vidrio templado*/
     bottom: 1.5em;
     border-radius: 1em 2em;
+    transform: rotate3d(10, 0, 0, 80deg);
 }
 
 .TextAim > h3{
@@ -478,7 +481,26 @@ input:checked + .slider:before {
 
 /*Inicia la animacion de AIM en el contenedor de tittle y text*/
 
+.scroll-tittleandtextaimxo{
+    transform: translateY(-50px);
+    transition: 3s ease;
+    opacity: 1;
+}
 
+.scroll-textaimxo1{
+    transform: rotate3d(0, 0, 0, 0deg);
+    transition: 3s ease;
+}
+
+.scroll-textaimxo2{
+    transform: rotate3d(0, 0, 0, 0deg);
+    transition: 2s ease;
+}
+
+.scroll-textaimxo3{
+    transform: rotate3d(0, 0, 0, 0deg);
+    transition: 1.5s ease;
+}
 
 /*Termina la animacion de AIM en el contenedor de tittle y text*/
 
@@ -640,6 +662,7 @@ input:checked + .slider:before {
 }
 
 /*se agrega para corregir el error en el efecto de scroll en las imagenes*/
+
 .SizeImg.active {
     opacity: 1 !important;
     transform: scale(1) !important;
