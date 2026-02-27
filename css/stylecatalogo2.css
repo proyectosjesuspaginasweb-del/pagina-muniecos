@@ -530,6 +530,11 @@ input:checked + .slider:before {
 
 /*Estilo para titulos*/
 
+.TittleSizeXo{
+    transform: translateY(220px);
+    opacity: 0;
+}
+
 .TittleSizeXo > h3{
     position: relative;
     width: 50%;
@@ -674,7 +679,11 @@ input:checked + .slider:before {
 
 /*empieza la animacion del size*/
 
-
+.scroll-textsize{
+    transform: translateY(0);
+    transition: 2s ease;
+    opacity: 1;
+}
 
 /*termina la animacion del size*/
 
@@ -705,6 +714,8 @@ input:checked + .slider:before {
     align-content: center;
     justify-content: center;
     align-items: center;
+    transform: translateY(180px);
+    opacity: 0;
 }
 
 .TittleCatalogo > h3{
@@ -755,6 +766,8 @@ input:checked + .slider:before {
     padding: 2em;
     font-size: 20px;
     font-family: Playfair_Display;
+    transform: translateY(250px);
+    opacity: 0;
 }
 
 .ImgContainerCatXo{
@@ -782,6 +795,7 @@ input:checked + .slider:before {
     box-shadow: 0 4px 22px rgb(61, 0, 58); /* Sombra ligera */
     /*efecto vidrio templado*/
     border-radius: 1em 3em;
+    transform: translateY(200px);
 }
 
 .ImgCatXo > img{
@@ -964,7 +978,23 @@ html:has(.ModalDialog:target) {/*hace que solo afecte el modalDialog para que al
 
 /*Inicia la animacion del catalogo, texto, titulo e imagenes*/
 
+.scroll-tittlecatalogoxo{
+    transform: translateY(0);
+    transition: 2s ease;
+    opacity: 1;
+}
 
+.scroll-textcatalogoxo{
+    transform: translateY(0);
+    transition: 2s ease;
+    opacity: 1;
+}
+
+.scroll-imgcatalogoxo{
+    transform: translateY(0);
+    transition: 3s ease;
+    opacity: 1;
+}
 
 /*Termina la animacion del catalogo, texto, titulo e imagenes*/
 
