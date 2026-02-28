@@ -113,7 +113,8 @@ const scrollbuttom = [//constantes definidas en un Array
     {id: "textaimxo3", className: "scroll-textaimxo3"},
     {id: "tittlesizexo", className: "scroll-textsize"},
     {id: "tittlecatalogoxo", className: "scroll-tittlecatalogoxo"},
-    {id: "catalogotextoxo", className: "scroll-textcatalogoxo"}
+    {id: "catalogotextoxo", className: "scroll-textcatalogoxo"},
+    {id: "buttonmore", className: "scroll-bottoncatalogo"}
 ];
 
 window.addEventListener('scroll', () =>{//guardia llamado windows al momento de que la ventana de scroll
@@ -126,7 +127,7 @@ window.addEventListener('scroll', () =>{//guardia llamado windows al momento de 
         const posicionelementoscroll = elementoscroll.getBoundingClientRect().top;
 
         // 3. Definimos un "punto de activación" (ejemplo: a un 100% de la pantalla)
-        const puntodeactivacion = window.innerHeight * 1.5;//indica que en que punto se activara la animacion
+        const puntodeactivacion = window.innerHeight * 1;//indica que en que punto se activara la animacion
 
         if (posicionelementoscroll < puntodeactivacion){
             // Si el elemento subió lo suficiente, le ponemos la clase de CSS
@@ -160,9 +161,10 @@ window.addEventListener("scroll", () => {
             img.style.transitionDelay = "0s";
             img.classList.remove("scroll-imgcatalogoxo");
         }
-    })
+    });
 
-})
+});
+
 
 
 
