@@ -10,10 +10,42 @@
 ======================================== */
 
 /* XX-Large devices and down (xxl) - <1400px */
-@media (max-width: 1400px){ }
+@media (max-width: 1400px){
+    /* Ajustes leves para pantallas muy grandes pero más estrechas */
+    .welcomen{
+        font-size: 48px;
+    }
+    #logo > div > img{
+        width: 14%;
+    }
+    .ImgContainerCatXo > img{
+        width: 48%;
+    }
+    .FondoCatalogoXo{
+        background-size: 16em;
+    }
+}
 
 /* X-Large devices and down (xl) - <1200px */
-@media (max-width: 1200px){ }
+@media (max-width: 1200px){
+    /* Ajustes para pantallas entre ~992px y 1200px */
+    .welcomen{
+        font-size: 44px;
+    }
+    .LogoXo > img{
+        width: 35%;
+    }
+    .ImgLogoXo > img{
+        width: 30%;
+    }
+    .ContainerTextAndTittle > .TittleWhoXo{
+        width: 70%;
+        margin: 0 auto;
+    }
+    .ImgContainerCatXo > img{
+        width: 47%;
+    }
+}
 
 /* Large devices and down (lg) - <992px */
 @media (max-width: 992px){
@@ -266,7 +298,44 @@
 }
 
 /* Medium devices and down (md) - <768px */
-@media (max-width: 768px){ }
+@media (max-width: 768px){
+    /* Ajustes para tablets y pantallas medianas */
+    .welcomen{
+        font-size: 36px;
+        padding-top: 1em;
+    }
+    .buttomEnter > a.enterButton{
+        width: 80%;
+    }
+    .icons > a > img{
+        width: 18%;
+    }
+    .LogoXo > img{
+        width: 28%;
+    }
+    .containerwho,
+    .containerSizes,
+    .ContainerWhoXo{
+        flex-direction: column;
+        align-items: center;
+    }
+    .sizescontainer{
+        width: 90%;
+        padding-top: 2em;
+    }
+    .ImgContainerCatXo > img{
+        width: 80%;
+        margin: 0.5em 0;
+        display: block;
+    }
+    .FondoCatalogoXo{
+        background-size: 12em;
+        height: auto;
+    }
+    .ImgWhoXo > img{
+        width: 60%;
+    }
+}
 
 /* Small devices and down (sm) - <576px */
 @media (max-width: 576px){
@@ -381,4 +450,16 @@
 }
 
 /* Small devices and up (sm) - ≥576px */
-@media (min-width: 576px){ }
+@media (min-width: 576px){
+    /* Sutiles ajustes para dispositivos pequeños en adelante */
+    .buttomEnter > a.enterButton{
+        padding: 10px 18px;
+    }
+    .navoption{
+        gap: 1.2em;
+    }
+    .icons > a > img{
+        max-width: 100%;
+        height: auto;
+    }
+}
