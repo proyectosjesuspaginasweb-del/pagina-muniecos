@@ -50,13 +50,13 @@ body.dark-mode{
 
 /* El contenedor del switch */
 
-.switch{
+.switch{/*se puede mover el boton del tema*/
     position: relative;
     display: inline-block;
     width: 4.5%!important;
     height: 34px;
-    left: 78em;
-    bottom: 13em;
+    left: 76.5em;
+    bottom: 14em;
     /* border: #6d015f solid 3px; */
 }
 
@@ -107,10 +107,11 @@ body.dark-mode{
 }
 
 input:checked + .slider{
-    background-color: #000;
+    background-color: white;
 }
 
 input:checked + .slider:before {
+    background: #000;
     transform: translateX(26px);
 }
 
@@ -133,18 +134,17 @@ input:checked + .slider:before {
     max-width: 100%;
     height: 120vh;
     /* border: yellow 2px solid; */
-    margin-bottom: 5em;
+    margin-bottom: 7em;
 }
 
 #SizeXo > .container-fluid:nth-child(1){
     /* border: orange 2px solid; */
     height: 422vh;
-
+    margin-bottom: 8em;
 }
 
 #CatalogXo > .container-fluid:nth-child(1){
     /* border: orange 2px solid; */
-    margin-bottom: 10em;
     /* border: yellow solid 2px; */
     height: 300vh;
 }
@@ -161,28 +161,36 @@ input:checked + .slider:before {
 
 .OptionMenu > ul{
     display: flex;
+    width: 97%;
+    height: 7vh;
     flex-direction: row;
-    gap: 2em;
-    margin: 3.5em 0em;
-    text-align: end;
+    margin: 4em 4em;
+    text-align: center;
     justify-content: end;
-    /* border: skyblue 1px solid; */
+    /* border: yellow 1px solid; */
 }
 
 .OptionMenu > ul > li{
+    justify-content: center;
+    align-content: center;
     list-style: none;
+    /* border: 2px solid green; */
+    width: 15%;
 }
 
 .OptionMenu > ul > li > a{
+    /* border: 2px solid black; */
     text-decoration: none;
-    font-size: 19px;
+    font-size: 13px;
+    width: 100%;
     color: var(--Rosa-fuerte);
     font-family: Lobster;
 
     &:hover{
         cursor: pointer;
-        border-bottom: var(--Rosa-fuerte) 4px dashed;
-        border-radius: 2em;
+        background: var(--Blanco);
+        border-radius: 1em;
+        border: 2px dashed var(--Rosa-fuerte);
     }
 }
 
@@ -199,6 +207,7 @@ input:checked + .slider:before {
 .is-scrolled{
     position: fixed;
     background: var(--Blanco);
+    top: 0;
     z-index: 999;
     width: 100%;
     height: 10vh;
@@ -222,10 +231,10 @@ input:checked + .slider:before {
     position: relative;
     width: 100%;
     /* border: springgreen 2px solid; */
-    bottom: 2em;
+    bottom: 2.5em;
     padding: 0 !important;
     margin: 0 !important;
-    right: 18em;
+    right: 6.5em;
 }
 
 /*terminade menu en seguimiento*/
@@ -533,8 +542,6 @@ input:checked + .slider:before {
     justify-content: center;
     align-content: center;
     /* border: #7928ca 1px solid; */
-
-
 }
 
 .ContainerTittleandSizesXo{
@@ -546,6 +553,11 @@ input:checked + .slider:before {
 }
 
 /*Estilo para titulos*/
+
+.TittleSizeXo{
+    transform: translateY(220px);
+    opacity: 0;
+}
 
 .TittleSizeXo > h3{
     position: relative;
@@ -590,6 +602,8 @@ input:checked + .slider:before {
     top: 5em;
     height: 400vh; /* Ajusta esto: a más altura, más lento el scroll */
     border: 10px dashed rgba(245, 3, 213, 0.418); /* Borde tenue */
+    transform:  translateY(200px);
+    opacity: 0;
 }
 
 /* Este es el que se queda quieto en pantalla */
@@ -692,7 +706,17 @@ input:checked + .slider:before {
 
 /*empieza la animacion del size*/
 
+.scroll-textsize{
+    transform: translateY(0);
+    transition: 2.5s ease;
+    opacity: 1;
+}
 
+.scroll-containersizeimgxo{
+    transform: translateY(0);
+    transition: 3s ease;
+    opacity: 1;
+}
 
 /*termina la animacion del size*/
 
@@ -701,7 +725,7 @@ input:checked + .slider:before {
 .CatalogoXocontainer{
     position: relative;
     width: 100%;
-    height: 295vh;
+    height: 308vh;
     /* border: #056d01 2px solid; */
     align-content: center;
     justify-content: center;
@@ -713,16 +737,20 @@ input:checked + .slider:before {
 .ContainerTittleandText{
     position: absolute;
     /* border: #ff0080 2px solid; */
-    top: 5em;
+    top: 8em;
 }
 
 .TittleCatalogo{
     position: relative;
+    width: 100%;
     height: 30vh;
     /* border: #ff0080 2px solid; */
     align-content: center;
     justify-content: center;
     align-items: center;
+    transform: translateY(180px);
+    opacity: 0;
+    bottom: 6em;
 }
 
 .TittleCatalogo > h3{
@@ -773,6 +801,8 @@ input:checked + .slider:before {
     padding: 2em;
     font-size: 20px;
     font-family: Playfair_Display;
+    transform: translateY(250px);
+    opacity: 0;
 }
 
 .ImgContainerCatXo{
@@ -800,6 +830,8 @@ input:checked + .slider:before {
     box-shadow: 0 4px 22px rgb(61, 0, 58); /* Sombra ligera */
     /*efecto vidrio templado*/
     border-radius: 1em 3em;
+    transform: translateY(200px);
+    opacity: 0;
 }
 
 .ImgCatXo > img{
@@ -954,10 +986,12 @@ html:has(.ModalDialog:target) {/*hace que solo afecte el modalDialog para que al
     position: relative;
     width: 100%;
     height: 20vh;
-
     align-content: center;
     justify-content: center;
     /* border: rgba(255, 0, 128, 0.9) 2px solid; */
+    top: 0;
+    transform: translateY(130px);
+    opacity: 0;
 }
 
 .buttomMore > a{
@@ -982,7 +1016,29 @@ html:has(.ModalDialog:target) {/*hace que solo afecte el modalDialog para que al
 
 /*Inicia la animacion del catalogo, texto, titulo e imagenes*/
 
+.scroll-tittlecatalogoxo{
+    transform: translateY(0);
+    transition: 2s ease;
+    opacity: 1;
+}
 
+.scroll-textcatalogoxo{
+    transform: translateY(0);
+    transition: 2s ease;
+    opacity: 1;
+}
+
+.scroll-imgcatalogoxo{
+    transform: translateY(0);
+    transition: 3s ease;
+    opacity: 1;
+}
+
+.scroll-bottoncatalogo{
+    transform: translateY(0);
+    transition: 3s ease;
+    opacity: 1;
+}
 
 /*Termina la animacion del catalogo, texto, titulo e imagenes*/
 
@@ -990,7 +1046,7 @@ html:has(.ModalDialog:target) {/*hace que solo afecte el modalDialog para que al
 
 .ContainerTittleandTextProcess{
     position: relative;
-    border: skyblue 2px solid;
+    /* border: skyblue 2px solid; */
     height: 120vh;
     display: flex;
     align-items: center;
@@ -1015,6 +1071,9 @@ html:has(.ModalDialog:target) {/*hace que solo afecte el modalDialog para que al
     box-shadow: 0 4px 22px rgba(80, 3, 76, 0.37); /* Sombra ligera */
     /*efecto vidrio templado*/
     border-radius: 1em 3em;
+    transform: translateX(-590px);
+    transition: all 2.5s ease;
+    opacity: 0;
 }
 
 .TittleProcess > h3{
@@ -1024,7 +1083,7 @@ html:has(.ModalDialog:target) {/*hace que solo afecte el modalDialog para que al
     font-family: Lobster;
 }
 
-.TextProcess{
+.textprocessprimary{
     display: flex;
     flex-direction: column;
     position: relative;
@@ -1049,6 +1108,8 @@ html:has(.ModalDialog:target) {/*hace que solo afecte el modalDialog para que al
     font-size: 20px;
     color: var(--Blanco);
     font-family: Playfair_Display;
+    transform: translateX(-35em);
+    opacity: 0;
 }
 
 .FlechaProgress{
@@ -1078,6 +1139,35 @@ html:has(.ModalDialog:target) {/*hace que solo afecte el modalDialog para que al
 }
 
 /*Termino de contenedor de process*/
+
+/*Inicia animacion de process*/
+
+.scroll-tittleprocess{
+    transform: translateX(0);
+    transition: 3s ease;
+    opacity: 1;
+}
+
+.scroll-textprocess{
+    transform: translateX(0);
+    transition: 4s ease;
+    opacity: 1;
+}
+
+.scroll-textprocess2{
+    transform: translateX(0);
+    transition: 4s ease;
+    opacity: 1;
+}
+
+.scroll-textprocess3{
+    transform: translateX(0);
+    transition: 4.5s ease;
+    opacity: 1;
+}
+
+
+/*Inicia animacion de process*/
 
 /*Inicio de contenedor de Contact*/
 
@@ -1116,6 +1206,8 @@ html:has(.ModalDialog:target) {/*hace que solo afecte el modalDialog para que al
     color: var(--Blanco);
     font-size: 18px;
     font-family: Indie_Flower;
+    transform: translateX(-32em);
+    opacity: 0;
 }
 
 .Textcontact{
@@ -1145,6 +1237,7 @@ html:has(.ModalDialog:target) {/*hace que solo afecte el modalDialog para que al
     filter: drop-shadow(0 2px 10px rgb(206, 199, 206)); /*Sombra ligera*/
     /*efecto vidrio templado*/
     border-radius: 2em 1em;
+    transform: translateX(-37em);
 }
 
 .IconsRed{
@@ -1167,6 +1260,7 @@ html:has(.ModalDialog:target) {/*hace que solo afecte el modalDialog para que al
     /* border: springgreen 2px solid; */
     height: 90vh;
     color: var(--Blanco);
+    transform: translateX(50em);
 }
 
 .dateperson{
@@ -1223,6 +1317,28 @@ html:has(.ModalDialog:target) {/*hace que solo afecte el modalDialog para que al
 }
 /*Termina el contenedor de Contact*/
 
+/*Inicio Animaciones de contacto*/
+
+.scroll-tittleandtext{
+    transform: translateY(0);
+    transition: 3s ease;
+    opacity: 1;
+}
+
+.scroll-iconsxo{
+    transform: translateY(0);
+    transition: 3s ease;
+    opacity: 1;
+}
+
+.scroll-formxo{
+    transform: translateY(0);
+    transition: 3s ease;
+    opacity: 1;
+}
+
+/*fin Animaciones de contacto*/
+
 /*Inicio de diseño de Footer*/
 
 .FooterXo{
@@ -1232,6 +1348,7 @@ html:has(.ModalDialog:target) {/*hace que solo afecte el modalDialog para que al
     /* border: rgba(0,0,0,0.8) 2px solid; */
     height: 80vh;
     background: url(../css/img/Fondos_Pagina_Munecos/FondoFooter2.svg) no-repeat 0em 2em / 160%;
+    overflow: hidden;
 }
 
 .NameXo{
@@ -1248,6 +1365,8 @@ html:has(.ModalDialog:target) {/*hace que solo afecte el modalDialog para que al
     font-family: Lobster;
     font-size: 28px;
     z-index: 2;
+    transform: translateY(10em);
+    opacity: 0;
 }
 
 .backgroundfooter{
@@ -1260,3 +1379,11 @@ html:has(.ModalDialog:target) {/*hace que solo afecte el modalDialog para que al
 }
 
 /*Termino de diseño de Footer*/
+
+/*Animacion del footer*/
+
+.scroll-namexofooter{
+    transform: translateY(0);
+    transition: 2s ease;
+    opacity: 1;
+}
