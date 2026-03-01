@@ -117,7 +117,7 @@ input:checked + .slider:before {
     max-width: 100%;
     height: 120vh;
     /* border: yellow 2px solid; */
-    margin-bottom: 8em;
+    margin-bottom: 7em;
 }
 
 #SizeXo > .container-fluid:nth-child(1){
@@ -217,7 +217,7 @@ input:checked + .slider:before {
     bottom: 2.5em;
     padding: 0 !important;
     margin: 0 !important;
-    right: 11em;
+    right: 6.5em;
 }
 
 /*terminade menu en seguimiento*/
@@ -585,6 +585,8 @@ input:checked + .slider:before {
     top: 5em;
     height: 400vh; /* Ajusta esto: a más altura, más lento el scroll */
     border: 10px dashed rgba(245, 3, 213, 0.418); /* Borde tenue */
+    transform:  translateY(200px);
+    opacity: 0;
 }
 
 /* Este es el que se queda quieto en pantalla */
@@ -688,7 +690,13 @@ input:checked + .slider:before {
 
 .scroll-textsize{
     transform: translateY(0);
-    transition: 2s ease;
+    transition: 2.5s ease;
+    opacity: 1;
+}
+
+.scroll-containersizeimgxo{
+    transform: translateY(0);
+    transition: 3s ease;
     opacity: 1;
 }
 
@@ -711,11 +719,12 @@ input:checked + .slider:before {
 .ContainerTittleandText{
     position: absolute;
     /* border: #ff0080 2px solid; */
-    top: 5em;
+    top: 8em;
 }
 
 .TittleCatalogo{
     position: relative;
+    width: 100%;
     height: 30vh;
     /* border: #ff0080 2px solid; */
     align-content: center;
@@ -723,7 +732,7 @@ input:checked + .slider:before {
     align-items: center;
     transform: translateY(180px);
     opacity: 0;
-    bottom: 2em;
+    bottom: 6em;
 }
 
 .TittleCatalogo > h3{
@@ -804,6 +813,7 @@ input:checked + .slider:before {
     /*efecto vidrio templado*/
     border-radius: 1em 3em;
     transform: translateY(200px);
+    opacity: 0;
 }
 
 .ImgCatXo > img{
@@ -961,7 +971,8 @@ html:has(.ModalDialog:target) {/*hace que solo afecte el modalDialog para que al
     align-content: center;
     justify-content: center;
     /* border: rgba(255, 0, 128, 0.9) 2px solid; */
-    transform: translateY(150px);
+    top: 0;
+    transform: translateY(130px);
     opacity: 0;
 }
 
@@ -1007,7 +1018,7 @@ html:has(.ModalDialog:target) {/*hace que solo afecte el modalDialog para que al
 
 .scroll-bottoncatalogo{
     transform: translateY(0);
-    transition: 2s ease;
+    transition: 3s ease;
     opacity: 1;
 }
 
@@ -1042,6 +1053,9 @@ html:has(.ModalDialog:target) {/*hace que solo afecte el modalDialog para que al
     box-shadow: 0 4px 22px rgba(80, 3, 76, 0.37); /* Sombra ligera */
     /*efecto vidrio templado*/
     border-radius: 1em 3em;
+    transform: translateX(-590px);
+    transition: all 2.5s ease;
+    opacity: 0;
 }
 
 .TittleProcess > h3{
@@ -1051,7 +1065,7 @@ html:has(.ModalDialog:target) {/*hace que solo afecte el modalDialog para que al
     font-family: Lobster;
 }
 
-.TextProcess{
+.textprocessprimary{
     display: flex;
     flex-direction: column;
     position: relative;
@@ -1076,6 +1090,8 @@ html:has(.ModalDialog:target) {/*hace que solo afecte el modalDialog para que al
     font-size: 20px;
     color: var(--Blanco);
     font-family: Playfair_Display;
+    transform: translateX(-35em);
+    opacity: 0;
 }
 
 .FlechaProgress{
@@ -1105,6 +1121,35 @@ html:has(.ModalDialog:target) {/*hace que solo afecte el modalDialog para que al
 }
 
 /*Termino de contenedor de process*/
+
+/*Inicia animacion de process*/
+
+.scroll-tittleprocess{
+    transform: translateX(0);
+    transition: 3s ease;
+    opacity: 1;
+}
+
+.scroll-textprocess{
+    transform: translateX(0);
+    transition: 4s ease;
+    opacity: 1;
+}
+
+.scroll-textprocess2{
+    transform: translateX(0);
+    transition: 4s ease;
+    opacity: 1;
+}
+
+.scroll-textprocess3{
+    transform: translateX(0);
+    transition: 4.5s ease;
+    opacity: 1;
+}
+
+
+/*Inicia animacion de process*/
 
 /*Inicio de contenedor de Contact*/
 
@@ -1143,6 +1188,8 @@ html:has(.ModalDialog:target) {/*hace que solo afecte el modalDialog para que al
     color: var(--Blanco);
     font-size: 18px;
     font-family: Indie_Flower;
+    transform: translateX(-32em);
+    opacity: 0;
 }
 
 .Textcontact{
@@ -1172,6 +1219,7 @@ html:has(.ModalDialog:target) {/*hace que solo afecte el modalDialog para que al
     filter: drop-shadow(0 2px 10px rgb(206, 199, 206)); /*Sombra ligera*/
     /*efecto vidrio templado*/
     border-radius: 2em 1em;
+    transform: translateX(-37em);
 }
 
 .IconsRed{
@@ -1194,6 +1242,7 @@ html:has(.ModalDialog:target) {/*hace que solo afecte el modalDialog para que al
     /* border: springgreen 2px solid; */
     height: 90vh;
     color: var(--Blanco);
+    transform: translateX(50em);
 }
 
 .dateperson{
@@ -1250,6 +1299,28 @@ html:has(.ModalDialog:target) {/*hace que solo afecte el modalDialog para que al
 }
 /*Termina el contenedor de Contact*/
 
+/*Inicio Animaciones de contacto*/
+
+.scroll-tittleandtext{
+    transform: translateY(0);
+    transition: 3s ease;
+    opacity: 1;
+}
+
+.scroll-iconsxo{
+    transform: translateY(0);
+    transition: 3s ease;
+    opacity: 1;
+}
+
+.scroll-formxo{
+    transform: translateY(0);
+    transition: 3s ease;
+    opacity: 1;
+}
+
+/*fin Animaciones de contacto*/
+
 /*Inicio de diseño de Footer*/
 
 .FooterXo{
@@ -1259,6 +1330,7 @@ html:has(.ModalDialog:target) {/*hace que solo afecte el modalDialog para que al
     /* border: rgba(0,0,0,0.8) 2px solid; */
     height: 80vh;
     background: url(../css/img/Fondos_Pagina_Munecos/FondoFooter2.svg) no-repeat 0em 2em / 160%;
+    overflow: hidden;
 }
 
 .NameXo{
@@ -1275,6 +1347,8 @@ html:has(.ModalDialog:target) {/*hace que solo afecte el modalDialog para que al
     font-family: Lobster;
     font-size: 28px;
     z-index: 2;
+    transform: translateY(10em);
+    opacity: 0;
 }
 
 .backgroundfooter{
@@ -1287,3 +1361,11 @@ html:has(.ModalDialog:target) {/*hace que solo afecte el modalDialog para que al
 }
 
 /*Termino de diseño de Footer*/
+
+/*Animacion del footer*/
+
+.scroll-namexofooter{
+    transform: translateY(0);
+    transition: 2s ease;
+    opacity: 1;
+}

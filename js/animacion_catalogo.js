@@ -114,7 +114,16 @@ const scrollbuttom = [//constantes definidas en un Array
     {id: "tittlesizexo", className: "scroll-textsize"},
     {id: "tittlecatalogoxo", className: "scroll-tittlecatalogoxo"},
     {id: "catalogotextoxo", className: "scroll-textcatalogoxo"},
-    {id: "buttonmore", className: "scroll-bottoncatalogo"}
+    {id: "button", className: "scroll-bottoncatalogo"},
+    {id: "tittleprocess", className: "scroll-tittleprocess"},
+    {id: "textprocess", className: "scroll-textprocess"},
+    {id: "textprocess2", className: "scroll-textprocess2"},
+    {id: "textprocess3", className: "scroll-textprocess3"},
+    {id: "containersizexo", className: "scroll-containersizeimgxo"},
+    {id: "tittleandtextcontactoxo", className: "scroll-tittleandtext"},
+    {id: "iconsred", className: "scroll-iconsxo"},
+    {id: "formxo", className: "scroll-formxo"},
+    {id: "namexofooter", className: "scroll-namexofooter"}
 ];
 
 window.addEventListener('scroll', () =>{//guardia llamado windows al momento de que la ventana de scroll
@@ -127,7 +136,7 @@ window.addEventListener('scroll', () =>{//guardia llamado windows al momento de 
         const posicionelementoscroll = elementoscroll.getBoundingClientRect().top;
 
         // 3. Definimos un "punto de activación" (ejemplo: a un 100% de la pantalla)
-        const puntodeactivacion = window.innerHeight * 1;//indica que en que punto se activara la animacion
+        const puntodeactivacion = window.innerHeight * 1.4;//indica que en que punto se activara la animacion
 
         if (posicionelementoscroll < puntodeactivacion){
             // Si el elemento subió lo suficiente, le ponemos la clase de CSS
@@ -145,7 +154,7 @@ window.addEventListener('scroll', () =>{//guardia llamado windows al momento de 
 const scrollimgcatalogoxo = document.querySelectorAll(".ImgCatXo");
 
 window.addEventListener("scroll", () => {
-    const activationimg = window.innerHeight * 1.5;
+    const activationimg = window.innerHeight * 0.8;
 
     scrollimgcatalogoxo.forEach((img,index) =>{
         const positonimg = img.getBoundingClientRect().top;
@@ -159,11 +168,12 @@ window.addEventListener("scroll", () => {
             img.classList.add("scroll-imgcatalogoxo");
         } else {
             img.style.transitionDelay = "0s";
-            img.classList.remove("scroll-imgcatalogoxo");
+            img.classList.remove("scroll-imgcatalogoxo", "oneanimationimgcatalogoxo", "twoanimationimgcatalogoxo");
         }
     });
 
 });
+
 
 
 
