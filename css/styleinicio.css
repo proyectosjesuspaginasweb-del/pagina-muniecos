@@ -138,7 +138,7 @@ body{
     background: var(--Rosa-fuerte);
     font-family: Indie_Flower;
     color: var(--Blanco);
-    right: 2em;
+    right: 0em;
     cursor:pointer;
     transition: 1.3s;
 }
@@ -206,7 +206,7 @@ body{
     height: 10vh;
     bottom: 10px;
     left: 80em;
-    border: paleturquoise solid 1px;
+    /* border: paleturquoise solid 1px; */
     opacity: 0.5;
 }
 
