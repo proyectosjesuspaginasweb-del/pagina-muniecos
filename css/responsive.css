@@ -338,115 +338,182 @@
 }
 
 /* Small devices and down (sm) - <576px */
-@media (max-width: 576px){
-    /* Welcome Section */
-    .welcomen{
-        font-size: 30px;
-        gap: 0.5em;
+@media (max-width: 320px){
+
+    .container-fluid{
+        max-width: 100%;
+        height: 71em;
+        /* border: yellow 3px solid; */
     }
-    .welcomeContainer{
-        flex-wrap: wrap;
+
+    .ContainerWhoXo{
+        max-width: 100%;
+        height: 71em;
+        /* border: steelblue 2px solid; */
+        display: flex!important;
+        flex-direction: column!important;
+        background: url(./img/Fondos_Pagina_Munecos/FondoWho3.jpg) no-repeat center / 100% 210vh;
     }
-    .buttomEnter > a.enterButton{
-        width: 80%;
-        font-size: 16px;
-        padding: 8px;
+
+    #navbar{
+        /* border: seagreen 3px solid; */
+        max-width: 100%;
+        display: flex!important;
+        flex-direction: column!important;
     }
-    .icons{
-        gap: 2em;
-        padding-top: 1em;
+
+    .OptionMenu{
+        max-width: 100%;
+        height: 20vh;
+        display: flex;
+        flex-direction: column;
+        /* border: paleturquoise 2px solid; */
+        display: none;
     }
-    .icons > a > img{
-        width: 22%;
+
+    .is-scrollednav{
+        display: none;
     }
-    #logo > div > img{
-        width: 20%;
+
+    .is-scrolloptionnav{
+        display: none;
+    }
+
+    .is-scrolled{
+        display: none;
+    }
+
+    .ImgLogoXo{
+        max-width: 100%;
+        height: 100vh;
+        /* border: midnightblue 2px solid; */
+    }
+
+    .ImgLogoXo > img{
+        position: relative;
+        width: 50%;
         height: auto;
-        bottom: 5px;
+        left: 1.5em;
+        /* border: tomato 2px solid; */
     }
-    
-    /* Navigation */
-    .navoption{
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    /* Who Section */
-    .tittlewho{
-        font-size: 32px;
-        padding: 2em 0;
-    }
-    .textwho{
-        font-size: 18px;
-        width: 95%;
-    }
-    
-    /* Sizes Section */
-    .containerSizes{
-        flex-direction: column;
-    }
-    .sizescontainer{
+
+    .ContainerTextAndTittleWhoXo{
+        position: relative;
+        top: 0em;
+        /* border: red solid 2px; */
+        overflow: hidden;
+        height: 71em;
         width: 100%;
+        display: flex!important;
+        flex-direction: column!important;
     }
-    .sizescontainer > img{
-        width: 70%;
-        height: auto;
-    }
-    
-    /* Catalog Section */
-    .imgcontainer{
-        max-height: none;
-    }
-    .imagenprueba > a > img{
-        height: auto;
-        width: 100%;
-    }
-    .buttomFurther{
-        width: 70%;
-    }
-    
-    /* Catalogo2 Page */
-    .MenunavXo > ul{
+
+    .ContainerTextAndTittleWhoXo, .row{
+        display: flex;
         flex-direction: column;
+        width: 100%;
+        text-align: center;
+        align-content: center;
     }
-    .ContainerTextAndTittle{
+
+    ul > li > a{
+        border: orange 2px solid;
+        font-size: 5px;
+    }
+
+    .TittleWhoXo > h3{
+        position: relative;
+        top: 3em;
+        width: 12em;
+        height: 35vh;
         font-size: 20px;
     }
-    .ContainerTextAndTittle > .TittleWhoXo{
-        width: 80%;
-        font-size: 28px;
+
+    .TextWhoXo{
+        position: relative;
+        right: 5em!important;
+        top: 5.5em;
+        width: 13em;
     }
-    .ContainerTextAndTittle > .TextWhoXo{
-        width: 90%;
-        font-size: 18px;
-    }
-    .TittleAim > h3{
-        font-size: 30px;
-    }
-    .TextAim{
-        font-size: 18px;
-    }
-    .TittleSizeXo > h3{
-        font-size: 30px;
-    }
-    .SizeImg{
+
+    .TextWhoXo > p{
+        padding: 2.5em;
         width: 100%;
+        height: 50vh;
+        font-size: 15px;
     }
-    .ImgContainerCatXo > img{
-        width: 90%;
+
+    .ImgWhoXo{
+        position: relative;
+        top: 6em;
+        width: 100%!important;
+        height: 100vh!important;
+        /* border: blueviolet 2px solid; */
     }
-    .TittleCatalogo > h3{
-        font-size: 32px;
+
+    .ImgWhoXo > img{
+        position: absolute;
+        width: 43%;
+        height: 30vh;
+        /* border: tomato 2px solid; */
+        top: 3em;
+        right: 20em!important;
     }
-    .TittleCatalogo > p{
-        font-size: 16px;
+
+    .ImgWhoXo > img:nth-child(1){
+        top: 0em;
+        left: 6em;
     }
-    .ContainerContactXo{
-        margin: 1em;
+
+    .ImgWhoXo > img:nth-child(2){
+        position: relative;
+        top: 7em;
+        left: -3em;
     }
-    .IconsXo > .IconsRed > a > img{
-        width: 20%;
+
+    .ImgWhoXo > img:nth-child(3){
+        top: 7.1em;
+        left: 9em;
     }
+
+    /*termina edicion en responsive de who*/
+
+    #AimXO > .container-fluid{
+        height: 200vh;
+        width: 100%;
+        border: navy 2px solid;
+    }
+        
+
+    .ContainerAimXo{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        /* border: orange 2px solid; */
+        width: 100%;
+        height: 200vh;
+    }
+
+    .ContainerTittleandTextAimXo{
+        width: 100%;
+        height: 200vh;
+    }
+
+    .ContainerTextAimXo{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 150vh;
+    }
+
+    .TextAim{
+        width: 80%;
+        height: 50vh;
+        border: brown 2px solid;
+        font-size: 13px;
+    }
+
 }
 
 /* Small devices and up (sm) - ≥576px */

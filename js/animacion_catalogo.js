@@ -137,7 +137,7 @@ window.addEventListener('scroll', () =>{//guardia llamado windows al momento de 
         const posicionelementoscroll = elementoscroll.getBoundingClientRect().top;
 
         // 3. Definimos un "punto de activación" (ejemplo: a un 100% de la pantalla)
-        const puntodeactivacion = window.innerHeight * 1.4;//indica que en que punto se activara la animacion
+        const puntodeactivacion = window.innerHeight * 1.2;//indica que en que punto se activara la animacion
 
         if (posicionelementoscroll < puntodeactivacion){
             // Si el elemento subió lo suficiente, le ponemos la clase de CSS
@@ -175,7 +175,12 @@ window.addEventListener("scroll", () => {
 
 });
 
+/*Menu hambuergesa*/
 
+const navButton = document.querySelector(".nav-button");
+const navbar = document.getElementById("navbar");
 
-
+navButton.addEventListener("click", () => {
+    navbar.classList.toggle("nav-open");
+});
 

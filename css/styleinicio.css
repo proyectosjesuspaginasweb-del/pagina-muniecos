@@ -203,11 +203,11 @@ body{
 #logo > div > img{
     position: absolute;
     width: 5%;
-    height: 10vh;
-    bottom: 10px;
-    left: 80em;
+    height: 20vh;
+    bottom: 45px;
+    left: 72em;
     /* border: paleturquoise solid 1px; */
-    opacity: 0.5;
+    opacity: 0.4;
 }
 
 /*Inicio de estilo de logo*/
