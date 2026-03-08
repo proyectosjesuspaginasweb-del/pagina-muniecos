@@ -44,27 +44,33 @@ body{
 /*Inicio de estolo del contenedor de letrero*/
 
 #main{
-    /* border: palevioletred solid 1px; */
+    /* border: #d87093 solid 2px; */
+    max-width: 100%;
+    min-height: 100vh;
+}
+
+.containerwelcomandlogo{
     display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 97.2vh;
+    flex-direction: column;
+    max-width: 100%;
+    min-height: 100vh;
+    /* border: yellow 2px solid; */
 }
 
 .welcomen{
     display: flex;
     flex-direction: column;
     gap: 1em;
-    width: 60%;
-    height: auto;
-    /* border: purple 1px solid; */
+    min-width: 100%;
+    min-height: 70vh;
+    /* border: purple 2px solid; */
     text-align: center;
     justify-content: center;
+    align-content: center;
     font-size: 50px;
     color: var(--Rosa-fuerte);
-    padding-top: 2em;
-    margin-left: 1em;
     font-family: Indie_Flower;
+    /* border: yellow solid 2px; */
 }
 
 .welcomeContainer{
@@ -131,7 +137,8 @@ body{
 
 .buttomEnter > a.enterButton{
     position: relative;
-    border: yellowgreen 2px solid;
+    display: flexbox;
+    /* border: yellowgreen 2px solid; */
     border-radius: 2em;
     width: 23%;
     padding: 10px;
@@ -144,70 +151,42 @@ body{
 }
 
 .buttomEnter > a.enterButton:hover{
+    display: flexbox;
     transform: translateY(-20px);
     transition: 1.3s;
+    /* border: teal 2px solid; */
 }
 
 /*Fin de estolo del contenedor de letrero*/
-
-.containerRedes{
-    width: 40%;
-    height: 99.1vh;
-    /* border: palegreen solid 2px; */
-}
-
-/*animacion de los iconos y estilo*/
-.icons{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 3em;
-    padding-top: 1.5em;
-    overflow: hidden;
-}
-
-.icons1{
-    transform: translateX(-150px);
-    opacity: 0;
-    transition: all 2s ease;/*afecta tiempo de transicion*/
-}
-
-.icons2{
-    transform: translateX(150px);
-    opacity: 0;
-    transition: all 2s ease;
-}
-
-.icons1.mostrar{
-    transform: translateY(0);
-    opacity: 1;
-}
-
-.icons2.mostrar2{
-    transform: translateY(0);
-    opacity: 1;
-}
-
-.icons > a > img{
-    display: flex;
-    width: 20%;
-    justify-content: center;
-    align-items: center;
-    margin-left: 12em;
-}
 
 /*fin de portada de muñecos XO*/
 
 /*Inicio de estilo de logo*/
 
-#logo > div > img{
-    position: absolute;
-    width: 5%;
+.imglogo{
+    position: relative;
+    display: flex;
+    /* border: tomato 2px solid; */
+    max-width: 100%;
+    min-height: 30vh;
+    justify-content: end;
+    padding: 1.7em;
+}
+
+.imglogo > a{
+    position: relative;
+    display: flex;
+    /* border: turquoise 3px solid; */
+    min-width: 10%;
     height: 20vh;
-    bottom: 45px;
-    left: 72em;
-    /* border: paleturquoise solid 1px; */
-    opacity: 0.4;
+}
+
+.imglogo > a >img{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
 }
 
 /*Inicio de estilo de logo*/

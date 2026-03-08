@@ -1,532 +1,58 @@
 /* ========================================
-   BOOTSTRAP 5 RESPONSIVE BREAKPOINTS
-   ========================================
-   X-Small:       <576px
-   Small (sm):    ≥576px
-   Medium (md):   ≥768px
-   Large (lg):    ≥992px
-   X-Large (xl):  ≥1200px
-   XX-Large (xxl):≥1400px
+   Breakpoints equivalentes a los mixins
+   de Bootstrap `media-breakpoint-up(...)`
+
+   sm  ≥576px
+   md  ≥768px
+   lg  ≥992px
+   xl  ≥1200px
+   xxl ≥1400px
 ======================================== */
 
-/* XX-Large devices and down (xxl) - <1400px */
-@media (max-width: 1400px){
-    /* Ajustes leves para pantallas muy grandes pero más estrechas */
-    .welcomen{
-        font-size: 48px;
-    }
-    #logo > div > img{
-        width: 14%;
-    }
-    .ImgContainerCatXo > img{
-        width: 48%;
-    }
-    .FondoCatalogoXo{
-        background-size: 16em;
-    }
-}
+/* Mobile devices (max-width: 575px) */
+@media (max-width: 575px) {
+   .welcomen{
+      max-width: 100%;
+      /* border: teal 2px solid; */
+      font-size: 20px;
+   }
 
-/* X-Large devices and down (xl) - <1200px */
-@media (max-width: 1200px){
-    /* Ajustes para pantallas entre ~992px y 1200px */
-    .welcomen{
-        font-size: 44px;
-    }
-    .LogoXo > img{
-        width: 35%;
-    }
-    .ImgLogoXo > img{
-        width: 30%;
-    }
-    .ContainerTextAndTittle > .TittleWhoXo{
-        width: 70%;
-        margin: 0 auto;
-    }
-    .ImgContainerCatXo > img{
-        width: 47%;
-    }
-}
-
-/* Large devices and down (lg) - <992px */
-@media (max-width: 992px){
-    /* Main Section */
-    #main{
-        flex-direction: column;
-        height: auto;
-    }
-    .welcomen{
-        width: 100%;
-        margin-left: 0;
-        padding-top: 1.5em;
-        font-size: 40px;
-    }
-    .buttomEnter > a.enterButton{
-        width: 60%;
-        right: 0;
-        margin-top: 1em;
-    }
-    .containerRedes{
-        width: 100%;
-        height: auto;
-    }
-    .icons > a > img{
-        width: 15%;
-        margin-left: 0;
-        margin-inline: auto;
-    }
-    #logo > div > img{
-        width: 12%;
-        left: auto;
-        right: 1em;
-    }
-    
-    /* Navigation */
-    .containernav{
-        flex-direction: column;
-        height: auto;
-        align-items: center;
-    }
-    .LogoXo{
-        width: 100%;
-        height: auto;
-    }
-    .LogoXo > img{
-        position: static;
-        width: 30%;
-        height: auto;
-        margin-top: 1em;
-    }
-    .navoption{
-        flex-wrap: wrap;
-        gap: 1em;
-        padding-top: 1em;
-        height: auto;
-    }
-    
-    /* Who Section */
-    .containerwho{
-        flex-direction: column;
-        height: auto;
-    }
-    .infwho{
-        width: 100%;
-        height: auto;
-    }
-    .imgwho{
-        width: 100%;
-        height: auto;
-    }
-    .imgwho > img{
-        position: static;
-        width: 40%;
-        height: auto;
-        margin: 1em auto;
-        display: block;
-    }
-    
-    /* Goals Section */
-    #goals,
-    .containerGoals{
-        height: auto;
-    }
-    .textGoals{
-        flex-direction: column;
-        left: 0;
-    }
-    .ListonGoalsup{
-        display: none;
-    }
-    
-    /* Sizes Section */
-    #sizes,
-    .containerSizes{
-        height: auto;
-    }
-    .containerSizes{
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .sizescontainer{
-        width: 45%;
-        padding-top: 4em;
-    }
-    .containerSizes > .sizescontainer:nth-child(n){
-        top: 0;
-        bottom: 0;
-    }
-    .listonsizes1,
-    .listonsizes2{
-        display: none;
-    }
-    
-    /* Catalog Section */
-    #catalog{
-        height: auto;
-    }
-    .imgcontainer{
-        height: auto;
-        max-height: 200vh;
-    }
-    .bandera1,
-    .bandera2{
-        display: none;
-    }
-    .buttomFurther{
-        left: 0;
-        margin: 2em auto;
-        height: auto;
-        justify-content: center;
-        width: 40%;
-    }
-    
-    /* Catalogo2 Page */
-    .container-xxl{
-        flex-direction: column;
-        gap: 1em;
-        height: auto;
-        align-items: center;
-    }
-    .ImgLogoXo > img{
-        position: static;
-        width: 25%;
-        height: auto;
-        margin-top: 1em;
-    }
-    .MenunavXo > ul{
-        flex-wrap: wrap;
-        justify-content: center;
-        padding-top: 0;
-        margin-bottom: 1em;
-    }
-    .ContainerWhoXo{
-        flex-direction: column;
-        height: auto;
-    }
-    .ContainerTextAndTittle{
-        width: 100%;
-        padding-top: 3em;
-    }
-    .ContainerTextAndTittle > .TittleWhoXo{
-        width: 60%;
-        margin: 0 auto;
-    }
-    .ContainerTextAndTittle > .TextWhoXo{
-        width: 85%;
-        margin: 2em auto;
-        height: auto;
-    }
-    .ImgWhoXo{
-        width: 100%;
-        margin: 2em 0;
-        background-size: 22em;
-    }
-    .ImgWhoXo > img{
-        position: static;
-        width: 50%;
-        height: auto;
-        margin: 1em auto;
-        display: block;
-    }
-    .ContainerAim{
-        flex-direction: column;
-        height: auto;
-        background-size: 5em;
-    }
-    .TittleAim{
-        width: 100%;
-        margin-left: 0;
-        margin-top: 2em;
-    }
-    .TextAim{
-        height: auto;
-    }
-    .Icon1Aim,
-    .FlechaAim1{
-        display: none;
-    }
-    .ContainerSizes,
-    .SizesXo{
-        height: auto;
-    }
-    .ContainerImgSize{
-        flex-wrap: wrap;
-        height: auto;
-        justify-content: center;
-    }
-    .SizeImg{
-        width: 45%;
-        height: auto;
-        margin-top: 2em;
-    }
-    .SizeImg > img{
-        height: auto;
-    }
-    .CatalogoXocontainer{
-        height: auto;
-    }
-    .ImgContainerCatXo{
-        margin: 3em auto;
-        width: 95%;
-    }
-    .ImgContainerCatXo > img{
-        width: 45%;
-        height: auto;
-        margin: 1em 1%;
-    }
-    .ImgContainerCatXo > img:nth-child(n){
-        bottom: 0;
-        margin-bottom: 1em;
-    }
-    .FondoCatalogoXo{
-        height: 180vh;
-        background-size: 14em;
-    }
-    .ContainerContactXo{
-        flex-direction: column;
-        margin: 2em;
-    }
-    .IconsXo{
-        width: 100%;
-        border: none;
-    }
-    .IconsRed{
-        width: 100%;
-    }
-    .IconsXo > .IconsRed > a > img{
-        width: 14%;
-    }
-}
-
-/* Medium devices and down (md) - <768px */
-@media (max-width: 768px){
-    /* Ajustes para tablets y pantallas medianas */
-    .welcomen{
-        font-size: 36px;
-        padding-top: 1em;
-    }
-    .buttomEnter > a.enterButton{
-        width: 80%;
-    }
-    .icons > a > img{
-        width: 18%;
-    }
-    .LogoXo > img{
-        width: 28%;
-    }
-    .containerwho,
-    .containerSizes,
-    .ContainerWhoXo{
-        flex-direction: column;
-        align-items: center;
-    }
-    .sizescontainer{
-        width: 90%;
-        padding-top: 2em;
-    }
-    .ImgContainerCatXo > img{
-        width: 80%;
-        margin: 0.5em 0;
-        display: block;
-    }
-    .FondoCatalogoXo{
-        background-size: 12em;
-        height: auto;
-    }
-    .ImgWhoXo > img{
-        width: 60%;
-    }
-}
-
-/* Small devices and down (sm) - <576px */
-@media (max-width: 320px){
-
-    .container-fluid{
-        max-width: 100%;
-        height: 71em;
-        /* border: yellow 3px solid; */
-    }
-
-    .ContainerWhoXo{
-        max-width: 100%;
-        height: 71em;
-        /* border: steelblue 2px solid; */
-        display: flex!important;
-        flex-direction: column!important;
-        background: url(./img/Fondos_Pagina_Munecos/FondoWho3.jpg) no-repeat center / 100% 210vh;
-    }
-
-    #navbar{
-        /* border: seagreen 3px solid; */
-        max-width: 100%;
-        display: flex!important;
-        flex-direction: column!important;
-    }
-
-    .OptionMenu{
-        max-width: 100%;
-        height: 20vh;
-        display: flex;
-        flex-direction: column;
-        /* border: paleturquoise 2px solid; */
-        display: none;
-    }
-
-    .is-scrollednav{
-        display: none;
-    }
-
-    .is-scrolloptionnav{
-        display: none;
-    }
-
-    .is-scrolled{
-        display: none;
-    }
-
-    .ImgLogoXo{
-        max-width: 100%;
-        height: 100vh;
-        /* border: midnightblue 2px solid; */
-    }
-
-    .ImgLogoXo > img{
-        position: relative;
-        width: 50%;
-        height: auto;
-        left: 1.5em;
-        /* border: tomato 2px solid; */
-    }
-
-    .ContainerTextAndTittleWhoXo{
-        position: relative;
-        top: 0em;
-        /* border: red solid 2px; */
-        overflow: hidden;
-        height: 71em;
-        width: 100%;
-        display: flex!important;
-        flex-direction: column!important;
-    }
-
-    .ContainerTextAndTittleWhoXo, .row{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-        align-content: center;
-    }
-
-    ul > li > a{
-        border: orange 2px solid;
-        font-size: 5px;
-    }
-
-    .TittleWhoXo > h3{
-        position: relative;
-        top: 3em;
-        width: 12em;
-        height: 35vh;
-        font-size: 20px;
-    }
-
-    .TextWhoXo{
-        position: relative;
-        right: 5em!important;
-        top: 5.5em;
-        width: 13em;
-    }
-
-    .TextWhoXo > p{
-        padding: 2.5em;
-        width: 100%;
-        height: 50vh;
-        font-size: 15px;
-    }
-
-    .ImgWhoXo{
-        position: relative;
-        top: 6em;
-        width: 100%!important;
-        height: 100vh!important;
-        /* border: blueviolet 2px solid; */
-    }
-
-    .ImgWhoXo > img{
-        position: absolute;
-        width: 43%;
-        height: 30vh;
-        /* border: tomato 2px solid; */
-        top: 3em;
-        right: 20em!important;
-    }
-
-    .ImgWhoXo > img:nth-child(1){
-        top: 0em;
-        left: 6em;
-    }
-
-    .ImgWhoXo > img:nth-child(2){
-        position: relative;
-        top: 7em;
-        left: -3em;
-    }
-
-    .ImgWhoXo > img:nth-child(3){
-        top: 7.1em;
-        left: 9em;
-    }
-
-    /*termina edicion en responsive de who*/
-
-    #AimXO > .container-fluid{
-        height: 200vh;
-        width: 100%;
-        border: navy 2px solid;
-    }
-        
-
-    .ContainerAimXo{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-content: center;
-        /* border: orange 2px solid; */
-        width: 100%;
-        height: 200vh;
-    }
-
-    .ContainerTittleandTextAimXo{
-        width: 100%;
-        height: 200vh;
-    }
-
-    .ContainerTextAimXo{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 150vh;
-    }
-
-    .TextAim{
-        width: 80%;
-        height: 50vh;
-        border: brown 2px solid;
-        font-size: 13px;
-    }
-
+   .imglogo{
+      display: flex;
+      justify-content: center;
+      /* border: springgreen 2px solid; */
+      top: 0;
+      left: 0;
+   }
 }
 
 /* Small devices and up (sm) - ≥576px */
-@media (min-width: 576px){
-    /* Sutiles ajustes para dispositivos pequeños en adelante */
-    .buttomEnter > a.enterButton{
-        padding: 10px 18px;
-    }
-    .navoption{
-        gap: 1.2em;
-    }
-    .icons > a > img{
-        max-width: 100%;
-        height: auto;
-    }
+@media (min-width: 576px) {
+   
+   .imglogo{
+      justify-content: center;
+   }
 }
+
+/* Medium devices and up (md) - ≥768px */
+@media (min-width: 768px) {
+   .imglogo{
+      justify-content: end;
+   }
+}
+
+/* Large devices and up (lg) - ≥992px */
+@media (min-width: 992px) {
+
+}
+
+/* X-Large devices and up (xl) - ≥1200px */
+@media (min-width: 1200px) {
+
+}
+
+/* XX-Large devices and up (xxl) - ≥1400px */
+@media (min-width: 1400px) {
+
+}
+
