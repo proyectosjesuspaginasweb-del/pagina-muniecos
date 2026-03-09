@@ -63,7 +63,9 @@ updateActiveImage();
 const scrollnav = [
     { id: "navbar", className: "is-scrolled"},
     { id: "imgnavxo", className: "is-scrollednav"},
-    { id: "optionav", className: "is-scrolloptionnav"}
+    { id: "optionav", className: "is-scrolloptionnav"},
+    { id: "switch", className: "is-scrollswitch"},
+    { id: "imglogoxo", className: "is-imglogoxoscroll"}
 ]
 
 //El vigilate
@@ -174,13 +176,3 @@ window.addEventListener("scroll", () => {
     });
 
 });
-
-/*Menu hambuergesa*/
-
-const navButton = document.querySelector(".nav-button");
-const navbar = document.getElementById("navbar");
-
-navButton.addEventListener("click", () => {
-    navbar.classList.toggle("nav-open");
-});
-

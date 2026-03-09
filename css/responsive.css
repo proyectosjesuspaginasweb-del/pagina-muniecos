@@ -11,6 +11,8 @@
 
 /* Mobile devices (max-width: 575px) */
 @media (max-width: 575px) {
+
+   /*Responsive de inicio*/
    .welcomen{
       max-width: 100%;
       /* border: teal 2px solid; */
@@ -24,21 +26,35 @@
       top: 0;
       left: 0;
    }
+   
+   /*Fin responsive de inicio*/
+
+   .is-scrolled{
+      display: none;
+   }
+
 }
 
 /* Small devices and up (sm) - ≥576px */
 @media (min-width: 576px) {
    
+   /*Responsive de inicio*/
    .imglogo{
       justify-content: center;
    }
+   /*Fin responsive de inicio*/
+
 }
 
 /* Medium devices and up (md) - ≥768px */
 @media (min-width: 768px) {
+
+   /*Responsive de inicio*/
    .imglogo{
       justify-content: end;
    }
+   /*Fin responsive de inicio*/
+
 }
 
 /* Large devices and up (lg) - ≥992px */

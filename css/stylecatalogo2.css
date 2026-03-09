@@ -63,18 +63,18 @@ body.dark-mode{
 
 .switch{/*se puede mover el boton del tema*/
     position: relative;
+    right: 1em;
+    top: 0.5em;
     display: inline-block;
-    width: 4.5%!important;
-    height: 34px;
-    left: 76.5em;
-    bottom: 14em;
+    min-width: 6%;
+    height: 5.4vh;
     /* border: #6d015f solid 3px; */
 }
 
 .switch input{
     opacity: 0;
-    width: 0;
-    height: 0;
+    width: 10%;
+    height: 10vh;
 }
 
 .slider{/*contenedor que tiene adentro el boton*/
@@ -130,6 +130,10 @@ input:checked + .slider:before {
 
 /*Inicia estilo del menu, el logo de XO y who*/
 
+main{
+    overflow: hidden;
+}
+
 .container-xxl{/*contenedor donde viene el logo y el menu*/
     display: flex;
     flex-direction: row;
@@ -143,14 +147,16 @@ input:checked + .slider:before {
 
 .container-fluid{
     max-width: 100%;
-    height: 120vh;
+    min-height: 100vh;
+    display: flex;
     /* border: yellow 2px solid; */
     margin-bottom: 7em;
+    overflow: hidden;
 }
 
 #SizeXo > .container-fluid:nth-child(1){
-    /* border: orange 2px solid; */
-    height: 422vh;
+    /* border: orange 2px solid;*/
+    min-height: 100vh;
     margin-bottom: 8em;
 }
 
@@ -162,61 +168,90 @@ input:checked + .slider:before {
 
 /*Inicio Diseño de menú*/
 
+.ImgLogoXo{
+    position: relative;/*siempre debe de tener position absolute*/
+    display: flex;
+    justify-content: center;/*para que aplique el centrar el contenido*/
+    align-items: center;
+    /* border: orange 2px solid; */
+    min-width: 20%;
+    max-height: 100vh;
+}
+
+.ImgLogoXo > img{
+    position: relative;
+    display: flex;
+    width: 85%;
+    max-height: 30vh;
+    /* border: #000 2px solid; */
+}
+
+.navxo{
+    position: relative;
+    display: flex;
+    max-width: 100%;
+    min-width: 120vh;
+}
+
 .OptionandLogoMenu{
     position: relative;
     display: flex;
-    width: 100%;
-    height: 32vh;
+    flex-direction: row;
+    min-width: 100%;
+    max-height: 30vh;
     /* border: #00c6ff 2px solid; */
 }
 
-.OptionMenu > ul{
+.OptionMenu{
+    position: relative;
     display: flex;
-    width: 97%;
-    height: 7vh;
     flex-direction: row;
-    margin: 4em 4em;
-    text-align: center;
+    min-width: 80%;
+    max-height: 30vh;
+    /* border: red 2px solid; */
     justify-content: end;
-    /* border: yellow 1px solid; */
 }
 
-.OptionMenu > ul > li{
+.navoption{
+    position: relative;
+    display: flex;
+    min-width: 100%;
+    min-height: 30vh;
+    /* border: blue 2px solid; */
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: end;
+}
+
+.navoption > li{
+    position: relative;
+    /* border: lime 2px solid; */
+    font-size: 15px;
+    min-width: 10%;
+    max-height: 10vh;
+    list-style: none;
     justify-content: center;
     align-content: center;
-    list-style: none;
-    /* border: 2px solid green; */
-    width: 15%;
+    text-align: center;
 }
 
-.OptionMenu > ul > li > a{
-    /* border: 2px solid black; */
+.navoption > li > a{
+    /* border: #000 2px solid; */
     text-decoration: none;
-    font-size: 13px;
-    width: 100%;
-    color: var(--Rosa-fuerte);
+    width: 20%;
+    min-height: 30vh;
     font-family: Lobster;
-
-    &:hover{
-        cursor: pointer;
-        background: var(--Blanco);
-        border-radius: 1em;
-        border: 2px dashed var(--Rosa-fuerte);
-    }
-}
-
-.navbar{
-    background: var(--Blanco);
-    position: fixed;
-    height: 35vh;
+    color: var(--Rosa-fuerte);
 }
 
 .nav-button{
     width: 100%;
     height: auto;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     display: none;
 }
+
 
 /*Fin Diseño de menú*/
 
@@ -225,6 +260,7 @@ input:checked + .slider:before {
 .is-scrolled{
     position: fixed;
     background: var(--Blanco);
+    display: flex;
     top: 0;
     z-index: 999;
     width: 100%;
@@ -247,12 +283,40 @@ input:checked + .slider:before {
 
 .is-scrolloptionnav{
     position: relative;
-    width: 100%;
+    min-width: 94%;
+    display: flex;
+    min-height: 10vh;
     /* border: springgreen 2px solid; */
-    bottom: 2.5em;
     padding: 0 !important;
     margin: 0 !important;
-    right: 6.5em;
+    align-content: rit;
+    justify-content: center;
+    text-align: right;
+    padding: 0;
+    margin: 0;
+}
+
+.is-scrollswitch{
+    position: relative;
+    display: flex;
+    max-width: 20%;
+    top: 0.8em;
+    /* border: #000 2px solid; */
+}
+
+.is-imglogoxoscroll{
+    position: relative;
+    display: flex;
+    max-width: 10%;
+    height: 10vh;
+    /* border: blue 2px solid; */
+}
+
+.is-imglogoxoscroll > img{
+    position: relative;
+    justify-content: center;
+    align-content: center;
+    width: 20%;
 }
 
 /*terminade menu en seguimiento*/
@@ -262,14 +326,6 @@ input:checked + .slider:before {
 .ImgWhoXo{
     transform: translateY(350px);
     opacity: 0;
-}
-
-.ImgLogoXo > img{
-    position: absolute;
-    width: 15%;
-    height: 30vh;
-    top: 1em;
-    left: 8em;
 }
 
 .ImgWhoXo > img{
@@ -290,12 +346,13 @@ input:checked + .slider:before {
 
 .ContainerWhoXo{
     position: relative;
-    width: 100%;
-    height: 120vh;
+    min-width: 100%;
+    max-height: 120vh;
     display: flex;
     flex-direction: column;
     background: url(./img/Fondos_Pagina_Munecos/FondoWho3.jpg) no-repeat center / 120% 150vh;
     /* border: violet 2px solid; */
+    overflow: hidden;
 }
 
 .the-containercontactXo{
@@ -306,18 +363,21 @@ input:checked + .slider:before {
     position: relative;
     display: flex;
     flex-direction: row;
-    width: 100%;
-    height: 40vh;
+    max-width: 100%;
+    min-height: 100vh;
     /* border: red 2px solid; */
-    top: 6em;
-    left: 0em;
-    align-content: center;
+    align-items: center;/*centra los contenedores de texto y titulo*/
+    justify-content: center;
+    gap: 1em;
 }
 
 .TittleWhoXo{
+    position: relative;
+    display: flex;
     transform: translateX(-400px);
     opacity: 0;
     width: 25%;
+    /* border: #6d015f solid 1px; */
 }
 
 .TittleWhoXo > h3{/*contenedor del titulo afecta el h3 directamente*/
@@ -337,17 +397,27 @@ input:checked + .slider:before {
     border: 4px dashed rgba(245, 3, 213, 0.418); /* Borde tenue */
     box-shadow: 0 4px 22px rgba(80, 3, 76, 0.37); /* Sombra ligera */
     /*efecto vidrio templado*/
-    left: 2em;
     border-radius: 1em 2em;
      filter: drop-shadow(0 2px 10px rgb(206, 199, 206)); /* Sombra ligera */
 }
 
 .TextWhoXo{/*contenedor del texto*/
+    position: relative;
+    display: flex;
     height: 50vh;
-    width: 30%;
-    text-align: center;
-    align-content: center;
+    max-width: 30%;
     /* border: salmon 2px solid; */
+    transform: translateX(-400px);
+    opacity: 0;
+}
+
+.TextWhoXo > p{/*se puede mover el texto dentro del contenedor*/
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    height: 50vh;
     /*efecto vidrio templado*/
     background: rgba(206, 7, 224, 0.068); /* Blanco con transparencia */
     backdrop-filter: blur(10px);
@@ -358,10 +428,7 @@ input:checked + .slider:before {
     color: var(--Blanco);
     font-size: 18px;
     font-family: Playfair_Display;
-    margin-left: 7.5em;
     border-radius: 1em 2em;
-    transform: translateX(-400px);
-    opacity: 0;
 }
 
 .scrollimgwho{
@@ -374,8 +441,9 @@ input:checked + .slider:before {
     height: 51vh;
     width: 32%!important;
     position: relative;
-    left: 0em;
-    top: 0em;
+    display: flex;
+    justify-content: center;
+    align-content: center;
     /* border: #ff0080 1px solid; */
     filter: drop-shadow(0 0 10px rgb(139, 1, 116));
 }
@@ -424,12 +492,22 @@ input:checked + .slider:before {
 
 /*Contenedor de AimXO Inicia el diseño*/
 
+.ContainerAimXo{
+    position: relative;
+    display: flex;
+    max-width: 100%;
+    min-height: 100vh;
+    /* border: rgba(224, 7, 188, 0.37) 2px solid; */
+}
+
 .ContainerTittleandTextAimXo{
     position: relative;
     /* border: royalblue 1px solid; */
-    width: 100%;
+    max-width: 100%;
     height: 120vh;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
     background: url(../css/img/Iconos_Xo/ParcheXo.png) no-repeat 6em 3em / 5em 5em,/*primero icono de parche arriba a la izquieda*/
     url(../css/img/Iconos_Xo/ParcheXo.png) no-repeat 40em 15em / 5em 5em,/*segundo parche de enmedio de arriba*/
     url(../css/img/Iconos_Xo/ParcheXo.png) no-repeat 73em 3em / 5em 5em,/*tercer parche arriba a la derecha*/
@@ -562,16 +640,16 @@ input:checked + .slider:before {
 
 .ContainerSizesXo{
     position: relative;
-    width: 100%;
-    height: 100vh;
+    min-width: 100%;
+    min-height: 187vh;
     text-align: center;
     justify-content: center;
     align-content: center;
-    /* border: #7928ca 1px solid; */
+    border: #7928ca 2px solid;
 }
 
 .ContainerTittleandSizesXo{
-    position: static;
+    position: relative;
     width: 100%;
     height: 100vh;
     top: 3em;
@@ -626,7 +704,7 @@ input:checked + .slider:before {
 .ContainerImgSizeXo {
     position: relative;
     top: 5em;
-    height: 400vh; /* Ajusta esto: a más altura, más lento el scroll */
+    height: 300vh; /* Ajusta esto: a más altura, más lento el scroll */
     border: 10px dashed rgba(245, 3, 213, 0.418); /* Borde tenue */
     transform:  translateY(200px);
     opacity: 0;
@@ -637,7 +715,7 @@ input:checked + .slider:before {
     position: sticky;
     top: 0em;
     width: 100%;
-    max-height: 100vh;
+    min-height: 100vh;
     overflow: hidden; /* Evita que salgan barras de scroll internas */
     display: flex;
     justify-content: center;
@@ -699,7 +777,8 @@ input:checked + .slider:before {
 }
 
 /* Solo la que tiene .active se ve */
-.SizeImg.active {
+.SizeImg.active{
+    position: static;
     opacity: 1;
     transform: scale(1);
     pointer-events: all;
@@ -707,11 +786,11 @@ input:checked + .slider:before {
 }
 
 .scroll-step{
-    position: absolute;
+    position: relative;
     width: 100%;
     height: 100vh;
     align-content: center;
-    /* border: yellow 2px solid; */
+    border: yellow 2px solid;
 }
 
 .scroll-step.active{
