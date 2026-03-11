@@ -1,3 +1,4 @@
+
 /*Boton de modo oscuro/claro*/
 
 const temaCheckbox = document.getElementById("theme-checkbox");
@@ -22,41 +23,9 @@ temaCheckbox.addEventListener("change", ()=>{
 
 /*fin de tema de modo*/
 
-/*Inicio de efecto del menu en seguimiento y efecto de movimiento en pagina*/
+/*efecto de movimiento en pagina*/
 
-const updateActiveImage = () => {//guardia
-    const container = document.querySelector(".ContainerImgSizeXo");
-    const steps = document.querySelectorAll(".SizeImg");
-    
-    if (!container || steps.length === 0) return;
 
-    const rect = container.getBoundingClientRect();//codigo importante para saber para proteccion del evento (guardia)
-    
-    // Calculamos el progreso. 
-    // Si rect.top es positivo, aún no llegamos al contenedor.
-    let scrollPercent = -rect.top / (rect.height - window.innerHeight);//la distancia donde da el borde
-
-    // --- MI CRÍTICA: Lógica de protección ---
-    let targetIndex = 0; // Por defecto, la primera imagen
-
-    if (scrollPercent >= 0 && scrollPercent <= 1) {//ayuda que la primera imagen este vista en la ventana
-        // Si estamos dentro del contenedor, calculamos cuál toca
-        const stepIndex = Math.floor(scrollPercent * steps.length);
-        targetIndex = Math.min(stepIndex, steps.length - 1);
-    } else if (scrollPercent > 1) {
-        // Si ya pasamos el contenedor, dejamos la última activa
-        targetIndex = steps.length - 1;
-    }
-    // Si scrollPercent es < 0, targetIndex se queda en 0 (la primera)
-
-    steps.forEach((step, index) => {
-        step.classList.toggle("active", index === targetIndex);
-    });
-};
-
-window.addEventListener("scroll", updateActiveImage);
-window.addEventListener("load", updateActiveImage); // También al terminar de cargar todo
-updateActiveImage();
 
 /*Empieza el seguimiento del menu*/
 

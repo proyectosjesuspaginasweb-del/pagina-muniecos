@@ -149,20 +149,13 @@ main{
     max-width: 100%;
     min-height: 100vh;
     display: flex;
-    /* border: yellow 2px solid; */
+    border: yellow 2px solid;
     margin-bottom: 7em;
     overflow: hidden;
 }
 
-#SizeXo > .container-fluid:nth-child(1){
-    /* border: orange 2px solid;*/
-    min-height: 100vh;
-    margin-bottom: 8em;
-}
-
 #CatalogXo > .container-fluid:nth-child(1){
-    /* border: orange 2px solid; */
-    /* border: yellow solid 2px; */
+    border: yellow solid 2px;
     height: 300vh;
 }
 
@@ -639,188 +632,56 @@ main{
 /*inicia contenedor de tamaño (sizes)*/
 
 .ContainerSizesXo{
-    position: relative;
+    border: lightgreen 2px solid;
     min-width: 100%;
-    min-height: 187vh;
-    text-align: center;
-    justify-content: center;
-    align-content: center;
-    border: #7928ca 2px solid;
-}
-
-.ContainerTittleandSizesXo{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    top: 3em;
-    /* border: springgreen 1px solid; */
-}
-
-/*Estilo para titulos*/
-
-.TittleSizeXo{
-    transform: translateY(220px);
-    opacity: 0;
-}
-
-.TittleSizeXo > h3{
-    position: relative;
-    width: 50%;
-    height: 20vh;
-    left: 8em;
-    display: flex;
-    text-align: center;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    font-size: 40px;
-    color: var(--Blanco);
-    font-family: Lobster;
-    /* border: tomato 2px solid; */
-    /*efecto vidrio templado*/
-    background: rgba(206, 7, 224, 0.068); /* Blanco con transparencia */
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); /* Para soporte en Safari */
-    border: 4px dashed rgba(245, 3, 213, 0.418); /* Borde tenue */
-    box-shadow: 0 4px 22px rgba(80, 3, 76, 0.37); /* Sombra ligera */
-    /*efecto vidrio templado*/
-}
-
-.TittleSizeXoSize > h3{
-    font-size: 25px;
-    font-family: Playfair_Display;
-    color: var(--Blanco);
-    /* border: turquoise 2px solid; */
-}
-
-/*Fin Estilo para titulos*/
-
-#SizeXo{
-    position: relative;
     min-height: 100vh;
-    /* overflow-y: scroll; */
-}
-
-.ContainerImgSizeXo {
-    position: relative;
-    top: 5em;
-    height: 300vh; /* Ajusta esto: a más altura, más lento el scroll */
-    border: 10px dashed rgba(245, 3, 213, 0.418); /* Borde tenue */
-    transform:  translateY(200px);
-    opacity: 0;
-}
-
-/* Este es el que se queda quieto en pantalla */
-.sticky-wrapper {
-    position: sticky;
-    top: 0em;
-    width: 100%;
-    min-height: 100vh;
-    overflow: hidden; /* Evita que salgan barras de scroll internas */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* border: #6d015f 2px solid; */
-}
-
-.sticky-wrapper:nth-child(1){
-    /* border: purple 2px solid; */
-    /*efecto vidrio templado*/
-    width: 100%;
-    height: 100vh;
-    z-index: 2;
-}
-
-.sticky-wrapper > .SizeImg:nth-child(2n+1){/*Impares en las imagenes*/
-    z-index: 2;
-    width: 100%;
-    background: url(../css/img/Fondos_Pagina_Munecos/wave.svg)no-repeat -51em 2em / cover,/*Fondo ondulado de abajo*/
-    url(../css/img/Fondos_Pagina_Munecos/wave-Arriba.svg) no-repeat 0em -10em / 113% 100% ;/*Fondo ondulado de arriba*/
-}
-
-.sticky-wrapper > .SizeImg:nth-child(2n){/*pares en las imagenes*/
-    background: url(../css/img/Fondos_Pagina_Munecos/wave2.svg) no-repeat 0em 10em / cover,/*Fondo ondulado de Abajo*/
-    url(../css/img/Fondos_Pagina_Munecos/wave2-Arriba.svg) no-repeat 0em -10em / 113% 100% ;/*Fondo ondulado de arriba*/
-    z-index: 2;
-    width: 100%;
-}
-
-/* Las imágenes se enciman una de otra */
-.SizeImg {/*contenedor principal que tiene el titulo de tamaño e imagen*/
-    position: absolute; /* Todas en el mismo lugar */
-    width: 100%;
-    height: 100vh;
-    top: 0em;
     display: flex;
     flex-direction: column;
-    opacity: 0; /*Ocultas por defecto*/
-    transition: opacity 0.5s ease-in-out;
-    pointer-events: none;
-    transition: 3s ease translateX(100px) linear;
-    z-index: 2;
-    /* border: #ff0080 2px solid; */
-}
-
-.SizeImg img{/*contenedor de imagenes*/
-    position: relative;
-    width: 30%;
-    height: 60vh;
-    border-radius: 2em 3em;
-    box-shadow: #6d015f 5px 10px 20px;
-    z-index: 1;
-    /* border: tomato 2px solid; */
-}
-
-.FondoOndeado{
-    position: absolute;
-    z-index: 2;
-}
-
-/* Solo la que tiene .active se ve */
-.SizeImg.active{
-    position: static;
-    opacity: 1;
-    transform: scale(1);
-    pointer-events: all;
-    z-index: 10;
-}
-
-.scroll-step{
-    position: relative;
-    width: 100%;
-    height: 100vh;
     align-content: center;
-    border: yellow 2px solid;
+    margin: 0 auto;
 }
 
-.scroll-step.active{
-    opacity: 1;
-    transform: translateX(100px) scale(2);
+.TittleSizeXo{
+    position: relative;
+    display: flex;
+    max-width: 100%;
+    height: 20vh;
+    padding: 0;
+    margin: 0;
+    border: seagreen 2px solid;
+    justify-content: center;
+    align-items: center;
+} 
+
+.TittleSizeXo > h3{
+    font-size: 45px;
+    color: var(--Blanco);
+    font-family: Lobster;
 }
 
-/*se agrega para corregir el error en el efecto de scroll en las imagenes*/
-
-.SizeImg.active {
-    opacity: 1 !important;
-    transform: scale(1) !important;
-    pointer-events: all !important;
-    z-index: 10; /* Que suba al frente */
+.ContainerImgSizeXo{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+    min-height: 100vh;
+    padding-top: 20vh;
+    gap: 3em;
+    border: #000 3px solid;
+    /* overflow: hidden; */
+    justify-content: center;/*centra el contenido*/
+    align-items: center;/*centra los elementos*/
 }
 
-/*Termina contenedor de tamaño (sizes)*/
-
-/*empieza la animacion del size*/
-
-.scroll-textsize{
-    transform: translateY(0);
-    transition: 2.5s ease;
-    opacity: 1;
+.ContainerImgSizeXo > img{
+    object-fit: cover;
+    width: 300px;
+    max-width: 80vw;
+    aspect-ratio: 1/1;/*los alinia de 1 en 1*/
 }
 
-.scroll-containersizeimgxo{
-    transform: translateY(0);
-    transition: 3s ease;
-    opacity: 1;
+.spacer{
+    height: 100vh;
 }
 
 /*termina la animacion del size*/
