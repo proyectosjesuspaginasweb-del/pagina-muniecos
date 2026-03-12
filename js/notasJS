@@ -1,0 +1,147 @@
+
+/*Boton de modo oscuro/claro
+
+const temaCheckbox = document.getElementById("theme-checkbox");
+const imgWho = document.querySelector(".ContainerWhoXo");
+const btnBlack = document.querySelector(".slider");
+
+temaCheckbox.addEventListener("change", ()=>{
+    
+    if (temaCheckbox.checked) {
+        document.body.classList.add("dark-mode");
+        console.log("Modo Oscuro Activado");
+        imgWho.classList.add("the-containercontactXo");
+        btnBlack.classList.add("mode-black-slider")
+
+    } else {
+        document.body.classList.remove("dark-mode");
+        console.log("Modo Claro Activado");
+        imgWho.classList.remove("the-containercontactXo");
+        btnBlack.classList.remove("mode-black-slider")
+    }
+});
+
+/*fin de tema de modo*/
+
+/*efecto de movimiento en pagina*/
+
+
+
+/*Empieza el seguimiento del menu
+
+const scrollnav = [
+    { id: "navbar", className: "is-scrolled"},
+    { id: "imgnavxo", className: "is-scrollednav"},
+    { id: "optionav", className: "is-scrolloptionnav"},
+    { id: "switch", className: "is-scrollswitch"},
+    { id: "imglogoxo", className: "is-imglogoxoscroll"}
+]
+
+//El vigilate
+window.addEventListener("scroll", () =>{
+    //Se crea una constante para saber cuanto se ha movido el scroll verticalmente
+    const scrollActual = window.scrollY
+
+    //Recorre la constante (por si en el futuro tenemos mas de una elemento)
+    scrollnav.forEach(item =>{
+        const elemento = document.getElementById(item.id)//en la constante elemento se guardar el id que se pone en scrollnav
+
+        if (scrollActual > 100) {
+            elemento.classList.add(item.className);
+        } else {
+            elemento.classList.remove(item.className);
+        }
+    });
+});
+
+
+/*Termina el seguimiento del menu*/
+
+/*Efecto de carga de animacion en who
+
+const loadwindows = [
+    {id: "scrolltittleWho", className: "animationwhotittle"},
+    {id: "scrolltextWho", className: "animationwhotext"},
+    {id: "imgwhoxo", className: "animationimgwho"}
+];
+
+window.addEventListener('DOMContentLoaded', () =>{
+    loadwindows.forEach(item=>{
+        const el = document.getElementById(item.id);
+        if (el) {
+            el.classList.toggle(item.className);
+        }
+    });
+});
+
+/*Fin efecto de carga de animacion en who
+
+//animacion en scroll buttom en pagina
+
+const scrollbuttom = [//constantes definidas en un Array
+    {id: "tittleandtextaimxo", className: "scroll-tittleandtextaimxo"},
+    {id: "textaimxo1", className: "scroll-textaimxo1"},
+    {id: "textaimxo2", className: "scroll-textaimxo2"},
+    {id: "textaimxo3", className: "scroll-textaimxo3"},
+    {id: "tittlesizexo", className: "scroll-textsize"},
+    {id: "tittlecatalogoxo", className: "scroll-tittlecatalogoxo"},
+    {id: "catalogotextoxo", className: "scroll-textcatalogoxo"},
+    {id: "button", className: "scroll-bottoncatalogo"},
+    {id: "tittleprocess", className: "scroll-tittleprocess"},
+    {id: "textprocess", className: "scroll-textprocess"},
+    {id: "textprocess2", className: "scroll-textprocess2"},
+    {id: "textprocess3", className: "scroll-textprocess3"},
+    {id: "containersizexo", className: "scroll-containersizeimgxo"},
+    {id: "tittleandtextcontactoxo", className: "scroll-tittleandtext"},
+    {id: "iconsred", className: "scroll-iconsxo"},
+    {id: "formxo", className: "scroll-formxo"},
+    {id: "namexofooter", className: "scroll-namexofooter"}
+];
+
+window.addEventListener('scroll', () =>{//guardia llamado windows al momento de que la ventana de scroll
+    scrollbuttom.forEach(item =>{//bucle hasta que se cumpla el bucle hasta que se cumpla la condicion
+        const elementoscroll = document.getElementById(item.id);
+
+    if (elementoscroll) {
+        
+        // 2. Medimos la distancia del elemento al techo de la pantalla
+        const posicionelementoscroll = elementoscroll.getBoundingClientRect().top;
+
+        // 3. Definimos un "punto de activación" (ejemplo: a un 100% de la pantalla)
+        const puntodeactivacion = window.innerHeight * 1.2;//indica que en que punto se activara la animacion
+
+        if (posicionelementoscroll < puntodeactivacion){
+            // Si el elemento subió lo suficiente, le ponemos la clase de CSS
+            elementoscroll.classList.add(item.className);
+        }else{
+            // Opcional: si quieres que la animación se repita al subir
+            elementoscroll.classList.remove(item.className);
+        }
+    }
+    });
+});
+
+/*animacion de imagenes para la pagina
+
+const scrollimgcatalogoxo = document.querySelectorAll(".ImgCatXo");
+
+window.addEventListener("scroll", () => {
+    const activationimg = window.innerHeight * 0.8;
+
+    scrollimgcatalogoxo.forEach((img,index) =>{
+        const positonimg = img.getBoundingClientRect().top;
+
+        if (positonimg < activationimg) {
+            if (index % 2 === 0) {
+                img.classList.add("oneanimationimgcatalogoxo");
+            } else {
+                img.classList.add("twoanimationimgcatalogoxo");
+            }
+            img.classList.add("scroll-imgcatalogoxo");
+        } else {
+            img.style.transitionDelay = "0s";
+            img.classList.remove("scroll-imgcatalogoxo", "oneanimationimgcatalogoxo", "twoanimationimgcatalogoxo");
+        }
+    });
+
+});*/
