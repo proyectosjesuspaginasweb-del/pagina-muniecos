@@ -593,7 +593,7 @@ main{
     height: 20vh;
     padding: 0;
     margin: 0;
-    border: seagreen 2px solid;
+    /* border: seagreen 2px solid; */
     justify-content: center;
     align-items: center;
 } 

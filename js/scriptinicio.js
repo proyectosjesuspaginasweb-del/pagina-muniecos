@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         stagger: 0.1,
         duration: 1.5,
         ease: "back",
-        repeat: 2
+        repeat: 100
     })
 });
 });
