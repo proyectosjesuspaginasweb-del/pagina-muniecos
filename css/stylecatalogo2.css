@@ -149,14 +149,14 @@ main{
     max-width: 100%;
     min-height: 100vh;
     display: flex;
-    border: yellow 2px solid;
+    /* border: yellow 2px solid; */
     margin-bottom: 7em;
     overflow: hidden;
 }
 
 #CatalogXo > .container-fluid:nth-child(1){
     border: yellow solid 2px;
-    height: 300vh;
+    height: 315vh;
 }
 
 /*Inicio Diseño de menú*/
@@ -577,13 +577,16 @@ main{
 /*inicia contenedor de tamaño (sizes)*/
 
 .ContainerSizesXo{
-    border: lightgreen 2px solid;
+    /* border: lightgreen 2px solid; */
     min-width: 100%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-content: center;
     margin: 0 auto;
+    border: dashed 5px var(--Rosa-fuerte);
+    border-radius: 2em;
+    background: linear-gradient(229deg,rgba(245, 0, 204, 1) 0%, rgba(48, 179, 164, 0) 12%, rgba(48, 179, 164, 0) 89%, rgba(245, 0, 204, 1) 98%), linear-gradient(304deg,rgba(245, 0, 204, 1) 0%, rgba(48, 179, 164, 0) 12%, rgba(48, 179, 164, 0) 89%, rgba(245, 0, 204, 1) 98%);
 }
 
 .TittleSizeXo{
@@ -609,9 +612,10 @@ main{
     display: flex;
     min-width: 100%;
     min-height: 100vh;
-    /* border: #000 3px solid; */
+    /* border: #000 3px dashed; */
     overflow: hidden;
     justify-content: center;/*centra el contenido*/
+    border-radius: 2em;
 }
 
 .gallery{
@@ -619,14 +623,13 @@ main{
     min-width: 100%;
     min-height: 100vh;
     overflow: hidden;
-    border: 3px solid;
 }
 
 .cards{
     position: absolute;
     width: 14rem;
     height: 25rem;
-    top: 40%;
+    top: 34%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -646,23 +649,28 @@ main{
     top: 0;
     left: 0;
     border-radius: 0.8rem;
+    border: 4px dashed var(--Rosa-fuerte);
+    box-shadow: 0 0 20px var(--Rosa-fuerte);
 }
 
 .actions{
     position: absolute;
-    bottom: 35px;
-    left: 50%;
+    bottom: 22em;
+    left: 52%;
     transform: translate(-50%);
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 50rem;
 }
 
-.actions button{
-    min-width: 80%;
+.actions button{/*afecta los contenedores de los botones se le puede dar estilo en estos*/
+    min-width: 15%;
     min-height: 6vh;
     border-radius: 3em;
+    background-color: var(--Rosa-fuerte);
+    color: var(--Blanco);
+    font-family: Playfair_Display;
 }
 
 a{
@@ -685,9 +693,11 @@ a:hover{
 
 .CatalogoXocontainer{
     position: relative;
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    height: 308vh;
-    /* border: #056d01 2px solid; */
+    height: 310vh;
+    border: #056d01 2px solid;
     align-content: center;
     justify-content: center;
     text-align: center;
@@ -695,35 +705,37 @@ a:hover{
 }
 
 
-.ContainerTittleandText{
-    position: absolute;
-    /* border: #ff0080 2px solid; */
-    top: 8em;
+.ContainerTittleandTextCatalogo{
+    position: relative;
+    display: flex;
+    min-width: 100%;
+    height: 60vh;
+    flex-direction: column;
+    border: yellow 2px solid;
 }
 
 .TittleCatalogo{
     position: relative;
-    width: 100%;
-    height: 30vh;
-    /* border: #ff0080 2px solid; */
-    align-content: center;
+    display: flex;
     justify-content: center;
     align-items: center;
-    bottom: 6em;
+    text-align: center;
+    min-width: 100%;
+    height: 20vh;
+    border: #ff0080 2px solid;
 }
 
 .TittleCatalogo > h3{
     position: relative;
-    width: 50%;
+    width: 30%;
     height: 12vh;
-    align-content: center;
-    text-align: center;
-    left: 7em;
+    display:flex ;
     color: var(--Blanco);
     font-family: Lobster;
     font-size: 45px;
+    justify-content: center;
+    align-items: center;
     /* border: royalblue 1px solid; */
-    /*efecto vidrio templado*/
     background: rgb(224, 7, 195); /* Blanco con transparencia */
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px); /* Para soporte en Safari */
@@ -741,44 +753,57 @@ a:hover{
 }
 
 .TextCatalogo{
+    display: flex;
     position: relative;
-    /* border: rgba(235, 2, 122, 0.822) 2px solid; */
-    width: 100%;
-    height: 20vh;
+    border: rgba(235, 2, 122, 0.822) 2px solid;
+    max-width: 100%;
+    height: 40vh;
     text-align: center;
     justify-content: center;
     align-content: center;
-    /*efecto vidrio templado*/
-    /*efecto vidrio templado*/
-    background: rgb(224, 7, 195); /* Blanco con transparencia */
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); /* Para soporte en Safari */
-    border: 4px dashed rgb(121, 0, 158); /* Borde tenue */
-    box-shadow: 0 4px 22px rgb(61, 0, 58); /* Sombra ligera */
-    /*efecto vidrio templado*/
     color: var(--Blanco);
     padding: 2em;
     font-size: 20px;
     font-family: Playfair_Display;
 }
 
+.TextCatalogo > p{
+    max-width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    /* border: royalblue 1px solid; */
+    background: rgb(224, 7, 195); /* Blanco con transparencia */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Para soporte en Safari */
+    border: 4px dashed rgb(121, 0, 158); /* Borde tenue */
+    box-shadow: 0 4px 22px rgb(61, 0, 58); /* Sombra ligera */
+    /*efecto vidrio templado*/
+}
+
 .ImgContainerCatXo{
     position: relative;
-    align-content: center;
+    display: grid;
+    grid-template-columns: 350px 350px 350px;/*aqui se le da el tamaño de las columnas*/
+    grid-auto-rows: 400px;/*se le da el tamaño de las filas*/
+    max-width: 100%;
     height: 250vh;
-    top: 15em;
-    /* border: red 2px solid; */
+    border: red 2px solid;
     overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    gap: 1% 3%;
 }
 
 .ImgCatXo{
     position: relative;
     display: flex;
-    left: 2.5em;
-    flex-direction: row;
+    top: 2em;
+    min-width: 100%;
     height: 55vh;
     /* border: sienna 2px solid; */
-    margin: 3em 2em;
     /*efecto vidrio templado*/
     background: rgba(224, 7, 188, 0.37); /* Blanco con transparencia */
     backdrop-filter: blur(10px);
@@ -787,14 +812,12 @@ a:hover{
     box-shadow: 0 4px 22px rgb(61, 0, 58); /* Sombra ligera */
     /*efecto vidrio templado*/
     border-radius: 1em 3em;
+    justify-content: center;
+    align-items: center;
 }
 
 .ImgCatXo > img{
     position: absolute;
-    width: 85%;
-    top: 1.5em;
-    left: 1.3em;
-    height: 45vh;
     border-radius: 1em 3em;
     transition: all 2s ease;
     /*efecto vidrio templado*/
@@ -804,12 +827,12 @@ a:hover{
     border: 4px dashed rgb(158, 0, 97); /* Borde tenue */
     box-shadow: 0 4px 22px rgb(61, 0, 58); /* Sombra ligera */
     /*efecto vidrio templado*/
+    width: 100%;
+    height: 100%;
 }
 
 .ImgCatXo > a{/*el la imagen del cuadrado*/
     position: relative;
-    width: 100%;
-    height: 50vh;
     /* border: #ff0080 solid 2px; */
     z-index: 4;
     opacity: 0;
