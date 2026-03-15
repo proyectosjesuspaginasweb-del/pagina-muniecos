@@ -357,7 +357,7 @@ main{
     /* border: red 2px solid; */
     align-items: center;/*centra los contenedores de texto y titulo*/
     justify-content: center;
-    gap: 1em;
+    gap: 2em;
 }
 
 .TittleWhoXo{
@@ -385,14 +385,14 @@ main{
     box-shadow: 0 4px 22px rgba(80, 3, 76, 0.37); /* Sombra ligera */
     /*efecto vidrio templado*/
     border-radius: 1em 2em;
-     filter: drop-shadow(0 2px 10px rgb(206, 199, 206)); /* Sombra ligera */
+    filter: drop-shadow(0 2px 10px rgb(206, 199, 206)); /* Sombra ligera */
 }
 
 .TextWhoXo{/*contenedor del texto*/
     position: relative;
     display: flex;
     height: 50vh;
-    max-width: 30%;
+    max-width: 25%;
     /* border: salmon 2px solid; */
 }
 
@@ -414,6 +414,7 @@ main{
     font-size: 18px;
     font-family: Playfair_Display;
     border-radius: 1em 2em;
+    filter: drop-shadow(0 2px 10px rgb(206, 199, 206)); /* Sombra ligera */
 }
 
 .scrollimgwho{
@@ -480,6 +481,7 @@ main{
     url(../css/img/Iconos_Xo/ParcheXo.png) no-repeat 73em 39em / 5em 5em,/*sexto parche abajo de derecha*/
     url(../css/img/Iconos_Xo/Circulo_Xo.png) no-repeat 10em 20em / 10em 10em,
     url(../css/img/Iconos_Xo/Circulo_Xo.png) no-repeat 63em 20em / 10em 10em;
+    filter: drop-shadow(0 2px 10px rgb(206, 199, 206)); /* Sombra ligera */
 }
 
 .ImgAimXo > img{
@@ -599,12 +601,14 @@ main{
     /* border: seagreen 2px solid; */
     justify-content: center;
     align-items: center;
-} 
+    filter: drop-shadow(0 2px 10px rgb(206, 199, 206)); /* Sombra ligera */
+}
 
 .TittleSizeXo > h3{
     font-size: 45px;
     color: var(--Blanco);
     font-family: Lobster;
+    filter: drop-shadow(0 2px 10px rgb(206, 199, 206)); /* Sombra ligera */
 }
 
 .ContainerImgSizeXo{
@@ -662,6 +666,7 @@ main{
     align-items: center;
     justify-content: center;
     gap: 50rem;
+    filter: drop-shadow(0 2px 10px rgb(206, 199, 206)); /* Sombra ligera */
 }
 
 .actions button{/*afecta los contenedores de los botones se le puede dar estilo en estos*/
@@ -715,6 +720,7 @@ a:hover{
     height: 60vh;
     flex-direction: column;
     /* border: yellow 2px solid; */
+    filter: drop-shadow(0 2px 10px rgb(206, 199, 206)); /* Sombra ligera */
 }
 
 .TittleCatalogo{
@@ -781,7 +787,7 @@ a:hover{
     background: rgb(224, 7, 195); /* Blanco con transparencia */
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px); /* Para soporte en Safari */
-    border: 4px dashed rgb(121, 0, 158); /* Borde tenue */
+    border: 4px dashed rgb(121, 0, 158);/* Borde tenue*/
     box-shadow: 0 4px 22px rgb(61, 0, 58); /* Sombra ligera */
     /*efecto vidrio templado*/
 }
@@ -792,12 +798,13 @@ a:hover{
     grid-template-columns: 350px 350px 350px;/*aqui se le da el tamaño de las columnas*/
     grid-auto-rows: 400px;/*se le da el tamaño de las filas*/
     max-width: 100%;
-    height: 250vh;
+    height: 200vh;
     /* border: red 2px solid; */
     overflow: hidden;
     justify-content: center;
     align-items: center;
     gap: 1% 3%;
+    filter: drop-shadow(0 2px 10px rgb(206, 199, 206)); /* Sombra ligera */
 }
 
 .ImgCatXo{
@@ -1004,11 +1011,15 @@ html:has(.ModalDialog:target) {/*hace que solo afecte el modalDialog para que al
     align-content: center;
     justify-content: start;
     overflow: hidden;
+    background: linear-gradient(231deg,rgba(145, 3, 107, 0.6) 0%, rgba(250, 250, 250, 0) 14%, rgba(255, 255, 255, 0) 83%, rgba(145, 3, 107, 0.59) 100%);
+    border-radius: 1em 3em;
+    border: dashed 5px var(--Rosa-fuerte);
+    filter: drop-shadow(0 2px 10px rgb(206, 199, 206)); /* Sombra ligera */
 }
 
 .TittleProcess{
     position:relative;
-    /* border: yellowgreen 2px solid; */
+    /* border: yellowgreen 2px solid; */;
     height: 20vh;
     text-align: center;
     align-content: center;
@@ -1089,145 +1100,118 @@ html:has(.ModalDialog:target) {/*hace que solo afecte el modalDialog para que al
 /*Inicio de contenedor de Contact*/
 
 .ContainerContactXo{
-    position: absolute;
-    height: 110vh;
-    /* border: yellowgreen 1px solid; */
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
+    position: relative;
+    min-height: 100%;
+    height: 100vh;
+    display: grid;
+    grid-auto-rows: 100%;
+    grid-template-columns: 50% 50%;
+    gap: 1em;
+    grid-auto-flow: column;
+    justify-content: center;
+    /* border: #02c1fc 2px solid; */
+    /*efecto vidrio templado*/
+    background: rgba(206, 7, 224, 0.144); /* Blanco con transparencia */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Para soporte en Safari */
+    filter: drop-shadow(0 2px 10px rgb(206, 199, 206)); /*Sombra ligera*/
+    /*efecto vidrio templado*/
+    border-radius: 2em;
 }
 
 .ContainerTextandPXo{
     /* border: slateblue 2px solid; */
     position: relative;
-    height: 90vh;
-    top: 0em;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    height: 100vh;
+    align-items: center;
+    align-content: center;
+    gap: 2em;
 }
 
-.TextContactXo{
-    position: relative;
-    top: 3em;
-    left: 5em;
-    /* border: rgb(184, 8, 37) 1px solid; */
-    width: 70%;
+.textcontactXoandtext{
+    max-width: 70%;
     text-align: center;
-    align-content: center;
-    /*efecto vidrio templado*/
-    background: rgba(206, 7, 224, 0.144); /* Blanco con transparencia */
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); /* Para soporte en Safari */
-    border: 1px solid rgba(176, 3, 245, 0.418); /* Borde tenue */
-    filter: drop-shadow(0 2px 10px rgb(128, 1, 128)); /* Sombra ligera */
-    /*efecto vidrio templado*/
-    border-radius: 2em 1em;
-    color: var(--Blanco);
-    font-size: 18px;
-    font-family: Indie_Flower;
-}
-
-.Textcontact{
-    position: relative;
-    top: 2em;
-    /* border: slategray 2px solid; */
-    text-align: center;
-    align-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* border: #02c1fc 2px solid; */
     font-size: 20px;
-    font-family: Lobster;
     color: var(--Blanco);
+    font-family: Playfair_Display;
 }
 
 .IconsXo{
-    position: relative;
-    top: 5em;
-    left: 3em;
-    display: flex;
-    flex-direction: row;
-    width: 80%;
-    height: 56vh;
-    /* border: skyblue 1px solid; */
-    /*efecto vidrio templado*/
-    background: rgba(206, 7, 224, 0.144); /* Blanco con transparencia */
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); /* Para soporte en Safari */
-    filter: drop-shadow(0 2px 10px rgb(206, 199, 206)); /*Sombra ligera*/
-    /*efecto vidrio templado*/
-    border-radius: 2em 1em;
-}
-
-.IconsRed{
-    /* border: teal 2px solid; */
     text-align: center;
+    min-width: 100%;
+    display: grid;
+    grid-template-columns: 150px 150px;
+    grid-auto-rows: 35%;
+    grid-auto-flow: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    font-size: 20px;
+    color: var(--Blanco);
+    font-family: Lobster;
 }
 
-.IconsXo > .IconsRed > a > img{
-    /* border: salmon 1px solid; */
-    position: relative;
-    top: 5em;
-    width: 66%;
-    height: 20vh;
+.IconsRed > a > img{
+    width: 70%;
+    height: 30vh;
+    /* border: #88ce02 2px solid; */
 }
 
 .FormXo{
     position: relative;
-    top: 0em;
-    right: 3em;
-    /* border: springgreen 2px solid; */
-    height: 90vh;
-    color: var(--Blanco);
+    max-width: 100%;
+    height: 110vh;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-auto-rows: 110%;
+    grid-auto-flow: row;
+    /* border: #88ce02 2px solid; */
+}
+
+form{
+    position: relative;
+    display: grid;
+    max-width: 100%;
+    grid-template-rows: 30% 30% 30%;
+    grid-auto-columns: 100%;
+    grid-auto-flow: row;
+    justify-content: center;
+    align-items: center;
+    /* border: yellow 2px solid; */
 }
 
 .dateperson{
     position: relative;
-    top: 3.5em;
-    /* border: sienna 2px solid; */
-    height: 30vh;
-    text-align: center;
-    justify-content: center;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-auto-rows: 50%;
+    gap: 1em;
     align-items: center;
-    font-size: 15px;
-    font-family: Playfair_Display;
-    /*efecto vidrio templado*/
-    background: rgba(206, 7, 224, 0.144); /* Blanco con transparencia */
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); /* Para soporte en Safari */
-    filter: drop-shadow(0 2px 10px rgb(206, 199, 206)); /*Sombra ligera*/
-    /*efecto vidrio templado*/
-}
-
-.dateperson > .NombreFormXo > input{/*afecta el input donde se pondran los datos*/
-    /* border: springgreen 5px solid; */
-    width: 65%;
-    position: relative;
-    left: 1em;
+    text-align: center;
 }
 
 .dateformxo{
     position: relative;
-    top: 3.4em;
-    height: 50vh;
-    /* border: teal 2px solid; */
-    text-align: center;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-auto-rows: 40%;
+    grid-auto-flow: row;
     justify-content: center;
+    text-align: center;
     align-items: center;
-    font-size: 15px;
-    /*efecto vidrio templado*/
-    background: rgba(206, 7, 224, 0.144); /* Blanco con transparencia */
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); /* Para soporte en Safari */
-    filter: drop-shadow(0 2px 10px rgb(206, 199, 206)); /*Sombra ligera*/
-    /*efecto vidrio templado*/
+    gap: 1em;
 }
 
-.FormXosizeandcomentarie > h3{
-    /* border: #6d015f 1px solid; */
-    font-size: 22px;
-    font-family: Lobster;
-}
-
-.sumitformxo{
-    position: relative;
-    top: -1em;
-}
 /*Termina el contenedor de Contact*/
 
 /*Inicio de diseño de Footer*/
@@ -1256,6 +1240,7 @@ html:has(.ModalDialog:target) {/*hace que solo afecte el modalDialog para que al
     font-family: Lobster;
     font-size: 28px;
     z-index: 2;
+    filter: drop-shadow(0 2px 10px rgb(206, 199, 206)); /* Sombra ligera */
 }
 
 .backgroundfooter{
