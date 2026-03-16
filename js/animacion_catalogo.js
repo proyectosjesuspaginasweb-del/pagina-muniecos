@@ -5,7 +5,7 @@ const imgWho = document.querySelector(".ContainerWhoXo");
 const btnBlack = document.querySelector(".slider");
 
 temaCheckbox.addEventListener("change", ()=>{
-    
+
     if (temaCheckbox.checked) {
         document.body.classList.add("dark-mode");
         console.log("Modo Oscuro Activado");
@@ -192,24 +192,69 @@ function buildSeamlessLoop(items, spacing, animateFunc) {
 
 /*Termina el seguimiento del menu*/
 
-// document.addEventListener("DOMContentLoaded", (event) => {
-//   gsap.registerPlugin(ScrollTrigger)
-//   let proxy = { skew: 0 },
-//     skewSetter = gsap.quickSetter(".skewElem", "skewY", "deg"), // fast
-//     clamp = gsap.utils.clamp(-20, 20); // don't let the skew go beyond 20 degrees. 
+/*Animacion texto en la pagina*/
 
-// ScrollTrigger.create({
-//   onUpdate: (self) => {
-//     let skew = clamp(self.getVelocity() / -300);
-//     // only do something if the skew is MORE severe. Remember, we're always tweening back to 0, so if the user slows their scrolling quickly, it's more natural to just let the tween handle that smoothly rather than jumping to the smaller skew.
-//     if (Math.abs(skew) > Math.abs(proxy.skew)) {
-//       proxy.skew = skew;
-//       gsap.to(proxy, {skew: 0, duration: 0.8, ease: "power3", overwrite: true, onUpdate: () => skewSetter(proxy.skew)});
-//     }
-//   }
-// });
+document.addEventListener("DOMContentLoaded", (event) => {
 
-// // make the right edge "stick" to the scroll bar. force3D: true improves performance
-// gsap.set(".skewElem", {transformOrigin: "right center", force3D: true});
-//  });
+	const animationwho = document.querySelectorAll(".domwho") 
+	const animationwhoimg = document.querySelectorAll(".imgwho") 
+
+	gsap.to([animationwho, animationwhoimg], {
+		x: 0,
+		y: 0,
+		opacity: 1,
+		duration: 0.8,
+		delay: 0.5,
+		ease: "power1",
+		rotation: 360,
+		stagger: 1,
+	});
+
+});
+
+//animacion de scroll
+
+document.addEventListener("DOMContentLoaded", (event) => {
+gsap.registerPlugin(ScrollTrigger)
+
+const actionaim = document.querySelectorAll('.actionanimation');
+const actionsize = document.querySelector('.actionsize');
+    
+    gsap.to([actionaim], {
+		duration: 1,
+		opacity: 1,/*opacidad para que al pasar el secoll se muestre el elemento*/
+		x: 0,
+		delay: 0.5,/*le da el tiempo de espera entre cada elemento*/
+		stagger: 0.5,/*le da el tiempo de espera entre cada elemento*/
+		scrollTrigger: {
+			trigger: actionaim,
+			start: "-70 85%",/*star/como funciona el primero maneja el star(verde) y el segundo maneja el end (rojo)*/
+			end: "-50 20%",/*end*/
+			markers: true,
+			toggleActions: "play 0 0 reset",
+			opacity: 0,
+			delay: 1,
+		}
+	});
+
+	gsap.to([actionsize], {
+		duration: 0.1,
+		opacity: 1,/*opacidad para que al pasar el secoll se muestre el elemento*/
+		y: 0,
+		delay: 0.5,/*le da el tiempo de espera entre cada elemento*/
+		stagger: 0.2,/*le da el tiempo de espera entre cada elemento*/
+		scrollTrigger: {
+			trigger: actionsize,
+			start: "-70 85%",/*star/como funciona el primero maneja el star(verde) y el segundo maneja el end (rojo)*/
+			end: "-50 20%",/*end*/
+			markers: true,
+			toggleActions: "play 0 0 reset",
+			opacity: 0,
+			delay: 1,
+		}
+	});
+	
+});
+
+/*Fin de animacion texto en la pagina*/
 
