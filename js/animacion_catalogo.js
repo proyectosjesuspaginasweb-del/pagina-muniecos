@@ -197,7 +197,7 @@ function buildSeamlessLoop(items, spacing, animateFunc) {
 document.addEventListener("DOMContentLoaded", (event) => {
 
 	const animationwho = document.querySelectorAll(".domwho") 
-	const animationwhoimg = document.querySelectorAll(".imgwho") 
+	const animationwhoimg = document.querySelectorAll(".imgwho")
 
 	gsap.to([animationwho, animationwhoimg], {
 		x: 0,
@@ -219,6 +219,9 @@ gsap.registerPlugin(ScrollTrigger)
 
 const actionaim = document.querySelectorAll('.actionanimation');
 const actionsize = document.querySelector('.actionsize');
+const animationcatalogo = document.querySelectorAll(".activecatalogo")
+const actionimgcat1 = document.querySelectorAll('.activeimgcat1')
+const actionimgcat2 = document.querySelectorAll('.activeimgcat2')
     
     gsap.to([actionaim], {
 		duration: 1,
@@ -253,6 +256,60 @@ const actionsize = document.querySelector('.actionsize');
 			delay: 1,
 		}
 	});
+
+	gsap.to([animationcatalogo], {
+		duration: 1.2,
+		opacity: 1,/*opacidad para que al pasar el secoll se muestre el elemento*/
+		x: 0,
+		delay: 0.5,/*le da el tiempo de espera entre cada elemento*/
+		stagger: 0.2,/*le da el tiempo de espera entre cada elemento*/
+		scrollTrigger: {
+			trigger: animationcatalogo,
+			start: "-70 85%",/*star/como funciona el primero maneja el star(verde) y el segundo maneja el end (rojo)*/
+			end: "-50 20%",/*end*/
+			markers: true,
+			toggleActions: "play 0 0 reset",
+			opacity: 0,
+			duration: 1,
+			delay: 1,
+		}
+	});
+
+	gsap.to([actionimgcat1, actionimgcat2], {
+		duration: 0.5,
+		opacity: 1.2,/*opacidad para que al pasar el secoll se muestre el elemento*/
+		y: 0,
+		delay: 1,/*le da el tiempo de espera entre cada elemento*/
+		stagger: 0.5,/*le da el tiempo de espera entre cada elemento*/
+		scrollTrigger: {
+			trigger: actionimgcat1, actionimgcat2,
+			start: "-60% 85%",/*star/como funciona el primero maneja el star(verde) y el segundo maneja el end (rojo)*/
+			end: "-50 20%",/*end*/
+			markers: true,
+			toggleActions: "play 0 0 reset",
+			opacity: 0,
+			duration: 1,
+			delay: 1,
+		}
+	});
+
+	// gsap.to([actionimgcat2], {
+	// 	duration: 0.5,
+	// 	opacity: 1.2,/*opacidad para que al pasar el secoll se muestre el elemento*/
+	// 	y: 0,
+	// 	delay: 1,/*le da el tiempo de espera entre cada elemento*/
+	// 	stagger: 1,/*le da el tiempo de espera entre cada elemento*/
+	// 	scrollTrigger: {
+	// 		trigger: actionimgcat2,
+	// 		start: "-60% 85%",/*star/como funciona el primero maneja el star(verde) y el segundo maneja el end (rojo)*/
+	// 		end: "-50 20%",/*end*/
+	// 		markers: true,
+	// 		toggleActions: "play 0 0 reset",
+	// 		opacity: 0,
+	// 		duration: 1,
+	// 		delay: 1,
+	// 	}
+	// });
 	
 });
 

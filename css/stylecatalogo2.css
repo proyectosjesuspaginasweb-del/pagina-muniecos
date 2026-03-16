@@ -633,6 +633,7 @@ main{
     position: relative;
     display: flex;
     max-width: 100%;
+    left: 2em;
     height: 20vh;
     padding: 0;
     margin: 0;
@@ -773,6 +774,8 @@ a:hover{
     min-width: 100%;
     height: 20vh;
     /* border: #ff0080 2px solid; */
+    transform: translateX(-400px);
+    opacity: 0;
 }
 
 .TittleCatalogo > h3{
@@ -815,6 +818,8 @@ a:hover{
     padding: 2em;
     font-size: 20px;
     font-family: Playfair_Display;
+    transform: translateX(900px);
+    opacity: 0;
 }
 
 .TextCatalogo > p{
@@ -865,6 +870,8 @@ a:hover{
     border-radius: 1em 3em;
     justify-content: center;
     align-items: center;
+    transform: translateY(200px);
+    opacity: 0;
 }
 
 .ImgCatXo > img{
