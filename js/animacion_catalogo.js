@@ -222,7 +222,13 @@ const actionsize = document.querySelector('.actionsize');
 const animationcatalogo = document.querySelectorAll(".activecatalogo")
 const actionimgcat1 = document.querySelectorAll('.activeimgcat1')
 const actionimgcat2 = document.querySelectorAll('.activeimgcat2')
-    
+const actionimgcat3 = document.querySelectorAll('.activeimgcat3')
+const activebottommore = document.querySelectorAll('.activebottomore')
+const activeprocess = document.querySelectorAll('.activeprocess')
+const activeicon = document.querySelectorAll('.activecontac')
+const activeiconimg = document.querySelectorAll('.activeicon')
+const activefooter = document.querySelectorAll('.activefooter')
+
     gsap.to([actionaim], {
 		duration: 1,
 		opacity: 1,/*opacidad para que al pasar el secoll se muestre el elemento*/
@@ -231,9 +237,9 @@ const actionimgcat2 = document.querySelectorAll('.activeimgcat2')
 		stagger: 0.5,/*le da el tiempo de espera entre cada elemento*/
 		scrollTrigger: {
 			trigger: actionaim,
-			start: "-70 85%",/*star/como funciona el primero maneja el star(verde) y el segundo maneja el end (rojo)*/
+			start: "-90 100%",/*star/como funciona el primero maneja el star(verde) y el segundo maneja el end (rojo)*/
 			end: "-50 20%",/*end*/
-			markers: true,
+			// markers: true,
 			toggleActions: "play 0 0 reset",
 			opacity: 0,
 			delay: 1,
@@ -241,33 +247,34 @@ const actionimgcat2 = document.querySelectorAll('.activeimgcat2')
 	});
 
 	gsap.to([actionsize], {
-		duration: 0.1,
+		duration: 1,
 		opacity: 1,/*opacidad para que al pasar el secoll se muestre el elemento*/
 		y: 0,
 		delay: 0.5,/*le da el tiempo de espera entre cada elemento*/
 		stagger: 0.2,/*le da el tiempo de espera entre cada elemento*/
 		scrollTrigger: {
 			trigger: actionsize,
-			start: "-70 85%",/*star/como funciona el primero maneja el star(verde) y el segundo maneja el end (rojo)*/
-			end: "-50 20%",/*end*/
-			markers: true,
+			start: "-20% 100%",/*star/como funciona el primero maneja el star(verde) y el segundo maneja el end (rojo)*/
+			end: "20% 20%",/*end*/
+			// markers: true,
 			toggleActions: "play 0 0 reset",
 			opacity: 0,
-			delay: 1,
+			y: 0,
+			delay: 0.6,
 		}
 	});
 
 	gsap.to([animationcatalogo], {
-		duration: 1.2,
+		duration: 1,
 		opacity: 1,/*opacidad para que al pasar el secoll se muestre el elemento*/
 		x: 0,
 		delay: 0.5,/*le da el tiempo de espera entre cada elemento*/
 		stagger: 0.2,/*le da el tiempo de espera entre cada elemento*/
 		scrollTrigger: {
 			trigger: animationcatalogo,
-			start: "-70 85%",/*star/como funciona el primero maneja el star(verde) y el segundo maneja el end (rojo)*/
+			start: "-140% 100%",/*star/como funciona el primero maneja el star(verde) y el segundo maneja el end (rojo)*/
 			end: "-50 20%",/*end*/
-			markers: true,
+			// markers: true,
 			toggleActions: "play 0 0 reset",
 			opacity: 0,
 			duration: 1,
@@ -275,42 +282,149 @@ const actionimgcat2 = document.querySelectorAll('.activeimgcat2')
 		}
 	});
 
-	gsap.to([actionimgcat1, actionimgcat2], {
-		duration: 0.5,
+	gsap.to([actionimgcat1], {
+		duration: 1,
+		opacity: 1,/*opacidad para que al pasar el secoll se muestre el elemento*/
+		y: 0,
+		delay: 1,/*le da el tiempo de espera entre cada elemento*/
+		stagger: 0.2,/*le da el tiempo de espera entre cada elemento*/
+		scrollTrigger: {
+			trigger: actionimgcat1,
+			start: "-105% 100%",/*star/como funciona el primero maneja el star(verde) y el segundo maneja el end (rojo)*/
+			end: "-50 20%",/*end*/
+			// markers: true,
+			toggleActions: "play 0 0 reset",
+			opacity: 0,
+			duration: 0.5,
+			delay: 0.2,
+		}
+	});
+
+	gsap.to([actionimgcat2], {
+		duration: 1,
+		opacity: 1,/*opacidad para que al pasar el secoll se muestre el elemento*/
+		y: 0,
+		delay: 1,/*le da el tiempo de espera entre cada elemento*/
+		stagger: 0.2,/*le da el tiempo de espera entre cada elemento*/
+		scrollTrigger: {
+			trigger: actionimgcat1,
+			start: "20%	% 100%",/*star/como funciona el primero maneja el star(verde) y el segundo maneja el end (rojo)*/
+			end: "120% 20%",/*end*/
+			// markers: true,
+			toggleActions: "play 0 0 reset",
+			opacity: 0,
+			duration: 0.5,
+			delay: 0.2,
+		}
+	});
+
+	gsap.to([actionimgcat3], {
+		duration: 1,
+		opacity: 1,/*opacidad para que al pasar el secoll se muestre el elemento*/
+		y: 0,
+		delay: 1,/*le da el tiempo de espera entre cada elemento*/
+		stagger: 0.2,/*le da el tiempo de espera entre cada elemento*/
+		scrollTrigger: {
+			trigger: actionimgcat1,
+			start: "137% 100%",/*star/como funciona el primero maneja el star(verde) y el segundo maneja el end (rojo)*/
+			end: "200% 20%",/*end*/
+			// markers: true,
+			toggleActions: "play 0 0 reset",
+			opacity: 0,
+			duration: 0.5,
+			delay: 0.2,
+		}
+	});
+
+	gsap.to([activebottommore], {
+		duration: 1,
+		opacity: 1,/*opacidad para que al pasar el secoll se muestre el elemento*/
+		y: 0,
+		delay: 1,/*le da el tiempo de espera entre cada elemento*/
+		stagger: 0.2,/*le da el tiempo de espera entre cada elemento*/
+		scrollTrigger: {
+			trigger: activebottommore,
+			start: "-180% 100%",/*star/como funciona el primero maneja el star(verde) y el segundo maneja el end (rojo)*/
+			end: "-50% 20%",/*end*/
+			// markers: true,
+			y: 100,
+			toggleActions: "play 0 0 reset",
+			opacity: 0,
+			duration: 2,
+		}
+	});
+
+	gsap.to([activeprocess], {
+		duration: 1,
+		opacity: 1.2,/*opacidad para que al pasar el secoll se muestre el elemento*/
+		x: 0,
+		delay: 1,/*le da el tiempo de espera entre cada elemento*/
+		stagger: 0.2,/*le da el tiempo de espera entre cada elemento*/
+		scrollTrigger: {
+			trigger: activeprocess,
+			start: "-180% 100%",/*star/como funciona el primero maneja el star(verde) y el segundo maneja el end (rojo)*/
+			end: "0% 20%",/*end*/
+			// markers: true,
+			y: 100,
+			toggleActions: "play 0 0 reset",
+			opacity: 0,
+			duration: 2,
+		}
+	});
+
+	gsap.to([activeicon], {
+		duration: 1,
+		opacity: 1.2,/*opacidad para que al pasar el secoll se muestre el elemento*/
+		x: 0,
+		delay: 1,/*le da el tiempo de espera entre cada elemento*/
+		stagger: 0.1,/*le da el tiempo de espera entre cada elemento*/
+		scrollTrigger: {
+			trigger: activeicon,
+			start: "-400% 100%",/*star/como funciona el primero maneja el star(verde) y el segundo maneja el end (rojo)*/
+			end: "0% 20%",/*end*/
+			// markers: true,
+			x: 0,
+			toggleActions: "play 0 0 reset",
+			opacity: 0,
+			duration: 2,
+		}
+	});
+
+	gsap.to([activeiconimg], {
+		duration: 1,
 		opacity: 1.2,/*opacidad para que al pasar el secoll se muestre el elemento*/
 		y: 0,
 		delay: 1,/*le da el tiempo de espera entre cada elemento*/
-		stagger: 0.5,/*le da el tiempo de espera entre cada elemento*/
+		stagger: 0.1,/*le da el tiempo de espera entre cada elemento*/
 		scrollTrigger: {
-			trigger: actionimgcat1, actionimgcat2,
-			start: "-60% 85%",/*star/como funciona el primero maneja el star(verde) y el segundo maneja el end (rojo)*/
-			end: "-50 20%",/*end*/
-			markers: true,
+			trigger: activeiconimg,
+			start: "-240% 100%",/*star/como funciona el primero maneja el star(verde) y el segundo maneja el end (rojo)*/
+			end: "-160% 20%",/*end*/
+			// markers: true,
+			y: 0,
 			toggleActions: "play 0 0 reset",
 			opacity: 0,
-			duration: 1,
-			delay: 1,
+			duration: 2,
 		}
 	});
 
-	// gsap.to([actionimgcat2], {
-	// 	duration: 0.5,
-	// 	opacity: 1.2,/*opacidad para que al pasar el secoll se muestre el elemento*/
-	// 	y: 0,
-	// 	delay: 1,/*le da el tiempo de espera entre cada elemento*/
-	// 	stagger: 1,/*le da el tiempo de espera entre cada elemento*/
-	// 	scrollTrigger: {
-	// 		trigger: actionimgcat2,
-	// 		start: "-60% 85%",/*star/como funciona el primero maneja el star(verde) y el segundo maneja el end (rojo)*/
-	// 		end: "-50 20%",/*end*/
-	// 		markers: true,
-	// 		toggleActions: "play 0 0 reset",
-	// 		opacity: 0,
-	// 		duration: 1,
-	// 		delay: 1,
-	// 	}
-	// });
-	
+	gsap.to([activefooter], {
+		duration: 1,
+		opacity: 1.2,/*opacidad para que al pasar el secoll se muestre el elemento*/
+		y: 0,
+		delay: 1,/*le da el tiempo de espera entre cada elemento*/
+		stagger: 0.1,/*le da el tiempo de espera entre cada elemento*/
+		scrollTrigger: {
+			trigger: activefooter,
+			start: "-940% 100%",/*star/como funciona el primero maneja el star(verde) y el segundo maneja el end (rojo)*/
+			end: "-160% 20%",/*end*/
+			// markers: true,
+			y: 0,
+			toggleActions: "play 0 0 reset",
+			opacity: 0,
+			duration: 2,
+		}
+	});
 });
 
 /*Fin de animacion texto en la pagina*/
