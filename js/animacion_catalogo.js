@@ -26,20 +26,29 @@ temaCheckbox.addEventListener("change", ()=>{
 
 const scrollnav = [
     { id: "navbar", className: "is-scrolled"},
-    { id: "imgnavxo", className: "is-scrollednav"},
-    { id: "optionav", className: "is-scrolloptionnav"},
-    { id: "switch", className: "is-scrollswitch"},
-    { id: "imglogoxo", className: "is-imglogoxoscroll"}
+    { id: "igmavxo", className: "is-scrollednavimg"},
+	{ id: "opcionescontinernav", className: "scroll-containeroption"},
+	{ id: "switch", className: "scroll-switch"}
 ]
 
 //El vigilate
-window.addEventListener("scroll", () =>{
-    //Se crea una constante para saber cuanto se ha movido el scroll verticalmente
-    const scrollActual = window.scrollY
+window.addEventListener("scroll", () => {
+    const scrollActual = window.scrollY;
 
-    //Recorre la constante (por si en el futuro tenemos mas de una elemento)
-    scrollnav.forEach(item =>{
-        const elemento = document.getElementById(item.id)//en la constante elemento se guardar el id que se pone en scrollnav
+    // --- ESTA ES LA CLÁUSULA DE GUARDA ---
+    // Si el ancho de la ventana es menor o igual a 575, 
+    // detenemos la ejecución de la función inmediatamente.
+    if (window.innerWidth <= 575) {
+        // Opcional: Limpiar las clases por si acaso se quedó alguna pegada
+        scrollnav.forEach(item => {
+            document.getElementById(item.id).classList.remove(item.className);
+        });
+        return; // El "return" hace que el código de abajo NO se ejecute
+    }
+    // -------------------------------------
+
+    scrollnav.forEach(item => {
+        const elemento = document.getElementById(item.id);
 
         if (scrollActual > 100) {
             elemento.classList.add(item.className);
@@ -47,6 +56,17 @@ window.addEventListener("scroll", () =>{
             elemento.classList.remove(item.className);
         }
     });
+});
+
+/*active para menu despegable*/
+
+// Seleccionamos el botón específico, no todo el contenedor
+const btnAbrir = document.querySelector(".navpeelable");
+// Seleccionamos lo que queremos mostrar/ocultar
+const menuOpciones = document.querySelector(".OptionMenu");
+
+btnAbrir.addEventListener("click", () => {
+    menuOpciones.classList.toggle("action-nav");
 });
 
 /*Efecto de size de xo*/
@@ -203,7 +223,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 		x: 0,
 		y: 0,
 		opacity: 1,
-		duration: 0.8,
+		duration: 0.6,
 		delay: 0.5,
 		ease: "power1",
 		rotation: 360,
@@ -356,16 +376,16 @@ const activefooter = document.querySelectorAll('.activefooter')
 
 	gsap.to([activeprocess], {
 		duration: 1,
-		opacity: 1.2,/*opacidad para que al pasar el secoll se muestre el elemento*/
+		opacity: 1,/*opacidad para que al pasar el secoll se muestre el elemento*/
 		x: 0,
-		delay: 1,/*le da el tiempo de espera entre cada elemento*/
+		delay: 1.5,/*le da el tiempo de espera entre cada elemento*/
 		stagger: 0.2,/*le da el tiempo de espera entre cada elemento*/
 		scrollTrigger: {
 			trigger: activeprocess,
-			start: "-180% 100%",/*star/como funciona el primero maneja el star(verde) y el segundo maneja el end (rojo)*/
+			start: "-60% 100%",/*star/como funciona el primero maneja el star(verde) y el segundo maneja el end (rojo)*/
 			end: "0% 20%",/*end*/
 			// markers: true,
-			y: 100,
+			x: 0,
 			toggleActions: "play 0 0 reset",
 			opacity: 0,
 			duration: 2,

@@ -24,15 +24,15 @@
 
                     <nav class="navxo" id="navbar">
 
-                        <div class="OptionandLogoMenu">
+                        <div class="OptionandLogoMenu" id="containeropcion">
                     
-                            <div class="ImgLogoXo" id="imglogoxo">
-                                    <img src="../css/img/Logos_muñecos/LogoXo.png" alt="Logo XO" loading="lazy" id="imgnavxo">
+                            <div class="ImgLogoXo">
+                                    <img src="../css/img/Logos_muñecos/LogoXo.png" alt="Logo XO" loading="lazy" id="igmavxo">
                             </div>
 
                             <div class="OptionMenu">
 
-                                    <ul class="navoption" id="optionav">
+                                    <ul class="navoption" id="opcionescontinernav"  >
                                         <li><a href="#WhoMyXo">Inicio</a></li>
                                         <li><a href="#AimXO">Objetivo</a></li>
                                         <li><a href="#SizeXo">Tamaños</a></li>
@@ -45,6 +45,10 @@
                                         <input type="checkbox" id="theme-checkbox">
                                         <span class="slider"></span>
                                     </label>
+
+                                    <div class="iconhamburger">
+                                        <button class="navpeelable"><img src="../css/img/Iconos_Xo/icon-icons.svg" alt="iconhamburger"></button>
+                                    </div>
 
                             </div>
 
@@ -384,18 +388,18 @@
 
                     <div class="CirculosProcess"></div>
 
-                    <div class="ContainerTittleandTextProcess col-lg-12 p-0 m-0 row">
+                    <div class="ContainerTittleandTextProcess">
 
-                        <div class="TittleProcess col-lg-4 activeprocess">
+                        <div class="TittleProcess activeprocess">
                             <h3>¿Como Pedir tu diseño?</h3>
                         </div>
 
                         <div class="FlechaProgress"></div>
 
-                        <div class="textprocessprimary col-lg-12 colum p-0 m-0">
-                            <p><h4 class="textprocess col-lg-5 activeprocess">1. Elige tu diseño favorito de los que ofrecemos.</h4>
-                            <h4 class="textprocess col-lg-6 activeprocess">2. Envíanos un mensaje con el nombre del diseño que elegiste.</h4>
-                            <h4 class="textprocess col-lg-8 activeprocess">3. Recibe tu muñeco personalizado en 10 días hábiles.</h4></p>
+                        <div class="textprocessprimary">
+                            <p><h4 class="textprocess activeprocess">1. Elige tu diseño favorito de los que ofrecemos.</h4>
+                            <h4 class="textprocess activeprocess">2. Envíanos un mensaje con el nombre del diseño que elegiste.</h4>
+                            <h4 class="textprocess activeprocess">3. Recibe tu muñeco personalizado en 10 días hábiles.</h4></p>
                         </div>
 
                     </div>
@@ -462,6 +466,7 @@
                                 <div class="NombreFormXo">
                                 <label for="name">Nombre(s):</label>
                                 <input type="text" name="name" id="name" placeholder="Jesús Noé">
+
                             </div>
 
                             <div class="NombreFormXo">
@@ -486,19 +491,19 @@
                             <div class="FormXosizeandcomentarie">
                                 <h3>Tamaño del Diseño</h3>
                                 <div class="sizeform">
-                                <label for="10cm">8 cm</label>
+                                <label for="8cm">8 cm</label>
                                 <input type="radio" name="size" id="size8">
-                                <label for="20cm">10 cm</label>
+                                <label for="10cm">10 cm</label>
                                 <input type="radio" name="size" id="size10">
-                                <label for="10cm">15 cm</label>
+                                <label for="15cm">15 cm</label>
                                 <input type="radio" name="size" id="size15">
-                                <label for="10cm">20 cm</label>
+                                <label for="20cm">20 cm</label>
                                 <input type="radio" name="size" id="size20">
-                                <label for="10cm">30 cm</label>
+                                <label for="30cm">30 cm</label>
                                 <input type="radio" name="size" id="size30">
-                                <label for="10cm">45 cm</label>
+                                <label for="45cm">45 cm</label>
                                 <input type="radio" name="size" id="size45">
-                                <label for="10cm">80 cm</label>
+                                <label for="80cm">80 cm</label>
                                 <input type="radio" name="size" id="size80">
                                 </div>
                             </div>
@@ -513,6 +518,7 @@
                             </div>
                             
                             </div>
+
                             </form>
 
                         </div>
@@ -526,20 +532,21 @@
 
         </main>
 
-    <footer>
+            <footer>
 
-        <div class="FooterXo col-xxl-12 p-0 m-0">
+        <div class="FooterXo">
 
             <div class="backgroundfooter"></div>
 
-            <div class="NameXo col-12 p-0 m-0 column">
+            <div class="NameXo">
                 <span class="footerdate col-4 activefooter">@Xochilt</span>
                 <span class="footerdate col-4 activefooter">2026</span>
                 <span class="footerdate col-4 activefooter">Derechos recerbados de Crochet xo</span>
             </div>
+
         </div>
 
-    </footer>
+            </footer>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="../Gsap/gsap-public (1)/gsap-public/minified/gsap.min.js"></script>
