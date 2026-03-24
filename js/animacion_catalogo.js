@@ -61,12 +61,15 @@ window.addEventListener("scroll", () => {
 /*active para menu despegable*/
 
 // Seleccionamos el botón específico, no todo el contenedor
-const btnAbrir = document.querySelector(".navpeelable");
+const btnAbrir = document.getElementById("activebtnav");
 // Seleccionamos lo que queremos mostrar/ocultar
-const menuOpciones = document.querySelector(".OptionMenu");
+const menuOpciones = document.getElementById("navpeelable");
+const containerimgnav = document.getElementById("containerimgnav");
 
-btnAbrir.addEventListener("click", () => {
-    menuOpciones.classList.toggle("action-nav");
+btnAbrir.addEventListener("click", (event) => {
+    event.preventDefault();
+    menuOpciones.classList.toggle("scroll-action-nav");
+    menuOpciones.classList.toggle("menu-open");
 });
 
 /*Efecto de size de xo*/

@@ -27,9 +27,111 @@
       left: 0;
    }
 
-   /*Fin responsive de inicio*/
+}
 
-   .is-scrolled{
+@media (min-width: 576px) {
+
+}
+
+/* mostrar menu hamburguesa en *(<=992px) *y* <=575px */
+@media (max-width: 992px) {
+
+   /*inicia el contenedor de menu*/
+
+.scroll-action-nav{
+   position: fixed !important;
+   min-width: 100% !important;
+   top: 0;
+   left: 0;
+   display: flex;
+   flex-direction: row;
+   /* justify-content: flex-start; */
+   gap: 0px;
+   height: 27.5vh;
+   background-color: rgba(255, 255, 255, 0.98);
+   z-index: 999;
+   animation: navactive 0.4s ease;
+   /* border: tomato 2px solid; */
+}
+
+.scroll-action-nav .navoption {
+   display: flex !important;
+   flex-direction: column;
+   gap: 0px;
+   min-width: 80%;
+   margin: 0px;
+   padding: 0;
+   justify-content: start;
+   align-items: start;
+}
+
+.scroll-action-nav .navoption > li {
+   width: 67%;
+   /* margin: 0; */
+   /* border: blueviolet 1px solid; */
+}
+
+.scroll-action-nav .navoption > li > a {
+   width: 100%;
+   text-align: center;
+   padding: 0px 0;
+   font-size: 12px;
+}
+
+.scroll-action-nav label{
+   top: 15% !important;
+   right: 2% !important;
+   min-width: 19%;
+   height: 7vh;
+   /* border: 2px goldenrod solid; */
+}
+
+.scroll-action-nav .slider{
+   max-width: 98%;
+   height: 6vh;
+   /* border: 2px goldenrod solid; */
+}
+
+.scroll-action-nav .slider::before{
+   top: 3px;
+}
+
+.scroll-action-nav .mode-black-slider::before{
+   top: 1.7px;
+   left: 0px;
+}
+
+.iconhamburger {
+   position: fixed !important;
+   top: 12px !important;
+   right: 12px !important;
+   z-index: 1000 !important;
+}
+
+@keyframes navactive {
+   from{
+      transform: translateY(-100px);
+   }to{
+      transform: translateY(0);
+   }
+} 
+
+.scroll-action-nav .iconhamburger{
+   /* border: yellowgreen 2px solid!important; */
+   top: 12px !important;
+   right: 12px !important;
+   left: auto !important;
+} 
+
+.scroll-optionav{
+   min-width: 100%;
+   max-width: 10vh;
+   background-color: aqua;
+   display: flex;
+   z-index: 1000!important;
+}
+
+.is-scrolled{
       display: none!important;
       animation: none!important;
    }
@@ -78,72 +180,14 @@
       object-fit: contain;
    }
 
-}
-
-/* Small devices and up (sm) - ≥576px */
-@media (min-width: 576px) {
-
-}
-
-/* mostrar menu hamburguesa en *(<=992px) *y* <=575px */
-@media (max-width: 992px) {
-
-   .active-iconhamburger{
-      position: absolute;
-      width: 20%;
-      background-color: white;
-   }
-
-   /* Estado inicial en móvil: Escondido a la derecha */
-.OptionMenu {
-    display: none; /* O puedes usar transform: translateX(100%) para animarlo */
-}
-
-/* Cuando tiene la clase activa */
-.OptionMenu.action-nav {
-   display: flex;
-   flex-direction: row; /* Apila Inicio, Objetivo, etc. */
-   align-items: center;
-   justify-content: start;
-   position: fixed;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100vh;
-   background-color: pink;
-   z-index: 999;
-   animation: peelable 2s ease;
-   font-size: 1px!important;
-}
-
-/* Estilo para las letras dentro del menú responsive */
-
-.action-nav .navoption{
-   display: flex;
-   flex-direction: column;
-   gap: 4px; /* Espacio entre cada opción */
-   list-style: none;
-   text-align: center;
-   min-width: 10%;
-}
-
-@keyframes peelable {
-   from{
-      transform: translateY(-100px);
-   }to{
-      transform: translateY(0);
-   }
-}
-
-/*termina la action de nav*/
-
    .mode-black-slider{
       height: 5.6vh;
-      width: 100%;
+      width: 95%;
    }
 
    .mode-black-slider::before{
       top: 1px;
+      left: 1px;
    }
 
    label{
@@ -162,8 +206,7 @@
 
    .switch{
       max-width: 100%;
-      top: 0;
-      left: 0;
+      left: 76%;
       z-index: 999;
    }
 
@@ -176,9 +219,8 @@
       /* border: red 2px solid; */
    }
 
-   nav{
-      animation: none !important;
-      -webkit-animation: none !important;
+   .navoption{
+      display: none;
    }
 
    .OptionandLogoMenu{
@@ -188,30 +230,17 @@
       top: 0;
       left: 0;
       flex-direction: row;
-      border: yellow 2px solid;
-   }
-
-   .OptionMenu{
-      position: relative;
-      top: 0;
-      left: 0;
-      max-width: 100%;
-      border: rgb(155, 136, 129) 2px solid;
-      height: 100vh;
-   }
-
-   .navoption{
-      display: none;
+      /* border: yellow 2px solid; */
    }
 
    .iconhamburger {
-      display: flex !important;
+      display: flex !important;/*lo pone enfrente de todo para moverlo en la pagina */
       visibility: visible !important;
       opacity: 1 !important;
-      position: sticky !important;
-      top: 0%!important;
-      right: 20px !important;
-      min-width: 50px !important;
+      position: fixed!important;
+      top: 4% !important;
+      left: 79.5%;
+      min-width: 25px !important;
       height: 46px !important;
       z-index: 999 !important;
       background: rgba(216, 60, 190, 0.9) !important;
@@ -226,6 +255,8 @@
       width: 100%;
       border-radius: 5px;
    }
+
+   /*termina el contenedor de menu*/
 
    .ContainerWhoXo{
       max-width: 100%;
@@ -710,6 +741,43 @@
    }
    /*Fin responsive de inicio*/
 
+
+   /*inicio de pagina principal*/
+
+   .iconhamburger{
+      /* border: red 2px solid!important; */
+      position: fixed !important;
+        /* border: red 2px solid !important; */
+      left: 93% !important;
+      top: 8% !important;
+      z-index: 999 !important;
+   }
+
+   .slider{
+      /* border: yellow 2px solid!important; */
+      left: 190% !important;
+   } 
+
+   .scroll-action-nav .navoption{
+      /* border: 2px solid blue!important; */
+      align-items: center;
+      min-height: 27vh !important;
+   } 
+   
+   .scroll-action-nav .navoption > li > a{
+      font-size: 15px;
+   }
+
+   .OptionandLogoMenu{
+      top: 18%;
+   }
+
+   .ImgLogoXo > img{
+      /* border: 2px solid orange!important; */
+      left: 200%;
+      width: 100%;
+      top: 3%!important;
+   }
 }
 
 /* Large devices and up (lg) - ≥992px */

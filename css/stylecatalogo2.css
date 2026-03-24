@@ -80,11 +80,12 @@ body.dark-mode{
 .slider{/*contenedor que tiene adentro el boton*/
     position: absolute;
     cursor: pointer;
-    top: 0; left: 0; right: 0; bottom: 0;
+    top: 0; left: -3px; right: 0; bottom: 0;
     background-color: #ccc;
     transition: .4s;
     border: 34px;
-    width: 95%;
+    width: 100%;
+    height: 5.9vh;
     border-radius: 2em;
 }
 
@@ -92,7 +93,7 @@ body.dark-mode{
     position: absolute;
     content: "";
     height: 26px;width: 26px;
-    left: 4px;bottom: 4px;
+    left: 4px;bottom: 4px; top: 3px;
     background-color: white;
     transition: .4s;
     border-radius: 50%;
@@ -205,6 +206,7 @@ main{
     max-height: 30vh;
     /* border: red 2px solid; */
     justify-content: end;
+    top: 17%;
 }
 
 .navoption{
@@ -248,14 +250,16 @@ main{
 }
 
 .iconhamburger{
-    display: none;
-    max-width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
 }
 
 .iconhamburger{
     border: #88ce02 2px solid;
-    width: 20%;
-    height: auto;
+    display: none;
 }
 
 /*Fin Diseño de menú*/
