@@ -32,8 +32,9 @@ const scrollnav = [
 ]
 
 //El vigilate
-window.addEventListener("scroll", () => {
+window.addEventListener("scroll", (event) => {
     const scrollActual = window.scrollY;
+	event.preventDefault();
 
     // --- ESTA ES LA CLÁUSULA DE GUARDA ---
     // Si el ancho de la ventana es menor o igual a 575, 

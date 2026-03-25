@@ -10,6 +10,140 @@
 ======================================== */
 
 /* Mobile devices (max-width: 575px) */
+@media (min-width: 372px){
+
+   .OptionMenu{
+      /* border: seagreen 2px solid; */
+      top: 0%;
+
+   }
+
+   .slider{
+      /* border: green 2px solid; */
+      height: 4vh !important;
+   }
+   
+   .input:checked + .slider {
+      /* border: saddlebrown 2px solid; */
+      width: 10%!important;
+   }
+
+   #ContactXo > .container-fluid{
+      /* border: turquoise 2px solid; */
+      height: 230vh !important;
+   }
+
+   .ContainerContactXo{
+      /* border: royalblue 2px solid; */
+      min-height: 100vh !important;
+   }
+
+   .ContainerTextandPXo {
+      /* border: tomato 2px solid; */
+      height: 159vh !important;
+   }
+
+   .FormXo{
+      /* border: rebeccapurple 2px solid; */
+      height: 76vh !important;
+   }
+
+   .dateformxo{
+      /* border: yellowgreen 2px solid; */
+      height: 89vh !important;
+   }
+
+
+}
+
+@media (min-width: 480px) {
+
+   /*menu*/
+
+   .scroll-action-nav{
+      /* border: pink 2px solid; */
+      height: 16vh !important;
+   } 
+
+   .OptionMenu{
+      top: -5px;
+      right: -13% !important
+   }
+
+   .slider{
+      /* border: springgreen 2px solid; */
+      max-height: 102% !important;
+   }
+
+   .slider::before{
+      /* border: red solid 2px; */
+      top: 3px !important;
+
+   }
+   
+   .scroll-action-nav .slider{
+      /* border: red solid 2px; */
+      width: 61%;
+      left: 39%;
+      top: -86%;
+   }
+
+   .scroll-action-nav .slider::before {
+      /* border: yellow 2px solid; */
+      top: 5px !important;
+   }
+
+
+   /*##############Aim###################################*/
+   
+   .TextAim{
+      /* border: yellow 2px solid; */
+      max-height: 50vh !important;
+   }
+
+
+   /*#############contacto##############################*/
+
+   #ContactXo > .container-fluid{
+      /* border: crimson 2px solid; */
+      height: 208vh !important;
+   }
+
+   .ContainerContactXo{
+      /* border: olive 2px solid; */
+      height: 86vh !important;
+   }
+
+   .FormXo{
+      /* border: red solid 2px; */
+      height: 109vh !important;
+   }
+
+   .ContainerTextandPXo{
+      /* border: orange 2px solid; */
+      height: 80vh !important;
+   }
+
+   .IconsXo{
+      /* height: 100vh!important; */
+   }
+
+   form{
+      /* border: violet 2px solid; */
+      height: 100vh !important;
+      bottom: 0%;
+   }
+
+   .dateformxo{
+      height: 60vh !important;
+   }
+   
+   .sizeform {
+      /* border: palegreen 2px solid!important; */
+      height: 38vh !important;
+   }
+}
+
 @media (max-width: 575px) {
 
    /*Responsive de inicio*/
@@ -28,11 +162,6 @@
    }
 
 }
-
-@media (min-width: 576px) {
-
-}
-
 /* mostrar menu hamburguesa en *(<=992px) *y* <=575px */
 @media (max-width: 992px) {
 
