@@ -10,7 +10,7 @@
 ======================================== */
 
 /* Mobile devices (max-width: 575px) */
-@media (min-width: 372px){
+@media (min-width: 372px) {
 
    .OptionMenu{
       /* border: seagreen 2px solid; */
@@ -45,8 +45,25 @@
    
    .input:checked + .slider {
       /* border: saddlebrown 2px solid; */
-      width: 10%!important;
+      width: 5%!important;
+      height: 5vh!important;
    }
+
+   /*catalogo*/
+
+   .ImgCatXo > a{
+      display: none;
+   }
+
+   .ModalContent{
+      display: none;
+   }
+
+   .ModalDialog > div > img{
+      display: none;
+   }
+
+   /*contactpo*/
 
    #ContactXo > .container-fluid{
       /* border: turquoise 2px solid; */
@@ -73,6 +90,66 @@
       height: 89vh !important;
    }
 
+}
+
+@media (max-width: 393px) and (min-width: 393px){
+   .slider{
+      /* border: blue 1px solid; */
+      min-height: 96% !important;
+   }
+
+   .mode-black-slider{
+      /* border: yellowgreen 2px solid; */
+      max-width: 100% !important;
+   }
+
+   .mode-black-slider::before{
+      top: 2px !important;
+   }
+
+   .scroll-action-nav .mode-black-slider{
+      /* border: salmon 1px solid; */
+      max-width: 75%!important;
+   }
+
+   .scroll-action-nav .slider{
+      /* border: red solid 1px; */
+      min-width: 85% !important;
+      max-height: 4.8vh !important;
+      top: -70% !important;
+      left: 8% !important;
+   }
+
+   .scroll-action-nav .slider::before{
+      top: 3px !important;
+      left: 3px !important;
+   }
+
+   .scroll-action-nav .mode-black-slider::before{
+      /* border: aqua 1px solid; */
+      top: 1.5px !important;
+      left: 6px !important;
+   }
+
+   /*menu*/
+
+   .scroll-action-nav{
+      /* border: orangered 1px solid; */
+      min-height: 20vh !important;
+   }
+
+   .scroll-action-nav .navoption{
+      /* border: purple 1px solid; */
+      min-width: 78% !important;
+      right: 6px !important;
+      min-height: 100% !important;
+      align-items: center!important;
+      justify-content: center!important;
+   }
+
+   .scroll-action-nav .navoption > li{
+      /* border: peru 1px solid; */
+   } 
 
 }
 
