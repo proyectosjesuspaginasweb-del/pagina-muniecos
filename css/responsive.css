@@ -19,8 +19,28 @@
    }
 
    .slider{
-      /* border: green 2px solid; */
       height: 4vh !important;
+      width: 98% !important;
+   }
+
+   .scroll-action-nav .slider{
+      /* border: green 2px solid; */
+      max-width: 86% !important;
+      height: 4.1vh !important;
+      top: -100% !important;
+      left: 13%;
+   }
+
+   .scroll-action-nav .mode-black-slider::before{
+      /* border: yellow 1px solid; */
+      top: 1px !important;
+      right: 0!important;
+   }
+
+   .mode-black-slider::before{
+      /* border: red 1px solid; */
+      top: 1px!important;
+      left: 3px !important;
    }
    
    .input:checked + .slider {
