@@ -15,7 +15,14 @@
    .OptionMenu{
       /* border: seagreen 2px solid; */
       top: 0%;
+      max-height: 20% !important;
+   }
 
+   .navoption{
+      /* border: yellowgreen 1px solid; */
+      min-height: 100% !important;
+      align-items: center !important;
+      justify-content: center !important;
    }
 
    .slider{
