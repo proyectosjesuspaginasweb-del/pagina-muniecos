@@ -970,7 +970,7 @@
 
    /*Responsive de inicio*/
    .imglogo{
-      justify-content: end;
+      justify-content: center;
    }
    /*Fin responsive de inicio*/
 
@@ -987,9 +987,42 @@
    }
 
    .slider{
-      /* border: yellow 2px solid!important; */
-      left: 190% !important;
+      /* border: yellow 2px solid !important; */
+      min-height: 114% !important;
+      width: 166% !important;
+      left: 125% !important;
+      top: -84% !important;
    } 
+
+   .is-scrolled .slider{
+      /* border: 1px solid red; */
+      width: 141% !important;
+      min-height: 6vh !important;
+      top: -37% !important;
+      left: 130% !important;
+   }
+
+   .slider::before{
+      top: 3.4px !important;
+   }
+
+   .mode-black-slider::before{
+      /* border: brown 1px solid; */
+      top: 2px !important
+   }
+
+   .is-scrolled .slider::before{
+      /* border: yellowgreen 1px solid; */
+      top: 3px !important;
+   }
+
+   .is-scrolled .mode-black-slider::before{
+      top: 2px !important
+   }
+
+   .is-scrolled{
+      min-height: 19vh !important;
+   }
 
    .scroll-action-nav .navoption{
       /* border: 2px solid blue!important; */
@@ -1001,20 +1034,173 @@
       font-size: 15px;
    }
 
+   .is-scrolled{
+      /* border: blue 2px solid!important; */
+      min-height: 14vh !important;
+   }
+
+   .navoption{
+      gap: 4%;
+   }
+
    .OptionandLogoMenu{
-      top: 18%;
+      /* border: yellow solid 1px; */
+      top: 0 !important;
+      min-height: 45vh !important;
+      min-width: 100% !important;
+      justify-content: start !important;
+   }
+
+   .OptionMenu{
+      /* border: turquoise 1px solid; */
+      max-height: 100vh!important;
+      min-width: 58%;
+   }
+
+   .is-scrolled .navoption{
+      /* border: springgreen 1px solid !important; */
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 25px;
+   }
+
+   .is-scrolled .ImgLogoXo{
+      /* border: green solid 1px; */
+      top: 0!important;
+      left: 0!important;
+      max-height: 13vh;
+   }
+
+   .is-scrolled .OptionandLogoMenu{
+      /* border: rgb(143, 3, 148) 2px solid !important; */
+      min-height: 13vh !important;
+      justify-content: center;
+   }
+
+   .is-scrolled .OptionMenu{
+      /* border: blue 2px solid; */
+      min-width: 68% !important;
+      justify-content: center;
+      left: 0;
+      align-items: center;
    }
 
    .ImgLogoXo > img{
       /* border: 2px solid orange!important; */
-      left: 200%;
+      left: -9% !important;
       width: 100%;
-      top: 3%!important;
+      top: 0!important;
    }
+
+   .is-scrolled .ImgLogoXo > img{
+   /* border: turquoise solid 2px!important; */
+   max-width: 31% !important;
+   }
+
+   /*Resposive WHo*/
+
+   .ContainerTextAndTittleWhoXo{
+      /* border: red 1px solid; */
+      top: 9%;
+   }
+
+   .TittleWhoXo > h3{
+      font-size: 40px!important;
+   }
+
+   .TextWhoXo > p{
+      font-size: 15px;
+      left: 11%;
+   }
+
+   .ImgWhoXo > img:nth-child(1){
+      width: 50%;
+   }
+
+   .ImgWhoXo > img:nth-child(2){
+      left: 16%;
+      width: 50%;
+   }
+
+   .ImgWhoXo > img:nth-child(3){
+      left: 56%;
+      width: 50%;
+   }
+
+   /*Responsive Aim*/
+
+   .TittleAimXo{
+      top: 0;
+      left: 0;
+      border: blue 1px solid;
+      justify-content: center !important;
+      align-items: center !important;
+      display: flex;
+   }
+
+   .TittleAimXo > h3{
+      top: 0;
+      left: 0;
+      min-width: 45%;
+   }
+
+   .TextAim{
+      /* border: red solid 1px; */
+      height: 20%;
+      font-size: 15px;
+      min-height: 78% !important;
+      top: 0;
+      left: 0;
+   }
+
+   .TextAim > p{
+      top: -8em !important;
+      left: 0;
+      padding: 20px;
+   }
+
+   .ImgAimXo{
+      /* border: yellow 1px solid; */
+      top: 0;
+      left: 0;
+      height: 20vh;
+   }  
+
+   .ImgAimXo > img{
+      top: 25px;
+      left: 42%;
+   }
+
 }
 
 /* Large devices and up (lg) - ≥992px */
 @media (min-width: 992px) {
+
+   .ImgLogoXo{
+      /* border: yellow 1px solid; */
+      top: 9% !important;
+      left: 8% !important;
+   }
+
+   .ImgLogoXo > img{
+      /* border: 1px solid saddlebrown; */
+      left: 0;
+      bottom: 0!important;
+   }
+
+   .navxo{
+      /* border: solid rebeccapurple 1px; */
+      min-height: 34vh;
+   }
+
+   .OptionandLogoMenu{
+      top: 0;
+      left: 0;
+      /* border: turquoise 1px solid; */
+      max-height: 100vh;
+      justify-content: center;
+      align-items: center;
+   }
 
 }
 
