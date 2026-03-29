@@ -1171,6 +1171,40 @@
       left: 42%;
    }
 
+   /*responsive catalogo*/
+
+   .ImgContainerCatXo{
+      border: yellow 1px solid;
+      gap: 3px;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      left: 1px;
+   }
+
+   .ImgCatXo{
+      border: 3px solid green;
+      min-width: 90%;
+   }
+
+   /* Activar animación de imagen grande en 768px */
+   .ImgCatXo > a{
+      border: 1px solid red;
+      display: block;
+      opacity: 1 !important;
+      top: 0;
+      left: 0;
+   }
+
+   .ModalContent {
+      display: block;
+   }
+
+   .ModalDialog > div > img {
+      display: block;
+      left: 4%!important;
+   }
+
 }
 
 /* Large devices and up (lg) - ≥992px */
