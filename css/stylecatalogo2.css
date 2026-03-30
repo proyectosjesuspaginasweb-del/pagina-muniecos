@@ -61,13 +61,23 @@ body.dark-mode{
 
 /* El contenedor del switch */
 
+.container-switch{
+    /* border: rgba(245, 0, 204, 1) 2px solid; */
+    max-width: 100%;
+    height: 13vh;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
 .switch{/*se puede mover el boton del tema*/
     position: relative;
-    right: 2em;
-    top: 1.5em;
-    display: inline-block;
-    min-width: 6%;
-    height: 5.4vh;
+    display: flex;
+    right: 49px;
+    top: 0;
+    min-width: 9% !important;
+    height: 5vh;
+    overflow: hidden;
     /* border: #6d015f solid 3px; */
 }
 
@@ -77,23 +87,34 @@ body.dark-mode{
     height: 10vh;
 }
 
+.checkbox{
+    border: teal 1px solid;
+}
+
 .slider{/*contenedor que tiene adentro el boton*/
     position: absolute;
     cursor: pointer;
-    top: 0; left: -3px; right: 0; bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #ccc;
     transition: .4s;
     border: 34px;
     width: 100%;
-    height: 5.9vh;
+    height: 4.1vh;
     border-radius: 2em;
+    /* border: #88ce02 1px solid; */
 }
 
 .slider::before{/*boton blanco del modo claro*/
     position: absolute;
     content: "";
     height: 26px;width: 26px;
-    left: 4px;bottom: 4px; top: 3px;
+    left: 3px; bottom: 0; top: 2px;
     background-color: white;
     transition: .4s;
     border-radius: 50%;
@@ -175,9 +196,9 @@ main{
 .ImgLogoXo > img{
     position: relative;
     display: flex;
-    width: 70%;
-    left: 1%;
-    top: 10%;
+    width: 38%;
+    left: -8%;
+    top: 0%;
     max-height: 30vh;
     /* border: #000 2px solid; */
 }
@@ -191,34 +212,39 @@ main{
 
 .OptionandLogoMenu{
     position: relative;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 44% 55%;
+    grid-auto-rows: 40vh;
+    grid-auto-flow: row;
     min-width: 100%;
-    max-height: 30vh;
     /* border: #00c6ff 2px solid; */
 }
 
 .OptionMenu{
     position: relative;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-rows: 42% 91%;
+    grid-template-columns: 99%;
     min-width: 80%;
     max-height: 30vh;
     /* border: red 2px solid; */
-    justify-content: end;
-    top: 17%;
+    top: 0;
+    left: 0;
+    justify-content: start;
+    align-items: center;
+    align-content: start;
 }
 
 .navoption{
     position: relative;
     display: flex;
     min-width: 100%;
-    min-height: 30vh;
+    min-height: 15vh;
+    gap: 26px;
     /* border: blue 2px solid; */
     margin: 0;
     padding: 0;
     align-items: center;
-    justify-content: end;
 }
 
 .navoption > li{
@@ -270,7 +296,7 @@ main{
     position: fixed;
     background: var(--Blanco);
     display: grid;
-    grid-template-columns: 100%;
+    grid-template-columns: 41% 60% 100%;
     grid-auto-rows: 100%;
     top: 0;
     left: 0;
@@ -278,7 +304,7 @@ main{
     min-width: 100%;
     height: 10vh;
     animation: bajarMenu 0.5s forwards;
-    /* border: #88ce02 2px solid; */
+    border: #88ce02 2px solid;
 }
 
 @keyframes bajarMenu{
@@ -290,10 +316,24 @@ main{
     }
 }
 
+.is-scrolled .navxo{
+    border: steelblue 2px solid;
+}
+
+.is-scrolled .ImgLogoXo > img{
+    top: 5px !important;
+    left: 0;
+}
+
+.is-scrolled .ImgLogoXo{
+    border: blue 1px solid;
+    height: 9.5vh;
+}
+
 .is-scrollednavimg{
     max-width: 20%;
     position: relative!important;
-    top: 1px!important;
+    top: 0px!important;
     /* border: yellow 2px solid; */
 }
 
@@ -302,16 +342,38 @@ main{
     min-height: 10vh;
     display: flex;
     flex-direction: row;
+    align-items: center;
+    /* border: #88ce02 2px solid; */
+}
+
+.is-scrolled .OptionandLogoMenu{
+    display: grid;
+    grid-template-columns: 44% 154%;
+    grid-auto-rows: 10vh;
+}
+
+.is-scrolled .OptionMenu{
+    /* border: red solid 1px; */
+    display: flex;
+    flex-direction: row-reverse;
+    min-width: 100%;
+}
+
+.is-scrolled .container-switch{
+    border: springgreen 2px solid;
+    min-width: 29% !important;
+    height: 10vh;
     justify-content: center;
     align-items: center;
 }
 
-.scroll-switch{
-    min-width: 6%;
-    height: 5.5vh;
-    /* border: #88ce02 2px solid; */
-    top: 11px;
-    right: 25px;
+.is-scrolled .switch{
+    border: yellow 2px solid;
+    min-width: 100%;
+}
+
+.is-scrolled .slider::before{
+    max-width: 100%;
 }
 
 /* Evita que el contenido brinque */
@@ -350,7 +412,7 @@ main{
     display: flex;
     flex-direction: column;
     background: url(./img/Fondos_Pagina_Munecos/FondoWho3.jpg) no-repeat center / 120% 150vh;
-    /* border: violet 2px solid; */
+    border: violet 2px solid;
     overflow: hidden;
 }
 

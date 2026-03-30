@@ -10,23 +10,42 @@
 ======================================== */
 
 /* Media Queries */
+
+@media (min-width: 318px) {
+  *{
+   border: goldenrod 2px solid;
+   }
+}
+
 @media (min-width: 576px) {
-  /* sm */
+  *{
+   border: tomato 2px solid;
+   }
 }
 
 @media (min-width: 768px) {
-  /* md */
+  *{
+   border: blue 2px solid;
+   }
 }
 
 @media (min-width: 992px) {
   /* lg */
+  *{
+   border: greenyellow 2px solid;
+   }
 }
 
 @media (min-width: 1200px) {
   /* xl */
+  *{
+   border: cyan 0px solid;
+   }
 }
 
 @media (min-width: 1400px) {
-  /* xxl */
+  *{
+   border: maroon 2px solid;
+   }
 }
 
