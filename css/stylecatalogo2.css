@@ -591,7 +591,6 @@ main{
 }
 
 .TittleAimXo > h3{
-    /* border: #88ce02 2px solid; */
     position: relative;
     width: 40%;
     height: 12vh;
@@ -654,7 +653,6 @@ main{
 }
 
 .TextAim > p{
-    /* border: #88ce02 solid 1px; */
     position: relative;
     top: 0em;
 }
@@ -662,7 +660,6 @@ main{
 .ContainerTextAimXo > .TextAim:nth-child(1){
     transform: translateX(-400px);
     opacity: 0;
-    top: 0;
 }
 
 .ContainerTextAimXo > .TextAim:nth-child(2){
