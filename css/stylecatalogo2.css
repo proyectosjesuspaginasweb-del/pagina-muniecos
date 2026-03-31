@@ -73,7 +73,7 @@ body.dark-mode{
 .switch{/*se puede mover el boton del tema*/
     position: relative;
     display: flex;
-    right: 49px;
+    right: 41px;
     top: 0;
     min-width: 9% !important;
     height: 5vh;
@@ -105,7 +105,7 @@ body.dark-mode{
     transition: .4s;
     border: 34px;
     width: 100%;
-    height: 4.1vh;
+        height: 5.1vh;
     border-radius: 2em;
     /* border: #88ce02 1px solid; */
 }
@@ -129,7 +129,7 @@ body.dark-mode{
     position: absolute;
     content: "";
     height: 27px;width: 27px;
-    left: 4px;bottom: 3px;
+    left: 4px;top: 1px;
     background-color: black;
     transition: .4s;
     border-radius: 50%;
@@ -284,7 +284,7 @@ main{
 }
 
 .iconhamburger{
-    border: #88ce02 2px solid;
+    /* border: #88ce02 2px solid; */
     display: none;
 }
 
@@ -296,7 +296,7 @@ main{
     position: fixed;
     background: var(--Blanco);
     display: grid;
-    grid-template-columns: 41% 60% 100%;
+    grid-template-columns: 46%;
     grid-auto-rows: 100%;
     top: 0;
     left: 0;
@@ -316,17 +316,13 @@ main{
     }
 }
 
-.is-scrolled .navxo{
-    border: steelblue 2px solid;
-}
-
 .is-scrolled .ImgLogoXo > img{
     top: 5px !important;
     left: 0;
 }
 
 .is-scrolled .ImgLogoXo{
-    border: blue 1px solid;
+    /* border: blue 1px solid; */
     height: 9.5vh;
 }
 
@@ -348,7 +344,7 @@ main{
 
 .is-scrolled .OptionandLogoMenu{
     display: grid;
-    grid-template-columns: 44% 154%;
+    grid-template-columns: 55% 135%;
     grid-auto-rows: 10vh;
 }
 
@@ -360,20 +356,27 @@ main{
 }
 
 .is-scrolled .container-switch{
-    border: springgreen 2px solid;
-    min-width: 29% !important;
+    /* border: springgreen 2px solid; */
+    min-width: 12%!important;
     height: 10vh;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
 }
 
 .is-scrolled .switch{
-    border: yellow 2px solid;
-    min-width: 100%;
+    /* border: yellow 2px solid; */
+    width: 67%;
+    height: 6vh;
+    left: -15px;
 }
 
 .is-scrolled .slider::before{
     max-width: 100%;
+    top: 2.5px;
+}
+
+.is-scrolled .mode-black-slider::before{
+    top: 1px;
 }
 
 /* Evita que el contenido brinque */
