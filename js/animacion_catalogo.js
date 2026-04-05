@@ -28,7 +28,8 @@ const scrollnav = [
     { id: "navbar", className: "is-scrolled"},
     { id: "igmavxo", className: "is-scrollednavimg"},
 	{ id: "opcionescontinernav", className: "scroll-containeroption"},
-	{ id: "switch", className: "scroll-switch"}
+	{ id: "switch", className: "scroll-switch"},
+	{ id: "scroll", className: "scroll-active-who"}
 ]
 
 //El vigilate

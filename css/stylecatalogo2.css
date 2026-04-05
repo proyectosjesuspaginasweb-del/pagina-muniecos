@@ -73,10 +73,10 @@ body.dark-mode{
 .switch{/*se puede mover el boton del tema*/
     position: relative;
     display: flex;
-    right: 41px;
-    top: 0;
-    min-width: 9% !important;
-    height: 5vh;
+    right: 11%;
+    top: 45%;
+    max-width: 8.9% !important;
+    min-height: 6vh;
     overflow: hidden;
     /* border: #6d015f solid 3px; */
 }
@@ -105,7 +105,7 @@ body.dark-mode{
     transition: .4s;
     border: 34px;
     width: 100%;
-        height: 5.1vh;
+    min-height: 4.7vh;
     border-radius: 2em;
     /* border: #88ce02 1px solid; */
 }
@@ -172,7 +172,7 @@ main{
     min-height: 100vh;
     display: flex;
     /* border: yellow 2px solid; */
-    margin-bottom: 7em;
+    margin-bottom: 10%;
     overflow: hidden;
 }
 
@@ -365,8 +365,15 @@ main{
 
 .is-scrolled .switch{
     /* border: yellow 2px solid; */
-    width: 67%;
-    height: 6vh;
+    min-width: 70%;
+    height: 7vh;
+    right: 25%;
+    top: -1px;
+}
+
+.is-scrolled .slider{
+    max-width: 88%;
+    height: 4.9vh;
     left: 3px;
     top: -1px;
 }
@@ -374,6 +381,7 @@ main{
 .is-scrolled .slider::before{
     max-width: 100%;
     top: 2.5px;
+    /* border: teal 1px solid; */
 }
 
 .is-scrolled .mode-black-slider::before{
@@ -464,6 +472,7 @@ main{
     /*efecto vidrio templado*/
     border-radius: 1em 2em;
     filter: drop-shadow(0 2px 10px rgb(206, 199, 206)); /* Sombra ligera */
+    padding: 10%;
 }
 
 .TextWhoXo{/*contenedor del texto*/
@@ -495,6 +504,7 @@ main{
     font-family: Playfair_Display;
     border-radius: 1em 2em;
     filter: drop-shadow(0 2px 10px rgb(206, 199, 206)); /* Sombra ligera */
+    padding: 10%;
 }
 
 .scrollimgwho{
@@ -668,6 +678,7 @@ main{
     color: var(--Blanco);
     font-family: Playfair_Display;
     padding: 10%;
+    bottom: 20px;
 }
 
 .ContainerTextAimXo > .TextAim:nth-child(1){
@@ -695,10 +706,8 @@ main{
     /* border: lightgreen 2px solid; */
     min-width: 100%;
     min-height: 100vh;
-    height: 42em;
     display: flex;
     flex-direction: column;
-    align-content: center;
     margin: 0 auto;
     border: dashed 5px var(--Rosa-fuerte);
     border-radius: 2em;
@@ -1108,9 +1117,9 @@ html:has(.ModalDialog:target) {/*hace que solo afecte el modalDialog para que al
     align-content: center;
     justify-content: center;
     /* border: rgba(255, 0, 128, 0.9) 2px solid; */
-    top: 0;
+    bottom: 35px;
     transform: translateY(100px);
-    opacity: 1;
+    opacity: 0;
 }
 
 .buttomMore > a{
@@ -1216,7 +1225,20 @@ html:has(.ModalDialog:target) {/*hace que solo afecte el modalDialog para que al
 }
 
 .textprocess:nth-child(4){
+    width: 70%;
+    display: flex;
+    justify-items: start;
+    align-items: center;
+    padding-left: 9%;
+    /* border: #88ce02 2px solid; */
+}
+
+.textprocess:nth-child(5){
     width: 75%;
+    display: flex;
+    justify-items: start;
+    align-items: center;
+    padding-left: 9%;
     /* border: #88ce02 2px solid; */
 }
 

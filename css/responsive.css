@@ -11,45 +11,264 @@
 
 /* Media Queries */
 
-@media (min-width: 318px) {
+@media (min-width: 318px) and (max-width: 575px) {
   *{
    border: goldenrod 2px solid;
    }
 }
 
-@media (min-width: 576px) {
+@media (min-width: 576px) and (max-width: 767px) {
   *{
    border: tomato 2px solid;
    }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 991px) {
   *{
    border: blue 2px solid;
    }
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 992px) and (max-width: 1023px) {
+
   /* lg */
   *{
    border: greenyellow 0px solid;
    }
 
-   .is-scrolled{
-      border: slategrey 1px solid;
-
+   .container-fluid{
+      /* border: yellow 2px solid; */
+      margin-bottom: 15%;
    }
 
+   #WhoMyXo > .container-fluid:nth-child(1){
+      /* border: blue 1px solid;  */
+      min-height: 60vh;
+   }
+
+   /*Responsive Menu*/
+
    .switch{
-      border: turquoise 1px solid;
-      width: 11.1%;
-      height: 6.5vh;
+      width: 9.7%;
+      height: 43.9%;
+      right: 4%;
    }
 
    .slider{
-      border: yellow 1px solid;
-      height: 5.7vh;
+      height: 100%;
+      width: 96%;
+   }
+
+   .is-scrolled{
+      /* border: slategrey 1px solid; */
+      height: 10vh;
+      grid-template-columns: 49% 41% 10%;
+   }
+
+   .is-scrolled .slider{
+      /* border: yellow 1px solid; */
+      height: 80.5%;
+      width: 93.5%;
+   }
+
+   .OptionandLogoMenu{
+      /* border: red 1px solid; */
+      grid-template-columns: 36% 64.5%;
+   }
+
+   .navoption{
+      /* border: yellow 1px solid; */
+      justify-content: center;
+   }
+
+   .navoption > li > a{
+      font-size: 13px;
+   }
+
+   .ImgLogoXo > img{
+      width: 53%;
+      left: 1px;
+      top: 39px;
+   }
+
+   .is-scrolled .OptionandLogoMenu{
+      grid-template-columns: 39% 147%;
+   }
+
+   .is-scrolled .ImgLogoXo{
+      /* border: sienna 1px solid; */
       max-width: 100%;
+   }
+
+   .is-scrolled .ImgLogoXo > img{
+      min-width: 39%;
+   }
+
+   .is-scrolled .navoption{
+      justify-content: center;
+   }
+
+   .is-scrolled .container-switch{
+      justify-content: center;
+      align-items: center;
+   }
+
+   .is-scrolled .switch{
+      /* border: yellow 1px solid; */
+      height: 7vh;
+      top: 3px;
+      width: 75%;
+   }
+
+   /*Responsive Who*/
+
+   .ContainerWhoXo{
+      height: 125vh;
+      border: blue 1px solid;
+   }
+
+   .ContainerTextAndTittleWhoXo{
+      min-height: 90vh;
+      /* border: 1px solid red; */
+   }
+
+   .scroll-active-who{
+      /* border: blue 1px solid; */
+      height: 90vh;
+   }
+
+   .is-scrolled .ContainerTextAndTittleWhoXo{
+      /* border: red 1px solid; */
+      min-height: 100vh;
+   }
+
+   .TittleWhoXo > h3{
+      font-size: 30px;
+      height: 48vh;
+   }
+   
+   .TextWhoXo > p{
+      font-size: 15px;
+      height: 48vh;
+      top: 0;
+      left: 14px;
+   }
+
+   .ImgWhoXo{
+      /* border: springgreen 1px solid; */
+      justify-items: center;
+      align-items: center;
+      left: 23px;
+   }
+
+   .ImgWhoXo > img{
+      width: 50%;
+      height: 29vh;
+   }
+
+   .ImgWhoXo > img:nth-child(1){
+      top: 0px;
+      left: 65px;
+   }
+   
+   .ImgWhoXo > img:nth-child(2){
+      top: 39%;
+      left: 0;
+   }
+
+   .ImgWhoXo > img:nth-child(3){
+      top: 40%;
+      left: 40%;
+   }
+
+   /*Responsive Aim*/
+
+   .ContainerTittleandTextAimXo{
+      gap: 0;
+   }
+
+   .ContainerTextAimXo{
+      /* border: sandybrown 1px solid; */
+      display: flex;
+      justify-items: center;
+      align-items: center;
+   }
+
+   .TittleAimXo > h3{
+      /* border: royalblue 1px solid; */
+      width: 48%;
+   }
+
+   .ContainerTextAimXo > .TextAim:nth-child(1){
+      /* border: turquoise 1px solid; */
+      height: 55vh;
+   }
+
+   .ContainerTextAimXo > .TextAim:nth-child(2){
+      /* border: turquoise 1px solid; */
+      height: 55vh;
+   }
+
+   .ContainerTextAimXo > .TextAim:nth-child(3){
+      border: turquoise 1px solid;
+      height: 55vh;
+   }
+
+   .ImgAimXo > img{
+      top: 14%;
+      left: 41%;
+   }
+
+   .tittle-aimXo-text{
+      font-family: 20px;
+   }
+
+   .TextAim > p{
+      font-size: 12px;
+      bottom: 31px;
+      padding: 31px;
+   }
+
+   /*Responsive Size*/
+
+   .cards li{
+      /* border: saddlebrown 1px solid; */
+      height: 75vh;
+      top: 60px;
+   }
+
+   .actions{
+      gap: 42rem;
+      top: 44%;
+   }
+
+   /*Responsive calalogo*/
+
+   .ImgContainerCatXo{
+      border: tomato 1px solid;
+      grid-auto-rows: 32%;
+      grid-template-columns: 30% 30% 30%;
+      justify-items: center;
+   }
+
+   .ImgCatXo{
+      min-width: 90%;
+      height: 48vh;
+   }
+}
+
+@media (min-width: 1024px) and (max-width: 1199px){
+   
+   .switch{
+      /* border: powderblue 1px solid; */
+      height: 6vh;
+      width: 12.1%;
+      left: 3px;
+   }
+
+   .slider{
+      height: 5.6vh;
+      width: 90%;
    }
    
 }
@@ -85,6 +304,12 @@
       width: 100%;
    }
 
+   .ImgLogoXo > img {
+      width: 45%;
+      left: -34px;
+      top: 57px;
+   }
+
    /*Responsive Who*/
 
    .ImgWhoXo > img{
@@ -117,7 +342,7 @@
    }
 
    .ModalDialog:target{
-      border: yellowgreen 1px solid;
+      /* border: yellowgreen 1px solid; */
    }
 
    .ModalDialog > div > img{
@@ -230,6 +455,13 @@
    .navoption > li > a{
       font-size: 20px;
    }
+
+   .ImgLogoXo > img {
+      width: 45%;
+      left: -34px;
+      top: 57px;
+   }
+
 
    /*menu despegable*/
 
