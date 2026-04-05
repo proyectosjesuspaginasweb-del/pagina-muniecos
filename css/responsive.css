@@ -29,7 +29,7 @@
    }
 }
 
-@media (min-width: 992px) and (max-width: 1439px) {
+@media (min-width: 992px) and (max-width: 1199px) {
   /* lg */
   *{
    border: greenyellow 0px solid;
@@ -54,12 +54,110 @@
    
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1200px) and (max-width: 1399px) {
   /* xl */
   *{
    border: cyan 0px solid;
    }
 
+   .container-fluid{
+      /* border: yellow 2px solid; */
+      margin-bottom: 15%;
+   }
+
+   /*responsive menu*/
+
+   .switch{
+      /* border: turquoise 1px solid; */
+      width: 10.1%;
+      height: 4.5vh;
+   }
+
+   .slider{
+      /* border: red 1px solid; */
+      height: 4vh;
+      width: 92%;
+   }
+
+   .is-scrolled .slider{
+      /* border: yellow 1px solid; */
+      top: 16%;
+      width: 100%;
+   }
+
+   /*Responsive Who*/
+
+   .ImgWhoXo > img{
+      width: 60%;
+   }
+
+   /*Rsponsive Aim*/
+
+   .ImgAimXo > img{
+      top: 15%;
+      left: 42%;
+   }
+
+   /*Responsive Catalogo*/
+
+   #CatalogXo > .container-fluid:nth-child(1){
+      height: 100%;
+      /* border: green 1px solid; */
+   }
+
+   .CatalogoXocontainer{
+      /* border: red 1px solid; */
+      height: 28%;
+   }
+
+   .ImgContainerCatXo{
+      /* border: tomato 1px solid; */
+      gap: 4%;
+      grid-auto-rows: 28%;
+   }
+
+   .ModalDialog:target{
+      border: yellowgreen 1px solid;
+   }
+
+   .ModalDialog > div > img{
+      top: 5%;
+   }
+
+   .FlechaIzquierda > img{
+      top: -50px;
+      left: 15px;
+   }
+
+   .FlechaDerecha > img{
+      top: 52%;
+      left: 41%;
+   }
+
+   .btn-cerrar > img{
+      top: -13rem;
+      left: 51rem;
+   }
+
+   /*Responsive contacto*/
+
+   #ContactXo > .container-fluid:nth-child(1){
+      /* border: blue solid 1px; */
+      min-height: 66% !important;
+      margin-bottom: 62px !important;
+   }
+
+   .ContainerContactXo{
+      /* border: orange 1px solid; */
+      height: 90vh;
+   }
+
+   /*Footer*/
+
+   .FooterXo{
+      /* border: cyan 1px solid; */
+      height: 59vh!important;
+   }
 
 }
 
@@ -67,6 +165,15 @@
   *{
    border: maroon 0px solid;
    }
+
+   .container-fluid{
+      /* border: yellow 2px solid; */
+      margin-bottom: 15%;
+   }
+
+   /*Inicio de XO*/
+
+
 
    /*inicio de la pagina*/
 
@@ -185,7 +292,63 @@
    
    /*Responsive Aim*/
 
-   
+   .ContainerTextAimXo > .TextAim:nth-child(1){
+      height: 66vh;
+   }
 
+   .ContainerTextAimXo > .TextAim:nth-child(2){
+      height: 66vh;
+   }
+
+   .ContainerTextAimXo > .TextAim:nth-child(3){
+      height: 66vh;
+   }
+
+   .ImgAimXo > img{
+      left: 42%;
+      top: 12%;
+   }
+
+   .TextAim > p {
+      padding: 26px;
+      font-size: 20px;
+   }
+
+   /*Responsive de catalogo*/
+
+   #CatalogXo > .container-fluid:nth-child(1){
+      height: 70%;
+   }
+
+   .CatalogoXocontainer{
+      /* border: green solid 1px; */
+      height: 95%
+   }
+
+   .ImgContainerCatXo{
+      /* border: red solid 1px; */
+      gap: 4%;
+      grid-auto-rows: 30%;
+   } 
+
+   /*Resposive de contact*/
+
+   #ContactXo > .container-fluid:nth-child(1){
+      /* border: blue solid 1px; */
+      min-height: 66% !important;
+      margin-bottom: 62px !important;
+   }
+
+   .ContainerContactXo{
+      /* border: orange 1px solid; */
+      height: 90vh;
+   }
+
+   /*Footer*/
+
+   .FooterXo{
+      /* border: cyan 1px solid; */
+      height: 70vh!important;
+   }
 
 }
