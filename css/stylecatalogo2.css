@@ -297,14 +297,14 @@ main{
     background: var(--Blanco);
     display: grid;
     grid-template-columns: 46%;
-    grid-auto-rows: 100%;
+    grid-auto-rows: minmax(100%);
     top: 0;
     left: 0;
     z-index: 999;
     min-width: 100%;
     height: 10vh;
     animation: bajarMenu 0.5s forwards;
-    border: #88ce02 2px solid;
+    /* border: #88ce02 2px solid; */
 }
 
 @keyframes bajarMenu{
@@ -317,8 +317,8 @@ main{
 }
 
 .is-scrolled .ImgLogoXo > img{
-    top: 5px !important;
-    left: 0;
+    top: 3px !important;
+    left: 0px;
 }
 
 .is-scrolled .ImgLogoXo{
@@ -327,7 +327,7 @@ main{
 }
 
 .is-scrollednavimg{
-    max-width: 20%;
+    max-width: 18%;
     position: relative!important;
     top: 0px!important;
     /* border: yellow 2px solid; */
@@ -367,7 +367,8 @@ main{
     /* border: yellow 2px solid; */
     width: 67%;
     height: 6vh;
-    left: -15px;
+    left: 3px;
+    top: -1px;
 }
 
 .is-scrolled .slider::before{
@@ -376,7 +377,7 @@ main{
 }
 
 .is-scrolled .mode-black-slider::before{
-    top: 1px;
+    top: 1.3px;
 }
 
 /* Evita que el contenido brinque */
@@ -584,31 +585,22 @@ main{
     height: 30vh;
     margin: 3px 0px;
     padding: 0;
+    display: flex;
     text-align: center;
     align-content: center;
     color: var(--Blanco);
     font-family: Lobster;
     border-radius: 1em;
-    transform: translateX(-400px);
-    opacity: 0;
+    justify-content: center;
+    align-items: center;
 }
 
 .TittleAimXo > h3{
     position: relative;
     width: 40%;
     height: 12vh;
-    left: 10.5em;
-    top: 1em;
     align-content: center;
     background: var(--Rosa-fuerte);
-    clip-path: polygon(/*figura de liston*/
-    0 0,
-    100% 0,/*afecta el lado derecho arriba*/
-    97% 50%,/*edita el lado derecho el centro*/
-    100% 100%,/*afecta el lado derecho abajo*/
-    0 100%,/*afecta el lado izquierdo*/
-    4% 50%/*afecta el lado izquierdo*/
-    );
     filter: drop-shadow();
     display: block;/*Elimina los espacios en linea que tiene la imagen*/
     box-sizing: border-box;/*adapanta el border y pading se inclya en la dimesion de la imagen*/
@@ -616,6 +608,9 @@ main{
     border: 6px dashed rgba(255, 0, 128, 0.9); /* borde circular que sigue la forma*/
     background-clip: padding-box; /* evita que la imagen se solape con el borde */
     font-size: 38px;
+    justify-content: center;
+    transform: translateX(-400px);
+    opacity: 0;
 }
 
 .ContainerTextAimXo{
@@ -633,11 +628,24 @@ main{
     justify-content: center;
 }
 
+.tittle-aimXo-text{
+    /* border: yellowgreen 1px solid; */
+    width: 100%;
+    height: 10vh;
+    color: var(--Blanco);
+    font-family: Lobster;
+    justify-content: center;
+    align-content: center;
+}
+
 .TextAim{/*contenedor donde viene el texto de Aim*/
     position: relative;
     /* border: #ff0080 10px solid; */
     margin: 2em;
     height: 60vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20%;
     /*efecto vidrio templado*/
     background: rgba(206, 7, 224, 0.068); /* Blanco con transparencia */
     backdrop-filter: blur(10px);
@@ -652,12 +660,14 @@ main{
 .TextAim > h3{
     position: relative;
     /* border: yellow 1px solid; */
-    top: 1.5em;
+    top: 15%;
 }
 
 .TextAim > p{
     position: relative;
-    top: 0em;
+    color: var(--Blanco);
+    font-family: Playfair_Display;
+    padding: 10%;
 }
 
 .ContainerTextAimXo > .TextAim:nth-child(1){
