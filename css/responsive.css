@@ -169,22 +169,103 @@
 
    /*Responsive Aim*/
 
+   .ContainerTextAimXo{
+      gap: 3%;
+   }
+
+   .ImgAimXo > img{
+      top: 14%;
+      left: 42%;
+   }
+
    .TittleAimXo > h3{
       font-size: 20px;
       width: 55%;
+   }
+
+   .TextAim{
+      max-width: 29%;
+      height: 66vh;
+      margin: 0;
    }
 
    .TextAim > h3{
       font-size: 25px;
    }
 
-   .TextAim{
-      width: 50%;
-      height: 60vh;
-   }
-
    .TextAim > p{
       font-size: 13px;
+   }
+
+   /*Responsive Size*/
+
+   .cards li{
+      /* border: saddlebrown 1px solid; */
+      height: 75vh;
+      top: 60px;
+   }
+
+   .actions{
+      gap: 30rem;
+      top: 44%;
+   }
+
+   /*Responsive Catalogo*/
+
+   .TittleCatalogo > h3{
+      width: 45%;
+   }
+
+   .TextCatalogo > p{
+      max-width: 90%;
+      font-size: 15px;
+   }
+
+   /*Responsive calalogo*/
+
+   #CatalogXo > .container-fluid:nth-child(1){
+      /* border: yellow solid 2px; */
+      height: 279vh;
+   }
+
+   .CatalogoXocontainer{
+      height: 278vh;
+   }
+
+   .ImgContainerCatXo{
+      /* border: tomato 1px solid; */
+      grid-auto-rows: 27%;
+      grid-template-columns: 28% 28% 28%;
+      justify-items: center;
+   }
+
+   .ImgCatXo{
+      min-width: 90%;
+      height: 48vh;
+   }
+
+   .buttomMore{
+      bottom: 5%;
+   }
+
+   /*Responsive procress*/
+
+   .TittleProcess > h3{
+      font-size: 35px;
+   }
+
+   .textprocess{
+      font-size: 12px;
+      min-height: 12%;
+   }
+
+   .FlechaProgress{
+      background-position: 33% 70%, 
+      20% 47%, 
+      8% 24%,
+      10% 0%,
+      15% 10%;
+      font-size: 70%;
    }
 }
 
