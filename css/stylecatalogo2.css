@@ -181,6 +181,11 @@ main{
     height: 320vh;
 }
 
+#ContactXo > .container-fluid:nth-child(1){
+    /* border: orange solid 2px; */
+    height: 105vh;
+}
+
 /*Inicio Diseño de menú*/
 
 .ImgLogoXo{
@@ -1246,12 +1251,14 @@ html:has(.ModalDialog:target) {/*hace que solo afecte el modalDialog para que al
     position: absolute;
     min-width: 100%;
     height: 100vh;
-    background: url(../css/img/Iconos_Xo/FlechaDibujo.png) no-repeat 20em 14em / 20em,/*1er flecha*/
-    url(../css/img/Iconos_Xo/FlechaDibujo.png) no-repeat 12em 6em / 20em,/*2do flecha*/
-    url(../css/img/Iconos_Xo/FlechaDibujo.png) no-repeat -1em -3em / 20em,/*3er flecha*/
-    url(../css/img/Iconos_Xo/Aguja2.png) no-repeat 61em 15em / 20em,/*aguja de texto 1*/
-    url(../css/img/Iconos_Xo/Aguja2.png) no-repeat 45em 5em / 20em,/*aguja de texto 2*/
-    url(../css/img/Iconos_Xo/Aguja2.png) no-repeat 25em -4em / 20em;/*aguja de texto 3*/
+    background: url(../css/img/Iconos_Xo/FlechaDibujo.png) no-repeat 26em 18em / 15em,/*1er flecha*/
+    url(../css/img/Iconos_Xo/FlechaDibujo.png) no-repeat 17.5em 11.5em / 15em,/*2do flecha*/
+    url(../css/img/Iconos_Xo/FlechaDibujo.png) no-repeat 9em 5em / 15em,/*3er flecha*/
+    url(../css/img/Iconos_Xo/FlechaDibujo.png) no-repeat 5em -1.5em / 15em,/*4to flecha*/
+    url(../css/img/Iconos_Xo/Aguja2.png) no-repeat 58em 18em / 15em,/*aguja de texto 1*/
+    url(../css/img/Iconos_Xo/Aguja2.png) no-repeat 46em 12em / 15em,/*aguja de texto 2*/
+    url(../css/img/Iconos_Xo/Aguja2.png) no-repeat 35em 5.5em / 15em,/*aguja de texto 3*/
+    url(../css/img/Iconos_Xo/Aguja2.png) no-repeat 25em -1em / 15em;/*aguja de texto 4*/
     z-index: 2;
     /* border: tomato 2px solid; */
     transform: rotate(180deg);
@@ -1274,10 +1281,8 @@ html:has(.ModalDialog:target) {/*hace que solo afecte el modalDialog para que al
 
 .ContainerContactXo{
     position: relative;
-    min-height: 100%;
-    height: 100vh;
     display: grid;
-    grid-auto-rows: 100%;
+    min-height: 100vh;
     grid-template-columns: 50% 50%;
     gap: 0em;
     grid-auto-flow: column;
@@ -1363,6 +1368,8 @@ html:has(.ModalDialog:target) {/*hace que solo afecte el modalDialog para que al
     /* border: #88ce02 2px solid; */
 }
 
+/*inicia estilo de footer*/
+
 .FormXo{
     position: relative;
     max-width: 100%;
@@ -1428,7 +1435,7 @@ form{
     justify-content: center;
     align-content: center;
     /* border: rgba(0,0,0,0.8) 2px solid; */
-    height: 80vh;
+    min-height: 80vh;
     max-width: 100%;
     background: url(../css/img/Fondos_Pagina_Munecos/FondoFooter2.svg) no-repeat 0em 2em / 160%;
     overflow: hidden;
@@ -1447,7 +1454,7 @@ form{
 .NameXo{
     /* border: yellow 2px solid; */
     position: absolute;
-    height: 80vh;
+    height: 100vh;
     min-width: 100%;
     display: flex;
     flex-direction: column;
