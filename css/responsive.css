@@ -257,20 +257,159 @@
    }
 }
 
-@media (min-width: 1024px) and (max-width: 1199px){
+@media (min-width: 1024px) and (max-width: 1199px){   
+
+   /*Responsive menu*/
    
+   .OptionandLogoMenu{
+      /* border: purple 1px solid; */
+      grid-template-columns: 35% 59%;
+      grid-auto-rows: 45vh;
+   }
+
+   .ImgLogoXo > img{
+      top: 55px;
+      width: 47%;
+      left: 1px;
+   }
+
+   .navoption{
+      /* border: yellow 1px solid; */
+      top: 36px;
+      left: 1px;
+   }
+
    .switch{
       /* border: powderblue 1px solid; */
       height: 6vh;
-      width: 12.1%;
-      left: 3px;
+      min-width: 12.1%;
+      left: 8px;
+      top: 28px;
    }
 
    .slider{
-      height: 5.612vh;
-      width: 90%;
+      height: 5.4vh;
+      width: 81%;
+   }
+
+   .mode-black-slider::before{
+      top: 0.3px;
+   }
+
+   .is-scrolled .slider{
+      /* border: rebeccapurple 1px solid; */
+      top: 2px;
+      height: 5.7vh;
+      width: 77%;
+   }
+
+   .is-scrolled .OptionandLogoMenu{
+      /* border: 1px solid purple; */
+      grid-template-columns: 39% 150%;
+   }
+
+   .is-scrolled .ImgLogoXo{
+      /* border: sienna 1px solid; */
+      max-width: 100%;
+   }
+
+   .is-scrolled .ImgLogoXo > img{
+      min-width: 24%;
+   }
+
+   .is-scrolled .navoption{
+      top: 0;
+      justify-content: center;
+   }
+
+   .is-scrolled .container-switch{
+      justify-content: center;
+      align-items: center;
+   }
+
+   .is-scrolled .switch{
+      /* border: yellow 1px solid; */
+      height: 5vh;
+      top: 0px;
+      left: 0;
+      min-width: 93%;
+   }
+
+   /*responsive de who*/
+
+   .TittleAimXo > h3{
+      font-size: 33px;
+   }
+
+   .ImgAimXo > img{
+      top: 12%;
+      left: 42%;
+   }
+
+   .TextAim > h3{
+      font-size: 25px;
+   }
+
+   .TextAim > p{
+      font-size: 13px;
+   }
+
+   /*Responsive de size*/
+
+   .cards li{
+      width: 100%;
+      top: 60px;
+   }
+
+   .actions{
+      gap: 40rem;
+      top: 40%;
+   }
+
+   /*Responsive catalogo*/
+
+   .CatalogoXocontainer{
+      height: 300vh;
+   }
+
+   .ImgContainerCatXo{
+      grid-template-columns: 30% 30% 30%;
+      grid-auto-rows: 27%;
+      justify-items: center;
+   }
+
+   .ImgCatXo{
+      min-width: 90%;
+      height: 48vh;
+   }
+
+   .buttomMore{
+      bottom: 5%;
    }
    
+   /*Responsive process*/
+
+   .textprocess{
+      min-height: 8vh;
+   }
+
+   .textprocess:nth-child(3){
+      display: flex;
+      padding-left: 3%;
+      padding-top: 4px;
+   }
+
+   .textprocess:nth-child(4){
+      display: flex;
+      padding-left: 3%;
+      padding-bottom: 4px;
+   }
+
+   .textprocess:nth-child(5){
+      display: flex;
+      padding-left: 3%;
+      padding-bottom: 4px;
+   }
 }
 
 @media (min-width: 1200px) and (max-width: 1399px) {
