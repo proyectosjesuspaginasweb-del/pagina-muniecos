@@ -261,11 +261,77 @@
 
    .FlechaProgress{
       background-position: 33% 70%, 
-      20% 47%, 
+      21% 47%, 
       8% 24%,
-      10% 0%,
+      1% 0%,
       15% 10%;
       font-size: 70%;
+   }
+
+   /*Responsive contacto*/
+
+   .ContainerContactXo{
+      grid-template-columns: 41% 57%;
+   }
+
+   #ContactXo > .container-fluid:nth-child(1){
+      /* border: seagreen 1px solid; */
+      height: 113vh;
+   }
+
+   .TittleContactXo{
+      font-size: 22px;
+   }
+
+   .textcontactxo{
+      font-size: 15px;
+   }
+
+   .Textcontact > h3{
+      font-size: 20px;
+   }
+
+   .IconsRed > a > img{
+      position: relative;
+      width: 50%;
+      bottom: 16px;
+      left: 37px;
+   }
+
+   .dateperson{
+      font-size: 13px;
+   }
+
+   form{
+      grid-template-rows: 34% 35%;
+      grid-auto-columns: 83%;
+   }
+
+   .FormXosizeandcomentarie > h3{
+      font-size: 22px;
+   }
+
+   .sizeform > label{
+      font-size: 10px;
+   }
+
+   .FormXosizeandcomentarie > h3{
+      font-size: 18px;
+   }
+
+   /*Responsive footer*/
+
+   .FooterXo{
+      /* border: olivedrab 1px solid; */
+      min-height: 56vh;
+   }
+
+   .backgroundfooter{
+      background-size: 50%;
+   }
+
+   .footerdate{
+      font-size: 18px;
    }
 }
 
