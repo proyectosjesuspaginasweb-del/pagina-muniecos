@@ -28,7 +28,8 @@ const scrollnav = [
     { id: "navbar", className: "is-scrolled"},
     { id: "igmavxo", className: "is-scrollednavimg"},
 	{ id: "opcionescontinernav", className: "scroll-containeroption"},
-	{ id: "switch", className: "scroll-switch"}
+	{ id: "switch", className: "scroll-switch"},
+	{ id: "scroll", className: "scroll-active-who"}
 ]
 
 //El vigilate
@@ -241,7 +242,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 document.addEventListener("DOMContentLoaded", (event) => {
 gsap.registerPlugin(ScrollTrigger)
 
-const actionaim = document.querySelectorAll('.actionanimation');
+const actionaim = document.querySelectorAll('.action-animation');
 const actionsize = document.querySelector('.actionsize');
 const animationcatalogo = document.querySelectorAll(".activecatalogo")
 const actionimgcat1 = document.querySelectorAll('.activeimgcat1')
@@ -263,7 +264,7 @@ const activefooter = document.querySelectorAll('.activefooter')
 			trigger: actionaim,
 			start: "-90 100%",/*star/como funciona el primero maneja el star(verde) y el segundo maneja el end (rojo)*/
 			end: "-50 20%",/*end*/
-			// markers: true,
+			//markers: true,
 			toggleActions: "play 0 0 reset",
 			opacity: 0,
 			delay: 1,
