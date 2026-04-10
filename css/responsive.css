@@ -830,6 +830,21 @@
 
 @media (min-width: 480px) and (max-width: 767px){
 
+
+   .welcomen{
+      font-size: 30px;
+   }
+
+   .buttomEnter > a.enterButton{
+      font-size: 30px;
+   }
+
+   .imglogo{
+      justify-content: center;
+   }
+
+   /*empieza el responsive menu*/
+
    .container-fluid{
       /* border: yellow 2px solid; */
       margin-bottom: 25%;
