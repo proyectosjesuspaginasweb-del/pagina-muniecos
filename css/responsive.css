@@ -419,7 +419,7 @@
    }
 }
 
-@media (min-width: 322px) and (max-width: 575px) {
+@media (min-width: 322px) and (max-width: 470px) {
   *{
    border: goldenrod 0px solid;
    }
@@ -828,20 +828,11 @@
    }
 }
 
-@media (min-width: 425px) and (max-width: 767px) {
-  *{
-   border: tomato 0px solid;
-   }
+@media (min-width: 480px) and (max-width: 767px){
 
-   .container-fluid{
-      /* border: yellow 2px solid; */
-      margin-bottom: 25%;
-   }
 
-   /*Responsive de inicio*/
-
-   .welcomeContainer{
-      font-size: 26px;
+   .welcomen{
+      font-size: 30px;
    }
 
    .buttomEnter > a.enterButton{
@@ -852,24 +843,74 @@
       justify-content: center;
    }
 
-   /*Responsive de menu*/
+   /*empieza el responsive menu*/
 
-   .OptionandLogoMenu{
-      /* border: turquoise 1px solid; */
-      grid-template-columns: 38% 27%;
+   .container-fluid{
+      /* border: yellow 2px solid; */
+      margin-bottom: 25%;
    }
 
    .ImgLogoXo > img{
-      width: 60%;
+      width: 67%;
+      left: 4%;
+      top: 10%;
+   }
+
+   .OptionandLogoMenu{
+      grid-template-columns: 20% 23%;
+      grid-auto-rows: 20vh;
+   }
+
+   .OptionMenu{
+      grid-template-rows: 25% 25%;
    }
 
    .navoption{
       display: none;
    }
 
+   .navpeelable{
+      height: 6vh;
+   }
+
+   .switch{
+      min-width: 27%;
+      min-height: 1vh!important;
+      position: relative;
+      top: 50%;
+      right: 22px;
+      /* border: blue 1px solid; */
+      box-sizing: border-box;
+      justify-content: start;
+   }
+
+   .switch input{
+      height: 5%;
+   }
+
+   .slider{
+      /* border: tomato 1px solid; */
+      position: relative;
+      min-height: 31px !important;
+      max-width: 100%;
+      box-sizing: border-box;
+   }
+
+   .scroll-action-nav{
+      position: fixed;
+      min-width: 100%;
+      height: 18vh;
+      background-color: white;
+      animation: activemenu 2s ease;
+      display: grid;
+      grid-template-columns: 25% 52%;
+      grid-auto-rows: 20%;
+      z-index: 999;
+   }
+
    .iconhamburger{
       position: fixed;
-      left: 86%;
+      left: 85%;
       top: 5%;
       display: inline;
       /* border: springgreen 1px solid; */
@@ -881,31 +922,8 @@
    .navpeelable{
       display: inline;
       width: 100%;
-      height: 8vh;
-      border-radius: 1em;
-   }
-
-   .switch{
-      min-width: 34%;
       height: 5vh;
-      right: 15px;
-      top: 46px;
-   }
-
-   .slider{
-      height: 5.6vh;
-   }
-
-   .scroll-action-nav{
-      position: fixed;
-      min-width: 100%;
-      height: 23vh;
-      background-color: white;
-      animation: activemenu 2s ease;
-      display: grid;
-      grid-template-columns: 28% 52%;
-      grid-auto-rows: 20%;
-      z-index: 999;
+      border-radius: 1em;
    }
 
    @keyframes activemenu {
@@ -919,22 +937,22 @@
 
    .scroll-action-nav .OptionMenu{
       display: inline-block;
-      border: 1px red solid;
+      /* border: 1px red solid; */
    }
 
    .scroll-action-nav .navoption{
       display: inline;
       width: 50%;
-      height: 32vh;
+      height: 21vh;
       /* border: yellow 1px solid; */
       justify-content: center;
       align-content: end;
-      top: 0;
+      top: 50px;
    }
 
    .scroll-action-nav .navoption > li{
       height: 3.1vh;
-      top: -7px;
+      top: 5px;
    }
 
    .scroll-action-nav .navoption > li > a{
@@ -943,32 +961,34 @@
 
    .scroll-action-nav .switch{
       top: 16px;
-      right: 25px;
-      min-width: 52%;
-      height: 5vh;
+      right: 10px;
+      min-width: 57%;
+      height: 3.7vh;
    }
 
    .scroll-action-nav .slider{
-      width: 98%;
-      height: 5.8vh;
+      width: 100%;
+      height: 0vh;
    }
 
    .scroll-action-nav .iconhamburger{
       position: absolute;
-      top: 27%;
+      top: 34%;
       left: 80%;
+      /* border: turquoise 1px solid; */
+      height: 5.5vh;
    }
 
    /*responsive Who*/
 
    #WhoMyXo > .container-fluid{
       /* border: springgreen 1px solid; */
-      height: 220vh;
+      height: 170vh;
    }
 
    .ContainerWhoXo{
       /* border: yellow 1px solid; */
-      min-height: 270vh;
+      min-height: 170vh;
       background-size: 100% 100%;
    }
 
@@ -982,23 +1002,26 @@
 
    .TittleWhoXo > h3{
       position: relative;
-      min-width: 53vh;
+      min-width: 34vh;
       top: 0;
-      right: 105%;
-      font-size: 30px;
+      right: 92%;
+      font-size: 46px;
+      height: 34vh;
    }
 
    .TextWhoXo > p{
       position: relative;
-      min-width: 53vh;
-      top: 0;
-      right: 100%;
-      font-size: 15px;
+      min-width: 34vh;
+      top: 77px;
+      right: 86%;
+      font-size: 18px;
+      height: 34vh;
    }
 
    .ImgWhoXo{
       /* border: blue solid 1px; */
-      min-width: 58vh;
+      min-width: 42vh;
+      height: 45vh;
       top: 0;
       right: 0%;
       justify-content: center;
@@ -1006,46 +1029,52 @@
    }
 
    .ImgWhoXo > img{
-      width: 55%;
+      width: 36%;
+      height: 35%;
    }
 
    .ImgWhoXo > img:nth-child(1){
       top: 0;
-      left: 22%;
+      left: 32%;
    }
 
    .ImgWhoXo > img:nth-child(2){
-      top: 41%;
-      left: 10px;
+      top: 24%;
+      left: 69px;
    }
 
    .ImgWhoXo > img:nth-child(3){
-      top: 41%;
-      left: 42%;
+      top: 24%;
+      left: 47%;
    }
 
    /*responsive Aim*/
 
    #AimXO > .container-fluid{
       /* border: springgreen 1px solid; */
-      height: 210vh;
+      height: 165vh;
    }
 
    .ContainerTittleandTextAimXo{
       /* border: yellow 1px solid; */
-      height: 210vh;
+      height: 165vh;
+   }
+
+   .TittleAimXo{
+      top: 3%;
    }
 
    .TittleAimXo > h3{
-      font-size: 23px;
+      font-size: 25px;
       width: 70%;
    }
 
    .ContainerTextAimXo{
       flex-direction: column;
-      height: 145vh;
+      height: 133vh;
       justify-content: center;
       align-items: center;
+      bottom: 2%;
    }
 
    .ImgAimXo > img{
@@ -1054,18 +1083,29 @@
    }
 
    .TextAim{
-      min-height: 50vh;
-      width: 75%;
+      max-height: 38vh;
+      width: 70%;
    }
 
    .TextAim > p{
-      font-size: 15px;
+      font-size: 12px;
    }
 
    /*Responsive Size*/
 
+   #SizeXo > .container-fluid{
+      /* border: yellowgreen 1px solid; */
+      min-height: 60vh;
+   }
+
    .ContainerTittleandSizesXo{
       flex-direction: column;
+      /* border: yellow 1px solid; */
+      height: 60vh;
+   }
+
+   .ContainerImgSizeXo{
+      min-height: 51vh;
    }
 
    .ContainerSizesXo{
@@ -1074,7 +1114,7 @@
 
    .TittleSizeXo{
       /* border: yellowgreen 1px solid; */
-      top: 6%;
+      top: 4%;
       width: 85%;
    }
 
@@ -1082,49 +1122,67 @@
       font-size: 30px;
    }
 
+   .gallery{
+      top: 1px;
+      min-height: 46vh;
+      /* border: blueviolet 1px solid; */
+      min-width: 100%;
+   }
+
    .cards > li > h3{
       position: relative;
       top: 9px;
-      font-size: 23px;
+      font-size: 20px;
    }
 
    .cards li{
       top: 24%;
       width: 100%;
-      height: 59vh;
+      height: 37vh;
    }
 
    /*Responsive Catalogo*/
 
    #CatalogXo > .container-fluid:nth-child(1){
-      height: 650vh;
+      height: 432vh;
       /* border: blue solid 1px; */
    }
    
    .CatalogoXocontainer{
-      height: 650vh;
+      height: 432vh;
    }
 
    .TittleCatalogo > h3{
       width: 60%;
       font-size: 30px;
       top: 21px;
+      height: 7vh;
+   }
+
+   .TextCatalogo{
+      height: 20vh;
    }
 
    .TextCatalogo > p{
-      font-size: 15px;
+      font-size: 12px;
+      height: 10vh;
+      width: 91%;
    }
 
    .ImgContainerCatXo{
-      bottom: 30px;
+      bottom: 1%;
       grid-template-columns: 73%;
       grid-auto-rows: 10%;
       /* border: seashell 1px solid; */
-      height: 650vh;
+      height: 280%;
+   }
+
+   .ImgCatXo{
+      height: 36vh;
    }
 
    .buttomMore{
-      bottom: 28px;
+      bottom: 1%;
    }
 
    /*responsive process*/
@@ -1133,6 +1191,11 @@
       /* border: seagreen 1px solid; */
       flex-direction: column;
       justify-content: center;
+      align-items: center;
+   }
+
+   .textprocess:nth-child(4){
+      justify-items: center;
       align-items: center;
    }
 
@@ -1158,12 +1221,12 @@
 
    #ContactXo > .container-fluid:nth-child(1){
       /* border: yellow 1px solid; */
-      height: 204vh;
+      min-height: 112vh;
    }
 
    .ContainerContactXo{
       grid-template-columns: 100% !important;
-      grid-template-rows: 53% 42%;
+      grid-template-rows: 32% 39%;
       grid-auto-flow: column;
    }
 
@@ -1179,7 +1242,6 @@
       height: 24vh;
    }
 
-
    .IconsRed > a > img{
       /* border: 1px solid orange; */
       position: absolute;
@@ -1190,7 +1252,7 @@
 
    .dateperson{
       font-size: 10px;
-      grid-template-columns: 50% 50%;
+      grid-template-columns: 48% 48%;
       grid-auto-rows: 50%;
    }
 
@@ -1202,34 +1264,43 @@
       font-size: 14px;
    }
 
+   .dateformxo{
+      grid-auto-rows: 40%;
+   }
+
    /*Responsive footer*/
 
    .FooterXo{
-      /* border: olivedrab 1px solid; */
+      border: olivedrab 1px solid;
       min-height: 56vh;
    }
 
    .backgroundfooter{
-      background-size: 50%;
+      background-size: 60%;
    }
 
    .footerdate{
-      font-size: 18px;
+      min-width: 100%;
    }
 
    .FooterXo{
       /* border: tomato 1px solid; */
-      min-height: 33vh;
+      min-height: 20vh;
    }
 
    .footerdate{
-      font-size: 8px;
+      font-size: 13px;
    }
 
    .NameXo{
-      gap: 14px;
+      gap: 10px
    }
 
+   textarea{
+      position: relative;
+      top: 16px;
+      width: 83%;
+   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
