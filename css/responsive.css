@@ -830,6 +830,11 @@
 
 @media (min-width: 480px) and (max-width: 767px){
 
+   .container-fluid{
+      /* border: yellow 2px solid; */
+      margin-bottom: 25%;
+   }
+
    .ImgLogoXo > img{
       width: 67%;
       left: 4%;
@@ -1031,13 +1036,17 @@
    /*responsive Aim*/
 
    #AimXO > .container-fluid{
-      border: springgreen 1px solid;
-      height: 200vh;
+      /* border: springgreen 1px solid; */
+      height: 165vh;
    }
 
    .ContainerTittleandTextAimXo{
-      border: yellow 1px solid;
-      height: 200vh;
+      /* border: yellow 1px solid; */
+      height: 165vh;
+   }
+
+   .TittleAimXo{
+      top: 3%;
    }
 
    .TittleAimXo > h3{
@@ -1050,6 +1059,7 @@
       height: 133vh;
       justify-content: center;
       align-items: center;
+      bottom: 2%;
    }
 
    .ImgAimXo > img{
@@ -1068,8 +1078,19 @@
 
    /*Responsive Size*/
 
+   #SizeXo > .container-fluid{
+      /* border: yellowgreen 1px solid; */
+      min-height: 60vh;
+   }
+
    .ContainerTittleandSizesXo{
       flex-direction: column;
+      /* border: yellow 1px solid; */
+      height: 60vh;
+   }
+
+   .ContainerImgSizeXo{
+      min-height: 51vh;
    }
 
    .ContainerSizesXo{
@@ -1078,12 +1099,19 @@
 
    .TittleSizeXo{
       /* border: yellowgreen 1px solid; */
-      top: 6%;
+      top: 4%;
       width: 85%;
    }
 
    .TittleSizeXo > h3{
       font-size: 30px;
+   }
+
+   .gallery{
+      top: 1px;
+      min-height: 46vh;
+      /* border: blueviolet 1px solid; */
+      min-width: 100%;
    }
 
    .cards > li > h3{
@@ -1095,40 +1123,51 @@
    .cards li{
       top: 24%;
       width: 100%;
-      height: 59vh;
+      height: 37vh;
    }
 
    /*Responsive Catalogo*/
 
    #CatalogXo > .container-fluid:nth-child(1){
-      height: 650vh;
+      height: 432vh;
       /* border: blue solid 1px; */
    }
    
    .CatalogoXocontainer{
-      height: 650vh;
+      height: 432vh;
    }
 
    .TittleCatalogo > h3{
       width: 60%;
       font-size: 30px;
       top: 21px;
+      height: 7vh;
+   }
+
+   .TextCatalogo{
+      height: 20vh;
    }
 
    .TextCatalogo > p{
-      font-size: 15px;
+      font-size: 12px;
+      height: 10vh;
+      width: 91%;
    }
 
    .ImgContainerCatXo{
-      bottom: 30px;
+      bottom: 1%;
       grid-template-columns: 73%;
       grid-auto-rows: 10%;
       /* border: seashell 1px solid; */
-      height: 650vh;
+      height: 280%;
+   }
+
+   .ImgCatXo{
+      height: 36vh;
    }
 
    .buttomMore{
-      bottom: 28px;
+      bottom: 1%;
    }
 
    /*responsive process*/
@@ -1137,6 +1176,11 @@
       /* border: seagreen 1px solid; */
       flex-direction: column;
       justify-content: center;
+      align-items: center;
+   }
+
+   .textprocess:nth-child(4){
+      justify-items: center;
       align-items: center;
    }
 
@@ -1162,12 +1206,12 @@
 
    #ContactXo > .container-fluid:nth-child(1){
       /* border: yellow 1px solid; */
-      height: 204vh;
+      min-height: 112vh;
    }
 
    .ContainerContactXo{
       grid-template-columns: 100% !important;
-      grid-template-rows: 53% 42%;
+      grid-template-rows: 32% 39%;
       grid-auto-flow: column;
    }
 
@@ -1182,7 +1226,6 @@
       width: 100%;
       height: 24vh;
    }
-
 
    .IconsRed > a > img{
       /* border: 1px solid orange; */
@@ -1206,10 +1249,14 @@
       font-size: 14px;
    }
 
+   .dateformxo{
+      grid-auto-rows: 40%;
+   }
+
    /*Responsive footer*/
 
    .FooterXo{
-      /* border: olivedrab 1px solid; */
+      border: olivedrab 1px solid;
       min-height: 56vh;
    }
 
@@ -1223,7 +1270,7 @@
 
    .FooterXo{
       /* border: tomato 1px solid; */
-      min-height: 30vh;
+      min-height: 20vh;
    }
 
    .footerdate{
