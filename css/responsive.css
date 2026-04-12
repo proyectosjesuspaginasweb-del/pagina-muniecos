@@ -450,7 +450,7 @@
    }
 
    .OptionandLogoMenu{
-      grid-template-columns: 20% 23%;
+      grid-template-columns: 20% 20.5%;
       grid-auto-rows: 20vh;
    }
 
@@ -467,11 +467,11 @@
    }
 
    .switch{
-      min-width: 27%;
+      min-width: 36%;
       min-height: 1vh!important;
       position: relative;
-      top: 50%;
-      right: 38px;
+      top: 55%;
+      right: 16px;
       /* border: blue 1px solid; */
       box-sizing: border-box;
       justify-content: start;
