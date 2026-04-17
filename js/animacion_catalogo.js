@@ -28,33 +28,25 @@ const scrollnav = [
     { id: "navbar", className: "is-scrolled"},
     { id: "igmavxo", className: "is-scrollednavimg"},
 	{ id: "opcionescontinernav", className: "scroll-containeroption"},
-	{ id: "switch", className: "scroll-switch"}
+	{ id: "switch", className: "scroll-switch"},
+	{ id: "scroll", className: "scroll-active-who"}
 ]
 
 //El vigilate
-window.addEventListener("scroll", (event) => {
+const elementosDOM = scrollnav.map(item => ({
+    el: document.getElementById(item.id),
+    className: item.className
+}));
+
+window.addEventListener("scroll", () => {
     const scrollActual = window.scrollY;
-	event.preventDefault();
+    const isMobile = window.innerWidth <= 575;
 
-    // --- ESTA ES LA CLÁUSULA DE GUARDA ---
-    // Si el ancho de la ventana es menor o igual a 575, 
-    // detenemos la ejecución de la función inmediatamente.
-    if (window.innerWidth <= 575) {
-        // Opcional: Limpiar las clases por si acaso se quedó alguna pegada
-        scrollnav.forEach(item => {
-            document.getElementById(item.id).classList.remove(item.className);
-        });
-        return; // El "return" hace que el código de abajo NO se ejecute
-    }
-    // -------------------------------------
-
-    scrollnav.forEach(item => {
-        const elemento = document.getElementById(item.id);
-
-        if (scrollActual > 100) {
-            elemento.classList.add(item.className);
+    elementosDOM.forEach(({ el, className }) => {
+        if (!isMobile && scrollActual > 100) {
+            el.classList.add(className);
         } else {
-            elemento.classList.remove(item.className);
+            el.classList.remove(className);
         }
     });
 });
