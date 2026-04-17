@@ -63,20 +63,20 @@ body.dark-mode{
 
 .container-switch{
     /* border: rgba(245, 0, 204, 1) 2px solid; */
-    max-width: 100%;
-    height: 13vh;
+    min-width: 40vw;
+    height: 11vh;
     display: flex;
     justify-content: end;
-    align-items: end;
+    align-items: center;
 }
 
 .switch{/*se puede mover el boton del tema*/
-    position: absolute;
+    position: relative;
     display: flex;
-    right: 11%;
-    top: 45%;
-    max-width: 8.9% !important;
-    min-height: 6vh;
+    right: 0%;
+    top: 0%;
+    min-width: 67px;
+    min-height: 0;
     overflow: hidden;
     /* border: #6d015f solid 3px; */
 }
@@ -92,7 +92,7 @@ body.dark-mode{
 }
 
 .slider{/*contenedor que tiene adentro el boton*/
-    position: static;
+    position: absolute;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -100,20 +100,20 @@ body.dark-mode{
     background-color: #ccc;
     transition: .4s;
     border: 34px;
-    width: 100%;
-    min-height: 4.7vh;
+    min-width: 87%;
+    min-height: 4.5vh;
     border-radius: 2em;
     /* border: #88ce02 1px solid; */
 }
 
 .slider::before{/*boton blanco del modo claro*/
-    position: absolute;
+    position: relative;
     content: "";
     height: 26px;width: 26px;
-    left: 9px; bottom: 0; top: 2px;
     background-color: white;
     transition: .4s;
     border-radius: 50%;
+    right: 13px;
 }
 
 .mode-black-slider{/*Boton de contenedor de modo negro*/
@@ -173,7 +173,7 @@ main{
 
 #CatalogXo > .container-fluid:nth-child(1){
     /* border: yellow solid 2px; */
-    height: 320vh;
+        height: 295vh;
 }
 
 #ContactXo > .container-fluid:nth-child(1){
@@ -224,7 +224,7 @@ main{
     position: relative;
     display: grid;
     grid-template-rows: 42% 59%;
-    grid-template-columns: 99%;
+    grid-template-columns: 52vw;
     min-width: 80%;
     max-height: 30vh;
     /* border: red 2px solid; */
@@ -245,6 +245,7 @@ main{
     margin: 0;
     padding: 0;
     align-items: center;
+    justify-content: end;
 }
 
 .navoption > li{
@@ -357,7 +358,7 @@ main{
 
 .is-scrolled .container-switch{
     /* border: springgreen 2px solid; */
-    min-width: 12%!important;
+    min-width: 12vw;
     height: 10vh;
     justify-content: right;
     align-items: center;
@@ -365,7 +366,7 @@ main{
 
 .is-scrolled .switch{
     /* border: yellow 2px solid; */
-    min-width: 70%;
+    max-width: 5vw;
     height: 7vh;
     right: 25%;
     top: -1px;
@@ -381,12 +382,13 @@ main{
 
 .is-scrolled .slider::before{
     max-width: 100%;
-    top: 2.5px;
+    top: 0.4px;
     /* border: teal 1px solid; */
 }
 
 .is-scrolled .mode-black-slider::before{
-    top: 2.3px;
+    top: 1.3px;
+    left: 1px;
 }
 
 /* Evita que el contenido brinque */
