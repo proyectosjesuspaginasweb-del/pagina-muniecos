@@ -10,3 +10,182 @@
 ======================================== */
 
 /* Media Queries */
+
+@media (min-width: 318px) {
+  *{
+   border: goldenrod 2px solid;
+   }
+}
+
+@media (min-width: 576px) {
+  *{
+   border: tomato 2px solid;
+   }
+}
+
+@media (min-width: 768px) {
+  *{
+   border: blue 2px solid;
+   }
+}
+
+@media (min-width: 992px) and (max-width: 1439px) {
+  /* lg */
+  *{
+   border: greenyellow 0px solid;
+   }
+
+   .is-scrolled{
+      border: slategrey 1px solid;
+
+   }
+
+   .switch{
+      border: turquoise 1px solid;
+      width: 11.1%;
+      height: 6.5vh;
+   }
+
+   .slider{
+      border: yellow 1px solid;
+      height: 5.7vh;
+      max-width: 100%;
+   }
+   
+}
+
+@media (min-width: 1200px) {
+  /* xl */
+  *{
+   border: cyan 0px solid;
+   }
+
+
+}
+
+@media (min-width: 1400px) {
+  *{
+   border: maroon 0px solid;
+   }
+
+   /*inicio de la pagina*/
+
+   .containerwelcomandlogo{
+      /* border: orange 2px solid; */
+      max-width: 100%;
+      display: grid;
+      grid-template-rows: 1fr 0fr;
+      grid-auto-columns: 100%;
+   }
+
+   .welcomen{
+      /* border: red 1px solid; */
+      max-width: 100%;
+   }
+
+   .welcomeContainer{
+      /* border: turquoise 2px solid; */
+      max-width: 100%;
+   }
+
+   .buttomEnter{
+      /* border: chartreuse 2px solid; */
+      max-width: 100%;
+   }
+
+   .imglogo{
+      /* border: blue 2px solid; */
+      max-width: 100%;
+   }
+
+   /*Inicio de resposive catalogo*/
+
+   .switch{
+      /* border: solid red 1px; */
+      height: 5vh;
+      justify-content: center;
+      top: 36px;
+      right: 11px;
+   }
+
+   .slider{
+      /* border: springgreen 2px solid; */
+      height: 4vh;
+      width: 85%;
+   }
+
+   .navoption{
+      /* border: springgreen 2px solid; */
+      justify-content: end;
+      right: 13px;
+   }
+
+   .navoption > li > a{
+      font-size: 20px;
+   }
+
+   /*menu despegable*/
+
+   .is-scrolled .OptionandLogoMenu{
+      grid-template-columns: 39% 147%;
+   }
+
+   .is-scrolled .ImgLogoXo{
+      /* border: sienna 1px solid; */
+      max-width: 100%;
+   }
+
+   .is-scrolled .ImgLogoXo > img{
+      min-width: 24%;
+   }
+
+   .is-scrolled .navoption{
+      justify-content: center;
+   }
+
+   .is-scrolled .container-switch{
+      justify-content: center;
+      align-items: center;
+   }
+
+   .is-scrolled .switch{
+      /* border: yellow 1px solid; */
+      height: 5vh;
+      top: 3px;
+   }
+
+   /*inicio responsive de who*/
+
+   .TextWhoXo > p{
+      left: 47px;
+   }
+
+   .ImgWhoXo > img{
+      width: 50%;
+   }
+
+   .ImgWhoXo{
+      left: 36px;
+      display: flex;
+      justify-items: center;
+      align-items: center;
+   }
+
+   .ImgWhoXo > img:nth-child(1){
+      top: 0px;
+   }
+
+   .ImgWhoXo > img:nth-child(2){
+      top: 40%;
+   }
+
+   .ImgWhoXo > img:nth-child(3){
+      top: 42%;
+   }
+   
+   /*Responsive Aim*/
+
+   
+
+
+}

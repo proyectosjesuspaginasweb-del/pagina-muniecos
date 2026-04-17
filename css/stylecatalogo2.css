@@ -73,10 +73,10 @@ body.dark-mode{
 .switch{/*se puede mover el boton del tema*/
     position: absolute;
     display: flex;
-    right: 4%;
-    top: 21%;
-    min-width: 10.1%;
-    max-height: 6.5vh;
+    right: 41px;
+    top: 0;
+    min-width: 9% !important;
+    height: 5vh;
     overflow: hidden;
     /* border: #6d015f solid 3px; */
 }
@@ -101,7 +101,7 @@ body.dark-mode{
     transition: .4s;
     border: 34px;
     width: 100%;
-    max-height: 5vh;
+        height: 5.1vh;
     border-radius: 2em;
     /* border: #88ce02 1px solid; */
 }
@@ -365,16 +365,8 @@ main{
 
 .is-scrolled .switch{
     /* border: yellow 2px solid; */
-    min-width: 84%;
-    height: 10vh;
-    right: 0;
-    top: 0px;
-    position: relative;
-}
-
-.is-scrolled .slider{
-    max-width: 81%;
-    height: 4.9vh;
+    width: 67%;
+    height: 6vh;
     left: 3px;
     top: 0px;
     border: 1px solid rgb(90, 89, 89);
@@ -678,8 +670,7 @@ main{
     position: relative;
     color: var(--Blanco);
     font-family: Playfair_Display;
-    padding: 6%;
-    bottom: 20px;
+    padding: 10%;
 }
 
 .ContainerTextAimXo > .TextAim:nth-child(1){
@@ -1247,14 +1238,12 @@ html:has(.ModalDialog:target) {/*hace que solo afecte el modalDialog para que al
     position: absolute;
     min-width: 100%;
     height: 100vh;
-    background: url(../css/img/Iconos_Xo/FlechaDibujo.png) no-repeat 19em 18em / 15em, /*1er flecha*/ 
-    url(../css/img/Iconos_Xo/FlechaDibujo.png) no-repeat 12em 11.5em / 15em, /*2do flecha*/
-    url(../css/img/Iconos_Xo/FlechaDibujo.png) no-repeat 5em 5em / 15em, /*3er flecha*/ 
-    url(../css/img/Iconos_Xo/FlechaDibujo.png) no-repeat 1em -1.5em / 15em, /*4to flecha*/ 
-    url(../css/img/Iconos_Xo/Aguja2.png) no-repeat 58em 18em / 15em, /*aguja de texto 1*/ 
-    url(../css/img/Iconos_Xo/Aguja2.png) no-repeat 46em 12em / 15em, /*aguja de texto 2*/ 
-    url(../css/img/Iconos_Xo/Aguja2.png) no-repeat 35em 5.5em / 15em, /*aguja de texto 3*/ 
-    url(../css/img/Iconos_Xo/Aguja2.png) no-repeat 25em -1em / 15em;
+    background: url(../css/img/Iconos_Xo/FlechaDibujo.png) no-repeat 20em 14em / 20em,/*1er flecha*/
+    url(../css/img/Iconos_Xo/FlechaDibujo.png) no-repeat 12em 6em / 20em,/*2do flecha*/
+    url(../css/img/Iconos_Xo/FlechaDibujo.png) no-repeat -1em -3em / 20em,/*3er flecha*/
+    url(../css/img/Iconos_Xo/Aguja2.png) no-repeat 61em 15em / 20em,/*aguja de texto 1*/
+    url(../css/img/Iconos_Xo/Aguja2.png) no-repeat 45em 5em / 20em,/*aguja de texto 2*/
+    url(../css/img/Iconos_Xo/Aguja2.png) no-repeat 25em -4em / 20em;/*aguja de texto 3*/
     z-index: 2;
     /* border: tomato 2px solid; */
     transform: rotate(180deg);
@@ -1431,7 +1420,7 @@ form{
     justify-content: center;
     align-content: center;
     /* border: rgba(0,0,0,0.8) 2px solid; */
-    min-height: 69vh;
+    height: 80vh;
     max-width: 100%;
     background: url(../css/img/Fondos_Pagina_Munecos/FondoFooter2.svg) no-repeat 0em 2em / 160%;
     overflow: hidden;
