@@ -60,16 +60,12 @@
 
    .iconhamburger{
       position: fixed;
-      left: 0;
-      top: 0;
       display: inline;
       /* border: springgreen 1px solid; */
-      /* max-height: 9vh; */
       z-index: 999;
-      padding: 0rem 1.1rem;
-      max-width: 100%;
+      padding: 4.5rem 1.5rem;
       justify-content: end;
-      max-height: 15vh;
+      max-height: 19vh;
       align-items: end;
       display: flex;
    }
@@ -84,6 +80,10 @@
    .container-switch{
       /* border: palevioletred 1px solid; */
       padding: 0rem 0rem;
+      justify-content: end;
+      align-items: end;
+      display: flex;
+      max-height: 150px;
    }
 
    .switch{
@@ -109,7 +109,7 @@
       background-color: white;
       animation: activemenu 2s ease;
       display: grid;
-      grid-template-columns: 27% 52%;
+      grid-template-columns: 25% 52%;
       grid-template-rows: 98%;
       z-index: 999;
    }
@@ -125,7 +125,7 @@
 
    .scroll-action-nav .OptionMenu{
       display: inline-block;
-      border: 1px red solid;
+      /* border: 1px red solid; */
    }
 
    .scroll-action-nav .navoption{
@@ -155,23 +155,26 @@
 
    .scroll-action-nav .switch{
       top: 0;
-      right: 40px;
-      min-width: 62%;
-      height: 5vh;
+      padding: 2rem 3rem;
    }
 
    .scroll-action-nav .slider{
-      position: relative;
-      min-width: 62px;
-      height: 5.1vh;
       border: 1px solid #6d6969;
+      min-width: 33px;
+      min-height: 7px;
+      overflow: hidden;
    }
 
    .scroll-action-nav .iconhamburger{
-      position: absolute;
-      top: 27%;
-      left: 80%;
-   }
+      display: inline;
+        /* border: springgreen 1px solid; */
+      z-index: 999;
+      padding: 4rem 3rem;
+      justify-content: end;
+      max-height: 19vh;
+      align-items: end;
+      display: flex;
+   } 
 
    /*responsive Who*/
 
