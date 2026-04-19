@@ -72,7 +72,7 @@ body.dark-mode{
 .switch{/*se puede mover el boton del tema*/
     position: relative;
     display: flex;
-    min-width: 67px;
+    min-width: 75px;
     overflow: hidden;
     /* border: #6d015f solid 3px; */
     padding: 0rem 0;
@@ -106,12 +106,12 @@ body.dark-mode{
 .slider::before{/*boton blanco del modo claro*/
     position: relative;
     content: "";
-    height: 23px;
+    height: 24px;
     width: 23px;
     background-color: white;
     transition: .4s;
     border-radius: 50%;
-    right: 16px;
+    right: 13px;
 }
 
 .mode-black-slider{/*Boton de contenedor de modo negro*/
@@ -302,13 +302,15 @@ main{
 }
 
 .is-scrolled .ImgLogoXo > img{
-    top: 3px !important;
-    left: 0px;
+    top: 0px;
+    /* left: 0px; */
+    width: 5vw;
 }
 
 .is-scrolled .ImgLogoXo{
     /* border: blue 1px solid; */
-    height: 9.5vh;
+    padding: 0rem 0;
+    max-width: 15vw;
 }
 
 .is-scrollednavimg{
@@ -323,7 +325,7 @@ main{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    border: #88ce02 2px solid;
+    /* border: #88ce02 2px solid; */
     padding: 0 1rem;
 }
 
@@ -347,19 +349,20 @@ main{
 .is-scrolled .container-switch{
     /* border: springgreen 2px solid; */
     min-width: 12vw;
-    height: 10vh;
+    /* height: 10vh; */
     justify-content: center;
     align-items: center;
+    padding: 0rem 0;
 }
 
 .is-scrolled .switch{
-    border: yellow 2px solid;
+    /* border: yellow 2px solid; */
     max-width: 5vw;
     padding: 0rem 0;
 }
 
 .is-scrolled .slider{
-    max-width: 88%;
+    min-width: 76%;
     left: 3px;
     top: 0px;
     border: 1px solid rgb(90, 89, 89);

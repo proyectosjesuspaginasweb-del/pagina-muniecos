@@ -60,26 +60,30 @@
 
    .iconhamburger{
       position: fixed;
-      left: 80%;
-      top: 5%;
+      left: 0;
+      top: 0;
       display: inline;
-      /* border: springgreen 1px solid; */
-      width: 14%;
-      height: 9vh;
+      border: springgreen 1px solid;
+      /* max-height: 9vh; */
       z-index: 999;
+      padding: 0rem 1.1rem;
+      max-width: 100%;
+      justify-content: end;
+      max-height: 20vh;
+      align-items: center;
+      display: flex;
    }
 
    .navpeelable{
       display: inline;
-      width: 16vw;
-      height: 8vh;
+      width: 44px;
+      height: 42px;
       border-radius: 1em;
    }
 
    .container-switch{
       /* border: palevioletred 1px solid; */
-      height: 40vh;
-      max-width: 0vw;
+      padding: 0rem 0rem;
    }
 
    .switch{
