@@ -196,8 +196,8 @@ main{
 .ImgLogoXo > img{
     position: relative;
     display: flex;
-    width: 38%;
-    left: -8%;
+    max-width: 15vw;
+    left: 0%;
     top: 0%;
     max-height: 30vh;
     /* border: #000 2px solid; */

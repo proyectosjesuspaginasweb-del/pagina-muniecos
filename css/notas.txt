@@ -1,4 +1,4 @@
-@media (max-width: 320px){
+@media (min-width: 576px){
    .container-fluid{
       /* border: yellow 2px solid; */
       margin-bottom: 25%;
@@ -6,12 +6,17 @@
 
    /*Responsive de inicio*/
 
+   .welcomen{
+      justify-content: center;
+      min-width: 100vw;
+   }
+
    .welcomeContainer{
-      font-size: 26px;
+      font-size: 20px;
    }
 
    .buttomEnter > a.enterButton{
-      font-size: 30px;
+      font-size: 22px;
    }
 
    .imglogo{
@@ -22,11 +27,18 @@
 
    .OptionandLogoMenu{
       /* border: turquoise 1px solid; */
-      grid-template-columns: 29% 19%;
+      grid-template-columns: 55vw 44vw;
+   }
+
+   .OptionMenu{
+      grid-template-rows: 40vh;
+      grid-template-columns: 44vw;
    }
 
    .ImgLogoXo > img{
-      width: 60%;
+      width: 77%;
+      left: 0;
+      top: 0;
    }
 
    .navoption{
@@ -35,7 +47,7 @@
 
    .iconhamburger{
       position: fixed;
-      left: 81%;
+      left: 80%;
       top: 5%;
       display: inline;
       /* border: springgreen 1px solid; */
@@ -46,31 +58,38 @@
 
    .navpeelable{
       display: inline;
-      width: 100%;
+      width: 16vw;
       height: 8vh;
       border-radius: 1em;
    }
 
+   .container-switch{
+      /* border: palevioletred 1px solid; */
+      height: 40vh;
+      max-width: 0vw;
+   }
+
    .switch{
-      min-width: 48%;
+      max-width: 0;
       height: 5vh;
-      right: 10px;
-      top: 50px;
+      right: 0;
+      top: 0;
+      position: relative;
    }
 
    .slider{
-      height: 5.6vh;
+      height: 4.6vh;
    }
 
    .scroll-action-nav{
       position: fixed;
-      min-width: 100%;
-      height: 23vh;
+      min-width: 100vw;
+      height: 19vh;
       background-color: white;
       animation: activemenu 2s ease;
       display: grid;
-      grid-template-columns: 28% 52%;
-      grid-auto-rows: 20%;
+      grid-template-columns: 27% 52%;
+      grid-template-rows: 98%;
       z-index: 999;
    }
 
@@ -90,11 +109,11 @@
 
    .scroll-action-nav .navoption{
       display: inline;
-      width: 50%;
-      height: 32vh;
+      width: 50vw;
+      height: 17vh;
       /* border: yellow 1px solid; */
       justify-content: center;
-      align-content: end;
+      align-content: center;
       top: 0;
    }
 
@@ -107,16 +126,24 @@
       font-size: 10px;
    }
 
+   .scroll-action-nav .container-switch{
+      height: 19vh;
+      min-width: 35vw;
+      /* border: pink 1px solid; */
+   }
+
    .scroll-action-nav .switch{
-      top: 16px;
-      right: 25px;
-      min-width: 52%;
+      top: 0;
+      right: 40px;
+      min-width: 62%;
       height: 5vh;
    }
 
    .scroll-action-nav .slider{
-      width: 98%;
-      height: 5.8vh;
+      position: relative;
+      min-width: 62px;
+      height: 5.1vh;
+      border: 1px solid #6d6969;
    }
 
    .scroll-action-nav .iconhamburger{
@@ -148,25 +175,25 @@
 
    .TittleWhoXo > h3{
       position: relative;
-      min-width: 48vh;
+      min-width: 78vw;
       top: 0;
-      right: 118%;
+      right: 104%;
       font-size: 30px;
-      height: 44vh;
+      height: 40vh;
    }
 
    .TextWhoXo > p{
       position: relative;
-      min-width: 48vh;
-      top: 15px;
-      right: 116%;
+      min-width: 78vw;
+      top: 0;
+      right: 104%;
       font-size: 15px;
-      height: 44vh;
+      height: 40vh;
    }
 
    .ImgWhoXo{
       /* border: blue solid 1px; */
-      min-width: 58vh;
+      min-width: 100vw;
       top: 0;
       right: 0%;
       justify-content: center;
@@ -174,7 +201,7 @@
    }
 
    .ImgWhoXo > img{
-      width: 49%;
+      width: 54vw;
       height: 28vh;
    }
 
@@ -206,8 +233,8 @@
    }
 
    .TittleAimXo > h3{
-      font-size: 20px;
-      width: 70%;
+      font-size: 25px;
+      width: 73vw;
    }
 
    .ContainerTextAimXo{
@@ -223,12 +250,14 @@
    }
 
    .TextAim{
-      min-height: 50vh;
-      width: 75%;
+      min-height: 48vh;
+      width: 80vw;
+      /* border: red 1px solid; */
+      left: 4px;
    }
 
    .TextAim > p{
-      font-size: 12px;
+      font-size: 13px;
    }
 
    /*Responsive Size*/
@@ -266,17 +295,17 @@
    /*Responsive Catalogo*/
 
    #CatalogXo > .container-fluid:nth-child(1){
-      height: 650vh;
+      height: 590vh;
       /* border: blue solid 1px; */
    }
    
    .CatalogoXocontainer{
-      height: 650vh;
+      height: 590vh;
    }
 
    .TittleCatalogo > h3{
-      width: 74%;
-      font-size: 33px;
+      width: 76vw;
+      font-size: 30px;
       top: 22px;
    }
 
@@ -388,968 +417,7 @@
 
    .FooterXo{
       /* border: tomato 1px solid; */
-      min-height: 26vh;
-   }
-
-   .footerdate{
-      font-size: 13px;
-   }
-
-   .NameXo{
-      gap: 10px
-   }
-
-   textarea{
-      position: relative;
-      top: 16px;
-      width: 83%;
-   }
-}
-
-@media (min-width: 322px) and (max-width: 470px) {
-  *{
-   border: goldenrod 0px solid;
-   }
-
-   .welcomen{
-      font-size: 30px;
-   }
-
-   .buttomEnter > a.enterButton{
-      font-size: 30px;
-   }
-
-   .imglogo{
-      justify-content: center;
-   }
-
-   /*empieza el responsive menu*/
-
-   .container-fluid{
-      /* border: yellow 2px solid; */
-      margin-bottom: 25%;
-   }
-
-   .ImgLogoXo > img{
-      width: 67%;
-      left: 4%;
-      top: 10%;
-   }
-
-   .OptionandLogoMenu{
-      grid-template-columns: 20% 18.5%;
-      grid-auto-rows: 20vh;
-   }
-
-   .OptionMenu{
-      grid-template-rows: 25% 25%;
-   }
-
-   .navoption{
-      display: none;
-   }
-
-   .navpeelable{
-      height: 6vh;
-   }
-
-   .switch{
-      min-width: 33%;
-      min-height: 1vh!important;
-      position: relative;
-      top: 55%;
-      right: 16px;
-      /* border: blue 1px solid; */
-      box-sizing: border-box;
-      justify-content: start;
-   }
-
-   .switch input{
-      height: 5%;
-   }
-
-   .slider{
-      /* border: tomato 1px solid; */
-      position: relative;
-      min-height: 31px !important;
-      max-width: 100%;
-      box-sizing: border-box;
-   }
-
-   .scroll-action-nav{
-      position: fixed;
-      min-width: 100%;
-      height: 18vh;
-      background-color: white;
-      animation: activemenu 2s ease;
-      display: grid;
-      grid-template-columns: 25% 52%;
-      grid-auto-rows: 20%;
-      z-index: 999;
-   }
-
-   .iconhamburger{
-      position: fixed;
-      left: 85%;
-      top: 5%;
-      display: inline;
-      /* border: springgreen 1px solid; */
-      width: 10%;
-      height: 9vh;
-      z-index: 999;
-   }
-
-   .navpeelable{
-      display: inline;
-      width: 100%;
-      height: 5vh;
-      border-radius: 1em;
-   }
-
-   @keyframes activemenu {
-      from{
-         transform: translateY(-100px);
-      }to{
-         transform: translateY(0);
-         transition: 2s all ease;
-      }
-   }
-
-   .scroll-action-nav .OptionMenu{
-      display: inline-block;
-      /* border: 1px red solid; */
-   }
-
-   .scroll-action-nav .OptionandLogoMenu{
-      border: yellow 1px solid;
-      grid-auto-rows: 18vh;
-   }
-
-   .scroll-action-nav .navoption{
-      display: inline;
-      width: 50%;
-      height: 21vh;
-      /* border: yellow 1px solid; */
-      justify-content: center;
-      align-content: end;
-      top: 50px;
-   }
-
-   .scroll-action-nav .navoption > li{
-      height: 3.1vh;
-      top: 5px;
-   }
-
-   .scroll-action-nav .navoption > li > a{
-      font-size: 10px;
-   }
-
-   .scroll-action-nav .switch{
-      top: 16px;
-      right: 10px;
-      min-width: 57%;
-      height: 3.7vh;
-   }
-
-   .scroll-action-nav .slider{
-      width: 100%;
-      height: 0vh;
-   }
-
-   .scroll-action-nav .iconhamburger{
-      position: absolute;
-      top: 34%;
-      left: 80%;
-      /* border: turquoise 1px solid; */
-      height: 5.5vh;
-   }
-
-   /*responsive Who*/
-
-   #WhoMyXo > .container-fluid{
-      /* border: springgreen 1px solid; */
-      height: 170vh;
-   }
-
-   .ContainerWhoXo{
-      /* border: yellow 1px solid; */
-      min-height: 170vh;
-      background-size: 100% 100%;
-   }
-
-   .ContainerTextAndTittleWhoXo{
-      /* border: tomato 1px solid; */
-      display: flex;
-      flex-direction: column;
-      min-height: 180vh;
-      justify-items: center;
-   }
-
-   .TittleWhoXo > h3{
-      position: relative;
-      min-width: 34vh;
-      top: 0;
-      right: 92%;
-      font-size: 46px;
-      height: 34vh;
-   }
-
-   .TextWhoXo > p{
-      position: relative;
-      min-width: 34vh;
-      top: 49px;
-      right: 86%;
-      font-size: 18px;
-      height: 34vh;
-   }
-
-   .ImgWhoXo{
-      /* border: blue solid 1px; */
-      min-width: 42vh;
-      height: 45vh;
-      top: 0;
-      right: 0%;
-      justify-content: center;
-      align-items: center;
-   }
-
-   .ImgWhoXo > img{
-      width: 36%;
-      height: 35%;
-   }
-
-   .ImgWhoXo > img:nth-child(1){
-      top: 0;
-      left: 32%;
-   }
-
-   .ImgWhoXo > img:nth-child(2){
-      top: 24%;
-      left: 69px;
-   }
-
-   .ImgWhoXo > img:nth-child(3){
-      top: 24%;
-      left: 47%;
-   }
-
-   /*responsive Aim*/
-
-   #AimXO > .container-fluid{
-      /* border: springgreen 1px solid; */
-      height: 165vh;
-   }
-
-   .ContainerTittleandTextAimXo{
-      /* border: yellow 1px solid; */
-      height: 165vh;
-   }
-
-   .TittleAimXo{
-      top: 3%;
-   }
-
-   .TittleAimXo > h3{
-      font-size: 25px;
-      width: 70%;
-   }
-
-   .ContainerTextAimXo{
-      flex-direction: column;
-      height: 133vh;
-      justify-content: center;
-      align-items: center;
-      bottom: 2%;
-   }
-
-   .ImgAimXo > img{
-      top: 8%;
-      left: 41%;
-   }
-
-   .TextAim{
-      max-height: 38vh;
-      width: 70%;
-   }
-
-   .TextAim > p{
-      font-size: 12px;
-   }
-
-   /*Responsive Size*/
-
-   #SizeXo > .container-fluid{
-      /* border: yellowgreen 1px solid; */
-      min-height: 60vh;
-   }
-
-   .ContainerTittleandSizesXo{
-      flex-direction: column;
-      /* border: yellow 1px solid; */
-      height: 60vh;
-   }
-
-   .ContainerImgSizeXo{
-      min-height: 51vh;
-   }
-
-   .ContainerSizesXo{
-      min-height: 53vh;
-   }
-
-   .TittleSizeXo{
-      /* border: yellowgreen 1px solid; */
-      top: 4%;
-      width: 85%;
-   }
-
-   .TittleSizeXo > h3{
-      font-size: 30px;
-   }
-
-   .gallery{
-      top: 1px;
-      min-height: 46vh;
-      /* border: blueviolet 1px solid; */
-      min-width: 100%;
-   }
-
-   .cards > li > h3{
-      position: relative;
-      top: 9px;
-      font-size: 20px;
-   }
-
-   .cards li{
-      top: 24%;
-      width: 100%;
-      height: 37vh;
-   }
-
-   /*Responsive Catalogo*/
-
-   #CatalogXo > .container-fluid:nth-child(1){
-      height: 432vh;
-      /* border: blue solid 1px; */
-   }
-   
-   .CatalogoXocontainer{
-      height: 432vh;
-   }
-
-   .TittleCatalogo > h3{
-      width: 60%;
-      font-size: 30px;
-      top: 21px;
-      height: 7vh;
-   }
-
-   .TextCatalogo{
-      height: 20vh;
-   }
-
-   .TextCatalogo > p{
-      font-size: 12px;
-      height: 10vh;
-      width: 91%;
-   }
-
-   .ImgContainerCatXo{
-      bottom: 1%;
-      grid-template-columns: 73%;
-      grid-auto-rows: 10%;
-      /* border: seashell 1px solid; */
-      height: 280%;
-   }
-
-   .ImgCatXo{
-      height: 36vh;
-   }
-
-   .buttomMore{
-      bottom: 1%;
-   }
-
-   /*responsive contact*/
-
-   #ContactXo > .container-fluid:nth-child(1){
-      /* border: yellow 1px solid; */
-      min-height: 161vh;
-   }
-
-   .ContainerContactXo{
-      grid-template-columns: 100% !important;
-      grid-template-rows: 51% 39%;
-      grid-auto-flow: column;
-   }
-
-   .IconsXo{
-      grid-template-columns: 30% 30%;
-      grid-template-rows: 50% 50%;
-      gap: 27px;
-   }
-
-   .IconsRed{
-      /* border: skyblue 1px solid; */
-      width: 100%;
-      height: 24vh;
-   }
-
-   .IconsRed > a > img{
-      /* border: 1px solid orange; */
-      position: absolute;
-      top: 41px;
-      left: 18px;
-      height: 16vh;
-   }
-
-   .dateperson{
-      font-size: 10px;
-      grid-template-columns: 48% 48%;
-      grid-auto-rows: 50%;
-   }
-
-   .FormXosizeandcomentarie > h3{
-      font-size: 20px;
-   }
-
-   .sizeform{
-      font-size: 14px;
-   }
-
-   .dateformxo{
-      grid-auto-rows: 40%;
-   }
-
-   /*responsive process*/
-
-   .ContainerTittleandTextProcess{
-      /* border: seagreen 1px solid; */
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-   }
-
-   .textprocess:nth-child(4){
-      justify-items: center;
-      align-items: center;
-   }
-
-   .TittleProcess{
-      width: 72%;
-      left: -10px;
-   }
-
-   .TittleProcess > h3{
-      font-size: 30px;
-   }
-
-   .textprocess{
-      font-size: 12px;
-      width: 85%!important;
-   }
-
-   .FlechaProgress{
-      display: none;
-   }
-
-   /*Responsive footer*/
-
-   .FooterXo{
-      /* border: olivedrab 1px solid; */
-      min-height: 56vh;
-   }
-
-   .backgroundfooter{
-      background-size: 60%;
-   }
-
-   .footerdate{
-      min-width: 100%;
-   }
-
-   .FooterXo{
-      /* border: tomato 1px solid; */
-      min-height: 20vh;
-   }
-
-   .footerdate{
-      font-size: 13px;
-   }
-
-   form{
-      grid-template-rows: 30% 13% 30%;
-   }
-
-   .NameXo{
-      gap: 10px
-   }
-
-   textarea{
-      position: relative;
-      top: 16px;
-      width: 83%;
-   }
-}
-
-@media (min-width: 480px) and (max-width: 767px){
-
-
-   .welcomen{
-      font-size: 30px;
-   }
-
-   .buttomEnter > a.enterButton{
-      font-size: 30px;
-   }
-
-   .imglogo{
-      justify-content: center;
-   }
-
-   /*empieza el responsive menu*/
-
-   .container-fluid{
-      /* border: yellow 2px solid; */
-      margin-bottom: 25%;
-   }
-
-   .ImgLogoXo > img{
-      width: 67%;
-      left: 4%;
-      top: 10%;
-   }
-
-   .OptionandLogoMenu{
-      grid-template-columns: 20% 23%;
-      grid-auto-rows: 20vh;
-   }
-
-   .OptionMenu{
-      grid-template-rows: 25% 25%;
-   }
-
-   .navoption{
-      display: none;
-   }
-
-   .navpeelable{
-      height: 6vh;
-   }
-
-   .switch{
-      min-width: 27%;
-      min-height: 1vh!important;
-      position: relative;
-      top: 50%;
-      right: 22px;
-      /* border: blue 1px solid; */
-      box-sizing: border-box;
-      justify-content: start;
-   }
-
-   .switch input{
-      height: 5%;
-   }
-
-   .slider{
-      /* border: tomato 1px solid; */
-      position: relative;
-      min-height: 31px !important;
-      max-width: 100%;
-      box-sizing: border-box;
-   }
-
-   .scroll-action-nav{
-      position: fixed;
-      min-width: 100%;
-      height: 18vh;
-      background-color: white;
-      animation: activemenu 2s ease;
-      display: grid;
-      grid-template-columns: 25% 52%;
-      grid-auto-rows: 20%;
-      z-index: 999;
-   }
-
-   .iconhamburger{
-      position: fixed;
-      left: 85%;
-      top: 5%;
-      display: inline;
-      /* border: springgreen 1px solid; */
-      width: 10%;
-      height: 9vh;
-      z-index: 999;
-   }
-
-   .navpeelable{
-      display: inline;
-      width: 100%;
-      height: 5vh;
-      border-radius: 1em;
-   }
-
-   @keyframes activemenu {
-      from{
-         transform: translateY(-100px);
-      }to{
-         transform: translateY(0);
-         transition: 2s all ease;
-      }
-   }
-
-   .scroll-action-nav .OptionMenu{
-      display: inline-block;
-      /* border: 1px red solid; */
-   }
-
-   .scroll-action-nav .navoption{
-      display: inline;
-      width: 50%;
-      height: 21vh;
-      /* border: yellow 1px solid; */
-      justify-content: center;
-      align-content: end;
-      top: 50px;
-   }
-
-   .scroll-action-nav .navoption > li{
-      height: 3.1vh;
-      top: 5px;
-   }
-
-   .scroll-action-nav .navoption > li > a{
-      font-size: 10px;
-   }
-
-   .scroll-action-nav .switch{
-      top: 16px;
-      right: 10px;
-      min-width: 57%;
-      height: 3.7vh;
-   }
-
-   .scroll-action-nav .slider{
-      width: 100%;
-      height: 0vh;
-   }
-
-   .scroll-action-nav .iconhamburger{
-      position: absolute;
-      top: 34%;
-      left: 80%;
-      /* border: turquoise 1px solid; */
-      height: 5.5vh;
-   }
-
-   /*responsive Who*/
-
-   #WhoMyXo > .container-fluid{
-      /* border: springgreen 1px solid; */
-      height: 170vh;
-   }
-
-   .ContainerWhoXo{
-      /* border: yellow 1px solid; */
-      min-height: 170vh;
-      background-size: 100% 100%;
-   }
-
-   .ContainerTextAndTittleWhoXo{
-      /* border: tomato 1px solid; */
-      display: flex;
-      flex-direction: column;
-      min-height: 180vh;
-      justify-items: center;
-   }
-
-   .TittleWhoXo > h3{
-      position: relative;
-      min-width: 34vh;
-      top: 0;
-      right: 92%;
-      font-size: 46px;
-      height: 34vh;
-   }
-
-   .TextWhoXo > p{
-      position: relative;
-      min-width: 34vh;
-      top: 77px;
-      right: 86%;
-      font-size: 18px;
-      height: 34vh;
-   }
-
-   .ImgWhoXo{
-      /* border: blue solid 1px; */
-      min-width: 42vh;
-      height: 45vh;
-      top: 0;
-      right: 0%;
-      justify-content: center;
-      align-items: center;
-   }
-
-   .ImgWhoXo > img{
-      width: 36%;
-      height: 35%;
-   }
-
-   .ImgWhoXo > img:nth-child(1){
-      top: 0;
-      left: 32%;
-   }
-
-   .ImgWhoXo > img:nth-child(2){
-      top: 24%;
-      left: 69px;
-   }
-
-   .ImgWhoXo > img:nth-child(3){
-      top: 24%;
-      left: 47%;
-   }
-
-   /*responsive Aim*/
-
-   #AimXO > .container-fluid{
-      /* border: springgreen 1px solid; */
-      height: 165vh;
-   }
-
-   .ContainerTittleandTextAimXo{
-      /* border: yellow 1px solid; */
-      height: 165vh;
-   }
-
-   .TittleAimXo{
-      top: 3%;
-   }
-
-   .TittleAimXo > h3{
-      font-size: 25px;
-      width: 70%;
-   }
-
-   .ContainerTextAimXo{
-      flex-direction: column;
-      height: 133vh;
-      justify-content: center;
-      align-items: center;
-      bottom: 2%;
-   }
-
-   .ImgAimXo > img{
-      top: 8%;
-      left: 41%;
-   }
-
-   .TextAim{
-      max-height: 38vh;
-      width: 70%;
-   }
-
-   .TextAim > p{
-      font-size: 12px;
-   }
-
-   /*Responsive Size*/
-
-   #SizeXo > .container-fluid{
-      /* border: yellowgreen 1px solid; */
-      min-height: 60vh;
-   }
-
-   .ContainerTittleandSizesXo{
-      flex-direction: column;
-      /* border: yellow 1px solid; */
-      height: 60vh;
-   }
-
-   .ContainerImgSizeXo{
-      min-height: 51vh;
-   }
-
-   .ContainerSizesXo{
-      min-height: 53vh;
-   }
-
-   .TittleSizeXo{
-      /* border: yellowgreen 1px solid; */
-      top: 4%;
-      width: 85%;
-   }
-
-   .TittleSizeXo > h3{
-      font-size: 30px;
-   }
-
-   .gallery{
-      top: 1px;
-      min-height: 46vh;
-      /* border: blueviolet 1px solid; */
-      min-width: 100%;
-   }
-
-   .cards > li > h3{
-      position: relative;
-      top: 9px;
-      font-size: 20px;
-   }
-
-   .cards li{
-      top: 24%;
-      width: 100%;
-      height: 37vh;
-   }
-
-   /*Responsive Catalogo*/
-
-   #CatalogXo > .container-fluid:nth-child(1){
-      height: 432vh;
-      /* border: blue solid 1px; */
-   }
-   
-   .CatalogoXocontainer{
-      height: 432vh;
-   }
-
-   .TittleCatalogo > h3{
-      width: 60%;
-      font-size: 30px;
-      top: 21px;
-      height: 7vh;
-   }
-
-   .TextCatalogo{
-      height: 20vh;
-   }
-
-   .TextCatalogo > p{
-      font-size: 12px;
-      height: 10vh;
-      width: 91%;
-   }
-
-   .ImgContainerCatXo{
-      bottom: 1%;
-      grid-template-columns: 73%;
-      grid-auto-rows: 10%;
-      /* border: seashell 1px solid; */
-      height: 280%;
-   }
-
-   .ImgCatXo{
-      height: 36vh;
-   }
-
-   .buttomMore{
-      bottom: 1%;
-   }
-
-   /*responsive process*/
-
-   .ContainerTittleandTextProcess{
-      /* border: seagreen 1px solid; */
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-   }
-
-   .textprocess:nth-child(4){
-      justify-items: center;
-      align-items: center;
-   }
-
-   .TittleProcess{
-      width: 72%;
-      left: -10px;
-   }
-
-   .TittleProcess > h3{
-      font-size: 30px;
-   }
-
-   .textprocess{
-      font-size: 12px;
-      width: 85%!important;
-   }
-
-   .FlechaProgress{
-      display: none;
-   }
-
-   /*responsive contact*/
-
-   #ContactXo > .container-fluid:nth-child(1){
-      /* border: yellow 1px solid; */
-      min-height: 112vh;
-   }
-
-   .ContainerContactXo{
-      grid-template-columns: 100% !important;
-      grid-template-rows: 32% 39%;
-      grid-auto-flow: column;
-   }
-
-   .IconsXo{
-      grid-template-columns: 30% 30%;
-      grid-template-rows: 50% 50%;
-      gap: 27px;
-   }
-
-   .IconsRed{
-      /* border: skyblue 1px solid; */
-      width: 100%;
-      height: 24vh;
-   }
-
-   .IconsRed > a > img{
-      /* border: 1px solid orange; */
-      position: absolute;
-      top: 41px;
-      left: 18px;
-      height: 16vh;
-   }
-
-   .dateperson{
-      font-size: 10px;
-      grid-template-columns: 48% 48%;
-      grid-auto-rows: 50%;
-   }
-
-   .FormXosizeandcomentarie > h3{
-      font-size: 20px;
-   }
-
-   .sizeform{
-      font-size: 14px;
-   }
-
-   .dateformxo{
-      grid-auto-rows: 40%;
-   }
-
-   /*Responsive footer*/
-
-   .FooterXo{
-      border: olivedrab 1px solid;
-      min-height: 56vh;
-   }
-
-   .backgroundfooter{
-      background-size: 60%;
-   }
-
-   .footerdate{
-      min-width: 100%;
-   }
-
-   .FooterXo{
-      /* border: tomato 1px solid; */
-      min-height: 20vh;
+      min-height: 23vh;
    }
 
    .footerdate{
