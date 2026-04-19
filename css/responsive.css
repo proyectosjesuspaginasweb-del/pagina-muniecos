@@ -63,9 +63,9 @@
       display: inline;
       /* border: springgreen 1px solid; */
       z-index: 999;
-      padding: 4.5rem 1.5rem;
+      padding: 1rem 2rem;
       justify-content: end;
-      max-height: 19vh;
+      max-height: 12vh;
       align-items: end;
       display: flex;
    }
@@ -167,13 +167,15 @@
 
    .scroll-action-nav .iconhamburger{
       display: inline;
-        /* border: springgreen 1px solid; */
+      /* border: springgreen 1px solid; */
       z-index: 999;
       padding: 4rem 3rem;
       justify-content: end;
       max-height: 19vh;
       align-items: end;
       display: flex;
+      max-width: 31vw;
+      left: 329px;
    } 
 
    /*responsive Who*/
