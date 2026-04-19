@@ -69,8 +69,8 @@
       padding: 0rem 1.1rem;
       max-width: 100%;
       justify-content: end;
-      max-height: 20vh;
-      align-items: center;
+      max-height: 15vh;
+      align-items: end;
       display: flex;
    }
 
@@ -87,15 +87,14 @@
    }
 
    .switch{
-      max-width: 0;
-      height: 5vh;
       right: 0;
       top: 0;
-      position: relative;
+      padding: 0.1rem 0rem;
    }
 
    .slider{
-      height: 4.6vh;
+      padding: 0.1rem 0rem;
+      max-height: 29px;
    }
 
    .scroll-action-nav{
