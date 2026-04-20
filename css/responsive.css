@@ -49,7 +49,7 @@
    }
 
    .ImgLogoXo > img{
-      width: 77%;
+      max-width: 77%;
       left: 0;
       top: 0;
    }
@@ -65,7 +65,7 @@
       z-index: 999;
       padding: 0rem 1.5rem;
       justify-content: end;
-      max-height: 111px;
+      max-height: 88px;
       align-items: end;
       display: flex;
    }
@@ -89,7 +89,7 @@
    .switch{
       right: 0;
       top: 0;
-      padding: 0.1rem 0rem;
+      padding: 1.2rem 0rem;
    }
 
    .switch input{
@@ -123,6 +123,22 @@
       }
    }
 
+   .scroll-action-nav .navpeelable{
+      min-width: 43px;
+   }
+
+   .scroll-action-nav .iconhamburger{
+      display: inline;
+      border: springgreen 1px solid;
+      z-index: 999;
+      padding: 0rem 2rem;
+      justify-content: end;
+      align-items: center;
+      display: flex;
+      max-width: 534px;
+      z-index: 1;
+   } 
+
    .scroll-action-nav .OptionMenu{
       display: inline-block;
       /* border: 1px red solid; */
@@ -130,12 +146,12 @@
 
    .scroll-action-nav .navoption{
       display: inline;
-      width: 50vw;
-      height: 17vh;
+      padding: 0rem 0rem;
       /* border: yellow 1px solid; */
       justify-content: center;
       align-content: center;
       top: 0;
+      z-index: 2;
    }
 
    .scroll-action-nav .navoption > li{
@@ -155,27 +171,23 @@
 
    .scroll-action-nav .switch{
       top: 0;
-      padding: 2rem 3rem;
+      padding: 2.5rem 3rem;
+      z-index: 2;
+      justify-content: center;
    }
 
    .scroll-action-nav .slider{
       border: 1px solid #6d6969;
       overflow: hidden;
       padding: 0.1rem 1rem;
+      min-width: 57px;
    }
 
-   .scroll-action-nav .iconhamburger{
-      display: inline;
-      /* border: springgreen 1px solid; */
-      z-index: 999;
-      padding: 4rem 3rem;
-      justify-content: end;
-      max-height: 19vh;
-      align-items: end;
-      display: flex;
-      max-width: 31vw;
-      left: 329px;
-   } 
+   .scroll-action-nav .switch input{
+      opacity: 0;
+      width: 0;
+      height: 0;
+   }
 
    /*responsive Who*/
 
