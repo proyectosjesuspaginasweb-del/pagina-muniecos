@@ -129,13 +129,14 @@
 
    .scroll-action-nav .iconhamburger{
       display: inline;
-      border: springgreen 1px solid;
+      /* border: springgreen 1px solid; */
       z-index: 999;
-      padding: 0rem 2rem;
+      padding: 1rem 2rem;
       justify-content: end;
       align-items: center;
       display: flex;
       max-width: 534px;
+      max-height: 19vh;
       z-index: 1;
    } 
 
@@ -166,6 +167,8 @@
    .scroll-action-nav .container-switch{
       height: 19vh;
       min-width: 35vw;
+      justify-content: center;
+      align-items: center;
       /* border: pink 1px solid; */
    }
 
