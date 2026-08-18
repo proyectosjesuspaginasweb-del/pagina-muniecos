@@ -35,6 +35,21 @@
     --Rosa-Para-Letra: rgb(150, 6, 118);
 }
 
+/* Limit headings to scale responsively and avoid exploding on very large screens */
+.TittleWhoXo > h3,
+.TittleCatalogo > h3,
+.TittleSizeXo > h3,
+.TittleProcess > h3,
+.tittle-aimXo-text {
+    font-size: clamp(18px, 3.5vw, 56px);
+}
+
+/* Small utility for hero-type large text if present elsewhere */
+.hero-title, .hero h1, .hero h2 {
+    font-size: clamp(28px, 6vw, 120px);
+    line-height: 1.02;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -171,12 +186,12 @@ main{
 
 #CatalogXo > .container-fluid:nth-child(1){
     /* border: yellow solid 2px; */
-        height: 295vh;
+        height: auto; /* previously 295vh -> set to auto for responsive flow */
 }
 
 #ContactXo > .container-fluid:nth-child(1){
     /* border: orange solid 2px; */
-    height: 105vh;
+    height: auto;
 }
 
 /*Inicio Diseño de menú*/
@@ -192,22 +207,23 @@ main{
 }
 
 .ImgLogoXo > img{
-    display: flex;
-    max-width: 50vw;
-    max-height: 30vh;
+    display: block;
+    max-width: 180px;
+    width: auto;
+    height: auto;
     /* border: #000 2px solid; */
 }
 
 .navxo{
     display: flex;
     max-width: 100%;
-    min-width: 120vh;
+    min-width: auto;
 }
 
 .OptionandLogoMenu{
     display: grid;
     grid-template-columns: 44% 55%;
-    grid-auto-rows: 40vh;
+    grid-auto-rows: auto;
     grid-auto-flow: row;
     min-width: 100%;
     /* border: #00c6ff 2px solid; */
@@ -215,10 +231,10 @@ main{
 
 .OptionMenu{
     display: grid;
-    grid-template-rows: 44% 89%;
-    grid-template-columns: 52vw;
-    min-width: 80%;
-    max-height: 30vh;
+    grid-template-rows: auto;
+    grid-template-columns: 52%;
+    min-width: auto;
+    max-height: none;
     /* border: red 2px solid; */
 }
 
@@ -249,8 +265,9 @@ main{
 .navoption > li > a{
     /* border: #000 2px solid; */
     text-decoration: none;
-    width: 20%;
-    min-height: 30vh;
+    width: auto;
+    min-height: auto;
+    padding: 0.5rem 0.75rem;
     font-family: Lobster;
     color: var(--Rosa-fuerte);
 }
@@ -266,8 +283,8 @@ main{
     position: relative;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100vh;
+    width: auto;
+    height: auto;
 }
 
 .iconhamburger{
@@ -304,7 +321,8 @@ main{
 .is-scrolled .ImgLogoXo > img{
     top: 0px;
     /* left: 0px; */
-    width: 5vw;
+    width: auto;
+    max-width: 80px;
 }
 
 .is-scrolled .ImgLogoXo{
@@ -331,7 +349,7 @@ main{
 
 .is-scrolled .OptionandLogoMenu{
     display: grid;
-    grid-template-columns: 27vw 73vw;
+    grid-template-columns: 27% 73%;
     grid-auto-rows: 1fr;
 }
 
@@ -348,7 +366,7 @@ main{
 
 .is-scrolled .container-switch{
     /* border: springgreen 2px solid; */
-    min-width: 12vw;
+    min-width: 12%;
     /* height: 10vh; */
     justify-content: center;
     align-items: center;
@@ -383,7 +401,7 @@ main{
 
 /* Cuando el navbar tenga la clase activa, al main le damos un empujón */
 #navbar.is-scrolled + .ContainerTextAndTittleWhoXo {
-    padding-top: 10vh; 
+    padding-top: 60px; 
 }
 
 /*terminade menu en seguimiento*/
@@ -409,11 +427,11 @@ main{
 
 .ContainerWhoXo{
     position: relative;
-    min-width: 100%;
-    max-height: 120vh;
+    width: 100%;
+    max-height: none;
     display: flex;
     flex-direction: column;
-    background: url(./img/Fondos_Pagina_Munecos/FondoWho3.jpg) no-repeat center / 120% 150vh;
+    background: url(./img/Fondos_Pagina_Munecos/FondoWho3.jpg) no-repeat center/cover;
     /* border: violet 2px solid; */
     overflow: hidden;
 }
@@ -427,7 +445,7 @@ main{
     display: flex;
     flex-direction: row;
     max-width: 100%;
-    min-height: 100vh;
+    min-height: auto;
     /* border: red 2px solid; */
     align-items: center;/*centra los contenedores de texto y titulo*/
     justify-content: center;
@@ -555,7 +573,7 @@ main{
     position: relative;
     /* border: royalblue 1px solid; */
     max-width: 100%;
-    height: 120vh;
+    height: auto; /* was 120vh */
     gap: 10%;
     overflow: hidden;
     display: flex;
@@ -825,7 +843,7 @@ a:hover{
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 290vh;
+    height: auto; /* previously 290vh */
     /* border: #056d01 2px solid; */
     align-content: center;
     justify-content: center;
@@ -926,7 +944,7 @@ a:hover{
     grid-template-columns: 280px 280px 280px;
     grid-auto-rows: 400px;
     max-width: 100%;
-    height: 206vh;
+    height: auto; /* previously 206vh */
     /* border: red 2px solid; */
     overflow: hidden;
     justify-content: center;
@@ -1138,7 +1156,7 @@ html:has(.ModalDialog:target) {/*hace que solo afecte el modalDialog para que al
     position: relative;
     min-width: 100%;
     border: red 2px solid;
-    height: 120vh;
+    height: auto; /* was 120vh */
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -1252,7 +1270,7 @@ html:has(.ModalDialog:target) {/*hace que solo afecte el modalDialog para que al
 .CirculosProcess{
     position: absolute;
     width: 100%;
-    height: 120vh;
+    height: auto; /* was 120vh */
     background: url(../css/img/Iconos_Xo/CirculoRosaDibujo.png) no-repeat 1em 36em / 10em,/*1er Circulo Rosa*/
     url(../css/img/Iconos_Xo/CirculoRosaDibujo.png) no-repeat 74em 1em / 10em,/*2do Circulo Rosa*/
     url(../css/img/Iconos_Xo/CirculoRosaPintura.png) no-repeat 1em 1em / 20em;/*Circulo principal*/
@@ -1358,10 +1376,10 @@ html:has(.ModalDialog:target) {/*hace que solo afecte el modalDialog para que al
 .FormXo{
     position: relative;
     max-width: 100%;
-    height: 110vh;
+    height: auto; /* was 110vh */
     display: grid;
     grid-template-columns: 100%;
-    grid-auto-rows: 110%;
+    grid-auto-rows: auto;
     grid-auto-flow: row;
     /* border: #88ce02 2px solid; */
 }
