@@ -40,7 +40,7 @@ const elementosDOM = scrollnav.map(item => ({
 
 window.addEventListener("scroll", () => {
     const scrollActual = window.scrollY;
-    const isMobile = window.innerWidth <= 575;
+    const isMobile = window.innerWidth <= 275;
 
     elementosDOM.forEach(({ el, className }) => {
         if (!isMobile && scrollActual > 100) {
