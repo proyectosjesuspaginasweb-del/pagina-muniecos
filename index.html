@@ -174,8 +174,37 @@
       const innerWrappers = gsap.utils.toArray(".inner");
       const dots = gsap.utils.toArray(".progress button");
       const splitHeadings = headings.map(function (heading) {
-        return new SplitText(heading, { type: "chars,words,lines", linesClass: "clip-text" });
+        return new SplitText(heading, {
+          type: "chars,words,lines",
+          charsClass: "char",
+          wordsClass: "word",
+          linesClass: "clip-text"
+        });
       });
+      const headingChars = splitHeadings.flatMap(function (splitHeading) {
+        return splitHeading.chars;
+      });
+      const headingRotationX = gsap.quickTo(headings, "rotationX", { duration: 0.65, ease: "power3" });
+      const headingRotationY = gsap.quickTo(headings, "rotationY", { duration: 0.65, ease: "power3" });
+      const headingCharsX = gsap.quickTo(headingChars, "x", { duration: 0.65, ease: "power3" });
+      const headingCharsY = gsap.quickTo(headingChars, "y", { duration: 0.65, ease: "power3" });
+
+      function moveHeadingsWithPointer(event) {
+        const xRatio = event.clientX / window.innerWidth;
+        const yRatio = event.clientY / window.innerHeight;
+
+        headingRotationX(gsap.utils.interpolate(15, -15, yRatio));
+        headingRotationY(gsap.utils.interpolate(-15, 15, xRatio));
+        headingCharsX(gsap.utils.interpolate(-16, 16, xRatio));
+        headingCharsY(gsap.utils.interpolate(-16, 16, yRatio));
+      }
+
+      function resetHeadingPosition() {
+        headingRotationX(0);
+        headingRotationY(0);
+        headingCharsX(0);
+        headingCharsY(0);
+      }
 
       let currentIndex = -1;
       let animating = false;
@@ -217,15 +246,19 @@
           yPercent: 0
         }, 0)
           .fromTo(images[nextIndex], { yPercent: 15 * dFactor }, { yPercent: 0 }, 0)
-          .fromTo(splitHeadings[nextIndex].chars, {
+          .fromTo(splitHeadings[nextIndex].words, {
             autoAlpha: 0,
-            yPercent: 150 * dFactor
+            y: -100,
+            rotation: function () {
+              return gsap.utils.random(-80, 80);
+            }
           }, {
             autoAlpha: 1,
-            yPercent: 0,
+            y: 0,
+            rotation: 0,
             duration: 1,
-            ease: "power2",
-            stagger: { each: 0.02, from: "random" }
+            ease: "back",
+            stagger: 0.1
           }, 0.2)
           .fromTo(sections[nextIndex].querySelectorAll(".eyebrow, .copy p, .meta span, .section-button, .doll, .product-card"), {
             autoAlpha: 0,
@@ -265,6 +298,9 @@
         if (event.key === "ArrowDown" || event.key === "PageDown") gotoSection(currentIndex + 1, 1);
         if (event.key === "ArrowUp" || event.key === "PageUp") gotoSection(currentIndex - 1, -1);
       });
+
+      document.querySelector("main").addEventListener("pointermove", moveHeadingsWithPointer);
+      document.querySelector("main").addEventListener("pointerleave", resetHeadingPosition);
 
       const initialHashIndex = Array.from(sections).findIndex(function (section) {
         return "#" + section.id === window.location.hash;
