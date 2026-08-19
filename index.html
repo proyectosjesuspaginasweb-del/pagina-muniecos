@@ -278,7 +278,7 @@
         onDown: function () { if (!animating) gotoSection(currentIndex - 1, -1); },
         onUp: function () { if (!animating) gotoSection(currentIndex + 1, 1); },
         tolerance: 10,
-        preventDefault: true
+        preventDefault: false
       });
 
       document.querySelectorAll("[data-go]").forEach(function (control) {
