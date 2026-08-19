@@ -8,6 +8,23 @@
     <link rel="stylesheet" href="../css/responsive.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>Muñecos Crochet xo</title>
+
+    <style>
+        /* Overlay para cerrar menú en móvil */
+        .nav-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.45);
+            z-index: 990; /* debajo del menú que usa 999 en responsive.css */
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity .18s ease;
+        }
+        .nav-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+    </style>
 </head>
 <body>
 
@@ -557,5 +574,51 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/Draggable.min.js"></script>
     <script src="../Gsap/gsap-public (1)/gsap-public/minified/SplitText.min.js"></script>
     <script src="../js/animacion_catalogo.js"></script>
+
+    <script>
+      (function () {
+        const btn = document.getElementById('activebtnav');
+        const menu = document.getElementById('navpeelable');
+        if (!btn || !menu) return;
+
+        // crear overlay y añadir al body
+        const overlay = document.createElement('div');
+        overlay.className = 'nav-overlay';
+        document.body.appendChild(overlay);
+
+        // función para sincronizar overlay con estado del menú
+        function syncOverlay() {
+          const opened = menu.classList.contains('menu-open') || menu.classList.contains('scroll-action-nav');
+          if (opened) overlay.classList.add('active'); else overlay.classList.remove('active');
+          document.body.style.overflow = opened ? 'hidden' : '';
+        }
+
+        // Observador para cambios en atributos (clase) del menú
+        const mo = new MutationObserver(syncOverlay);
+        mo.observe(menu, { attributes: true, attributeFilter: ['class'] });
+
+        // Cerrar menú al tocar overlay
+        overlay.addEventListener('click', () => {
+          menu.classList.remove('menu-open');
+          menu.classList.remove('scroll-action-nav');
+          overlay.classList.remove('active');
+          document.body.style.overflow = '';
+        });
+
+        // También cerrar si se presiona Escape
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && (menu.classList.contains('menu-open') || menu.classList.contains('scroll-action-nav'))) {
+            menu.classList.remove('menu-open');
+            menu.classList.remove('scroll-action-nav');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+            if (btn.focus) btn.focus();
+          }
+        });
+
+        // Inicial sync
+        syncOverlay();
+      })();
+    </script>
 </body>
 </html>
