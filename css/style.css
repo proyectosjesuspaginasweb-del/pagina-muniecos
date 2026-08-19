@@ -37,7 +37,6 @@
       background: #07040d;
       isolation: isolate;
       perspective: 650px;
-      touch-action: pan-x pan-y pinch-zoom;
     }
 
     .site-shell::before {

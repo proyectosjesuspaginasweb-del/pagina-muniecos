@@ -272,13 +272,36 @@
         history.replaceState(null, "", "#" + sections[nextIndex].id);
       }
 
-      Observer.create({
+      const sectionObserver = Observer.create({
         type: "wheel,touch,pointer",
         wheelSpeed: -1,
         onDown: function () { if (!animating) gotoSection(currentIndex - 1, -1); },
         onUp: function () { if (!animating) gotoSection(currentIndex + 1, 1); },
         tolerance: 10,
-        preventDefault: false
+        preventDefault: true
+      });
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Control") sectionObserver.disable();
+      });
+
+      document.addEventListener("keyup", function (event) {
+        if (event.key === "Control") sectionObserver.enable();
+      });
+
+      let zoomWheelTimer;
+      main.addEventListener("wheel", function (event) {
+        if (!event.ctrlKey) return;
+
+        sectionObserver.disable();
+        window.clearTimeout(zoomWheelTimer);
+        zoomWheelTimer = window.setTimeout(function () {
+          sectionObserver.enable();
+        }, 250);
+      }, { capture: true, passive: true });
+
+      window.addEventListener("blur", function () {
+        sectionObserver.enable();
       });
 
       document.querySelectorAll("[data-go]").forEach(function (control) {
