@@ -473,6 +473,22 @@
         fill: currentColor;
       }
 
+      /* Full-page semi-transparent overlay that closes the menu when tapped */
+      .nav-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.45);
+        z-index: 25; /* below the panel, above page content */
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity .18s ease;
+      }
+
+      .nav-overlay.active {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
       /* When menu is opened, show links as a stacked panel */
       .nav-links.open {
         position: fixed;
@@ -486,7 +502,7 @@
         background: rgba(6, 3, 11, 0.98);
         border-radius: 10px;
         box-shadow: 0 12px 40px rgba(0,0,0,0.6);
-        z-index: 21;
+        z-index: 30; /* above overlay */
       }
 
       .nav-links.open a {
@@ -566,28 +582,44 @@
 
         if (!btn || !nav) return;
 
+        // create overlay element and append to body
+        const overlay = document.createElement('div');
+        overlay.className = 'nav-overlay';
+        document.body.appendChild(overlay);
+
+        function openMenu() {
+          nav.classList.add('open');
+          overlay.classList.add('active');
+          btn.setAttribute('aria-expanded', 'true');
+          document.body.style.overflow = 'hidden';
+        }
+
+        function closeMenu() {
+          nav.classList.remove('open');
+          overlay.classList.remove('active');
+          btn.setAttribute('aria-expanded', 'false');
+          document.body.style.overflow = '';
+        }
+
         btn.addEventListener('click', function () {
-          const open = nav.classList.toggle('open');
-          btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-          // prevent body scroll when menu is open on small screens
-          document.body.style.overflow = open ? 'hidden' : '';
+          const isOpen = nav.classList.contains('open');
+          if (isOpen) closeMenu(); else openMenu();
         });
+
+        // close when tapping overlay
+        overlay.addEventListener('click', closeMenu);
 
         // Close menu when resizing to large screens
         window.addEventListener('resize', () => {
           if (window.innerWidth > 900 && nav.classList.contains('open')) {
-            nav.classList.remove('open');
-            btn.setAttribute('aria-expanded', 'false');
-            document.body.style.overflow = '';
+            closeMenu();
           }
         });
 
         // Close on Escape key
         document.addEventListener('keydown', (e) => {
           if (e.key === 'Escape' && nav.classList.contains('open')) {
-            nav.classList.remove('open');
-            btn.setAttribute('aria-expanded', 'false');
-            document.body.style.overflow = '';
+            closeMenu();
             btn.focus();
           }
         });
