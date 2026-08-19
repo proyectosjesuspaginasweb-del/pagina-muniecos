@@ -573,51 +573,90 @@
     <script src="../Gsap/gsap-public (1)/gsap-public/minified/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/Draggable.min.js"></script>
     <script src="../Gsap/gsap-public (1)/gsap-public/minified/SplitText.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Draggable.min.js"></script>
     <script src="../js/animacion_catalogo.js"></script>
 
     <script>
       (function () {
-        const btn = document.getElementById('activebtnav');
+        const btnImg = document.getElementById('activebtnav');
         const menu = document.getElementById('navpeelable');
-        if (!btn || !menu) return;
+        if (!btnImg || !menu) return;
 
         // crear overlay y añadir al body
         const overlay = document.createElement('div');
         overlay.className = 'nav-overlay';
         document.body.appendChild(overlay);
 
-        // función para sincronizar overlay con estado del menú
-        function syncOverlay() {
-          const opened = menu.classList.contains('menu-open') || menu.classList.contains('scroll-action-nav');
-          if (opened) overlay.classList.add('active'); else overlay.classList.remove('active');
-          document.body.style.overflow = opened ? 'hidden' : '';
+        // GSAP timeline for menu (slide + fade)
+        const { gsap, Draggable } = window;
+        let menuTl;
+        function buildMenuTl() {
+          if (!gsap || menuTl) return;
+          const links = Array.from(menu.querySelectorAll('a'));
+          menuTl = gsap.timeline({ paused: true })
+            .to(overlay, { duration: 0.22, autoAlpha: 1, ease: 'power2.out' }, 0)
+            .fromTo(menu, { y: -20, autoAlpha: 0 }, { duration: 0.28, y: 0, autoAlpha: 1, ease: 'power3.out' }, 0)
+            .from(links, { y: -8, autoAlpha: 0, stagger: 0.04, duration: 0.28, ease: 'power3.out' }, 0.06);
         }
+        buildMenuTl();
 
-        // Observador para cambios en atributos (clase) del menú
-        const mo = new MutationObserver(syncOverlay);
-        mo.observe(menu, { attributes: true, attributeFilter: ['class'] });
-
-        // Cerrar menú al tocar overlay
-        overlay.addEventListener('click', () => {
-          menu.classList.remove('menu-open');
-          menu.classList.remove('scroll-action-nav');
-          overlay.classList.remove('active');
-          document.body.style.overflow = '';
-        });
-
-        // También cerrar si se presiona Escape
-        document.addEventListener('keydown', (e) => {
-          if (e.key === 'Escape' && (menu.classList.contains('menu-open') || menu.classList.contains('scroll-action-nav'))) {
+        function openMenu() {
+          menu.classList.add('menu-open');
+          overlay.classList.add('active');
+          document.body.style.overflow = 'hidden';
+          if (menuTl) menuTl.play();
+        }
+        function closeMenu() {
+          if (menuTl) menuTl.reverse().eventCallback('onReverseComplete', () => {
             menu.classList.remove('menu-open');
-            menu.classList.remove('scroll-action-nav');
             overlay.classList.remove('active');
             document.body.style.overflow = '';
-            if (btn.focus) btn.focus();
+          });
+          else {
+            menu.classList.remove('menu-open');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
           }
+        }
+
+        // toggle wired to the image button (wrap in parent button in HTML)
+        btnImg.closest('button')?.addEventListener('click', (e) => {
+          e.preventDefault();
+          const isOpen = menu.classList.contains('menu-open') || menu.classList.contains('scroll-action-nav');
+          if (isOpen) closeMenu(); else openMenu();
         });
 
-        // Inicial sync
-        syncOverlay();
+        // cerrar overlay
+        overlay.addEventListener('click', closeMenu);
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
+
+        // --- Swipe slider for .cards (simple snapping Draggable) ---
+        const container = document.querySelector('.cards');
+        if (container && gsap && Draggable) {
+          const items = Array.from(container.children);
+          let itemWidth = items[0]?.getBoundingClientRect().width || 0;
+          function refreshWidths() { itemWidth = items[0]?.getBoundingClientRect().width || 0; }
+          window.addEventListener('resize', refreshWidths);
+
+          const minX = -((items.length - 1) * itemWidth);
+          const snap = gsap.utils.snap(itemWidth);
+
+          gsap.set(container, { x: 0 });
+
+          Draggable.create(container, {
+            type: 'x',
+            bounds: { minX: minX, maxX: 0 },
+            edgeResistance: 0.75,
+            throwProps: true,
+            onDragEnd() {
+              const x = this.x;
+              const nearest = -Math.round(x / itemWidth) * itemWidth;
+              gsap.to(container, { x: nearest, duration: 0.5, ease: 'power3.out' });
+            }
+          });
+        }
+
       })();
     </script>
 </body>
