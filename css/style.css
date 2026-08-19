@@ -36,6 +36,7 @@
       min-height: 100vh;
       background: #07040d;
       isolation: isolate;
+      perspective: 650px;
     }
 
     .site-shell::before {
@@ -173,6 +174,9 @@
     .copy {
       max-width: 58rem;
       padding-bottom: clamp(1rem, 5vh, 4rem);
+      /* border: #23d7e8 1px solid; */
+      text-align: center;
+      justify-items: center;
     }
 
     .eyebrow {
@@ -185,16 +189,25 @@
 
     .section-heading {
       max-width: 60rem;
-      font-size: clamp(3.2rem, 10vw, 10rem);
+      font-size: clamp(3.2rem, 5vw, 10rem);
       line-height: .82;
       letter-spacing: 0;
       text-transform: uppercase;
       font-weight: 1000;
       text-shadow: 0 .08em 0 rgba(255, 47, 146, .34), 0 0 42px rgba(255, 122, 47, .46);
+      transform-origin: center center;
+      transform-style: preserve-3d;
+      will-change: transform;
     }
 
     .clip-text {
-      overflow: hidden;
+      overflow: visible;
+      justify-self: center;
+    }
+
+    .section-heading .char {
+      display: inline-block;
+      will-change: transform;
     }
 
     .copy p {

@@ -174,12 +174,41 @@
       const innerWrappers = gsap.utils.toArray(".inner");
       const dots = gsap.utils.toArray(".progress button");
       const splitHeadings = headings.map(function (heading) {
-        return new SplitText(heading, { type: "chars,words,lines", linesClass: "clip-text" });
+        return new SplitText(heading, {
+          type: "chars,words,lines",
+          charsClass: "char",
+          linesClass: "clip-text"
+        });
+      });
+      const headingChars = splitHeadings.flatMap(function (splitHeading) {
+        return splitHeading.chars;
       });
 
       let currentIndex = -1;
       let animating = false;
       const wrap = gsap.utils.wrap(0, sections.length);
+      const main = document.querySelector("main");
+      const headingRotationX = gsap.quickTo(headings, "rotationX", { duration: 0.65, ease: "power3" });
+      const headingRotationY = gsap.quickTo(headings, "rotationY", { duration: 0.65, ease: "power3" });
+      const headingCharsX = gsap.quickTo(headingChars, "x", { duration: 0.65, ease: "power3" });
+      const headingCharsY = gsap.quickTo(headingChars, "y", { duration: 0.65, ease: "power3" });
+
+      function moveHeadingsWithPointer(event) {
+        const xRatio = event.clientX / window.innerWidth;
+        const yRatio = event.clientY / window.innerHeight;
+
+        headingRotationX(gsap.utils.interpolate(15, -15, yRatio));
+        headingRotationY(gsap.utils.interpolate(-15, 15, xRatio));
+        headingCharsX(gsap.utils.interpolate(-24, 24, xRatio));
+        headingCharsY(gsap.utils.interpolate(-24, 24, yRatio));
+      }
+
+      function resetHeadingPosition() {
+        headingRotationX(0);
+        headingRotationY(0);
+        headingCharsX(0);
+        headingCharsY(0);
+      }
 
       gsap.set(outerWrappers, { yPercent: 100 });
       gsap.set(innerWrappers, { yPercent: -100 });
@@ -265,6 +294,9 @@
         if (event.key === "ArrowDown" || event.key === "PageDown") gotoSection(currentIndex + 1, 1);
         if (event.key === "ArrowUp" || event.key === "PageUp") gotoSection(currentIndex - 1, -1);
       });
+
+      main.addEventListener("pointermove", moveHeadingsWithPointer);
+      main.addEventListener("pointerleave", resetHeadingPosition);
 
       const initialHashIndex = Array.from(sections).findIndex(function (section) {
         return "#" + section.id === window.location.hash;
