@@ -1,0 +1,13 @@
+# Plantilla segura de configuracion para Codex.
+# Copia solo lo que necesites a ~/.codex/config.toml.
+# No pongas API keys ni tokens en este archivo.
+
+# Modelo por defecto, si tu instalacion lo permite.
+# model = "gpt-5"
+
+# Nivel de razonamiento preferido.
+# reasoning_effort = "medium"
+
+# Instrucciones: usa AGENTS.md para reglas del proyecto.
+# Este archivo es solo una referencia segura.
+
